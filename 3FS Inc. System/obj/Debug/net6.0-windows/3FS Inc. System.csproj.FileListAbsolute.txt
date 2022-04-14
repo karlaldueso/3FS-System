@@ -1,0 +1,28 @@
+D:\3FS-System\3FS Inc. System\bin\Debug\net6.0-windows\3FS Inc. System.exe
+D:\3FS-System\3FS Inc. System\bin\Debug\net6.0-windows\3FS Inc. System.deps.json
+D:\3FS-System\3FS Inc. System\bin\Debug\net6.0-windows\3FS Inc. System.runtimeconfig.json
+D:\3FS-System\3FS Inc. System\bin\Debug\net6.0-windows\3FS Inc. System.dll
+D:\3FS-System\3FS Inc. System\bin\Debug\net6.0-windows\3FS Inc. System.pdb
+D:\3FS-System\3FS Inc. System\obj\Debug\net6.0-windows\3FS Inc. System.csproj.AssemblyReference.cache
+D:\3FS-System\3FS Inc. System\obj\Debug\net6.0-windows\_3FS_Inc._System.Login.resources
+D:\3FS-System\3FS Inc. System\obj\Debug\net6.0-windows\_3FS_Inc._System.Main.resources
+D:\3FS-System\3FS Inc. System\obj\Debug\net6.0-windows\3FS Inc. System.csproj.GenerateResource.cache
+D:\3FS-System\3FS Inc. System\obj\Debug\net6.0-windows\3FS Inc. System.GeneratedMSBuildEditorConfig.editorconfig
+D:\3FS-System\3FS Inc. System\obj\Debug\net6.0-windows\3FS Inc. System.AssemblyInfoInputs.cache
+D:\3FS-System\3FS Inc. System\obj\Debug\net6.0-windows\3FS Inc. System.AssemblyInfo.cs
+D:\3FS-System\3FS Inc. System\obj\Debug\net6.0-windows\3FS Inc. System.csproj.CoreCompileInputs.cache
+D:\3FS-System\3FS Inc. System\obj\Debug\net6.0-windows\3FS Inc. System.dll
+D:\3FS-System\3FS Inc. System\obj\Debug\net6.0-windows\refint\3FS Inc. System.dll
+D:\3FS-System\3FS Inc. System\obj\Debug\net6.0-windows\3FS Inc. System.pdb
+D:\3FS-System\3FS Inc. System\obj\Debug\net6.0-windows\3FS Inc. System.genruntimeconfig.cache
+D:\3FS-System\3FS Inc. System\obj\Debug\net6.0-windows\ref\3FS Inc. System.dll
+D:\3FS-System\3FS Inc. System\bin\Debug\net6.0-windows\MySql.Data.dll
+D:\3FS-System\3FS Inc. System\bin\Debug\net6.0-windows\Google.Protobuf.dll
+D:\3FS-System\3FS Inc. System\bin\Debug\net6.0-windows\ZstdNet.dll
+D:\3FS-System\3FS Inc. System\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+D:\3FS-System\3FS Inc. System\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+D:\3FS-System\3FS Inc. System\bin\Debug\net6.0-windows\Ubiety.Dns.Core.dll
+D:\3FS-System\3FS Inc. System\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+D:\3FS-System\3FS Inc. System\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+D:\3FS-System\3FS Inc. System\bin\Debug\net6.0-windows\MySql.Data.xml
+D:\3FS-System\3FS Inc. System\obj\Debug\net6.0-windows\3FS Inc. System.csproj.CopyComplete

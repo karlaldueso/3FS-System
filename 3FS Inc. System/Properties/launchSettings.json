@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "3FS Inc. System": {
+      "commandName": "Project",
+      "sqlDebugging": true,
+      "nativeDebugging": true
+    }
+  }
+}
