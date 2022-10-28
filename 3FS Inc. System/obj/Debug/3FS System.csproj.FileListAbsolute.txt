@@ -1,0 +1,52 @@
+C:\Users\User\source\repos\3FS System\bin\Debug\3FS System.exe.config
+C:\Users\User\source\repos\3FS System\bin\Debug\3FS System.exe
+C:\Users\User\source\repos\3FS System\bin\Debug\3FS System.pdb
+C:\Users\User\source\repos\3FS System\obj\Debug\3FS System.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\3FS System\obj\Debug\3FS System.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\source\repos\3FS System\obj\Debug\_3FS_System.Login.resources
+C:\Users\User\source\repos\3FS System\obj\Debug\_3FS_System.Properties.Resources.resources
+C:\Users\User\source\repos\3FS System\obj\Debug\3FS System.csproj.GenerateResource.cache
+C:\Users\User\source\repos\3FS System\obj\Debug\3FS System.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\3FS System\obj\Debug\3FS System.exe
+C:\Users\User\source\repos\3FS System\obj\Debug\3FS System.pdb
+C:\Users\User\source\repos\3FS System\obj\Debug\_3FS_System.Main.resources
+C:\Users\User\source\repos\3FS System\bin\Debug\Dapper.dll
+C:\Users\User\source\repos\3FS System\bin\Debug\Dapper.xml
+C:\Users\User\source\repos\3FS System\obj\Debug\3FS System.csproj.CopyComplete
+C:\Users\User\source\repos\3FS System\obj\Debug\_3FS_System.Inventory.resources
+C:\Users\User\source\repos\3FS System\obj\Debug\_3FS_System.Sales.resources
+D:\3FS System\bin\Debug\3FS System.exe.config
+D:\3FS System\bin\Debug\3FS System.exe
+D:\3FS System\bin\Debug\3FS System.pdb
+D:\3FS System\bin\Debug\Dapper.dll
+D:\3FS System\bin\Debug\Dapper.xml
+D:\3FS System\obj\Debug\3FS System.csproj.AssemblyReference.cache
+D:\3FS System\obj\Debug\3FS System.csproj.SuggestedBindingRedirects.cache
+D:\3FS System\obj\Debug\_3FS_System.Inventory.resources
+D:\3FS System\obj\Debug\_3FS_System.Login.resources
+D:\3FS System\obj\Debug\_3FS_System.Main.resources
+D:\3FS System\obj\Debug\_3FS_System.Properties.Resources.resources
+D:\3FS System\obj\Debug\_3FS_System.Sales.resources
+D:\3FS System\obj\Debug\3FS System.csproj.GenerateResource.cache
+D:\3FS System\obj\Debug\3FS System.csproj.CoreCompileInputs.cache
+D:\3FS System\obj\Debug\3FS System.csproj.CopyComplete
+D:\3FS System\obj\Debug\3FS System.exe
+D:\3FS System\obj\Debug\3FS System.pdb
+G:\My Drive\3FS System\bin\Debug\3FS System.exe.config
+G:\My Drive\3FS System\bin\Debug\3FS System.exe
+G:\My Drive\3FS System\bin\Debug\3FS System.pdb
+G:\My Drive\3FS System\bin\Debug\Dapper.dll
+G:\My Drive\3FS System\bin\Debug\Dapper.xml
+G:\My Drive\3FS System\obj\Debug\3FS System.csproj.AssemblyReference.cache
+G:\My Drive\3FS System\obj\Debug\3FS System.csproj.SuggestedBindingRedirects.cache
+G:\My Drive\3FS System\obj\Debug\_3FS_System.Inventory.resources
+G:\My Drive\3FS System\obj\Debug\_3FS_System.Login.resources
+G:\My Drive\3FS System\obj\Debug\_3FS_System.Main.resources
+G:\My Drive\3FS System\obj\Debug\_3FS_System.Properties.Resources.resources
+G:\My Drive\3FS System\obj\Debug\_3FS_System.Sales.resources
+G:\My Drive\3FS System\obj\Debug\3FS System.csproj.GenerateResource.cache
+G:\My Drive\3FS System\obj\Debug\3FS System.csproj.CoreCompileInputs.cache
+G:\My Drive\3FS System\obj\Debug\3FS System.csproj.CopyComplete
+G:\My Drive\3FS System\obj\Debug\3FS System.exe
+G:\My Drive\3FS System\obj\Debug\3FS System.pdb
+G:\My Drive\3FS System\obj\Debug\_3FS_System.Collectibles.resources

@@ -1,4 +1,4 @@
-﻿namespace _3FS_Inc._System
+﻿namespace _3FS_System
 {
     partial class Main
     {
@@ -28,164 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.maintab = new System.Windows.Forms.TabControl();
-            this.sales_tab = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.inventory_tab = new System.Windows.Forms.TabPage();
-            this.pettycash_tab = new System.Windows.Forms.TabPage();
-            this.payables_tab = new System.Windows.Forms.TabPage();
-            this.collectibles_tab = new System.Windows.Forms.TabPage();
-            this.profiles_tab = new System.Windows.Forms.TabPage();
-            this.reports_tab = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.maintab.SuspendLayout();
-            this.sales_tab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.inventory_button = new System.Windows.Forms.Button();
+            this.sales_button = new System.Windows.Forms.Button();
+            this.customers_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // maintab
+            // inventory_button
             // 
-            this.maintab.Controls.Add(this.sales_tab);
-            this.maintab.Controls.Add(this.inventory_tab);
-            this.maintab.Controls.Add(this.pettycash_tab);
-            this.maintab.Controls.Add(this.payables_tab);
-            this.maintab.Controls.Add(this.collectibles_tab);
-            this.maintab.Controls.Add(this.profiles_tab);
-            this.maintab.Controls.Add(this.reports_tab);
-            this.maintab.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.maintab.Location = new System.Drawing.Point(3, 3);
-            this.maintab.Name = "maintab";
-            this.maintab.SelectedIndex = 0;
-            this.maintab.Size = new System.Drawing.Size(1132, 532);
-            this.maintab.TabIndex = 0;
-            this.maintab.Selected += new System.Windows.Forms.TabControlEventHandler(this.maintab_Selected);
+            this.inventory_button.Location = new System.Drawing.Point(83, 83);
+            this.inventory_button.Name = "inventory_button";
+            this.inventory_button.Size = new System.Drawing.Size(76, 26);
+            this.inventory_button.TabIndex = 0;
+            this.inventory_button.Text = "Inventory";
+            this.inventory_button.UseVisualStyleBackColor = true;
+            this.inventory_button.Click += new System.EventHandler(this.inventory_button_Click);
             // 
-            // sales_tab
+            // sales_button
             // 
-            this.sales_tab.Controls.Add(this.dataGridView1);
-            this.sales_tab.Location = new System.Drawing.Point(4, 37);
-            this.sales_tab.Name = "sales_tab";
-            this.sales_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.sales_tab.Size = new System.Drawing.Size(1124, 491);
-            this.sales_tab.TabIndex = 0;
-            this.sales_tab.Tag = "";
-            this.sales_tab.Text = "Sales";
-            this.sales_tab.UseVisualStyleBackColor = true;
+            this.sales_button.Location = new System.Drawing.Point(83, 115);
+            this.sales_button.Name = "sales_button";
+            this.sales_button.Size = new System.Drawing.Size(76, 26);
+            this.sales_button.TabIndex = 1;
+            this.sales_button.Text = "Sales";
+            this.sales_button.UseVisualStyleBackColor = true;
+            this.sales_button.Click += new System.EventHandler(this.sales_button_Click);
             // 
-            // dataGridView1
+            // customers_button
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(679, 333);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // inventory_tab
-            // 
-            this.inventory_tab.Location = new System.Drawing.Point(4, 37);
-            this.inventory_tab.Name = "inventory_tab";
-            this.inventory_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.inventory_tab.Size = new System.Drawing.Size(1124, 491);
-            this.inventory_tab.TabIndex = 1;
-            this.inventory_tab.Tag = "";
-            this.inventory_tab.Text = "Inventory";
-            this.inventory_tab.UseVisualStyleBackColor = true;
-            // 
-            // pettycash_tab
-            // 
-            this.pettycash_tab.Location = new System.Drawing.Point(4, 37);
-            this.pettycash_tab.Name = "pettycash_tab";
-            this.pettycash_tab.Size = new System.Drawing.Size(1124, 491);
-            this.pettycash_tab.TabIndex = 5;
-            this.pettycash_tab.Tag = "";
-            this.pettycash_tab.Text = "Petty Cash";
-            this.pettycash_tab.UseVisualStyleBackColor = true;
-            // 
-            // payables_tab
-            // 
-            this.payables_tab.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.payables_tab.Location = new System.Drawing.Point(4, 37);
-            this.payables_tab.Name = "payables_tab";
-            this.payables_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.payables_tab.Size = new System.Drawing.Size(1124, 491);
-            this.payables_tab.TabIndex = 3;
-            this.payables_tab.Tag = "";
-            this.payables_tab.Text = "Payables";
-            this.payables_tab.UseVisualStyleBackColor = true;
-            // 
-            // collectibles_tab
-            // 
-            this.collectibles_tab.Location = new System.Drawing.Point(4, 37);
-            this.collectibles_tab.Name = "collectibles_tab";
-            this.collectibles_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.collectibles_tab.Size = new System.Drawing.Size(1124, 491);
-            this.collectibles_tab.TabIndex = 2;
-            this.collectibles_tab.Tag = "";
-            this.collectibles_tab.Text = "Collectibles";
-            this.collectibles_tab.UseVisualStyleBackColor = true;
-            // 
-            // profiles_tab
-            // 
-            this.profiles_tab.Location = new System.Drawing.Point(4, 37);
-            this.profiles_tab.Name = "profiles_tab";
-            this.profiles_tab.Size = new System.Drawing.Size(1124, 491);
-            this.profiles_tab.TabIndex = 6;
-            this.profiles_tab.Tag = "";
-            this.profiles_tab.Text = "Profiles ";
-            this.profiles_tab.UseVisualStyleBackColor = true;
-            // 
-            // reports_tab
-            // 
-            this.reports_tab.Location = new System.Drawing.Point(4, 37);
-            this.reports_tab.Name = "reports_tab";
-            this.reports_tab.Size = new System.Drawing.Size(1124, 491);
-            this.reports_tab.TabIndex = 4;
-            this.reports_tab.Tag = "";
-            this.reports_tab.Text = "Reports";
-            this.reports_tab.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.maintab, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1138, 538);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.customers_button.Location = new System.Drawing.Point(83, 147);
+            this.customers_button.Name = "customers_button";
+            this.customers_button.Size = new System.Drawing.Size(76, 26);
+            this.customers_button.TabIndex = 2;
+            this.customers_button.Text = "Collectibles";
+            this.customers_button.UseVisualStyleBackColor = true;
+            this.customers_button.Click += new System.EventHandler(this.customers_button_Click);
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1162, 562);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(436, 269);
+            this.Controls.Add(this.customers_button);
+            this.Controls.Add(this.sales_button);
+            this.Controls.Add(this.inventory_button);
+            this.MaximumSize = new System.Drawing.Size(452, 308);
+            this.MinimumSize = new System.Drawing.Size(452, 308);
             this.Name = "Main";
-            this.Text = "3FS Inc. System";
-            this.Load += new System.EventHandler(this.Main_Load);
-            this.maintab.ResumeLayout(false);
-            this.sales_tab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "3FS System";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private TabControl maintab;
-        private TabPage sales_tab;
-        private TabPage inventory_tab;
-        private TabPage collectibles_tab;
-        private TableLayoutPanel tableLayoutPanel1;
-        private TabPage payables_tab;
-        private TabPage reports_tab;
-        private TabPage pettycash_tab;
-        private TabPage profiles_tab;
-        private DataGridView dataGridView1;
+        private System.Windows.Forms.Button inventory_button;
+        private System.Windows.Forms.Button sales_button;
+        private System.Windows.Forms.Button customers_button;
     }
 }

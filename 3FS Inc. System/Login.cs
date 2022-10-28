@@ -1,7 +1,20 @@
-namespace _3FS_Inc._System
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Dapper;
+using System.Threading;
+
+namespace _3FS_System
 {
     public partial class Login : Form
     {
+        Thread thrd;
         public Login()
         {
             InitializeComponent();
@@ -9,31 +22,15 @@ namespace _3FS_Inc._System
 
         private void login_button_Click(object sender, EventArgs e)
         {
-            if (this.user_text.Text == "admin")
-            {
-                if (this.password_text.Text == "3flowerstore")
-                {
-                    Main mainwin = new(this.user_text.Text);
-                    this.Hide();
-                    mainwin.ShowDialog();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Wrong password!", "Access Denied!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else if (this.user_text.Text == "nonadmin")
-            {
-                Main mainwin = new(this.user_text.Text);
-                this.Hide();
-                mainwin.ShowDialog();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Please enter credentials!", "Access Denied!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            this.Close();
+            thrd = new Thread(openMain);
+            thrd.SetApartmentState(ApartmentState.STA);
+            thrd.Start();
+        }
+
+        private void openMain()
+        {
+            Application.Run(new Main());
         }
     }
 }
