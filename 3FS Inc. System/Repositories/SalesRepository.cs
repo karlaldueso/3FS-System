@@ -21,7 +21,7 @@ namespace _3FS_System.Repositories
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                var output = connection.Execute("dbo.spSales_AddSales @ReceiptNum, @Qty, @Unit, @ItemID, @UnitPrice, @SubTotal ,@TransactionDate", sale);
+                var output = connection.Execute("dbo.spSales_AddSales @ReceiptNum, @Qty, @Unit, @ItemID, @UnitPrice, @SubTotal ,@TransactionDate, @UpdatedDate", sale);
                 return true;
             }
         }

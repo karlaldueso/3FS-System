@@ -31,6 +31,8 @@
             this.inventory_button = new System.Windows.Forms.Button();
             this.sales_button = new System.Windows.Forms.Button();
             this.customers_button = new System.Windows.Forms.Button();
+            this.users = new System.Windows.Forms.Button();
+            this.customerProfile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // inventory_button
@@ -63,11 +65,31 @@
             this.customers_button.UseVisualStyleBackColor = true;
             this.customers_button.Click += new System.EventHandler(this.customers_button_Click);
             // 
+            // users
+            // 
+            this.users.Location = new System.Drawing.Point(165, 115);
+            this.users.Name = "users";
+            this.users.Size = new System.Drawing.Size(76, 26);
+            this.users.TabIndex = 3;
+            this.users.Text = "Users";
+            this.users.UseVisualStyleBackColor = true;
+            // 
+            // customerProfile
+            // 
+            this.customerProfile.Location = new System.Drawing.Point(165, 83);
+            this.customerProfile.Name = "customerProfile";
+            this.customerProfile.Size = new System.Drawing.Size(76, 26);
+            this.customerProfile.TabIndex = 4;
+            this.customerProfile.Text = "Customers";
+            this.customerProfile.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 269);
+            this.Controls.Add(this.customerProfile);
+            this.Controls.Add(this.users);
             this.Controls.Add(this.customers_button);
             this.Controls.Add(this.sales_button);
             this.Controls.Add(this.inventory_button);
@@ -85,5 +107,7 @@
         private System.Windows.Forms.Button inventory_button;
         private System.Windows.Forms.Button sales_button;
         private System.Windows.Forms.Button customers_button;
+        private System.Windows.Forms.Button users;
+        private System.Windows.Forms.Button customerProfile;
     }
 }

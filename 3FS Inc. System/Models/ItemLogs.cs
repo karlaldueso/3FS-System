@@ -14,6 +14,6 @@ namespace _3FS_System.Models
         public string Previous { get; set; }
         public string Present { get; set; }
         public DateTime TransactionDate { get; set; }
-
+        public DateTime UpdatedDate { get; set; }
     }
 }

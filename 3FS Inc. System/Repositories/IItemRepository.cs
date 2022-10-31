@@ -16,7 +16,7 @@ namespace _3FS_System.Repositories
         IEnumerable<Items> GetItems_ByName(string ItemName, string BrandName);
         bool Insert(Items item);
         bool Update(Items item, int col, string input);
-        bool UpdateQty(int itemID, float qty, int transactiontype);
+        bool UpdateQty(int itemID, float qty, int transactiontype, DateTime updatedDate);
         bool Delete(Items item);
         int GetItemID(Items item);
     }

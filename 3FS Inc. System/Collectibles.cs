@@ -30,6 +30,7 @@ namespace _3FS_System
             dataGridCustomers.Columns["CustomerID"].Visible = false;
             dataGridCustomers.Columns["ContactNumber"].Visible = false;
             dataGridCustomers.Columns["Email"].Visible = false;
+            dataGridCustomers.Columns["UpdatedDate"].Visible = false;
             dataGridCustomers.AutoResizeColumns();
         }
 
@@ -50,6 +51,7 @@ namespace _3FS_System
                 ReceiptRepository receiptRepository = new ReceiptRepository();
                 dataGridReceipts.DataSource = receiptRepository.GetReceipt_ByCustomerID(CustomerID);
                 dataGridReceipts.Columns["CustomerID"].Visible = false;
+                dataGridReceipts.Columns["UpdatedDate"].Visible = false;
                 dataGridReceipts.AutoResizeColumns();
                 if (dataGridReceipts.Rows.Count != 0)
                 {
@@ -69,6 +71,7 @@ namespace _3FS_System
                 dataCollectiblesLog.DataSource = collectiblesRepository.GetCollectibleLogs_ByCustomerID(CustomerID);
                 dataCollectiblesLog.Columns["CollectiblesLogID"].Visible = false;
                 dataCollectiblesLog.Columns["CustomerID"].Visible = false;
+                dataCollectiblesLog.Columns["UpdatedDate"].Visible = false;
                 dataCollectiblesLog.AutoResizeColumns();
                 if (dataCollectiblesLog.Rows.Count != 0)
                 {
@@ -115,12 +118,14 @@ namespace _3FS_System
                         {
                             CustomerID = CustomerID,
                             Amount = amount,
-                            TransactionDate = DateTime.Now
+                            TransactionDate = DateTime.Now,
+                            UpdatedDate = DateTime.Now
                         };
                         CustomerRepository customerRepository = new CustomerRepository();
                         Customer customer = new Customer
                         {
-                            CustomerID = CustomerID
+                            CustomerID = CustomerID,
+                            UpdatedDate = DateTime.Now,
                         };
                         collectiblesRepository.Insert(collectible);
                         customerRepository.UpdateCredit(customer, -amount);
@@ -128,6 +133,7 @@ namespace _3FS_System
                         dataCollectiblesLog.DataSource = collectiblesRepository.GetCollectibleLogs_ByCustomerID(CustomerID);
                         dataCollectiblesLog.Columns["CollectiblesLogID"].Visible = false;
                         dataCollectiblesLog.Columns["CustomerID"].Visible = false;
+                        dataCollectiblesLog.Columns["UpdatedDate"].Visible = false;
                         dataCollectiblesLog.AutoResizeColumns();
                         if (dataCollectiblesLog.Rows.Count != 0)
                         {
@@ -146,6 +152,7 @@ namespace _3FS_System
                         dataGridCustomers.Columns["CustomerID"].Visible = false;
                         dataGridCustomers.Columns["ContactNumber"].Visible = false;
                         dataGridCustomers.Columns["Email"].Visible = false;
+                        dataGridCustomers.Columns["UpdatedDate"].Visible = false;
                         dataGridCustomers.AutoResizeColumns();
 
                         remainingtextbox.Text = dataGridCustomers.Rows[c_r[1]].Cells[5].Value.ToString();

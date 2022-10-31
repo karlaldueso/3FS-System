@@ -39,7 +39,7 @@ namespace _3FS_System.Repositories
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                var output = connection.Execute("dbo.spItemInventory_AddItem @ItemName, @BrandName, @CategoryID, @Quantity, @Unit, @SRP, @Capital, @Storage", item);
+                var output = connection.Execute("dbo.spItemInventory_AddItem @ItemName, @BrandName, @CategoryID, @Quantity, @Unit, @SRP, @Capital, @Storage, @UpdatedDate", item);
                 return true;
             }
         }
@@ -75,15 +75,15 @@ namespace _3FS_System.Repositories
                         item.Storage = input;
                         break;
                 }
-                _ = connection.Execute("dbo.spItemInventory_UpdateItem @ItemID, @ItemName, @BrandName, @CategoryID, @Quantity, @Unit, @SRP, @Capital, @Storage", item);
+                _ = connection.Execute("dbo.spItemInventory_UpdateItem @ItemID, @ItemName, @BrandName, @CategoryID, @Quantity, @Unit, @SRP, @Capital, @Storage, @UpdatedDate", item);
                 return true;
             }
         }
-        public bool UpdateQty(int itemID, float qty, int transactiontype)
+        public bool UpdateQty(int itemID, float qty, int transactiontype, DateTime updatedDate)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                _ = connection.Execute("dbo.spItemInventory_UpdateQtyByID @ItemID, @Qty, @TransactionType", new { itemID, qty, transactiontype });
+                _ = connection.Execute("dbo.spItemInventory_UpdateQtyByID @ItemID, @Qty, @TransactionType, @UpdatedDate", new { itemID, qty, transactiontype, updatedDate});
                 return true;
             }
         }

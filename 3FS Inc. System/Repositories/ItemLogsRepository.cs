@@ -78,7 +78,7 @@ namespace _3FS_System.Repositories
             }
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                var output = connection.Execute("dbo.spItemLogs_AddLog @ItemID, @TransactionType, @Previous, @Present, @TransactionDate", item);
+                var output = connection.Execute("dbo.spItemLogs_AddLog @ItemID, @TransactionType, @Previous, @Present, @TransactionDate, @UpdatedDate", item);
                 return true;
             }
         }

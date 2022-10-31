@@ -30,7 +30,7 @@ namespace _3FS_System.Repositories
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                var output = connection.Execute("dbo.spCollectiblesLog_AddLog @CustomerID, @Amount, @TransactionDate", collectibles);
+                var output = connection.Execute("dbo.spCollectiblesLog_AddLog @CustomerID, @Amount, @TransactionDate, @UpdatedDate", collectibles);
                 return true;
             }
         }

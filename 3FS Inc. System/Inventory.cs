@@ -46,7 +46,8 @@ namespace _3FS_System
                         Unit = UnitText.Text,
                         SRP = float.Parse(SRPText.Text),
                         Capital = float.Parse(CapitalText.Text),
-                        Storage = StorageText.Text
+                        Storage = StorageText.Text,
+                        UpdatedDate = DateTime.Now
                     };
                     itemRepository.Insert(item);
                     //Display and clear textbox
@@ -59,6 +60,7 @@ namespace _3FS_System
                     CapitalText.Text = "";
                     StorageText.Text = "";
                     dataGridView1.DataSource = itemRepository.GetItems_All();
+                    dataGridView1.Columns["UpdatedDate"].Visible = false;
 
                     //Adding to ItemLogs
                     item.ItemID = itemRepository.GetItemID(new Items { ItemName = item.ItemName, BrandName = item.BrandName });
@@ -68,10 +70,12 @@ namespace _3FS_System
                         TransactionType = "Add",
                         Previous = "",
                         Present = "",
-                        TransactionDate = DateTime.Now
+                        TransactionDate = DateTime.Now,
+                        UpdatedDate = DateTime.Now
                     };
                     itemsLogsRepository.Insert(itemlogs, 0);
                     dataGridView2.DataSource = itemsLogsRepository.GetItemLogs_All();
+                    dataGridView2.Columns["UpdatedDate"].Visible = false;
                     dataGridView1.AutoResizeColumns();
                     dataGridView1.AutoResizeRows();
                     dataGridView2.AutoResizeColumns();
@@ -161,7 +165,8 @@ namespace _3FS_System
                 Unit = dataGridView1.Rows[c_r[1]].Cells[5].Value.ToString(),
                 SRP = float.Parse(dataGridView1.Rows[c_r[1]].Cells[6].Value.ToString()),
                 Capital = float.Parse(dataGridView1.Rows[c_r[1]].Cells[7].Value.ToString()),
-                Storage = dataGridView1.Rows[c_r[1]].Cells[8].Value.ToString()
+                Storage = dataGridView1.Rows[c_r[1]].Cells[8].Value.ToString(),
+                UpdatedDate = DateTime.Now
             };
             itemRepository.Update(item, c_r[0], EditText.Text); //update selected row
             item.ItemID = Global.ITEMID;
@@ -171,11 +176,14 @@ namespace _3FS_System
                 TransactionType = "Update",
                 Previous = dataGridView1.Rows[c_r[1]].Cells[c_r[0]].Value.ToString(),
                 Present = EditText.Text,
-                TransactionDate = DateTime.Now
+                TransactionDate = DateTime.Now,
+                UpdatedDate = DateTime.Now
             };
             itemsLogsRepository.Insert(itemlogs, c_r[0]);
             dataGridView1.DataSource = itemRepository.GetItems_All();
             dataGridView2.DataSource = itemsLogsRepository.GetItemLogs_ByID(itemlogs.ItemID);
+            dataGridView1.Columns["UpdatedDate"].Visible = false;
+            dataGridView2.Columns["UpdatedDate"].Visible = false;
             dataGridView1.AutoResizeColumns();
             dataGridView1.AutoResizeRows();
             dataGridView2.AutoResizeColumns();
@@ -187,6 +195,7 @@ namespace _3FS_System
             DataAccess db = new DataAccess();
             ItemRepository itemRepository = new ItemRepository();
             dataGridView1.DataSource = itemRepository.GetItems_ByName(searchName.Text, searchBrandName.Text);
+            dataGridView1.Columns["UpdatedDate"].Visible = false;
             dataGridView1.AutoResizeColumns();
         }
 
@@ -195,6 +204,7 @@ namespace _3FS_System
             DataAccess db = new DataAccess();
             ItemRepository itemRepository = new ItemRepository();
             dataGridView1.DataSource = itemRepository.GetItems_ByName(searchName.Text, searchBrandName.Text);
+            dataGridView1.Columns["UpdatedDate"].Visible = false;
             dataGridView1.AutoResizeColumns();
             dataGridView1.AutoResizeRows();
         }
@@ -205,11 +215,9 @@ namespace _3FS_System
             ItemRepository itemRepository = new ItemRepository();
             ItemLogsRepository itemsLogsRepository = new ItemLogsRepository();
             dataGridView1.DataSource = itemRepository.GetItems_All();
-            dataGridView2.DataSource = itemsLogsRepository.GetItemLogs_All();
+            dataGridView1.Columns["UpdatedDate"].Visible = false;
             dataGridView1.AutoResizeColumns();
             dataGridView1.AutoResizeRows();
-            dataGridView2.AutoResizeColumns();
-            dataGridView2.AutoResizeRows();
         }
 
     }

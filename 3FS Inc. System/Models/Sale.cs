@@ -15,7 +15,8 @@ namespace _3FS_System.Models
         public int ItemID { get; set; }
         public float UnitPrice { get; set; }  
         public float SubTotal { get; set; }
-        public DateTime TransactionDate { get; set; }  
+        public DateTime TransactionDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
 
     }
 }

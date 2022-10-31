@@ -108,6 +108,7 @@ namespace _3FS_System
             DataAccess db = new DataAccess();
             ItemRepository itemRepository = new ItemRepository();
             dataGridInventory.DataSource = itemRepository.GetItems_ByName(searchName.Text, searchBrandName.Text);
+            dataGridInventory.Columns["UpdatedDate"].Visible = false;
             dataGridInventory.AutoResizeColumns();
         }
 
@@ -116,6 +117,7 @@ namespace _3FS_System
             DataAccess db = new DataAccess();
             ItemRepository itemRepository = new ItemRepository();
             dataGridInventory.DataSource = itemRepository.GetItems_ByName(searchName.Text, searchBrandName.Text);
+            dataGridInventory.Columns["UpdatedDate"].Visible = false;
             dataGridInventory.AutoResizeColumns();
             dataGridInventory.AutoResizeRows();
         }
@@ -176,56 +178,68 @@ namespace _3FS_System
             {
                 if ((dataGridInventory.SelectedCells.Count > 0) && (dataGridCustomers.SelectedCells.Count > 0))
                 {
-                    DateTime dateTime = DateTime.Now;
-                    DataAccess db = new DataAccess();
-
-                    //Insert to Receipt Table
-                    ReceiptRepository receiptRepository = new ReceiptRepository();
-                    int[] c_r = { dataGridCustomers.CurrentCellAddress.X, dataGridCustomers.CurrentCellAddress.Y };
-                    int customerID = (int)Convert.ToInt32(dataGridCustomers.Rows[c_r[1]].Cells[0].Value);
-                    Receipt receipt = new Receipt
+                    float parsedValue;
+                    if (float.TryParse(amountPaidTextbox.Text, out parsedValue))
                     {
-                        ReceiptNum = receiptnumTextbox.Text,
-                        CustomerID = customerID,
-                        TransactionDate = dateTime
-                    };
-                    receipt.AmountPaid = float.Parse(String.Format("{0:0.##}", amountPaidTextbox.Text));
-                    receipt.GrandTotal = float.Parse(String.Format("{0:0.##}", grandtotalTextbox.Text));
-                    receiptRepository.Insert(receipt);
+                        DateTime dateTime = DateTime.Now;
+                        DataAccess db = new DataAccess();
 
-                    //Insert to Sales Table
-                    SalesRepository salesRepository = new SalesRepository();
-                    ItemRepository itemRepository = new ItemRepository();
-                    Sale sales = new Sale();
-                    sales.TransactionDate = dateTime;
-                    for (int i = 0; i < dataGridItems.Rows.Count; i++)
-                    {
-                        sales.ReceiptNum = receiptnumTextbox.Text;
-                        sales.Qty = (float)Convert.ToDouble(dataGridItems.Rows[i].Cells[2].Value);
-                        sales.Unit = dataGridItems.Rows[i].Cells[3].Value.ToString();
-                        sales.ItemID = (int)Convert.ToInt32(dataGridItems.Rows[i].Cells[0].Value);
-                        sales.UnitPrice = (float)Convert.ToDouble(dataGridItems.Rows[i].Cells[8].Value);
-                        sales.SubTotal = (float)Convert.ToDouble(dataGridItems.Rows[i].Cells[9].Value);
-                        salesRepository.Insert(sales);
-                        itemRepository.UpdateQty(sales.ItemID, sales.Qty, 1);
-                    }
-
-                    if (receipt.CustomerID != 3)
-                    {
-                        CustomerRepository customerRepository = new CustomerRepository();
-                        //Update Customer Credit
-                        Customer customer = new Customer
+                        //Insert to Receipt Table
+                        ReceiptRepository receiptRepository = new ReceiptRepository();
+                        int[] c_r = { dataGridCustomers.CurrentCellAddress.X, dataGridCustomers.CurrentCellAddress.Y };
+                        int customerID = (int)Convert.ToInt32(dataGridCustomers.Rows[c_r[1]].Cells[0].Value);
+                        Receipt receipt = new Receipt
                         {
-                            CustomerID = receipt.CustomerID
+                            ReceiptNum = receiptnumTextbox.Text,
+                            CustomerID = customerID,
+                            TransactionDate = dateTime,
+                            UpdatedDate = dateTime
                         };
-                        float credit = receipt.GrandTotal-receipt.AmountPaid;
-                        customerRepository.UpdateCredit(customer, credit);
-                    }
+                        receipt.AmountPaid = float.Parse(String.Format("{0:0.##}", amountPaidTextbox.Text));
+                        receipt.GrandTotal = float.Parse(String.Format("{0:0.##}", grandtotalTextbox.Text));
+                        receiptRepository.Insert(receipt);
 
-                    dataGridItems.Rows.Clear();
-                    amountPaidTextbox.Clear();
-                    grandtotalTextbox.Clear();
-                    receiptnumTextbox.Clear();
+                        //Insert to Sales Table
+                        SalesRepository salesRepository = new SalesRepository();
+                        ItemRepository itemRepository = new ItemRepository();
+                        Sale sales = new Sale();
+                        sales.TransactionDate = dateTime;
+                        sales.UpdatedDate = dateTime; 
+                        for (int i = 0; i < dataGridItems.Rows.Count; i++)
+                        {
+                            sales.ReceiptNum = receiptnumTextbox.Text;
+                            sales.Qty = (float)Convert.ToDouble(dataGridItems.Rows[i].Cells[2].Value);
+                            sales.Unit = dataGridItems.Rows[i].Cells[3].Value.ToString();
+                            sales.ItemID = (int)Convert.ToInt32(dataGridItems.Rows[i].Cells[0].Value);
+                            sales.UnitPrice = (float)Convert.ToDouble(dataGridItems.Rows[i].Cells[8].Value);
+                            sales.SubTotal = (float)Convert.ToDouble(dataGridItems.Rows[i].Cells[9].Value);
+                            sales.UpdatedDate = dateTime;
+                            salesRepository.Insert(sales);
+                            itemRepository.UpdateQty(sales.ItemID, sales.Qty, 1, dateTime);
+                        }
+
+                        if (receipt.CustomerID != 3)
+                        {
+                            CustomerRepository customerRepository = new CustomerRepository();
+                            //Update Customer Credit
+                            Customer customer = new Customer
+                            {
+                                CustomerID = receipt.CustomerID,
+                                UpdatedDate = receipt.UpdatedDate
+                            };
+                            float credit = receipt.GrandTotal-receipt.AmountPaid;
+                            customerRepository.UpdateCredit(customer, credit);
+                        }
+
+                        dataGridItems.Rows.Clear();
+                        amountPaidTextbox.Clear();
+                        grandtotalTextbox.Clear();
+                        receiptnumTextbox.Clear();
+                    }
+                    else 
+                    {
+                        MessageBox.Show("Please enter numbers only!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
@@ -249,6 +263,9 @@ namespace _3FS_System
             CustomerRepository customerRepository = new CustomerRepository();
             dataGridCustomers.DataSource = customerRepository.GetCustomer_ByName(searchCustomerTextbox.Text);
             dataGridCustomers.Columns["CustomerID"].Visible = false;
+            dataGridCustomers.Columns["ContactNumber"].Visible = false;
+            dataGridCustomers.Columns["Email"].Visible = false;
+            dataGridCustomers.Columns["UpdatedDate"].Visible = false;
             dataGridCustomers.AutoResizeColumns();
         }
     }
