@@ -136,6 +136,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(750, 480);
