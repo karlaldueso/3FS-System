@@ -13,6 +13,7 @@ namespace _3FS_System.Models
         public string LastName { get; set; }
         public string ContactNumber { get; set; }
         public string Email { get; set; }
+        public string Address { get; set; }
         public float Credit { get; set; }  
         public DateTime UpdatedDate { get; set; }
     }

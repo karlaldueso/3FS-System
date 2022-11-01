@@ -104,6 +104,7 @@
     <Compile Include="Repositories\ISalesRepository.cs" />
     <Compile Include="Repositories\ItemLogsRepository.cs" />
     <Compile Include="Repositories\ItemRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
     <Compile Include="Repositories\ReceiptRepository.cs" />
     <Compile Include="Repositories\SalesRepository.cs" />
     <Compile Include="Sales.cs">

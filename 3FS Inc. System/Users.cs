@@ -16,5 +16,17 @@ namespace _3FS_System
         {
             InitializeComponent();
         }
+
+        private void AddItemButton_Click(object sender, EventArgs e)
+        {
+            if ((String.IsNullOrEmpty(firstNametext.Text)) || (String.IsNullOrEmpty(lastNametext.Text)) || (String.IsNullOrEmpty(contacttext.Text)) || (String.IsNullOrEmpty(usernametext.Text)) || (String.IsNullOrEmpty(PWtextbox1.Text)) || (String.IsNullOrEmpty(PWtextbox2.Text)))
+            {
+                MessageBox.Show("Enter complete details!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+
+            }
+        }
     }
 }
