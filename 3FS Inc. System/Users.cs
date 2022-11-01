@@ -26,6 +26,8 @@ namespace _3FS_System
             
             usersDataGrid.DataSource = userRepository.GetUsers_All();
             usersDataGrid.Columns["UpdatedDate"].Visible = false;
+            usersDataGrid.Columns["UserID"].Visible = false;
+            //usersDataGrid.Columns["PW"].Visible = false;
             usersDataGrid.AutoResizeColumns();
             usersDataGrid.AutoResizeRows();
 
@@ -39,9 +41,33 @@ namespace _3FS_System
             }
             else
             {
-                if(true)
+                if (PWtextbox1.Text == PWtextbox2.Text)
                 {
+                    DataAccess db = new DataAccess();
+                    UserRepository userRepository = new UserRepository();
+                    User user = new User
+                    {
+                        FirstName = firstNametext.Text,
+                        LastName = lastNametext.Text,
+                        UserName = usernametext.Text,
+                        PW = PWtextbox1.Text,
+                        ContactNum = contacttext.Text,
+                        UserType = userTypecombobox.SelectedIndex,
+                        UpdatedDate = DateTime.Now
+                    };
 
+                    userRepository.Insert(user);
+
+                    usersDataGrid.DataSource = userRepository.GetUsers_All();
+                    usersDataGrid.Columns["UpdatedDate"].Visible = false;
+                    usersDataGrid.Columns["UserID"].Visible = false;
+                    //usersDataGrid.Columns["PW"].Visible = false;
+                    usersDataGrid.AutoResizeColumns();
+                    usersDataGrid.AutoResizeRows();
+                }
+                else
+                {
+                    MessageBox.Show("Passwords do not match!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

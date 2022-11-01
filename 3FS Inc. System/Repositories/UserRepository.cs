@@ -24,7 +24,7 @@ namespace _3FS_System.Repositories
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                var output = connection.Execute("dbo.spUsers_AddUser @UserName, @PW, @UserType, @FirstName, @LastName, @UpdatedDate", user);
+                var output = connection.Execute("dbo.spUsers_AddUser @UserName, @PW, @UserType, @FirstName, @LastName, @ContactNum, @UpdatedDate", user);
                 return true;
             }
         }
