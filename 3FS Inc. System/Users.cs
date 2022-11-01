@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dapper;
+using _3FS_System.Helpers;
+using _3FS_System.Models;
+using _3FS_System.Repositories;
+using _3FS_System.Global_Variables;
 
 namespace _3FS_System
 {
@@ -15,6 +20,15 @@ namespace _3FS_System
         public Users()
         {
             InitializeComponent();
+
+            DataAccess db = new DataAccess();
+            UserRepository userRepository = new UserRepository();
+            
+            usersDataGrid.DataSource = userRepository.GetUsers_All();
+            usersDataGrid.Columns["UpdatedDate"].Visible = false;
+            usersDataGrid.AutoResizeColumns();
+            usersDataGrid.AutoResizeRows();
+
         }
 
         private void AddItemButton_Click(object sender, EventArgs e)

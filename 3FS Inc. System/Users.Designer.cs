@@ -29,9 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.usersDataGrid = new System.Windows.Forms.DataGridView();
             this.firstNametext = new System.Windows.Forms.TextBox();
             this.panel = new System.Windows.Forms.Panel();
+            this.userTypelabel = new System.Windows.Forms.Label();
+            this.userTypecombobox = new System.Windows.Forms.ComboBox();
+            this.userslabel = new System.Windows.Forms.Label();
+            this.PWtextbox2 = new System.Windows.Forms.TextBox();
+            this.PWlabel1 = new System.Windows.Forms.Label();
+            this.PWtextbox1 = new System.Windows.Forms.TextBox();
             this.usernamelabel = new System.Windows.Forms.Label();
             this.usernametext = new System.Windows.Forms.TextBox();
             this.contactNumberlabel = new System.Windows.Forms.Label();
@@ -39,35 +45,29 @@
             this.lastNamelabel = new System.Windows.Forms.Label();
             this.lastNametext = new System.Windows.Forms.TextBox();
             this.firstNamelabel = new System.Windows.Forms.Label();
-            this.PWlabel1 = new System.Windows.Forms.Label();
-            this.PWtextbox1 = new System.Windows.Forms.TextBox();
-            this.PWtextbox2 = new System.Windows.Forms.TextBox();
-            this.userslabel = new System.Windows.Forms.Label();
-            this.userTypecombobox = new System.Windows.Forms.ComboBox();
-            this.userTypelabel = new System.Windows.Forms.Label();
             this.AddItemButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDataGrid)).BeginInit();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.usersDataGrid);
             this.panel1.Location = new System.Drawing.Point(258, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(470, 303);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // usersDataGrid
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.IndianRed;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(464, 297);
-            this.dataGridView1.TabIndex = 0;
+            this.usersDataGrid.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.usersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usersDataGrid.Location = new System.Drawing.Point(3, 3);
+            this.usersDataGrid.Name = "usersDataGrid";
+            this.usersDataGrid.RowHeadersWidth = 51;
+            this.usersDataGrid.Size = new System.Drawing.Size(464, 297);
+            this.usersDataGrid.TabIndex = 0;
             // 
             // firstNametext
             // 
@@ -99,6 +99,73 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(240, 297);
             this.panel.TabIndex = 2;
+            // 
+            // userTypelabel
+            // 
+            this.userTypelabel.AutoSize = true;
+            this.userTypelabel.ForeColor = System.Drawing.Color.Gold;
+            this.userTypelabel.Location = new System.Drawing.Point(43, 211);
+            this.userTypelabel.Name = "userTypelabel";
+            this.userTypelabel.Size = new System.Drawing.Size(59, 13);
+            this.userTypelabel.TabIndex = 14;
+            this.userTypelabel.Text = "User Type:";
+            this.userTypelabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // userTypecombobox
+            // 
+            this.userTypecombobox.BackColor = System.Drawing.Color.Maroon;
+            this.userTypecombobox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.userTypecombobox.ForeColor = System.Drawing.Color.Gold;
+            this.userTypecombobox.FormattingEnabled = true;
+            this.userTypecombobox.Items.AddRange(new object[] {
+            "Admin",
+            "Encoder",
+            "Sales"});
+            this.userTypecombobox.Location = new System.Drawing.Point(108, 208);
+            this.userTypecombobox.Name = "userTypecombobox";
+            this.userTypecombobox.Size = new System.Drawing.Size(100, 21);
+            this.userTypecombobox.TabIndex = 13;
+            // 
+            // userslabel
+            // 
+            this.userslabel.AutoSize = true;
+            this.userslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userslabel.ForeColor = System.Drawing.Color.Gold;
+            this.userslabel.Location = new System.Drawing.Point(33, 14);
+            this.userslabel.Name = "userslabel";
+            this.userslabel.Size = new System.Drawing.Size(175, 25);
+            this.userslabel.TabIndex = 12;
+            this.userslabel.Text = "User Information:";
+            this.userslabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // PWtextbox2
+            // 
+            this.PWtextbox2.BackColor = System.Drawing.Color.Maroon;
+            this.PWtextbox2.ForeColor = System.Drawing.Color.Yellow;
+            this.PWtextbox2.Location = new System.Drawing.Point(108, 181);
+            this.PWtextbox2.Name = "PWtextbox2";
+            this.PWtextbox2.Size = new System.Drawing.Size(100, 20);
+            this.PWtextbox2.TabIndex = 11;
+            // 
+            // PWlabel1
+            // 
+            this.PWlabel1.AutoSize = true;
+            this.PWlabel1.ForeColor = System.Drawing.Color.Gold;
+            this.PWlabel1.Location = new System.Drawing.Point(46, 158);
+            this.PWlabel1.Name = "PWlabel1";
+            this.PWlabel1.Size = new System.Drawing.Size(56, 13);
+            this.PWlabel1.TabIndex = 10;
+            this.PWlabel1.Text = "Password:";
+            this.PWlabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // PWtextbox1
+            // 
+            this.PWtextbox1.BackColor = System.Drawing.Color.Maroon;
+            this.PWtextbox1.ForeColor = System.Drawing.Color.Yellow;
+            this.PWtextbox1.Location = new System.Drawing.Point(108, 155);
+            this.PWtextbox1.Name = "PWtextbox1";
+            this.PWtextbox1.Size = new System.Drawing.Size(100, 20);
+            this.PWtextbox1.TabIndex = 9;
             // 
             // usernamelabel
             // 
@@ -172,84 +239,17 @@
             this.firstNamelabel.Text = "First Name:";
             this.firstNamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // PWlabel1
-            // 
-            this.PWlabel1.AutoSize = true;
-            this.PWlabel1.ForeColor = System.Drawing.Color.Gold;
-            this.PWlabel1.Location = new System.Drawing.Point(46, 158);
-            this.PWlabel1.Name = "PWlabel1";
-            this.PWlabel1.Size = new System.Drawing.Size(56, 13);
-            this.PWlabel1.TabIndex = 10;
-            this.PWlabel1.Text = "Password:";
-            this.PWlabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // PWtextbox1
-            // 
-            this.PWtextbox1.BackColor = System.Drawing.Color.Maroon;
-            this.PWtextbox1.ForeColor = System.Drawing.Color.Yellow;
-            this.PWtextbox1.Location = new System.Drawing.Point(108, 155);
-            this.PWtextbox1.Name = "PWtextbox1";
-            this.PWtextbox1.Size = new System.Drawing.Size(100, 20);
-            this.PWtextbox1.TabIndex = 9;
-            // 
-            // PWtextbox2
-            // 
-            this.PWtextbox2.BackColor = System.Drawing.Color.Maroon;
-            this.PWtextbox2.ForeColor = System.Drawing.Color.Yellow;
-            this.PWtextbox2.Location = new System.Drawing.Point(108, 181);
-            this.PWtextbox2.Name = "PWtextbox2";
-            this.PWtextbox2.Size = new System.Drawing.Size(100, 20);
-            this.PWtextbox2.TabIndex = 11;
-            // 
-            // userslabel
-            // 
-            this.userslabel.AutoSize = true;
-            this.userslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userslabel.ForeColor = System.Drawing.Color.Gold;
-            this.userslabel.Location = new System.Drawing.Point(33, 14);
-            this.userslabel.Name = "userslabel";
-            this.userslabel.Size = new System.Drawing.Size(175, 25);
-            this.userslabel.TabIndex = 12;
-            this.userslabel.Text = "User Information:";
-            this.userslabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // userTypecombobox
-            // 
-            this.userTypecombobox.BackColor = System.Drawing.Color.Maroon;
-            this.userTypecombobox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.userTypecombobox.ForeColor = System.Drawing.Color.Gold;
-            this.userTypecombobox.FormattingEnabled = true;
-            this.userTypecombobox.Items.AddRange(new object[] {
-            "Admin",
-            "Encoder",
-            "Sales"});
-            this.userTypecombobox.Location = new System.Drawing.Point(108, 208);
-            this.userTypecombobox.Name = "userTypecombobox";
-            this.userTypecombobox.Size = new System.Drawing.Size(100, 21);
-            this.userTypecombobox.TabIndex = 13;
-            // 
-            // userTypelabel
-            // 
-            this.userTypelabel.AutoSize = true;
-            this.userTypelabel.ForeColor = System.Drawing.Color.Gold;
-            this.userTypelabel.Location = new System.Drawing.Point(43, 211);
-            this.userTypelabel.Name = "userTypelabel";
-            this.userTypelabel.Size = new System.Drawing.Size(59, 13);
-            this.userTypelabel.TabIndex = 14;
-            this.userTypelabel.Text = "User Type:";
-            this.userTypelabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
             // AddItemButton
             // 
             this.AddItemButton.BackColor = System.Drawing.Color.IndianRed;
             this.AddItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddItemButton.ForeColor = System.Drawing.Color.Gold;
             this.AddItemButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddItemButton.Location = new System.Drawing.Point(80, 248);
+            this.AddItemButton.Location = new System.Drawing.Point(77, 246);
             this.AddItemButton.Margin = new System.Windows.Forms.Padding(4);
             this.AddItemButton.Name = "AddItemButton";
             this.AddItemButton.Size = new System.Drawing.Size(100, 28);
-            this.AddItemButton.TabIndex = 6;
+            this.AddItemButton.TabIndex = 15;
             this.AddItemButton.Text = "Add";
             this.AddItemButton.UseVisualStyleBackColor = false;
             this.AddItemButton.Click += new System.EventHandler(this.AddItemButton_Click);
@@ -266,7 +266,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Users";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDataGrid)).EndInit();
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.ResumeLayout(false);
@@ -276,14 +276,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView usersDataGrid;
         private System.Windows.Forms.TextBox firstNametext;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label firstNamelabel;
         private System.Windows.Forms.Label usernamelabel;
         private System.Windows.Forms.TextBox usernametext;
-        private System.Windows.Forms.Label contactNumberlabel;
-        private System.Windows.Forms.TextBox contacttext;
         private System.Windows.Forms.Label lastNamelabel;
         private System.Windows.Forms.TextBox lastNametext;
         private System.Windows.Forms.Label PWlabel1;
@@ -292,6 +290,8 @@
         private System.Windows.Forms.Label userTypelabel;
         private System.Windows.Forms.ComboBox userTypecombobox;
         private System.Windows.Forms.Label userslabel;
+        private System.Windows.Forms.Label contactNumberlabel;
+        private System.Windows.Forms.TextBox contacttext;
         private System.Windows.Forms.Button AddItemButton;
     }
 }
