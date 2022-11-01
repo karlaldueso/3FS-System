@@ -42,10 +42,10 @@
             // progressBar1
             // 
             this.progressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.progressBar1.Location = new System.Drawing.Point(126, 353);
+            this.progressBar1.Location = new System.Drawing.Point(125, 353);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(519, 17);
-            this.progressBar1.Step = 2;
+            this.progressBar1.Step = 0;
             this.progressBar1.TabIndex = 0;
             // 
             // splashscreen

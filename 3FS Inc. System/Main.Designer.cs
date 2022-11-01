@@ -41,10 +41,10 @@
             // 
             this.inventory_button.Dock = System.Windows.Forms.DockStyle.Top;
             this.inventory_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventory_button.Location = new System.Drawing.Point(0, 384);
-            this.inventory_button.Margin = new System.Windows.Forms.Padding(4);
+            this.inventory_button.Location = new System.Drawing.Point(0, 600);
+            this.inventory_button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.inventory_button.Name = "inventory_button";
-            this.inventory_button.Size = new System.Drawing.Size(259, 139);
+            this.inventory_button.Size = new System.Drawing.Size(230, 218);
             this.inventory_button.TabIndex = 3;
             this.inventory_button.Text = "Inventory";
             this.inventory_button.UseVisualStyleBackColor = true;
@@ -55,10 +55,10 @@
             this.sales_button.AutoSize = true;
             this.sales_button.Dock = System.Windows.Forms.DockStyle.Top;
             this.sales_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sales_button.Location = new System.Drawing.Point(0, 256);
-            this.sales_button.Margin = new System.Windows.Forms.Padding(4);
+            this.sales_button.Location = new System.Drawing.Point(0, 400);
+            this.sales_button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.sales_button.Name = "sales_button";
-            this.sales_button.Size = new System.Drawing.Size(259, 128);
+            this.sales_button.Size = new System.Drawing.Size(230, 200);
             this.sales_button.TabIndex = 2;
             this.sales_button.Text = "Sales";
             this.sales_button.UseVisualStyleBackColor = true;
@@ -70,9 +70,9 @@
             this.customers_button.Dock = System.Windows.Forms.DockStyle.Top;
             this.customers_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customers_button.Location = new System.Drawing.Point(0, 0);
-            this.customers_button.Margin = new System.Windows.Forms.Padding(4);
+            this.customers_button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.customers_button.Name = "customers_button";
-            this.customers_button.Size = new System.Drawing.Size(259, 129);
+            this.customers_button.Size = new System.Drawing.Size(230, 202);
             this.customers_button.TabIndex = 0;
             this.customers_button.Text = "Collectibles";
             this.customers_button.UseVisualStyleBackColor = true;
@@ -83,10 +83,10 @@
             this.users.AutoSize = true;
             this.users.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.users.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.users.Location = new System.Drawing.Point(0, 523);
-            this.users.Margin = new System.Windows.Forms.Padding(4);
+            this.users.Location = new System.Drawing.Point(0, 632);
+            this.users.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.users.Name = "users";
-            this.users.Size = new System.Drawing.Size(259, 140);
+            this.users.Size = new System.Drawing.Size(230, 219);
             this.users.TabIndex = 4;
             this.users.Text = "Users";
             this.users.UseVisualStyleBackColor = true;
@@ -97,10 +97,10 @@
             this.customerProfile.AutoSize = true;
             this.customerProfile.Dock = System.Windows.Forms.DockStyle.Top;
             this.customerProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerProfile.Location = new System.Drawing.Point(0, 129);
-            this.customerProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.customerProfile.Location = new System.Drawing.Point(0, 202);
+            this.customerProfile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.customerProfile.Name = "customerProfile";
-            this.customerProfile.Size = new System.Drawing.Size(259, 127);
+            this.customerProfile.Size = new System.Drawing.Size(230, 198);
             this.customerProfile.TabIndex = 1;
             this.customerProfile.Text = "Customers";
             this.customerProfile.UseVisualStyleBackColor = true;
@@ -116,27 +116,29 @@
             this.panel1.Controls.Add(this.customers_button);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(259, 663);
+            this.panel1.Size = new System.Drawing.Size(230, 851);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.BackgroundImage = global::_3FS_System.Properties.Resources.hardware_logo_transparent;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1377, 663);
+            this.ClientSize = new System.Drawing.Size(1442, 851);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(1920, 1080);
-            this.MinimumSize = new System.Drawing.Size(750, 480);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.MaximumSize = new System.Drawing.Size(2872, 1661);
+            this.MinimumSize = new System.Drawing.Size(1116, 724);
             this.Name = "Main";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
