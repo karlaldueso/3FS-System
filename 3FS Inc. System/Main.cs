@@ -119,10 +119,10 @@ namespace _3FS_System
 
             // Set the child form's MdiParent property to 
             // the current form.
-     
-            // Call the method that changes the background color.
 
-            int myvalue = panel1.Height;
+            // Call the method that changes the background color.
+           
+            int myvalue = panel1.Height+2;
             myvalue = myvalue / 5;
             int buttonheight = myvalue;
             customers_button.Height = buttonheight;
@@ -210,7 +210,7 @@ namespace _3FS_System
             {
                 MaximumSize = new Size(screenWidth, screenHeight);
                 this.WindowState = FormWindowState.Maximized;
-                int newval = panel1.Height;
+                int newval = panel1.Height+2;
                 newval /= 5;
                 int buttonheight = newval;
                 customers_button.Height = buttonheight;
@@ -228,7 +228,7 @@ namespace _3FS_System
             {
                 this.Height = 650;
                 this.Width = 1200;
-                int newval = panel1.Height;
+                int newval = panel1.Height + 2;
                 newval /= 5;
                 int buttonheight = newval;
                 customers_button.Height = buttonheight;
