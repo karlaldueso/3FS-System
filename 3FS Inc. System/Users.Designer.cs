@@ -245,14 +245,13 @@
             this.AddItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddItemButton.ForeColor = System.Drawing.Color.Gold;
             this.AddItemButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddItemButton.Location = new System.Drawing.Point(77, 246);
+            this.AddItemButton.Location = new System.Drawing.Point(72, 246);
             this.AddItemButton.Margin = new System.Windows.Forms.Padding(4);
             this.AddItemButton.Name = "AddItemButton";
             this.AddItemButton.Size = new System.Drawing.Size(100, 28);
-            this.AddItemButton.TabIndex = 15;
+            this.AddItemButton.TabIndex = 16;
             this.AddItemButton.Text = "Add";
             this.AddItemButton.UseVisualStyleBackColor = false;
-            this.AddItemButton.Click += new System.EventHandler(this.AddItemButton_Click);
             // 
             // Users
             // 
