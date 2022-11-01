@@ -220,5 +220,9 @@ namespace _3FS_System
             dataGridView1.AutoResizeRows();
         }
 
+        private void Inventory_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

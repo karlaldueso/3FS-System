@@ -33,13 +33,18 @@
             this.customers_button = new System.Windows.Forms.Button();
             this.users = new System.Windows.Forms.Button();
             this.customerProfile = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // inventory_button
             // 
-            this.inventory_button.Location = new System.Drawing.Point(83, 83);
+            this.inventory_button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.inventory_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventory_button.Location = new System.Drawing.Point(0, 376);
+            this.inventory_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.inventory_button.Name = "inventory_button";
-            this.inventory_button.Size = new System.Drawing.Size(76, 26);
+            this.inventory_button.Size = new System.Drawing.Size(259, 127);
             this.inventory_button.TabIndex = 0;
             this.inventory_button.Text = "Inventory";
             this.inventory_button.UseVisualStyleBackColor = true;
@@ -47,9 +52,13 @@
             // 
             // sales_button
             // 
-            this.sales_button.Location = new System.Drawing.Point(83, 115);
+            this.sales_button.AutoSize = true;
+            this.sales_button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sales_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sales_button.Location = new System.Drawing.Point(0, 256);
+            this.sales_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sales_button.Name = "sales_button";
-            this.sales_button.Size = new System.Drawing.Size(76, 26);
+            this.sales_button.Size = new System.Drawing.Size(259, 120);
             this.sales_button.TabIndex = 1;
             this.sales_button.Text = "Sales";
             this.sales_button.UseVisualStyleBackColor = true;
@@ -57,9 +66,13 @@
             // 
             // customers_button
             // 
-            this.customers_button.Location = new System.Drawing.Point(83, 147);
+            this.customers_button.AutoSize = true;
+            this.customers_button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.customers_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customers_button.Location = new System.Drawing.Point(0, 0);
+            this.customers_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.customers_button.Name = "customers_button";
-            this.customers_button.Size = new System.Drawing.Size(76, 26);
+            this.customers_button.Size = new System.Drawing.Size(259, 129);
             this.customers_button.TabIndex = 2;
             this.customers_button.Text = "Collectibles";
             this.customers_button.UseVisualStyleBackColor = true;
@@ -67,37 +80,68 @@
             // 
             // users
             // 
-            this.users.Location = new System.Drawing.Point(165, 115);
+            this.users.AutoSize = true;
+            this.users.Dock = System.Windows.Forms.DockStyle.Top;
+            this.users.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.users.Location = new System.Drawing.Point(0, 503);
+            this.users.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.users.Name = "users";
-            this.users.Size = new System.Drawing.Size(76, 26);
+            this.users.Size = new System.Drawing.Size(259, 140);
             this.users.TabIndex = 3;
             this.users.Text = "Users";
             this.users.UseVisualStyleBackColor = true;
+            this.users.Click += new System.EventHandler(this.users_Click);
             // 
             // customerProfile
             // 
-            this.customerProfile.Location = new System.Drawing.Point(165, 83);
+            this.customerProfile.AutoSize = true;
+            this.customerProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.customerProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerProfile.Location = new System.Drawing.Point(0, 129);
+            this.customerProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.customerProfile.Name = "customerProfile";
-            this.customerProfile.Size = new System.Drawing.Size(76, 26);
+            this.customerProfile.Size = new System.Drawing.Size(259, 127);
             this.customerProfile.TabIndex = 4;
             this.customerProfile.Text = "Customers";
             this.customerProfile.UseVisualStyleBackColor = true;
+            this.customerProfile.Click += new System.EventHandler(this.customerProfile_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.users);
+            this.panel1.Controls.Add(this.inventory_button);
+            this.panel1.Controls.Add(this.sales_button);
+            this.panel1.Controls.Add(this.customerProfile);
+            this.panel1.Controls.Add(this.customers_button);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(259, 643);
+            this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 269);
-            this.Controls.Add(this.customerProfile);
-            this.Controls.Add(this.users);
-            this.Controls.Add(this.customers_button);
-            this.Controls.Add(this.sales_button);
-            this.Controls.Add(this.inventory_button);
-            this.MaximumSize = new System.Drawing.Size(452, 308);
-            this.MinimumSize = new System.Drawing.Size(452, 308);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1183, 643);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1920, 1080);
+            this.MinimumSize = new System.Drawing.Size(597, 368);
             this.Name = "Main";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "3FS System";
+            this.Text = "WarehausPro";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Main_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -109,5 +153,6 @@
         private System.Windows.Forms.Button customers_button;
         private System.Windows.Forms.Button users;
         private System.Windows.Forms.Button customerProfile;
+        private System.Windows.Forms.Panel panel1;
     }
 }

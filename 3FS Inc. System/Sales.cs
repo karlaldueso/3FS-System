@@ -268,5 +268,10 @@ namespace _3FS_System
             dataGridCustomers.Columns["UpdatedDate"].Visible = false;
             dataGridCustomers.AutoResizeColumns();
         }
+
+        private void Sales_DockChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
