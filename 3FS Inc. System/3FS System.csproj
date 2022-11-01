@@ -171,5 +171,8 @@
   <ItemGroup>
     <None Include="hardware_logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="hardware_logo transparent.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

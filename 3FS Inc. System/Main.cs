@@ -18,11 +18,12 @@ namespace _3FS_System
 {
     public partial class Main : Form
     {
+        int screenWidth = Screen.PrimaryScreen.Bounds.Width;
+        int screenHeight = Screen.PrimaryScreen.Bounds.Height;
         public Main()
         {
             InitializeComponent();
-            int screenWidth = Screen.PrimaryScreen.Bounds.Width;
-            int screenHeight = Screen.PrimaryScreen.Bounds.Height;
+            
            
             MaximumSize = new Size(screenWidth, screenHeight);
 
@@ -201,6 +202,51 @@ namespace _3FS_System
             }
         }
 
+       
 
+        private void Main_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                MaximumSize = new Size(screenWidth, screenHeight);
+                this.WindowState = FormWindowState.Maximized;
+                int newval = panel1.Height;
+                newval /= 5;
+                int buttonheight = newval;
+                customers_button.Height = buttonheight;
+                customerProfile.Height = buttonheight;
+                sales_button.Height = buttonheight;
+                inventory_button.Height = buttonheight;
+                users.Height = buttonheight;
+                this.BackgroundImage = null;
+                // string myfile = System.Reflection.Assembly.GetExecutingAssembly().Location + "hardware_logo transparent.png";
+                this.BackgroundImage = Properties.Resources.hardware_logo_transparent;
+
+                this.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+            else if (this.WindowState == FormWindowState.Normal)
+            {
+                this.Height = 650;
+                this.Width = 1200;
+                int newval = panel1.Height;
+                newval /= 5;
+                int buttonheight = newval;
+                customers_button.Height = buttonheight;
+                customerProfile.Height = buttonheight;
+                sales_button.Height = buttonheight;
+                inventory_button.Height = buttonheight;
+                users.Height = buttonheight;
+                this.BackgroundImage = null;
+
+                this.BackgroundImage = Properties.Resources.hardware_logo_transparent;
+                //Console.WriteLine(nheight);
+                this.WindowState = FormWindowState.Normal;
+                this.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+            else
+            {
+
+            }
+        }
     }
 }
