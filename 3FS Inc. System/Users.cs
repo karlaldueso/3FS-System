@@ -64,6 +64,14 @@ namespace _3FS_System
                     //usersDataGrid.Columns["PW"].Visible = false;
                     usersDataGrid.AutoResizeColumns();
                     usersDataGrid.AutoResizeRows();
+
+                    firstNametext.Clear();
+                    lastNametext.Clear();
+                    contacttext.Clear();
+                    usernametext.Clear();
+                    PWtextbox1.Clear();
+                    PWtextbox2.Clear();
+                    userTypecombobox.Text = "";
                 }
                 else
                 {

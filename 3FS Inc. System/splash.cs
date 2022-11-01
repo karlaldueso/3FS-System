@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace _3FS_System
 {
     public partial class splashscreen : Form
     {
+        Thread thrd;
         public splashscreen()
         {
             InitializeComponent();
@@ -24,11 +26,16 @@ namespace _3FS_System
             if (progressBar1.Value == 100) 
             {
                 timer1.Enabled=false;
-                Login frm = new Login();
-                frm.Show();
-                this.Hide();
+                this.Close();
+                thrd = new Thread(openLogin);
+                thrd.SetApartmentState(ApartmentState.STA);
+                thrd.Start();
             }
 
+        }
+        private void openLogin()
+        {
+            Application.Run(new Login());
         }
     }
 }
