@@ -30,276 +30,245 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-<<<<<<< HEAD
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.lastName = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.firstName = new System.Windows.Forms.Label();
-=======
+            this.firstNametext = new System.Windows.Forms.TextBox();
+            this.panel = new System.Windows.Forms.Panel();
+            this.usernamelabel = new System.Windows.Forms.Label();
+            this.usernametext = new System.Windows.Forms.TextBox();
             this.contactNumberlabel = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.contacttext = new System.Windows.Forms.TextBox();
             this.lastNamelabel = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lastNametext = new System.Windows.Forms.TextBox();
             this.firstNamelabel = new System.Windows.Forms.Label();
->>>>>>> kmaaedits
+            this.PWlabel1 = new System.Windows.Forms.Label();
+            this.PWtextbox1 = new System.Windows.Forms.TextBox();
+            this.PWtextbox2 = new System.Windows.Forms.TextBox();
+            this.userslabel = new System.Windows.Forms.Label();
+            this.userTypecombobox = new System.Windows.Forms.ComboBox();
+            this.userTypelabel = new System.Windows.Forms.Label();
+            this.AddItemButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(344, 33);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(258, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(627, 373);
+            this.panel1.Size = new System.Drawing.Size(470, 303);
             this.panel1.TabIndex = 0;
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.IndianRed;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(619, 366);
+            this.dataGridView1.Size = new System.Drawing.Size(464, 297);
             this.dataGridView1.TabIndex = 0;
             // 
-            // textBox1
+            // firstNametext
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Maroon;
-            this.textBox1.ForeColor = System.Drawing.Color.Yellow;
-            this.textBox1.Location = new System.Drawing.Point(157, 26);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
-            this.textBox1.TabIndex = 1;
+            this.firstNametext.BackColor = System.Drawing.Color.Maroon;
+            this.firstNametext.ForeColor = System.Drawing.Color.Yellow;
+            this.firstNametext.Location = new System.Drawing.Point(108, 51);
+            this.firstNametext.Name = "firstNametext";
+            this.firstNametext.Size = new System.Drawing.Size(100, 20);
+            this.firstNametext.TabIndex = 1;
             // 
-            // panel2
+            // panel
             // 
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.contactNumberlabel);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.lastNamelabel);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.firstNamelabel);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Location = new System.Drawing.Point(16, 37);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(320, 366);
-            this.panel2.TabIndex = 2;
+            this.panel.Controls.Add(this.AddItemButton);
+            this.panel.Controls.Add(this.userTypelabel);
+            this.panel.Controls.Add(this.userTypecombobox);
+            this.panel.Controls.Add(this.userslabel);
+            this.panel.Controls.Add(this.PWtextbox2);
+            this.panel.Controls.Add(this.PWlabel1);
+            this.panel.Controls.Add(this.PWtextbox1);
+            this.panel.Controls.Add(this.usernamelabel);
+            this.panel.Controls.Add(this.usernametext);
+            this.panel.Controls.Add(this.contactNumberlabel);
+            this.panel.Controls.Add(this.contacttext);
+            this.panel.Controls.Add(this.lastNamelabel);
+            this.panel.Controls.Add(this.lastNametext);
+            this.panel.Controls.Add(this.firstNamelabel);
+            this.panel.Controls.Add(this.firstNametext);
+            this.panel.Location = new System.Drawing.Point(12, 30);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(240, 297);
+            this.panel.TabIndex = 2;
             // 
-            // label4
-<<<<<<< HEAD
+            // usernamelabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Gold;
-            this.label4.Location = new System.Drawing.Point(69, 158);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 16);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "First Name:";
-=======
+            this.usernamelabel.AutoSize = true;
+            this.usernamelabel.ForeColor = System.Drawing.Color.Gold;
+            this.usernamelabel.Location = new System.Drawing.Point(44, 132);
+            this.usernamelabel.Name = "usernamelabel";
+            this.usernamelabel.Size = new System.Drawing.Size(58, 13);
+            this.usernamelabel.TabIndex = 8;
+            this.usernamelabel.Text = "Username:";
+            this.usernamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Gold;
-            this.label4.Location = new System.Drawing.Point(52, 128);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "First Name:";
+            // usernametext
             // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.Maroon;
-            this.textBox5.ForeColor = System.Drawing.Color.Yellow;
-            this.textBox5.Location = new System.Drawing.Point(118, 125);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Gold;
-            this.label3.Location = new System.Drawing.Point(52, 102);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "First Name:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.Maroon;
-            this.textBox4.ForeColor = System.Drawing.Color.Yellow;
-            this.textBox4.Location = new System.Drawing.Point(118, 99);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.usernametext.BackColor = System.Drawing.Color.Maroon;
+            this.usernametext.ForeColor = System.Drawing.Color.Yellow;
+            this.usernametext.Location = new System.Drawing.Point(108, 129);
+            this.usernametext.Name = "usernametext";
+            this.usernametext.Size = new System.Drawing.Size(100, 20);
+            this.usernametext.TabIndex = 7;
             // 
             // contactNumberlabel
             // 
             this.contactNumberlabel.AutoSize = true;
             this.contactNumberlabel.ForeColor = System.Drawing.Color.Gold;
-            this.contactNumberlabel.Location = new System.Drawing.Point(52, 76);
+            this.contactNumberlabel.Location = new System.Drawing.Point(45, 106);
+            this.contactNumberlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.contactNumberlabel.Name = "contactNumberlabel";
-            this.contactNumberlabel.Size = new System.Drawing.Size(60, 13);
+            this.contactNumberlabel.Size = new System.Drawing.Size(57, 13);
             this.contactNumberlabel.TabIndex = 6;
-            this.contactNumberlabel.Text = "First Name:";
->>>>>>> kmaaedits
+            this.contactNumberlabel.Text = "Contact #:";
+            this.contactNumberlabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox3
+            // contacttext
             // 
-<<<<<<< HEAD
-            this.textBox5.BackColor = System.Drawing.Color.Maroon;
-            this.textBox5.ForeColor = System.Drawing.Color.Yellow;
-            this.textBox5.Location = new System.Drawing.Point(157, 154);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(132, 22);
-            this.textBox5.TabIndex = 9;
-=======
-            this.textBox3.BackColor = System.Drawing.Color.Maroon;
-            this.textBox3.ForeColor = System.Drawing.Color.Yellow;
-            this.textBox3.Location = new System.Drawing.Point(118, 73);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.contacttext.BackColor = System.Drawing.Color.Maroon;
+            this.contacttext.ForeColor = System.Drawing.Color.Yellow;
+            this.contacttext.Location = new System.Drawing.Point(108, 103);
+            this.contacttext.Name = "contacttext";
+            this.contacttext.Size = new System.Drawing.Size(100, 20);
+            this.contacttext.TabIndex = 5;
             // 
             // lastNamelabel
             // 
             this.lastNamelabel.AutoSize = true;
             this.lastNamelabel.ForeColor = System.Drawing.Color.Gold;
-            this.lastNamelabel.Location = new System.Drawing.Point(52, 50);
+            this.lastNamelabel.Location = new System.Drawing.Point(42, 80);
             this.lastNamelabel.Name = "lastNamelabel";
-            this.lastNamelabel.Size = new System.Drawing.Size(60, 13);
+            this.lastNamelabel.Size = new System.Drawing.Size(61, 13);
             this.lastNamelabel.TabIndex = 4;
-            this.lastNamelabel.Text = "First Name:";
+            this.lastNamelabel.Text = "Last Name:";
+            this.lastNamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox2
+            // lastNametext
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Maroon;
-            this.textBox2.ForeColor = System.Drawing.Color.Yellow;
-            this.textBox2.Location = new System.Drawing.Point(118, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.lastNametext.BackColor = System.Drawing.Color.Maroon;
+            this.lastNametext.ForeColor = System.Drawing.Color.Yellow;
+            this.lastNametext.Location = new System.Drawing.Point(108, 77);
+            this.lastNametext.Name = "lastNametext";
+            this.lastNametext.Size = new System.Drawing.Size(100, 20);
+            this.lastNametext.TabIndex = 3;
             // 
             // firstNamelabel
             // 
             this.firstNamelabel.AutoSize = true;
             this.firstNamelabel.ForeColor = System.Drawing.Color.Gold;
-            this.firstNamelabel.Location = new System.Drawing.Point(52, 24);
+            this.firstNamelabel.Location = new System.Drawing.Point(42, 54);
             this.firstNamelabel.Name = "firstNamelabel";
             this.firstNamelabel.Size = new System.Drawing.Size(60, 13);
             this.firstNamelabel.TabIndex = 2;
             this.firstNamelabel.Text = "First Name:";
->>>>>>> kmaaedits
+            this.firstNamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label3
+            // PWlabel1
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Gold;
-            this.label3.Location = new System.Drawing.Point(69, 126);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 16);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "First Name:";
+            this.PWlabel1.AutoSize = true;
+            this.PWlabel1.ForeColor = System.Drawing.Color.Gold;
+            this.PWlabel1.Location = new System.Drawing.Point(46, 158);
+            this.PWlabel1.Name = "PWlabel1";
+            this.PWlabel1.Size = new System.Drawing.Size(56, 13);
+            this.PWlabel1.TabIndex = 10;
+            this.PWlabel1.Text = "Password:";
+            this.PWlabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox4
+            // PWtextbox1
             // 
-            this.textBox4.BackColor = System.Drawing.Color.Maroon;
-            this.textBox4.ForeColor = System.Drawing.Color.Yellow;
-            this.textBox4.Location = new System.Drawing.Point(157, 122);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(132, 22);
-            this.textBox4.TabIndex = 7;
+            this.PWtextbox1.BackColor = System.Drawing.Color.Maroon;
+            this.PWtextbox1.ForeColor = System.Drawing.Color.Yellow;
+            this.PWtextbox1.Location = new System.Drawing.Point(108, 155);
+            this.PWtextbox1.Name = "PWtextbox1";
+            this.PWtextbox1.Size = new System.Drawing.Size(100, 20);
+            this.PWtextbox1.TabIndex = 9;
             // 
-            // label2
+            // PWtextbox2
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(69, 94);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "First Name:";
+            this.PWtextbox2.BackColor = System.Drawing.Color.Maroon;
+            this.PWtextbox2.ForeColor = System.Drawing.Color.Yellow;
+            this.PWtextbox2.Location = new System.Drawing.Point(108, 181);
+            this.PWtextbox2.Name = "PWtextbox2";
+            this.PWtextbox2.Size = new System.Drawing.Size(100, 20);
+            this.PWtextbox2.TabIndex = 11;
             // 
-            // textBox3
+            // userslabel
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Maroon;
-            this.textBox3.ForeColor = System.Drawing.Color.Yellow;
-            this.textBox3.Location = new System.Drawing.Point(157, 90);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 22);
-            this.textBox3.TabIndex = 5;
+            this.userslabel.AutoSize = true;
+            this.userslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userslabel.ForeColor = System.Drawing.Color.Gold;
+            this.userslabel.Location = new System.Drawing.Point(33, 14);
+            this.userslabel.Name = "userslabel";
+            this.userslabel.Size = new System.Drawing.Size(175, 25);
+            this.userslabel.TabIndex = 12;
+            this.userslabel.Text = "User Information:";
+            this.userslabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lastName
+            // userTypecombobox
             // 
-            this.lastName.AutoSize = true;
-            this.lastName.ForeColor = System.Drawing.Color.Gold;
-            this.lastName.Location = new System.Drawing.Point(69, 62);
-            this.lastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lastName.Name = "lastName";
-            this.lastName.Size = new System.Drawing.Size(75, 16);
-            this.lastName.TabIndex = 4;
-            this.lastName.Text = "First Name:";
+            this.userTypecombobox.BackColor = System.Drawing.Color.Maroon;
+            this.userTypecombobox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.userTypecombobox.ForeColor = System.Drawing.Color.Gold;
+            this.userTypecombobox.FormattingEnabled = true;
+            this.userTypecombobox.Items.AddRange(new object[] {
+            "Admin",
+            "Encoder",
+            "Sales"});
+            this.userTypecombobox.Location = new System.Drawing.Point(108, 208);
+            this.userTypecombobox.Name = "userTypecombobox";
+            this.userTypecombobox.Size = new System.Drawing.Size(100, 21);
+            this.userTypecombobox.TabIndex = 13;
             // 
-            // textBox2
+            // userTypelabel
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Maroon;
-            this.textBox2.ForeColor = System.Drawing.Color.Yellow;
-            this.textBox2.Location = new System.Drawing.Point(157, 58);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 22);
-            this.textBox2.TabIndex = 3;
+            this.userTypelabel.AutoSize = true;
+            this.userTypelabel.ForeColor = System.Drawing.Color.Gold;
+            this.userTypelabel.Location = new System.Drawing.Point(43, 211);
+            this.userTypelabel.Name = "userTypelabel";
+            this.userTypelabel.Size = new System.Drawing.Size(59, 13);
+            this.userTypelabel.TabIndex = 14;
+            this.userTypelabel.Text = "User Type:";
+            this.userTypelabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // firstName
+            // AddItemButton
             // 
-            this.firstName.AutoSize = true;
-            this.firstName.ForeColor = System.Drawing.Color.Gold;
-            this.firstName.Location = new System.Drawing.Point(69, 30);
-            this.firstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.firstName.Name = "firstName";
-            this.firstName.Size = new System.Drawing.Size(75, 16);
-            this.firstName.TabIndex = 2;
-            this.firstName.Text = "First Name:";
+            this.AddItemButton.BackColor = System.Drawing.Color.IndianRed;
+            this.AddItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddItemButton.ForeColor = System.Drawing.Color.Gold;
+            this.AddItemButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddItemButton.Location = new System.Drawing.Point(80, 248);
+            this.AddItemButton.Margin = new System.Windows.Forms.Padding(4);
+            this.AddItemButton.Name = "AddItemButton";
+            this.AddItemButton.Size = new System.Drawing.Size(100, 28);
+            this.AddItemButton.TabIndex = 6;
+            this.AddItemButton.Text = "Add";
+            this.AddItemButton.UseVisualStyleBackColor = false;
+            this.AddItemButton.Click += new System.EventHandler(this.AddItemButton_Click);
             // 
             // Users
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Firebrick;
-            this.ClientSize = new System.Drawing.Size(997, 449);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(748, 365);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Users";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Users";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -308,16 +277,21 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox firstNametext;
+        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label firstNamelabel;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label usernamelabel;
+        private System.Windows.Forms.TextBox usernametext;
         private System.Windows.Forms.Label contactNumberlabel;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox contacttext;
         private System.Windows.Forms.Label lastNamelabel;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox lastNametext;
+        private System.Windows.Forms.Label PWlabel1;
+        private System.Windows.Forms.TextBox PWtextbox1;
+        private System.Windows.Forms.TextBox PWtextbox2;
+        private System.Windows.Forms.Label userTypelabel;
+        private System.Windows.Forms.ComboBox userTypecombobox;
+        private System.Windows.Forms.Label userslabel;
+        private System.Windows.Forms.Button AddItemButton;
     }
 }
