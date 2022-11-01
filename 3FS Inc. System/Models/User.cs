@@ -10,10 +10,11 @@ namespace _3FS_System.Models
     {
         public int UserID { get; set; }
         public string UserName { get; set; } 
-        public string Password { get; set; }
+        public string PW { get; set; }
         public int UserType { get; set; }  
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string UpdatedDate { get; set; }
+        public string ContactNum { get; set; }
+        public DateTime UpdatedDate { get; set; }
     }
 }

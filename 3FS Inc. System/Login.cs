@@ -27,8 +27,8 @@ namespace _3FS_System
             //}
 
               this.Close();
-                thrd = new Thread(openMain);
-               thrd.SetApartmentState(ApartmentState.STA);
+              thrd = new Thread(openMain);
+              thrd.SetApartmentState(ApartmentState.STA);
               thrd.Start();
         }
 

@@ -32,6 +32,7 @@
             this.usersDataGrid = new System.Windows.Forms.DataGridView();
             this.firstNametext = new System.Windows.Forms.TextBox();
             this.panel = new System.Windows.Forms.Panel();
+            this.AddItemButton = new System.Windows.Forms.Button();
             this.userTypelabel = new System.Windows.Forms.Label();
             this.userTypecombobox = new System.Windows.Forms.ComboBox();
             this.userslabel = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.lastNamelabel = new System.Windows.Forms.Label();
             this.lastNametext = new System.Windows.Forms.TextBox();
             this.firstNamelabel = new System.Windows.Forms.Label();
-            this.AddItemButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGrid)).BeginInit();
             this.panel.SuspendLayout();
@@ -61,10 +61,12 @@
             // 
             // usersDataGrid
             // 
+            this.usersDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.usersDataGrid.BackgroundColor = System.Drawing.Color.IndianRed;
             this.usersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.usersDataGrid.Location = new System.Drawing.Point(3, 3);
             this.usersDataGrid.Name = "usersDataGrid";
+            this.usersDataGrid.RowHeadersVisible = false;
             this.usersDataGrid.RowHeadersWidth = 51;
             this.usersDataGrid.Size = new System.Drawing.Size(464, 297);
             this.usersDataGrid.TabIndex = 0;
@@ -99,6 +101,21 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(240, 297);
             this.panel.TabIndex = 2;
+            // 
+            // AddItemButton
+            // 
+            this.AddItemButton.BackColor = System.Drawing.Color.IndianRed;
+            this.AddItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddItemButton.ForeColor = System.Drawing.Color.Gold;
+            this.AddItemButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddItemButton.Location = new System.Drawing.Point(75, 251);
+            this.AddItemButton.Margin = new System.Windows.Forms.Padding(4);
+            this.AddItemButton.Name = "AddItemButton";
+            this.AddItemButton.Size = new System.Drawing.Size(100, 28);
+            this.AddItemButton.TabIndex = 16;
+            this.AddItemButton.Text = "Add";
+            this.AddItemButton.UseVisualStyleBackColor = false;
+            this.AddItemButton.Click += new System.EventHandler(this.AddItemButton_Click);
             // 
             // userTypelabel
             // 
@@ -144,6 +161,7 @@
             this.PWtextbox2.ForeColor = System.Drawing.Color.Yellow;
             this.PWtextbox2.Location = new System.Drawing.Point(108, 181);
             this.PWtextbox2.Name = "PWtextbox2";
+            this.PWtextbox2.PasswordChar = '*';
             this.PWtextbox2.Size = new System.Drawing.Size(100, 20);
             this.PWtextbox2.TabIndex = 11;
             // 
@@ -164,6 +182,7 @@
             this.PWtextbox1.ForeColor = System.Drawing.Color.Yellow;
             this.PWtextbox1.Location = new System.Drawing.Point(108, 155);
             this.PWtextbox1.Name = "PWtextbox1";
+            this.PWtextbox1.PasswordChar = '*';
             this.PWtextbox1.Size = new System.Drawing.Size(100, 20);
             this.PWtextbox1.TabIndex = 9;
             // 
@@ -239,22 +258,9 @@
             this.firstNamelabel.Text = "First Name:";
             this.firstNamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // AddItemButton
-            // 
-            this.AddItemButton.BackColor = System.Drawing.Color.IndianRed;
-            this.AddItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddItemButton.ForeColor = System.Drawing.Color.Gold;
-            this.AddItemButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddItemButton.Location = new System.Drawing.Point(72, 246);
-            this.AddItemButton.Margin = new System.Windows.Forms.Padding(4);
-            this.AddItemButton.Name = "AddItemButton";
-            this.AddItemButton.Size = new System.Drawing.Size(100, 28);
-            this.AddItemButton.TabIndex = 16;
-            this.AddItemButton.Text = "Add";
-            this.AddItemButton.UseVisualStyleBackColor = false;
-            // 
             // Users
             // 
+            this.AcceptButton = this.AddItemButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Firebrick;
