@@ -11,6 +11,7 @@ using System.Threading;
 using System.Web;
 using System.Windows;
 using System.Runtime.InteropServices;
+using System.Drawing.Imaging;
 
 
 namespace _3FS_System
@@ -129,10 +130,6 @@ namespace _3FS_System
             inventory_button.Height = buttonheight;
             users.Height = buttonheight;
 
-
-
-            Console.WriteLine(buttonheight);
-
             SetBackGroundColorOfMDIForm();
         }
         private void SetBackGroundColorOfMDIForm()
@@ -203,5 +200,7 @@ namespace _3FS_System
                 customerprofile.Show();
             }
         }
+
+
     }
 }

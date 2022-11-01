@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.inventory_button = new System.Windows.Forms.Button();
             this.sales_button = new System.Windows.Forms.Button();
             this.customers_button = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@
             this.inventory_button.Dock = System.Windows.Forms.DockStyle.Top;
             this.inventory_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventory_button.Location = new System.Drawing.Point(0, 376);
-            this.inventory_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inventory_button.Margin = new System.Windows.Forms.Padding(4);
             this.inventory_button.Name = "inventory_button";
             this.inventory_button.Size = new System.Drawing.Size(259, 127);
             this.inventory_button.TabIndex = 0;
@@ -56,7 +57,7 @@
             this.sales_button.Dock = System.Windows.Forms.DockStyle.Top;
             this.sales_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sales_button.Location = new System.Drawing.Point(0, 256);
-            this.sales_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sales_button.Margin = new System.Windows.Forms.Padding(4);
             this.sales_button.Name = "sales_button";
             this.sales_button.Size = new System.Drawing.Size(259, 120);
             this.sales_button.TabIndex = 1;
@@ -70,7 +71,7 @@
             this.customers_button.Dock = System.Windows.Forms.DockStyle.Top;
             this.customers_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customers_button.Location = new System.Drawing.Point(0, 0);
-            this.customers_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.customers_button.Margin = new System.Windows.Forms.Padding(4);
             this.customers_button.Name = "customers_button";
             this.customers_button.Size = new System.Drawing.Size(259, 129);
             this.customers_button.TabIndex = 2;
@@ -84,7 +85,7 @@
             this.users.Dock = System.Windows.Forms.DockStyle.Top;
             this.users.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.users.Location = new System.Drawing.Point(0, 503);
-            this.users.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.users.Margin = new System.Windows.Forms.Padding(4);
             this.users.Name = "users";
             this.users.Size = new System.Drawing.Size(259, 140);
             this.users.TabIndex = 3;
@@ -98,7 +99,7 @@
             this.customerProfile.Dock = System.Windows.Forms.DockStyle.Top;
             this.customerProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerProfile.Location = new System.Drawing.Point(0, 129);
-            this.customerProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.customerProfile.Margin = new System.Windows.Forms.Padding(4);
             this.customerProfile.Name = "customerProfile";
             this.customerProfile.Size = new System.Drawing.Size(259, 127);
             this.customerProfile.TabIndex = 4;
@@ -117,7 +118,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(259, 643);
+            this.panel1.Size = new System.Drawing.Size(259, 663);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -126,17 +127,21 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1183, 643);
+            this.BackColor = System.Drawing.Color.IndianRed;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(1377, 663);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximizeBox = false;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
-            this.MinimumSize = new System.Drawing.Size(597, 368);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(750, 480);
             this.Name = "Main";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "WarehausPro";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Load);
