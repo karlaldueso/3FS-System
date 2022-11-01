@@ -46,7 +46,7 @@ namespace _3FS_System
                 float totalpayment = 0;
                 float totalcredit = 0;
 
-                remainingtextbox.Text = dataGridCustomers.Rows[c_r[1]].Cells[5].Value.ToString();
+                remainingtextbox.Text = dataGridCustomers.Rows[c_r[1]].Cells[6].Value.ToString();
 
                 ReceiptRepository receiptRepository = new ReceiptRepository();
                 dataGridReceipts.DataSource = receiptRepository.GetReceipt_ByCustomerID(CustomerID);

@@ -30,16 +30,17 @@ namespace _3FS_System
                 Login frm = new Login();
 
                 timer1.Enabled=false;
-                this.Close();
+                
                 thrd = new Thread(openLogin);
                 thrd.SetApartmentState(ApartmentState.STA);
                 thrd.Start();
+                this.Close();
             }
 
         }
         private void openLogin()
         {
-            this.Show(new Login());
+            Application.Run(new Login());
         }
     }
 }
