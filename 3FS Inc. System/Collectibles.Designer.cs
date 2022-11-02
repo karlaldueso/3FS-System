@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.remainingtextbox = new System.Windows.Forms.TextBox();
             this.remaininglabel = new System.Windows.Forms.Label();
@@ -53,11 +53,9 @@
             this.paymentsLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-=======
-            this.receiptDetailslabel = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.dataGridReceiptDetails = new System.Windows.Forms.DataGridView();
->>>>>>> kmaaedits
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridReceipts)).BeginInit();
@@ -65,10 +63,8 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-<<<<<<< HEAD
-=======
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridReceiptDetails)).BeginInit();
->>>>>>> kmaaedits
             this.SuspendLayout();
             // 
             // panel3
@@ -83,66 +79,39 @@
             this.panel3.Controls.Add(this.datetimeLabel);
             this.panel3.Location = new System.Drawing.Point(12, 12);
             this.panel3.Name = "panel3";
-<<<<<<< HEAD
-            this.panel3.Size = new System.Drawing.Size(431, 293);
-=======
-            this.panel3.Size = new System.Drawing.Size(542, 202);
->>>>>>> kmaaedits
+            this.panel3.Size = new System.Drawing.Size(528, 293);
             this.panel3.TabIndex = 58;
             // 
             // remainingtextbox
             // 
             this.remainingtextbox.BackColor = System.Drawing.Color.White;
             this.remainingtextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.remainingtextbox.ForeColor = System.Drawing.Color.Black;
             this.remainingtextbox.Location = new System.Drawing.Point(188, 237);
             this.remainingtextbox.Name = "remainingtextbox";
             this.remainingtextbox.ReadOnly = true;
-            this.remainingtextbox.Size = new System.Drawing.Size(233, 29);
-=======
-            this.remainingtextbox.ForeColor = System.Drawing.Color.Yellow;
-            this.remainingtextbox.Location = new System.Drawing.Point(436, 164);
-            this.remainingtextbox.Name = "remainingtextbox";
-            this.remainingtextbox.ReadOnly = true;
-            this.remainingtextbox.Size = new System.Drawing.Size(98, 29);
->>>>>>> kmaaedits
+            this.remainingtextbox.Size = new System.Drawing.Size(322, 29);
             this.remainingtextbox.TabIndex = 64;
             // 
             // remaininglabel
             // 
             this.remaininglabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.remaininglabel.ForeColor = System.Drawing.Color.Gold;
-<<<<<<< HEAD
             this.remaininglabel.Location = new System.Drawing.Point(109, 240);
             this.remaininglabel.Name = "remaininglabel";
             this.remaininglabel.Size = new System.Drawing.Size(90, 24);
-=======
-            this.remaininglabel.Location = new System.Drawing.Point(324, 165);
-            this.remaininglabel.Name = "remaininglabel";
-            this.remaininglabel.Size = new System.Drawing.Size(106, 29);
->>>>>>> kmaaedits
             this.remaininglabel.TabIndex = 64;
             this.remaininglabel.Text = "Balance:";
             // 
             // searchCustomerTextbox
             // 
-<<<<<<< HEAD
             this.searchCustomerTextbox.BackColor = System.Drawing.Color.White;
             this.searchCustomerTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.searchCustomerTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchCustomerTextbox.ForeColor = System.Drawing.Color.Black;
             this.searchCustomerTextbox.Location = new System.Drawing.Point(109, 43);
             this.searchCustomerTextbox.Name = "searchCustomerTextbox";
-            this.searchCustomerTextbox.Size = new System.Drawing.Size(312, 29);
-=======
-            this.searchCustomerTextbox.BackColor = System.Drawing.Color.Maroon;
-            this.searchCustomerTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.searchCustomerTextbox.ForeColor = System.Drawing.Color.Yellow;
-            this.searchCustomerTextbox.Location = new System.Drawing.Point(60, 26);
-            this.searchCustomerTextbox.Name = "searchCustomerTextbox";
-            this.searchCustomerTextbox.Size = new System.Drawing.Size(142, 29);
->>>>>>> kmaaedits
+            this.searchCustomerTextbox.Size = new System.Drawing.Size(401, 29);
             this.searchCustomerTextbox.TabIndex = 51;
             this.searchCustomerTextbox.TextChanged += new System.EventHandler(this.searchCustomerTextbox_TextChanged);
             // 
@@ -152,47 +121,36 @@
             this.dataGridCustomers.AllowUserToDeleteRows = false;
             this.dataGridCustomers.AllowUserToResizeColumns = false;
             this.dataGridCustomers.AllowUserToResizeRows = false;
-<<<<<<< HEAD
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Blue;
-            this.dataGridCustomers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Blue;
+            this.dataGridCustomers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridCustomers.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridCustomers.ColumnHeadersHeight = 14;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridCustomers.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridCustomers.Location = new System.Drawing.Point(13, 78);
-=======
-            this.dataGridCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridCustomers.BackgroundColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCustomers.Location = new System.Drawing.Point(9, 61);
->>>>>>> kmaaedits
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridCustomers.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridCustomers.Location = new System.Drawing.Point(13, 78);
             this.dataGridCustomers.Name = "dataGridCustomers";
             this.dataGridCustomers.ReadOnly = true;
             this.dataGridCustomers.RowHeadersVisible = false;
-            this.dataGridCustomers.RowHeadersWidth = 51;
-<<<<<<< HEAD
-            this.dataGridCustomers.Size = new System.Drawing.Size(408, 145);
+            this.dataGridCustomers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridCustomers.Size = new System.Drawing.Size(497, 145);
             this.dataGridCustomers.StandardTab = true;
-=======
-            this.dataGridCustomers.Size = new System.Drawing.Size(525, 96);
->>>>>>> kmaaedits
             this.dataGridCustomers.TabIndex = 49;
             this.dataGridCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCustomers_CellClick);
             // 
@@ -201,15 +159,9 @@
             this.customerLabel.AutoSize = true;
             this.customerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerLabel.ForeColor = System.Drawing.Color.Gold;
-<<<<<<< HEAD
             this.customerLabel.Location = new System.Drawing.Point(9, 48);
             this.customerLabel.Name = "customerLabel";
             this.customerLabel.Size = new System.Drawing.Size(82, 20);
-=======
-            this.customerLabel.Location = new System.Drawing.Point(3, 34);
-            this.customerLabel.Name = "customerLabel";
-            this.customerLabel.Size = new System.Drawing.Size(54, 13);
->>>>>>> kmaaedits
             this.customerLabel.TabIndex = 50;
             this.customerLabel.Text = "Customer:";
             // 
@@ -218,15 +170,9 @@
             this.datetimeLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.datetimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datetimeLabel.ForeColor = System.Drawing.Color.Gold;
-<<<<<<< HEAD
             this.datetimeLabel.Location = new System.Drawing.Point(51, 16);
             this.datetimeLabel.Name = "datetimeLabel";
             this.datetimeLabel.Size = new System.Drawing.Size(337, 29);
-=======
-            this.datetimeLabel.Location = new System.Drawing.Point(6, 4);
-            this.datetimeLabel.Name = "datetimeLabel";
-            this.datetimeLabel.Size = new System.Drawing.Size(196, 19);
->>>>>>> kmaaedits
             this.datetimeLabel.TabIndex = 52;
             this.datetimeLabel.Text = "datetimenow";
             this.datetimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -244,12 +190,8 @@
             this.dataGridReceipts.Name = "dataGridReceipts";
             this.dataGridReceipts.ReadOnly = true;
             this.dataGridReceipts.RowHeadersVisible = false;
-            this.dataGridReceipts.RowHeadersWidth = 51;
-<<<<<<< HEAD
-            this.dataGridReceipts.Size = new System.Drawing.Size(705, 253);
-=======
-            this.dataGridReceipts.Size = new System.Drawing.Size(373, 151);
->>>>>>> kmaaedits
+            this.dataGridReceipts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridReceipts.Size = new System.Drawing.Size(348, 253);
             this.dataGridReceipts.TabIndex = 53;
             this.dataGridReceipts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridReceipts_CellClick);
             this.dataGridReceipts.SelectionChanged += new System.EventHandler(this.dataGridReceipts_SelectionChanged);
@@ -264,20 +206,12 @@
             this.dataCollectiblesLog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataCollectiblesLog.BackgroundColor = System.Drawing.Color.IndianRed;
             this.dataCollectiblesLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-<<<<<<< HEAD
             this.dataCollectiblesLog.Location = new System.Drawing.Point(9, 38);
-=======
-            this.dataCollectiblesLog.Location = new System.Drawing.Point(3, 38);
->>>>>>> kmaaedits
             this.dataCollectiblesLog.Name = "dataCollectiblesLog";
             this.dataCollectiblesLog.ReadOnly = true;
             this.dataCollectiblesLog.RowHeadersVisible = false;
-            this.dataCollectiblesLog.RowHeadersWidth = 51;
-<<<<<<< HEAD
+            this.dataCollectiblesLog.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataCollectiblesLog.Size = new System.Drawing.Size(464, 185);
-=======
-            this.dataCollectiblesLog.Size = new System.Drawing.Size(326, 119);
->>>>>>> kmaaedits
             this.dataCollectiblesLog.TabIndex = 59;
             // 
             // panel1
@@ -288,15 +222,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.ordersLabel);
             this.panel1.Controls.Add(this.dataGridReceipts);
-<<<<<<< HEAD
             this.panel1.Location = new System.Drawing.Point(12, 311);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1044, 302);
-=======
-            this.panel1.Location = new System.Drawing.Point(12, 221);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(542, 201);
->>>>>>> kmaaedits
+            this.panel1.Size = new System.Drawing.Size(532, 302);
             this.panel1.TabIndex = 60;
             // 
             // totalorderstextbox
@@ -304,19 +232,11 @@
             this.totalorderstextbox.BackColor = System.Drawing.Color.White;
             this.totalorderstextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalorderstextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.totalorderstextbox.ForeColor = System.Drawing.Color.Black;
-            this.totalorderstextbox.Location = new System.Drawing.Point(795, 39);
+            this.totalorderstextbox.Location = new System.Drawing.Point(369, 67);
             this.totalorderstextbox.Name = "totalorderstextbox";
             this.totalorderstextbox.ReadOnly = true;
-            this.totalorderstextbox.Size = new System.Drawing.Size(221, 29);
-=======
-            this.totalorderstextbox.ForeColor = System.Drawing.Color.Yellow;
-            this.totalorderstextbox.Location = new System.Drawing.Point(389, 72);
-            this.totalorderstextbox.Name = "totalorderstextbox";
-            this.totalorderstextbox.ReadOnly = true;
-            this.totalorderstextbox.Size = new System.Drawing.Size(121, 29);
->>>>>>> kmaaedits
+            this.totalorderstextbox.Size = new System.Drawing.Size(126, 29);
             this.totalorderstextbox.TabIndex = 67;
             // 
             // label1
@@ -324,15 +244,9 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gold;
-<<<<<<< HEAD
-            this.label1.Location = new System.Drawing.Point(721, 42);
+            this.label1.Location = new System.Drawing.Point(364, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 24);
-=======
-            this.label1.Location = new System.Drawing.Point(382, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 29);
->>>>>>> kmaaedits
+            this.label1.Size = new System.Drawing.Size(163, 24);
             this.label1.TabIndex = 67;
             this.label1.Text = "Total Orders:";
             // 
@@ -342,11 +256,7 @@
             this.ordersLabel.ForeColor = System.Drawing.Color.Gold;
             this.ordersLabel.Location = new System.Drawing.Point(3, 6);
             this.ordersLabel.Name = "ordersLabel";
-<<<<<<< HEAD
-            this.ordersLabel.Size = new System.Drawing.Size(135, 25);
-=======
-            this.ordersLabel.Size = new System.Drawing.Size(184, 31);
->>>>>>> kmaaedits
+            this.ordersLabel.Size = new System.Drawing.Size(161, 25);
             this.ordersLabel.TabIndex = 53;
             this.ordersLabel.Text = "Order History:";
             // 
@@ -360,15 +270,9 @@
             this.panel2.Controls.Add(this.amountText);
             this.panel2.Controls.Add(this.paymentsLabel);
             this.panel2.Controls.Add(this.dataCollectiblesLog);
-<<<<<<< HEAD
-            this.panel2.Location = new System.Drawing.Point(449, 12);
+            this.panel2.Location = new System.Drawing.Point(550, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(607, 293);
-=======
-            this.panel2.Location = new System.Drawing.Point(560, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(423, 202);
->>>>>>> kmaaedits
             this.panel2.TabIndex = 61;
             // 
             // totalpaymentstextbox
@@ -376,35 +280,21 @@
             this.totalpaymentstextbox.BackColor = System.Drawing.Color.White;
             this.totalpaymentstextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalpaymentstextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.totalpaymentstextbox.ForeColor = System.Drawing.Color.Black;
             this.totalpaymentstextbox.Location = new System.Drawing.Point(263, 240);
             this.totalpaymentstextbox.Name = "totalpaymentstextbox";
             this.totalpaymentstextbox.ReadOnly = true;
             this.totalpaymentstextbox.Size = new System.Drawing.Size(210, 29);
-=======
-            this.totalpaymentstextbox.ForeColor = System.Drawing.Color.Yellow;
-            this.totalpaymentstextbox.Location = new System.Drawing.Point(208, 163);
-            this.totalpaymentstextbox.Name = "totalpaymentstextbox";
-            this.totalpaymentstextbox.ReadOnly = true;
-            this.totalpaymentstextbox.Size = new System.Drawing.Size(121, 29);
->>>>>>> kmaaedits
             this.totalpaymentstextbox.TabIndex = 65;
             // 
             // totalpaymentslabel
             // 
             this.totalpaymentslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalpaymentslabel.ForeColor = System.Drawing.Color.Gold;
-<<<<<<< HEAD
             this.totalpaymentslabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.totalpaymentslabel.Location = new System.Drawing.Point(183, 241);
             this.totalpaymentslabel.Name = "totalpaymentslabel";
             this.totalpaymentslabel.Size = new System.Drawing.Size(74, 24);
-=======
-            this.totalpaymentslabel.Location = new System.Drawing.Point(128, 163);
-            this.totalpaymentslabel.Name = "totalpaymentslabel";
-            this.totalpaymentslabel.Size = new System.Drawing.Size(74, 29);
->>>>>>> kmaaedits
             this.totalpaymentslabel.TabIndex = 66;
             this.totalpaymentslabel.Text = "Total:";
             // 
@@ -414,15 +304,9 @@
             this.paidButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.paidButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paidButton.ForeColor = System.Drawing.Color.Gold;
-<<<<<<< HEAD
             this.paidButton.Location = new System.Drawing.Point(479, 78);
             this.paidButton.Name = "paidButton";
             this.paidButton.Size = new System.Drawing.Size(123, 30);
-=======
-            this.paidButton.Location = new System.Drawing.Point(335, 64);
-            this.paidButton.Name = "paidButton";
-            this.paidButton.Size = new System.Drawing.Size(75, 23);
->>>>>>> kmaaedits
             this.paidButton.TabIndex = 63;
             this.paidButton.Text = "Paid";
             this.paidButton.UseVisualStyleBackColor = false;
@@ -430,7 +314,6 @@
             // 
             // amountText
             // 
-<<<<<<< HEAD
             this.amountText.BackColor = System.Drawing.Color.White;
             this.amountText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.amountText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -438,13 +321,6 @@
             this.amountText.Location = new System.Drawing.Point(479, 39);
             this.amountText.Name = "amountText";
             this.amountText.Size = new System.Drawing.Size(123, 29);
-=======
-            this.amountText.BackColor = System.Drawing.Color.Maroon;
-            this.amountText.ForeColor = System.Drawing.Color.Yellow;
-            this.amountText.Location = new System.Drawing.Point(335, 38);
-            this.amountText.Name = "amountText";
-            this.amountText.Size = new System.Drawing.Size(82, 20);
->>>>>>> kmaaedits
             this.amountText.TabIndex = 62;
             // 
             // paymentsLabel
@@ -453,11 +329,7 @@
             this.paymentsLabel.ForeColor = System.Drawing.Color.Gold;
             this.paymentsLabel.Location = new System.Drawing.Point(3, 4);
             this.paymentsLabel.Name = "paymentsLabel";
-<<<<<<< HEAD
             this.paymentsLabel.Size = new System.Drawing.Size(101, 25);
-=======
-            this.paymentsLabel.Size = new System.Drawing.Size(135, 31);
->>>>>>> kmaaedits
             this.paymentsLabel.TabIndex = 54;
             this.paymentsLabel.Text = "Payments";
             // 
@@ -468,45 +340,36 @@
             // 
             // panel4
             // 
-<<<<<<< HEAD
+            this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.panel3);
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1067, 624);
+            this.panel4.Size = new System.Drawing.Size(1229, 624);
             this.panel4.TabIndex = 62;
             // 
-            // Collectibles
+            // panel5
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.Firebrick;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1067, 624);
-            this.Controls.Add(this.panel4);
-            this.ImeMode = System.Windows.Forms.ImeMode.Off;
-=======
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.receiptDetailslabel);
-            this.panel4.Controls.Add(this.dataGridReceiptDetails);
-            this.panel4.Location = new System.Drawing.Point(560, 220);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(423, 202);
-            this.panel4.TabIndex = 62;
+            this.panel5.AutoSize = true;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.dataGridReceiptDetails);
+            this.panel5.Location = new System.Drawing.Point(550, 311);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(607, 302);
+            this.panel5.TabIndex = 62;
             // 
-            // receiptDetailslabel
+            // label3
             // 
-            this.receiptDetailslabel.AutoSize = true;
-            this.receiptDetailslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receiptDetailslabel.ForeColor = System.Drawing.Color.Gold;
-            this.receiptDetailslabel.Location = new System.Drawing.Point(3, 4);
-            this.receiptDetailslabel.Name = "receiptDetailslabel";
-            this.receiptDetailslabel.Size = new System.Drawing.Size(206, 31);
-            this.receiptDetailslabel.TabIndex = 54;
-            this.receiptDetailslabel.Text = "Receipt Details:";
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gold;
+            this.label3.Location = new System.Drawing.Point(3, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(205, 25);
+            this.label3.TabIndex = 54;
+            this.label3.Text = "Receipt Details:";
             // 
             // dataGridReceiptDetails
             // 
@@ -518,25 +381,24 @@
             this.dataGridReceiptDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridReceiptDetails.BackgroundColor = System.Drawing.Color.IndianRed;
             this.dataGridReceiptDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridReceiptDetails.Location = new System.Drawing.Point(3, 38);
+            this.dataGridReceiptDetails.Location = new System.Drawing.Point(9, 38);
             this.dataGridReceiptDetails.Name = "dataGridReceiptDetails";
             this.dataGridReceiptDetails.ReadOnly = true;
             this.dataGridReceiptDetails.RowHeadersVisible = false;
-            this.dataGridReceiptDetails.RowHeadersWidth = 51;
-            this.dataGridReceiptDetails.Size = new System.Drawing.Size(415, 153);
+            this.dataGridReceiptDetails.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridReceiptDetails.Size = new System.Drawing.Size(593, 254);
             this.dataGridReceiptDetails.TabIndex = 59;
             // 
             // Collectibles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Firebrick;
-            this.ClientSize = new System.Drawing.Size(993, 433);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(1229, 624);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
->>>>>>> kmaaedits
+            this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Name = "Collectibles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Collectibles";
@@ -551,10 +413,8 @@
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-<<<<<<< HEAD
-=======
+            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridReceiptDetails)).EndInit();
->>>>>>> kmaaedits
             this.ResumeLayout(false);
 
         }
@@ -582,10 +442,9 @@
         private System.Windows.Forms.TextBox totalorderstextbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
-<<<<<<< HEAD
-=======
-        private System.Windows.Forms.Label receiptDetailslabel;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridReceiptDetails;
->>>>>>> kmaaedits
+        private System.Windows.Forms.Label receiptDetailslabel;
     }
 }

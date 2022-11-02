@@ -118,11 +118,7 @@
             this.ItemNum.MinimumWidth = 6;
             this.ItemNum.Name = "ItemNum";
             this.ItemNum.ReadOnly = true;
-<<<<<<< HEAD
-            this.ItemNum.Width = 62;
-=======
             this.ItemNum.Width = 60;
->>>>>>> kmaaedits
             // 
             // Qty
             // 
@@ -130,11 +126,7 @@
             this.Qty.HeaderText = "Qty";
             this.Qty.MinimumWidth = 6;
             this.Qty.Name = "Qty";
-<<<<<<< HEAD
-            this.Qty.Width = 48;
-=======
             this.Qty.Width = 46;
->>>>>>> kmaaedits
             // 
             // Unit
             // 
@@ -143,11 +135,7 @@
             this.Unit.MinimumWidth = 6;
             this.Unit.Name = "Unit";
             this.Unit.ReadOnly = true;
-<<<<<<< HEAD
-            this.Unit.Width = 51;
-=======
             this.Unit.Width = 49;
->>>>>>> kmaaedits
             // 
             // ItemName
             // 
@@ -156,11 +144,7 @@
             this.ItemName.MinimumWidth = 6;
             this.ItemName.Name = "ItemName";
             this.ItemName.ReadOnly = true;
-<<<<<<< HEAD
             this.ItemName.Width = 60;
-=======
-            this.ItemName.Width = 58;
->>>>>>> kmaaedits
             // 
             // Brand
             // 
@@ -169,11 +153,7 @@
             this.Brand.MinimumWidth = 6;
             this.Brand.Name = "Brand";
             this.Brand.ReadOnly = true;
-<<<<<<< HEAD
             this.Brand.Width = 60;
-=======
-            this.Brand.Width = 58;
->>>>>>> kmaaedits
             // 
             // SRP
             // 
@@ -199,11 +179,7 @@
             this.UnitPrice.HeaderText = "Unit Price";
             this.UnitPrice.MinimumWidth = 6;
             this.UnitPrice.Name = "UnitPrice";
-<<<<<<< HEAD
             this.UnitPrice.Width = 78;
-=======
-            this.UnitPrice.Width = 76;
->>>>>>> kmaaedits
             // 
             // SubTotal
             // 
@@ -212,11 +188,7 @@
             this.SubTotal.MinimumWidth = 6;
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.ReadOnly = true;
-<<<<<<< HEAD
             this.SubTotal.Width = 78;
-=======
-            this.SubTotal.Width = 76;
->>>>>>> kmaaedits
             // 
             // dataGridInventory
             // 
@@ -342,17 +314,10 @@
             this.receiptnumTextbox.BackColor = System.Drawing.Color.Maroon;
             this.receiptnumTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.receiptnumTextbox.ForeColor = System.Drawing.Color.Yellow;
-<<<<<<< HEAD
             this.receiptnumTextbox.Location = new System.Drawing.Point(0, 0);
             this.receiptnumTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.receiptnumTextbox.Name = "receiptnumTextbox";
             this.receiptnumTextbox.Size = new System.Drawing.Size(200, 29);
-=======
-            this.receiptnumTextbox.Location = new System.Drawing.Point(28, 31);
-            this.receiptnumTextbox.Margin = new System.Windows.Forms.Padding(4);
-            this.receiptnumTextbox.Name = "receiptnumTextbox";
-            this.receiptnumTextbox.Size = new System.Drawing.Size(147, 29);
->>>>>>> kmaaedits
             this.receiptnumTextbox.TabIndex = 43;
             this.receiptnumTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
