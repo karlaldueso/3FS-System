@@ -183,7 +183,6 @@ namespace _3FS_System
             dataGridView1.DataSource = itemRepository.GetItems_All();
             dataGridView2.DataSource = itemsLogsRepository.GetItemLogs_ByID(itemlogs.ItemID);
             dataGridView1.Columns["UpdatedDate"].Visible = false;
-            dataGridView2.Columns["UpdatedDate"].Visible = false;
             dataGridView1.AutoResizeColumns();
             dataGridView1.AutoResizeRows();
             dataGridView2.AutoResizeColumns();

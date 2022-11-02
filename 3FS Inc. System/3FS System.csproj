@@ -63,6 +63,7 @@
     <Compile Include="CustomerProfile.Designer.cs">
       <DependentUpon>CustomerProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ReceiptDetails_DisplayFormat.cs" />
     <Compile Include="splash.cs">
       <SubType>Form</SubType>
     </Compile>
