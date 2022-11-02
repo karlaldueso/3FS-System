@@ -18,6 +18,9 @@ namespace _3FS_System
         public Sales()
         {
             InitializeComponent();
+            _ = new DataAccess();
+            SalesRepository salesRepository = new SalesRepository();
+            totalSales.Text = String.Format("P{0:N2}", salesRepository.GetTotalSalesOfTheDay(DateTime.Today));
         }
 
         private void addItem_Click(object sender, EventArgs e)
@@ -103,7 +106,7 @@ namespace _3FS_System
 
         private void searchName_TextChanged(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
+            _ = new DataAccess();
             ItemRepository itemRepository = new ItemRepository();
             dataGridInventory.DataSource = itemRepository.GetItems_ByName(searchName.Text, searchBrandName.Text);
             dataGridInventory.Columns["UpdatedDate"].Visible = false;
@@ -112,7 +115,7 @@ namespace _3FS_System
 
         private void searchBrandName_TextChanged(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
+            _ = new DataAccess();
             ItemRepository itemRepository = new ItemRepository();
             dataGridInventory.DataSource = itemRepository.GetItems_ByName(searchName.Text, searchBrandName.Text);
             dataGridInventory.Columns["UpdatedDate"].Visible = false;
@@ -227,6 +230,8 @@ namespace _3FS_System
                             float credit = receipt.GrandTotal-receipt.AmountPaid;
                             customerRepository.UpdateCredit(customer, credit);
                         }
+
+                        totalSales.Text = String.Format("P{0:N2}", salesRepository.GetTotalSalesOfTheDay(DateTime.Today));
 
                         dataGridItems.Rows.Clear();
                         amountPaidTextbox.Clear();
@@ -343,6 +348,31 @@ namespace _3FS_System
                     }
                     grandtotalTextbox.Text = String.Format("{0:N2}", grandtot);
                 }
+            }
+        }
+
+        private void receiptsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCollection fc = Application.OpenForms;
+            bool bFormNameOpen = false;
+            foreach (Form frm in fc)
+            {
+                if (frm.Name == "Receipts")
+                {
+                    bFormNameOpen = true;
+                    frm.Focus();
+                    break;
+                }
+                else
+                {
+                    bFormNameOpen = false;
+                }
+            }
+            if (bFormNameOpen == false)
+            {
+                Receipts receipts = new Receipts();
+                receipts.MdiParent = this.ParentForm;
+                receipts.Show();
             }
         }
     }

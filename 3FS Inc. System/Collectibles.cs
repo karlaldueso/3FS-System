@@ -31,20 +31,8 @@ namespace _3FS_System
             dataGridCustomers.Columns["ContactNumber"].Visible = false;
             dataGridCustomers.Columns["Email"].Visible = false;
             dataGridCustomers.Columns["UpdatedDate"].Visible = false;
-
-            //System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            //dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            //dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            //dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            //dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            //dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            //dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            //dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            //this.dataGridCustomers.DefaultCellStyle = dataGridViewCellStyle1;
-
             dataGridCustomers.AutoResizeColumns();
             dataGridCustomers.AutoResizeRows();
-
         }
 
         private void dataGridCustomers_CellClick(object sender, DataGridViewCellEventArgs e)

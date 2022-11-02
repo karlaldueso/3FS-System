@@ -21,7 +21,18 @@ namespace _3FS_System.Repositories
                 return output;
             }
         }
-
+        public float GetTotalSalesOfTheDay(DateTime datetime)
+        {
+            object totalsales;
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
+            {
+                totalsales = connection.ExecuteScalar("dbo.spSales_TotalSalesForTheDay @Date", datetime);
+            }
+            if (totalsales!=null)
+                return (float)Convert.ToDouble(totalsales.ToString());
+            else
+                return 0;
+        }
         public bool Insert(Sale sale)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))

@@ -10,6 +10,8 @@ namespace _3FS_System.Repositories
     public interface ISalesRepository
     {
         IEnumerable<ReceiptDetails_DisplayFormat> GetSale_ByReceipt(string ReceiptNum);
+
+        float GetTotalSalesOfTheDay(DateTime datetime);
         bool Insert(Sale sale);
         bool Update(Sale sale);
         bool Delete(Sale sale);

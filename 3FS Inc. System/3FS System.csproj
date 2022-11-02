@@ -64,6 +64,13 @@
       <DependentUpon>CustomerProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ReceiptDetails_DisplayFormat.cs" />
+    <Compile Include="Models\Receipt_PerDay.cs" />
+    <Compile Include="Receipts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receipts.Designer.cs">
+      <DependentUpon>Receipts.cs</DependentUpon>
+    </Compile>
     <Compile Include="splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerProfile.resx">
       <DependentUpon>CustomerProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receipts.resx">
+      <DependentUpon>Receipts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.cs</DependentUpon>

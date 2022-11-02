@@ -27,9 +27,14 @@ namespace _3FS_System.Repositories
             }
         }
 
-        public IEnumerable<Receipt> GetReceipt_ByDate(DateTime TransactionDate)
+        public IEnumerable<Receipt_PerDay> GetReceipt_ByDate(DateTime TransactionDate)
         {
-            throw new NotImplementedException();
+            string qry = string.Format("dbo.spReceipts_GetByDate @Date='{0}'", TransactionDate);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
+            {
+                var output = connection.Query<Receipt_PerDay>(qry);
+                return output;
+            }
         }
 
         public bool Insert(Receipt receipt)
