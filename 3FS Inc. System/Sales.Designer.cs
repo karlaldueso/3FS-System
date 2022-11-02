@@ -61,9 +61,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInventory)).BeginInit();
             this.searchpanel.SuspendLayout();
@@ -80,6 +80,8 @@
             this.dataGridItems.AllowUserToDeleteRows = false;
             this.dataGridItems.AllowUserToResizeColumns = false;
             this.dataGridItems.AllowUserToResizeRows = false;
+            this.dataGridItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridItems.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridItems.BackgroundColor = System.Drawing.Color.IndianRed;
             this.dataGridItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -109,7 +111,6 @@
             this.ItemID.Name = "ItemID";
             this.ItemID.ReadOnly = true;
             this.ItemID.Visible = false;
-            this.ItemID.Width = 125;
             // 
             // ItemNum
             // 
@@ -144,7 +145,7 @@
             this.ItemName.MinimumWidth = 6;
             this.ItemName.Name = "ItemName";
             this.ItemName.ReadOnly = true;
-            this.ItemName.Width = 60;
+            this.ItemName.Width = 58;
             // 
             // Brand
             // 
@@ -153,7 +154,7 @@
             this.Brand.MinimumWidth = 6;
             this.Brand.Name = "Brand";
             this.Brand.ReadOnly = true;
-            this.Brand.Width = 60;
+            this.Brand.Width = 58;
             // 
             // SRP
             // 
@@ -162,7 +163,6 @@
             this.SRP.Name = "SRP";
             this.SRP.ReadOnly = true;
             this.SRP.Visible = false;
-            this.SRP.Width = 125;
             // 
             // Capital
             // 
@@ -171,7 +171,6 @@
             this.Capital.Name = "Capital";
             this.Capital.ReadOnly = true;
             this.Capital.Visible = false;
-            this.Capital.Width = 125;
             // 
             // UnitPrice
             // 
@@ -179,7 +178,7 @@
             this.UnitPrice.HeaderText = "Unit Price";
             this.UnitPrice.MinimumWidth = 6;
             this.UnitPrice.Name = "UnitPrice";
-            this.UnitPrice.Width = 78;
+            this.UnitPrice.Width = 76;
             // 
             // SubTotal
             // 
@@ -188,7 +187,7 @@
             this.SubTotal.MinimumWidth = 6;
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.ReadOnly = true;
-            this.SubTotal.Width = 78;
+            this.SubTotal.Width = 76;
             // 
             // dataGridInventory
             // 
@@ -478,6 +477,18 @@
             this.panel3.Size = new System.Drawing.Size(286, 248);
             this.panel3.TabIndex = 57;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.Gold;
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Maroon;
+            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Gold;
+            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(284, 26);
+            this.dateTimePicker1.TabIndex = 53;
+            // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -501,18 +512,6 @@
             this.label1.Size = new System.Drawing.Size(118, 29);
             this.label1.TabIndex = 55;
             this.label1.Text = "Inventory";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.Gold;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Maroon;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Gold;
-            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(284, 26);
-            this.dateTimePicker1.TabIndex = 53;
             // 
             // Sales
             // 

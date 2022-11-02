@@ -31,7 +31,51 @@ namespace _3FS_System
 
 
         }
- 
+        private void Main_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                MaximumSize = new Size(screenWidth, screenHeight);
+                this.WindowState = FormWindowState.Maximized;
+                int newval = panel1.Height + 4;
+                newval /= 5;
+                int buttonheight = newval;
+                customers_button.Height = buttonheight;
+                customerProfile.Height = buttonheight;
+                sales_button.Height = buttonheight;
+                Inventory_new.Height = buttonheight;
+                users.Height = buttonheight;
+                this.BackgroundImage = null;
+                // string myfile = System.Reflection.Assembly.GetExecutingAssembly().Location + "hardware_logo transparent.png";
+                this.BackgroundImage = Properties.Resources.hardware_logo_transparent;
+
+                this.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+            else if (this.WindowState == FormWindowState.Normal)
+            {
+                this.Height = 650;
+                this.Width = 1200;
+                int newval = panel1.Height + 4;
+                newval /= 5;
+                int buttonheight = newval;
+                customers_button.Height = buttonheight;
+                customerProfile.Height = buttonheight;
+                sales_button.Height = buttonheight;
+                Inventory_new.Height = buttonheight;
+                users.Height = buttonheight;
+                this.BackgroundImage = null;
+
+                this.BackgroundImage = Properties.Resources.hardware_logo_transparent;
+                //Console.WriteLine(nheight);
+                this.WindowState = FormWindowState.Normal;
+                this.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+            else
+            {
+
+            }
+        }
+
         private void inventory_button_Click(object sender, EventArgs e)
         {
             
@@ -204,50 +248,7 @@ namespace _3FS_System
 
        
 
-        private void Main_Resize(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                MaximumSize = new Size(screenWidth, screenHeight);
-                this.WindowState = FormWindowState.Maximized;
-                int newval = panel1.Height+4;
-                newval /= 5;
-                int buttonheight = newval;
-                customers_button.Height = buttonheight;
-                customerProfile.Height = buttonheight;
-                sales_button.Height = buttonheight;
-                Inventory_new.Height = buttonheight;
-                users.Height = buttonheight;
-                this.BackgroundImage = null;
-                // string myfile = System.Reflection.Assembly.GetExecutingAssembly().Location + "hardware_logo transparent.png";
-                this.BackgroundImage = Properties.Resources.hardware_logo_transparent;
-
-                this.BackgroundImageLayout = ImageLayout.Zoom;
-            }
-            else if (this.WindowState == FormWindowState.Normal)
-            {
-                this.Height = 650;
-                this.Width = 1200;
-                int newval = panel1.Height + 4;
-                newval /= 5;
-                int buttonheight = newval;
-                customers_button.Height = buttonheight;
-                customerProfile.Height = buttonheight;
-                sales_button.Height = buttonheight;
-                Inventory_new.Height = buttonheight;
-                users.Height = buttonheight;
-                this.BackgroundImage = null;
-
-                this.BackgroundImage = Properties.Resources.hardware_logo_transparent;
-                //Console.WriteLine(nheight);
-                this.WindowState = FormWindowState.Normal;
-                this.BackgroundImageLayout = ImageLayout.Zoom;
-            }
-            else
-            {
-
-            }
-        }
+        
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {

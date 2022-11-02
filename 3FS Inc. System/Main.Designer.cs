@@ -34,6 +34,7 @@
             this.users = new System.Windows.Forms.Button();
             this.customerProfile = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Inventory_new = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,11 +45,10 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backgroundColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backgroundColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Inventory_new = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -132,11 +132,25 @@
             this.panel1.Controls.Add(this.customers_button);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 35);
-            this.panel1.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.panel1.Margin = new System.Windows.Forms.Padding(9);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(227, 740);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // Inventory_new
+            // 
+            this.Inventory_new.AutoSize = true;
+            this.Inventory_new.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Inventory_new.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inventory_new.Location = new System.Drawing.Point(0, 598);
+            this.Inventory_new.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.Inventory_new.Name = "Inventory_new";
+            this.Inventory_new.Size = new System.Drawing.Size(227, 142);
+            this.Inventory_new.TabIndex = 5;
+            this.Inventory_new.Text = "Inventory";
+            this.Inventory_new.UseVisualStyleBackColor = true;
+            this.Inventory_new.Click += new System.EventHandler(this.Inventory_new_Click);
             // 
             // menuStrip1
             // 
@@ -171,38 +185,38 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(136, 28);
             this.newToolStripMenuItem.Text = "&New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(136, 28);
             this.openToolStripMenuItem.Text = "&Open";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(136, 28);
             this.saveToolStripMenuItem.Text = "&Save";
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(136, 28);
             this.saveAsToolStripMenuItem.Text = "Save as";
             // 
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(136, 28);
             this.printToolStripMenuItem.Text = "&Print";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(136, 28);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // editToolStripMenuItem
@@ -218,6 +232,12 @@
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(58, 27);
             this.viewToolStripMenuItem.Text = "&View";
+            // 
+            // backgroundColorToolStripMenuItem
+            // 
+            this.backgroundColorToolStripMenuItem.Name = "backgroundColorToolStripMenuItem";
+            this.backgroundColorToolStripMenuItem.Size = new System.Drawing.Size(217, 28);
+            this.backgroundColorToolStripMenuItem.Text = "Background Color";
             // 
             // toolsToolStripMenuItem
             // 
@@ -237,26 +257,6 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(57, 27);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
-            // backgroundColorToolStripMenuItem
-            // 
-            this.backgroundColorToolStripMenuItem.Name = "backgroundColorToolStripMenuItem";
-            this.backgroundColorToolStripMenuItem.Size = new System.Drawing.Size(217, 28);
-            this.backgroundColorToolStripMenuItem.Text = "Background Color";
-            // 
-            // Inventory_new
-            // 
-            this.Inventory_new.AutoSize = true;
-            this.Inventory_new.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Inventory_new.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Inventory_new.Location = new System.Drawing.Point(0, 598);
-            this.Inventory_new.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.Inventory_new.Name = "Inventory_new";
-            this.Inventory_new.Size = new System.Drawing.Size(227, 142);
-            this.Inventory_new.TabIndex = 5;
-            this.Inventory_new.Text = "Inventory";
-            this.Inventory_new.UseVisualStyleBackColor = true;
-            this.Inventory_new.Click += new System.EventHandler(this.Inventory_new_Click);
-            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -268,7 +268,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
