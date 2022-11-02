@@ -12,9 +12,14 @@ namespace _3FS_System.Repositories
 {
     internal class SalesRepository : ISalesRepository
     {
-        public IEnumerable<Sale> GetSale_ByReceipt(string ReceiptNum)
+        public IEnumerable<ReceiptDetails_DisplayFormat> GetSale_ByReceipt(string ReceiptNum)
         {
-            throw new NotImplementedException();
+            string qry = string.Format("dbo.spSales_GetByReceipt @ReceiptNum={0}", ReceiptNum);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
+            {
+                var output = connection.Query<ReceiptDetails_DisplayFormat>(qry);
+                return output;
+            }
         }
 
         public bool Insert(Sale sale)

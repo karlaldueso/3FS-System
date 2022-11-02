@@ -27,7 +27,7 @@ namespace _3FS_System
             usersDataGrid.DataSource = userRepository.GetUsers_All();
             usersDataGrid.Columns["UpdatedDate"].Visible = false;
             usersDataGrid.Columns["UserID"].Visible = false;
-            //usersDataGrid.Columns["PW"].Visible = false;
+            usersDataGrid.Columns["PW"].Visible = false;
             usersDataGrid.AutoResizeColumns();
             usersDataGrid.AutoResizeRows();
 
@@ -61,7 +61,7 @@ namespace _3FS_System
                     usersDataGrid.DataSource = userRepository.GetUsers_All();
                     usersDataGrid.Columns["UpdatedDate"].Visible = false;
                     usersDataGrid.Columns["UserID"].Visible = false;
-                    //usersDataGrid.Columns["PW"].Visible = false;
+                    usersDataGrid.Columns["PW"].Visible = false;
                     usersDataGrid.AutoResizeColumns();
                     usersDataGrid.AutoResizeRows();
 

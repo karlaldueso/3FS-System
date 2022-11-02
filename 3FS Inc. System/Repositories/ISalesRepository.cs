@@ -9,7 +9,7 @@ namespace _3FS_System.Repositories
 {
     public interface ISalesRepository
     {
-        IEnumerable<Sale> GetSale_ByReceipt(string ReceiptNum);
+        IEnumerable<ReceiptDetails_DisplayFormat> GetSale_ByReceipt(string ReceiptNum);
         bool Insert(Sale sale);
         bool Update(Sale sale);
         bool Delete(Sale sale);

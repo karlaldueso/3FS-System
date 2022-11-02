@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dataGridItems = new System.Windows.Forms.DataGridView();
             this.ItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,8 +56,6 @@
             this.dataGridCustomers = new System.Windows.Forms.DataGridView();
             this.customerLabel = new System.Windows.Forms.Label();
             this.searchCustomerTextbox = new System.Windows.Forms.TextBox();
-            this.datetimeLabel = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.amountPaidTextbox = new System.Windows.Forms.TextBox();
             this.amountPaid = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -66,6 +63,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInventory)).BeginInit();
             this.searchpanel.SuspendLayout();
@@ -120,7 +118,11 @@
             this.ItemNum.MinimumWidth = 6;
             this.ItemNum.Name = "ItemNum";
             this.ItemNum.ReadOnly = true;
+<<<<<<< HEAD
             this.ItemNum.Width = 62;
+=======
+            this.ItemNum.Width = 60;
+>>>>>>> kmaaedits
             // 
             // Qty
             // 
@@ -128,7 +130,11 @@
             this.Qty.HeaderText = "Qty";
             this.Qty.MinimumWidth = 6;
             this.Qty.Name = "Qty";
+<<<<<<< HEAD
             this.Qty.Width = 48;
+=======
+            this.Qty.Width = 46;
+>>>>>>> kmaaedits
             // 
             // Unit
             // 
@@ -137,7 +143,11 @@
             this.Unit.MinimumWidth = 6;
             this.Unit.Name = "Unit";
             this.Unit.ReadOnly = true;
+<<<<<<< HEAD
             this.Unit.Width = 51;
+=======
+            this.Unit.Width = 49;
+>>>>>>> kmaaedits
             // 
             // ItemName
             // 
@@ -146,7 +156,11 @@
             this.ItemName.MinimumWidth = 6;
             this.ItemName.Name = "ItemName";
             this.ItemName.ReadOnly = true;
+<<<<<<< HEAD
             this.ItemName.Width = 60;
+=======
+            this.ItemName.Width = 58;
+>>>>>>> kmaaedits
             // 
             // Brand
             // 
@@ -155,7 +169,11 @@
             this.Brand.MinimumWidth = 6;
             this.Brand.Name = "Brand";
             this.Brand.ReadOnly = true;
+<<<<<<< HEAD
             this.Brand.Width = 60;
+=======
+            this.Brand.Width = 58;
+>>>>>>> kmaaedits
             // 
             // SRP
             // 
@@ -181,7 +199,11 @@
             this.UnitPrice.HeaderText = "Unit Price";
             this.UnitPrice.MinimumWidth = 6;
             this.UnitPrice.Name = "UnitPrice";
+<<<<<<< HEAD
             this.UnitPrice.Width = 78;
+=======
+            this.UnitPrice.Width = 76;
+>>>>>>> kmaaedits
             // 
             // SubTotal
             // 
@@ -190,7 +212,11 @@
             this.SubTotal.MinimumWidth = 6;
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.ReadOnly = true;
+<<<<<<< HEAD
             this.SubTotal.Width = 78;
+=======
+            this.SubTotal.Width = 76;
+>>>>>>> kmaaedits
             // 
             // dataGridInventory
             // 
@@ -209,6 +235,7 @@
             this.dataGridInventory.RowHeadersWidth = 51;
             this.dataGridInventory.Size = new System.Drawing.Size(803, 122);
             this.dataGridInventory.TabIndex = 1;
+            this.dataGridInventory.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridInventory_CellContentDoubleClick);
             // 
             // searchpanel
             // 
@@ -313,13 +340,19 @@
             // receiptnumTextbox
             // 
             this.receiptnumTextbox.BackColor = System.Drawing.Color.Maroon;
-            this.receiptnumTextbox.Dock = System.Windows.Forms.DockStyle.Top;
             this.receiptnumTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.receiptnumTextbox.ForeColor = System.Drawing.Color.Yellow;
+<<<<<<< HEAD
             this.receiptnumTextbox.Location = new System.Drawing.Point(0, 0);
             this.receiptnumTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.receiptnumTextbox.Name = "receiptnumTextbox";
             this.receiptnumTextbox.Size = new System.Drawing.Size(200, 29);
+=======
+            this.receiptnumTextbox.Location = new System.Drawing.Point(28, 31);
+            this.receiptnumTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.receiptnumTextbox.Name = "receiptnumTextbox";
+            this.receiptnumTextbox.Size = new System.Drawing.Size(147, 29);
+>>>>>>> kmaaedits
             this.receiptnumTextbox.TabIndex = 43;
             this.receiptnumTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -328,7 +361,7 @@
             this.receiptLabel.AutoSize = true;
             this.receiptLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.receiptLabel.ForeColor = System.Drawing.Color.Gold;
-            this.receiptLabel.Location = new System.Drawing.Point(41, 0);
+            this.receiptLabel.Location = new System.Drawing.Point(23, 4);
             this.receiptLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.receiptLabel.Name = "receiptLabel";
             this.receiptLabel.Size = new System.Drawing.Size(91, 20);
@@ -415,23 +448,6 @@
             this.searchCustomerTextbox.TabIndex = 51;
             this.searchCustomerTextbox.TextChanged += new System.EventHandler(this.searchCustomerTextbox_TextChanged);
             // 
-            // datetimeLabel
-            // 
-            this.datetimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetimeLabel.ForeColor = System.Drawing.Color.Gold;
-            this.datetimeLabel.Location = new System.Drawing.Point(8, 5);
-            this.datetimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.datetimeLabel.Name = "datetimeLabel";
-            this.datetimeLabel.Size = new System.Drawing.Size(261, 23);
-            this.datetimeLabel.TabIndex = 52;
-            this.datetimeLabel.Text = "datetimenow";
-            this.datetimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // amountPaidTextbox
             // 
             this.amountPaidTextbox.BackColor = System.Drawing.Color.Maroon;
@@ -487,10 +503,10 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Controls.Add(this.searchCustomerTextbox);
             this.panel3.Controls.Add(this.dataGridCustomers);
             this.panel3.Controls.Add(this.customerLabel);
-            this.panel3.Controls.Add(this.datetimeLabel);
             this.panel3.Location = new System.Drawing.Point(16, 28);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
@@ -520,6 +536,18 @@
             this.label1.Size = new System.Drawing.Size(118, 29);
             this.label1.TabIndex = 55;
             this.label1.Text = "Inventory";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.Gold;
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Maroon;
+            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Gold;
+            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(284, 26);
+            this.dateTimePicker1.TabIndex = 53;
             // 
             // Sales
             // 
@@ -586,8 +614,6 @@
         private System.Windows.Forms.DataGridView dataGridCustomers;
         private System.Windows.Forms.Label customerLabel;
         private System.Windows.Forms.TextBox searchCustomerTextbox;
-        private System.Windows.Forms.Label datetimeLabel;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TextBox amountPaidTextbox;
         private System.Windows.Forms.Label amountPaid;
         private System.Windows.Forms.Panel panel1;
@@ -595,5 +621,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

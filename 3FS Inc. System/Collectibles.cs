@@ -46,7 +46,7 @@ namespace _3FS_System
                 float totalpayment = 0;
                 float totalcredit = 0;
 
-                remainingtextbox.Text = dataGridCustomers.Rows[c_r[1]].Cells[6].Value.ToString();
+                remainingtextbox.Text = String.Format("P{0:N2}", dataGridCustomers.Rows[c_r[1]].Cells[6].Value);
 
                 ReceiptRepository receiptRepository = new ReceiptRepository();
                 dataGridReceipts.DataSource = receiptRepository.GetReceipt_ByCustomerID(CustomerID);
@@ -59,7 +59,7 @@ namespace _3FS_System
                     {
                         totalcredit += (float)Convert.ToDouble(dataGridReceipts.Rows[i].Cells[4].Value) - (float)Convert.ToDouble(dataGridReceipts.Rows[i].Cells[3].Value);
                     }
-                    totalorderstextbox.Text = String.Format("{0}", totalcredit.ToString());
+                    totalorderstextbox.Text = String.Format("P{0:N2}", totalcredit);
                 }
                 else
                 {
@@ -79,7 +79,7 @@ namespace _3FS_System
                     {
                         totalpayment += (float)Convert.ToDouble(dataCollectiblesLog.Rows[i].Cells[3].Value);
                     }
-                    totalpaymentstextbox.Text = String.Format("{0}", totalpayment.ToString());
+                    totalpaymentstextbox.Text = String.Format("P{0:N2}", totalpayment);
                 }
                 else
                 {
@@ -141,7 +141,7 @@ namespace _3FS_System
                             {
                                 totalpayment += (float)Convert.ToDouble(dataCollectiblesLog.Rows[i].Cells[3].Value);
                             }
-                            totalpaymentstextbox.Text = String.Format("{0}", totalpayment.ToString());
+                            totalpaymentstextbox.Text = String.Format("P{0:N2}", totalpayment);
                         }
                         else
                         {
@@ -155,7 +155,7 @@ namespace _3FS_System
                         dataGridCustomers.Columns["UpdatedDate"].Visible = false;
                         dataGridCustomers.AutoResizeColumns();
 
-                        remainingtextbox.Text = dataGridCustomers.Rows[c_r[1]].Cells[5].Value.ToString();
+                        remainingtextbox.Text = String.Format("P{0:N2}", dataGridCustomers.Rows[c_r[1]].Cells[6].Value);
 
                         amountText.Clear();
                     }
@@ -168,6 +168,27 @@ namespace _3FS_System
                 {
                     MessageBox.Show("Please enter numbers only!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void dataGridReceipts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dataGridReceipts_SelectionChanged(object sender, EventArgs e)
+        {
+            _ = new DataAccess();
+            var val = dataGridReceipts.CurrentCell.Value;
+            if (val != null)
+            {
+                int[] c_r = { dataGridReceipts.CurrentCellAddress.X, dataGridReceipts.CurrentCellAddress.Y };
+                string ReceiptNum = dataGridReceipts.Rows[c_r[1]].Cells[1].Value.ToString();
+
+                SalesRepository salesRepository = new SalesRepository();
+                dataGridReceiptDetails.DataSource = salesRepository.GetSale_ByReceipt(ReceiptNum);
+                dataGridReceiptDetails.AutoResizeColumns();
+                dataGridReceiptDetails.AutoResizeRows();
             }
         }
     }
