@@ -96,7 +96,7 @@
             this.UnitPrice,
             this.SubTotal});
             this.dataGridItems.Location = new System.Drawing.Point(4, 4);
-            this.dataGridItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridItems.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridItems.Name = "dataGridItems";
             this.dataGridItems.RowHeadersVisible = false;
             this.dataGridItems.RowHeadersWidth = 51;
@@ -120,7 +120,7 @@
             this.ItemNum.MinimumWidth = 6;
             this.ItemNum.Name = "ItemNum";
             this.ItemNum.ReadOnly = true;
-            this.ItemNum.Width = 71;
+            this.ItemNum.Width = 62;
             // 
             // Qty
             // 
@@ -128,7 +128,7 @@
             this.Qty.HeaderText = "Qty";
             this.Qty.MinimumWidth = 6;
             this.Qty.Name = "Qty";
-            this.Qty.Width = 56;
+            this.Qty.Width = 48;
             // 
             // Unit
             // 
@@ -137,7 +137,7 @@
             this.Unit.MinimumWidth = 6;
             this.Unit.Name = "Unit";
             this.Unit.ReadOnly = true;
-            this.Unit.Width = 59;
+            this.Unit.Width = 51;
             // 
             // ItemName
             // 
@@ -146,7 +146,7 @@
             this.ItemName.MinimumWidth = 6;
             this.ItemName.Name = "ItemName";
             this.ItemName.ReadOnly = true;
-            this.ItemName.Width = 73;
+            this.ItemName.Width = 60;
             // 
             // Brand
             // 
@@ -155,7 +155,7 @@
             this.Brand.MinimumWidth = 6;
             this.Brand.Name = "Brand";
             this.Brand.ReadOnly = true;
-            this.Brand.Width = 72;
+            this.Brand.Width = 60;
             // 
             // SRP
             // 
@@ -181,7 +181,7 @@
             this.UnitPrice.HeaderText = "Unit Price";
             this.UnitPrice.MinimumWidth = 6;
             this.UnitPrice.Name = "UnitPrice";
-            this.UnitPrice.Width = 93;
+            this.UnitPrice.Width = 78;
             // 
             // SubTotal
             // 
@@ -190,7 +190,7 @@
             this.SubTotal.MinimumWidth = 6;
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.ReadOnly = true;
-            this.SubTotal.Width = 94;
+            this.SubTotal.Width = 78;
             // 
             // dataGridInventory
             // 
@@ -202,7 +202,7 @@
             this.dataGridInventory.BackgroundColor = System.Drawing.Color.IndianRed;
             this.dataGridInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridInventory.Location = new System.Drawing.Point(276, 50);
-            this.dataGridInventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridInventory.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridInventory.Name = "dataGridInventory";
             this.dataGridInventory.ReadOnly = true;
             this.dataGridInventory.RowHeadersVisible = false;
@@ -220,7 +220,7 @@
             this.searchpanel.Controls.Add(this.label11);
             this.searchpanel.Controls.Add(this.brandlabel);
             this.searchpanel.Location = new System.Drawing.Point(7, 50);
-            this.searchpanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchpanel.Margin = new System.Windows.Forms.Padding(4);
             this.searchpanel.Name = "searchpanel";
             this.searchpanel.Size = new System.Drawing.Size(261, 121);
             this.searchpanel.TabIndex = 39;
@@ -230,9 +230,9 @@
             this.searchName.BackColor = System.Drawing.Color.Maroon;
             this.searchName.ForeColor = System.Drawing.Color.Yellow;
             this.searchName.Location = new System.Drawing.Point(107, 46);
-            this.searchName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchName.Margin = new System.Windows.Forms.Padding(4);
             this.searchName.Name = "searchName";
-            this.searchName.Size = new System.Drawing.Size(132, 22);
+            this.searchName.Size = new System.Drawing.Size(132, 20);
             this.searchName.TabIndex = 28;
             this.searchName.TextChanged += new System.EventHandler(this.searchName_TextChanged);
             // 
@@ -243,7 +243,7 @@
             this.namesearchlabel.Location = new System.Drawing.Point(48, 49);
             this.namesearchlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.namesearchlabel.Name = "namesearchlabel";
-            this.namesearchlabel.Size = new System.Drawing.Size(47, 16);
+            this.namesearchlabel.Size = new System.Drawing.Size(38, 13);
             this.namesearchlabel.TabIndex = 29;
             this.namesearchlabel.Text = "Name:";
             // 
@@ -252,9 +252,9 @@
             this.searchBrandName.BackColor = System.Drawing.Color.Maroon;
             this.searchBrandName.ForeColor = System.Drawing.Color.Yellow;
             this.searchBrandName.Location = new System.Drawing.Point(107, 78);
-            this.searchBrandName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchBrandName.Margin = new System.Windows.Forms.Padding(4);
             this.searchBrandName.Name = "searchBrandName";
-            this.searchBrandName.Size = new System.Drawing.Size(132, 22);
+            this.searchBrandName.Size = new System.Drawing.Size(132, 20);
             this.searchBrandName.TabIndex = 30;
             this.searchBrandName.TextChanged += new System.EventHandler(this.searchBrandName_TextChanged);
             // 
@@ -266,7 +266,7 @@
             this.label11.Location = new System.Drawing.Point(9, 12);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(95, 29);
+            this.label11.Size = new System.Drawing.Size(76, 24);
             this.label11.TabIndex = 32;
             this.label11.Text = "Search";
             // 
@@ -277,7 +277,7 @@
             this.brandlabel.Location = new System.Drawing.Point(11, 81);
             this.brandlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.brandlabel.Name = "brandlabel";
-            this.brandlabel.Size = new System.Drawing.Size(86, 16);
+            this.brandlabel.Size = new System.Drawing.Size(69, 13);
             this.brandlabel.TabIndex = 31;
             this.brandlabel.Text = "Brand Name:";
             // 
@@ -287,7 +287,7 @@
             this.addItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addItem.ForeColor = System.Drawing.Color.Gold;
             this.addItem.Location = new System.Drawing.Point(4, 203);
-            this.addItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addItem.Margin = new System.Windows.Forms.Padding(4);
             this.addItem.Name = "addItem";
             this.addItem.Size = new System.Drawing.Size(109, 36);
             this.addItem.TabIndex = 33;
@@ -302,7 +302,7 @@
             this.doneButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.doneButton.ForeColor = System.Drawing.Color.Gold;
             this.doneButton.Location = new System.Drawing.Point(27, 192);
-            this.doneButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.doneButton.Margin = new System.Windows.Forms.Padding(4);
             this.doneButton.Name = "doneButton";
             this.doneButton.Size = new System.Drawing.Size(149, 34);
             this.doneButton.TabIndex = 42;
@@ -317,9 +317,9 @@
             this.receiptnumTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.receiptnumTextbox.ForeColor = System.Drawing.Color.Yellow;
             this.receiptnumTextbox.Location = new System.Drawing.Point(0, 0);
-            this.receiptnumTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.receiptnumTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.receiptnumTextbox.Name = "receiptnumTextbox";
-            this.receiptnumTextbox.Size = new System.Drawing.Size(200, 34);
+            this.receiptnumTextbox.Size = new System.Drawing.Size(200, 29);
             this.receiptnumTextbox.TabIndex = 43;
             this.receiptnumTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -331,7 +331,7 @@
             this.receiptLabel.Location = new System.Drawing.Point(41, 0);
             this.receiptLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.receiptLabel.Name = "receiptLabel";
-            this.receiptLabel.Size = new System.Drawing.Size(109, 25);
+            this.receiptLabel.Size = new System.Drawing.Size(91, 20);
             this.receiptLabel.TabIndex = 44;
             this.receiptLabel.Text = "Receipt #:";
             // 
@@ -341,10 +341,10 @@
             this.grandtotalTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grandtotalTextbox.ForeColor = System.Drawing.Color.Yellow;
             this.grandtotalTextbox.Location = new System.Drawing.Point(403, 203);
-            this.grandtotalTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grandtotalTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.grandtotalTextbox.Name = "grandtotalTextbox";
             this.grandtotalTextbox.ReadOnly = true;
-            this.grandtotalTextbox.Size = new System.Drawing.Size(168, 34);
+            this.grandtotalTextbox.Size = new System.Drawing.Size(168, 29);
             this.grandtotalTextbox.TabIndex = 45;
             this.grandtotalTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -356,7 +356,7 @@
             this.grandtotalLabel.Location = new System.Drawing.Point(249, 209);
             this.grandtotalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.grandtotalLabel.Name = "grandtotalLabel";
-            this.grandtotalLabel.Size = new System.Drawing.Size(133, 25);
+            this.grandtotalLabel.Size = new System.Drawing.Size(109, 20);
             this.grandtotalLabel.TabIndex = 46;
             this.grandtotalLabel.Text = "Grand Total:";
             // 
@@ -367,7 +367,7 @@
             this.removeitemButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.removeitemButton.ForeColor = System.Drawing.Color.Gold;
             this.removeitemButton.Location = new System.Drawing.Point(132, 203);
-            this.removeitemButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.removeitemButton.Margin = new System.Windows.Forms.Padding(4);
             this.removeitemButton.Name = "removeitemButton";
             this.removeitemButton.Size = new System.Drawing.Size(109, 36);
             this.removeitemButton.TabIndex = 47;
@@ -384,7 +384,7 @@
             this.dataGridCustomers.BackgroundColor = System.Drawing.Color.IndianRed;
             this.dataGridCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCustomers.Location = new System.Drawing.Point(12, 75);
-            this.dataGridCustomers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridCustomers.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridCustomers.Name = "dataGridCustomers";
             this.dataGridCustomers.ReadOnly = true;
             this.dataGridCustomers.RowHeadersVisible = false;
@@ -399,7 +399,7 @@
             this.customerLabel.Location = new System.Drawing.Point(4, 42);
             this.customerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.customerLabel.Name = "customerLabel";
-            this.customerLabel.Size = new System.Drawing.Size(67, 16);
+            this.customerLabel.Size = new System.Drawing.Size(54, 13);
             this.customerLabel.TabIndex = 50;
             this.customerLabel.Text = "Customer:";
             // 
@@ -409,9 +409,9 @@
             this.searchCustomerTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.searchCustomerTextbox.ForeColor = System.Drawing.Color.Yellow;
             this.searchCustomerTextbox.Location = new System.Drawing.Point(80, 32);
-            this.searchCustomerTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchCustomerTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.searchCustomerTextbox.Name = "searchCustomerTextbox";
-            this.searchCustomerTextbox.Size = new System.Drawing.Size(188, 34);
+            this.searchCustomerTextbox.Size = new System.Drawing.Size(188, 29);
             this.searchCustomerTextbox.TabIndex = 51;
             this.searchCustomerTextbox.TextChanged += new System.EventHandler(this.searchCustomerTextbox_TextChanged);
             // 
@@ -438,9 +438,9 @@
             this.amountPaidTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.amountPaidTextbox.ForeColor = System.Drawing.Color.Yellow;
             this.amountPaidTextbox.Location = new System.Drawing.Point(27, 149);
-            this.amountPaidTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.amountPaidTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.amountPaidTextbox.Name = "amountPaidTextbox";
-            this.amountPaidTextbox.Size = new System.Drawing.Size(148, 34);
+            this.amountPaidTextbox.Size = new System.Drawing.Size(148, 29);
             this.amountPaidTextbox.TabIndex = 53;
             this.amountPaidTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -452,7 +452,7 @@
             this.amountPaid.Location = new System.Drawing.Point(24, 121);
             this.amountPaid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.amountPaid.Name = "amountPaid";
-            this.amountPaid.Size = new System.Drawing.Size(142, 25);
+            this.amountPaid.Size = new System.Drawing.Size(116, 20);
             this.amountPaid.TabIndex = 54;
             this.amountPaid.Text = "Amount Paid:";
             // 
@@ -465,7 +465,7 @@
             this.panel1.Controls.Add(this.removeitemButton);
             this.panel1.Controls.Add(this.grandtotalLabel);
             this.panel1.Location = new System.Drawing.Point(311, 28);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(581, 248);
             this.panel1.TabIndex = 55;
@@ -479,7 +479,7 @@
             this.panel2.Controls.Add(this.receiptnumTextbox);
             this.panel2.Controls.Add(this.amountPaid);
             this.panel2.Location = new System.Drawing.Point(900, 28);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(202, 248);
             this.panel2.TabIndex = 56;
@@ -492,7 +492,7 @@
             this.panel3.Controls.Add(this.customerLabel);
             this.panel3.Controls.Add(this.datetimeLabel);
             this.panel3.Location = new System.Drawing.Point(16, 28);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(286, 248);
             this.panel3.TabIndex = 57;
@@ -504,7 +504,7 @@
             this.panel4.Controls.Add(this.dataGridInventory);
             this.panel4.Controls.Add(this.searchpanel);
             this.panel4.Location = new System.Drawing.Point(16, 284);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1086, 182);
             this.panel4.TabIndex = 58;
@@ -517,21 +517,23 @@
             this.label1.Location = new System.Drawing.Point(464, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 36);
+            this.label1.Size = new System.Drawing.Size(118, 29);
             this.label1.TabIndex = 55;
             this.label1.Text = "Inventory";
             // 
             // Sales
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.Firebrick;
             this.ClientSize = new System.Drawing.Size(1121, 481);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Sales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;

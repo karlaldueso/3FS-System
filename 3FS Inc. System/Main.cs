@@ -36,28 +36,28 @@ namespace _3FS_System
         {
             
             
-            FormCollection fc = Application.OpenForms;
-            bool bFormNameOpen = false;
-            foreach (Form frm in fc)
-            {
-                if (frm.Name == "Inventory")
-                {
-                    bFormNameOpen = true;
-                    frm.Focus();
-                    break;
-                }
-                else
-                {
-                    bFormNameOpen = false;
-                }
-            }
-            if(bFormNameOpen == false)
-            {
-                Inventory invtry = new Inventory();
-                invtry.MdiParent = this;
+            //FormCollection fc = Application.OpenForms;
+            //bool bFormNameOpen = false;
+            //foreach (Form frm in fc)
+            //{
+            //    if (frm.Name == "Inventory")
+            //    {
+            //        bFormNameOpen = true;
+            //        frm.Focus();
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        bFormNameOpen = false;
+            //    }
+            //}
+            //if(bFormNameOpen == false)
+            //{
+            //    Inventory invtry = new Inventory();
+            //    invtry.MdiParent = this;
                 
-                invtry.Show();
-            }
+            //    invtry.Show();
+            //}
 
 
         }
@@ -122,13 +122,13 @@ namespace _3FS_System
 
             // Call the method that changes the background color.
            
-            int myvalue = panel1.Height+2;
+            int myvalue = panel1.Height+4;
             myvalue = myvalue / 5;
             int buttonheight = myvalue;
             customers_button.Height = buttonheight;
             customerProfile.Height = buttonheight;
             sales_button.Height = buttonheight;
-            inventory_button.Height = buttonheight;
+            Inventory_new.Height = buttonheight;
             users.Height = buttonheight;
 
             SetBackGroundColorOfMDIForm();
@@ -210,13 +210,13 @@ namespace _3FS_System
             {
                 MaximumSize = new Size(screenWidth, screenHeight);
                 this.WindowState = FormWindowState.Maximized;
-                int newval = panel1.Height+2;
+                int newval = panel1.Height+4;
                 newval /= 5;
                 int buttonheight = newval;
                 customers_button.Height = buttonheight;
                 customerProfile.Height = buttonheight;
                 sales_button.Height = buttonheight;
-                inventory_button.Height = buttonheight;
+                Inventory_new.Height = buttonheight;
                 users.Height = buttonheight;
                 this.BackgroundImage = null;
                 // string myfile = System.Reflection.Assembly.GetExecutingAssembly().Location + "hardware_logo transparent.png";
@@ -228,13 +228,13 @@ namespace _3FS_System
             {
                 this.Height = 650;
                 this.Width = 1200;
-                int newval = panel1.Height + 2;
+                int newval = panel1.Height + 4;
                 newval /= 5;
                 int buttonheight = newval;
                 customers_button.Height = buttonheight;
                 customerProfile.Height = buttonheight;
                 sales_button.Height = buttonheight;
-                inventory_button.Height = buttonheight;
+                Inventory_new.Height = buttonheight;
                 users.Height = buttonheight;
                 this.BackgroundImage = null;
 
@@ -247,6 +247,38 @@ namespace _3FS_System
             {
 
             }
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Inventory_new_Click(object sender, EventArgs e)
+        {
+            FormCollection fc = Application.OpenForms;
+            bool bFormNameOpen = false;
+            foreach (Form frm in fc)
+            {
+                if (frm.Name == "Inventory")
+                {
+                    bFormNameOpen = true;
+                    frm.Focus();
+                    break;
+                }
+                else
+                {
+                    bFormNameOpen = false;
+                }
+            }
+            if (bFormNameOpen == false)
+            {
+                Inventory invtry = new Inventory();
+                invtry.MdiParent = this;
+
+                invtry.Show();
+            }
+
         }
     }
 }
