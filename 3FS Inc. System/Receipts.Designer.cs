@@ -31,6 +31,8 @@
             this.dataGridReceipts = new System.Windows.Forms.DataGridView();
             this.dataGridReceiptDetails = new System.Windows.Forms.DataGridView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.totalSales = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridReceipts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridReceiptDetails)).BeginInit();
             this.SuspendLayout();
@@ -64,11 +66,38 @@
             this.dateTimePicker1.TabIndex = 2;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
+            // totalSales
+            // 
+            this.totalSales.BackColor = System.Drawing.Color.Maroon;
+            this.totalSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalSales.ForeColor = System.Drawing.Color.Yellow;
+            this.totalSales.Location = new System.Drawing.Point(192, 303);
+            this.totalSales.Margin = new System.Windows.Forms.Padding(4);
+            this.totalSales.Name = "totalSales";
+            this.totalSales.ReadOnly = true;
+            this.totalSales.Size = new System.Drawing.Size(218, 31);
+            this.totalSales.TabIndex = 57;
+            this.totalSales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(20, 306);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(172, 25);
+            this.label2.TabIndex = 58;
+            this.label2.Text = "TOTAL SALES:";
+            // 
             // Receipts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 329);
+            this.ClientSize = new System.Drawing.Size(865, 352);
+            this.Controls.Add(this.totalSales);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dataGridReceiptDetails);
             this.Controls.Add(this.dataGridReceipts);
@@ -77,6 +106,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridReceipts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridReceiptDetails)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -85,5 +115,7 @@
         private System.Windows.Forms.DataGridView dataGridReceipts;
         private System.Windows.Forms.DataGridView dataGridReceiptDetails;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox totalSales;
+        private System.Windows.Forms.Label label2;
     }
 }

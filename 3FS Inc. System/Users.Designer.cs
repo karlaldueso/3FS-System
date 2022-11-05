@@ -53,6 +53,7 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.usersDataGrid);
             this.panel1.Location = new System.Drawing.Point(258, 27);
             this.panel1.Name = "panel1";
@@ -61,6 +62,7 @@
             // 
             // usersDataGrid
             // 
+            this.usersDataGrid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.usersDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.usersDataGrid.BackgroundColor = System.Drawing.Color.IndianRed;
             this.usersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -73,6 +75,7 @@
             // 
             // firstNametext
             // 
+            this.firstNametext.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.firstNametext.BackColor = System.Drawing.Color.Maroon;
             this.firstNametext.ForeColor = System.Drawing.Color.Yellow;
             this.firstNametext.Location = new System.Drawing.Point(108, 51);
@@ -82,6 +85,7 @@
             // 
             // panel
             // 
+            this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel.Controls.Add(this.AddItemButton);
             this.panel.Controls.Add(this.userTypelabel);
             this.panel.Controls.Add(this.userTypecombobox);
@@ -104,6 +108,7 @@
             // 
             // AddItemButton
             // 
+            this.AddItemButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AddItemButton.BackColor = System.Drawing.Color.IndianRed;
             this.AddItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddItemButton.ForeColor = System.Drawing.Color.Gold;
@@ -119,6 +124,7 @@
             // 
             // userTypelabel
             // 
+            this.userTypelabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.userTypelabel.AutoSize = true;
             this.userTypelabel.ForeColor = System.Drawing.Color.Gold;
             this.userTypelabel.Location = new System.Drawing.Point(43, 211);
@@ -130,6 +136,7 @@
             // 
             // userTypecombobox
             // 
+            this.userTypecombobox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.userTypecombobox.BackColor = System.Drawing.Color.Maroon;
             this.userTypecombobox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userTypecombobox.ForeColor = System.Drawing.Color.Gold;
@@ -145,6 +152,7 @@
             // 
             // userslabel
             // 
+            this.userslabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.userslabel.AutoSize = true;
             this.userslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userslabel.ForeColor = System.Drawing.Color.Gold;
@@ -157,6 +165,7 @@
             // 
             // PWtextbox2
             // 
+            this.PWtextbox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PWtextbox2.BackColor = System.Drawing.Color.Maroon;
             this.PWtextbox2.ForeColor = System.Drawing.Color.Yellow;
             this.PWtextbox2.Location = new System.Drawing.Point(108, 181);
@@ -167,6 +176,7 @@
             // 
             // PWlabel1
             // 
+            this.PWlabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PWlabel1.AutoSize = true;
             this.PWlabel1.ForeColor = System.Drawing.Color.Gold;
             this.PWlabel1.Location = new System.Drawing.Point(46, 158);
@@ -178,6 +188,7 @@
             // 
             // PWtextbox1
             // 
+            this.PWtextbox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PWtextbox1.BackColor = System.Drawing.Color.Maroon;
             this.PWtextbox1.ForeColor = System.Drawing.Color.Yellow;
             this.PWtextbox1.Location = new System.Drawing.Point(108, 155);
@@ -188,6 +199,7 @@
             // 
             // usernamelabel
             // 
+            this.usernamelabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.usernamelabel.AutoSize = true;
             this.usernamelabel.ForeColor = System.Drawing.Color.Gold;
             this.usernamelabel.Location = new System.Drawing.Point(44, 132);
@@ -199,6 +211,7 @@
             // 
             // usernametext
             // 
+            this.usernametext.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.usernametext.BackColor = System.Drawing.Color.Maroon;
             this.usernametext.ForeColor = System.Drawing.Color.Yellow;
             this.usernametext.Location = new System.Drawing.Point(108, 129);
@@ -208,6 +221,7 @@
             // 
             // contactNumberlabel
             // 
+            this.contactNumberlabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.contactNumberlabel.AutoSize = true;
             this.contactNumberlabel.ForeColor = System.Drawing.Color.Gold;
             this.contactNumberlabel.Location = new System.Drawing.Point(45, 106);
@@ -220,6 +234,7 @@
             // 
             // contacttext
             // 
+            this.contacttext.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.contacttext.BackColor = System.Drawing.Color.Maroon;
             this.contacttext.ForeColor = System.Drawing.Color.Yellow;
             this.contacttext.Location = new System.Drawing.Point(108, 103);
@@ -229,6 +244,7 @@
             // 
             // lastNamelabel
             // 
+            this.lastNamelabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lastNamelabel.AutoSize = true;
             this.lastNamelabel.ForeColor = System.Drawing.Color.Gold;
             this.lastNamelabel.Location = new System.Drawing.Point(42, 80);
@@ -240,6 +256,7 @@
             // 
             // lastNametext
             // 
+            this.lastNametext.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lastNametext.BackColor = System.Drawing.Color.Maroon;
             this.lastNametext.ForeColor = System.Drawing.Color.Yellow;
             this.lastNametext.Location = new System.Drawing.Point(108, 77);
@@ -249,6 +266,7 @@
             // 
             // firstNamelabel
             // 
+            this.firstNamelabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.firstNamelabel.AutoSize = true;
             this.firstNamelabel.ForeColor = System.Drawing.Color.Gold;
             this.firstNamelabel.Location = new System.Drawing.Point(42, 54);

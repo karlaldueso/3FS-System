@@ -21,6 +21,8 @@ namespace _3FS_System
 
             _ = new DataAccess();
             ReceiptRepository receiptRepository = new ReceiptRepository();
+            SalesRepository salesRepository = new SalesRepository();
+            totalSales.Text = String.Format("P{0:N2}", salesRepository.GetTotalSalesOfTheDay(dateTimePicker1.Value.Date));
             dataGridReceipts.DataSource = receiptRepository.GetReceipt_ByDate(dateTimePicker1.Value.Date);
             dataGridReceipts.AutoResizeColumns();
             dataGridReceipts.AutoResizeRows();
@@ -30,6 +32,8 @@ namespace _3FS_System
         {
             _ = new DataAccess();
             ReceiptRepository receiptRepository = new ReceiptRepository();
+            SalesRepository salesRepository = new SalesRepository();
+            totalSales.Text = String.Format("P{0:N2}", salesRepository.GetTotalSalesOfTheDay(dateTimePicker1.Value.Date));
             dataGridReceipts.DataSource = receiptRepository.GetReceipt_ByDate(dateTimePicker1.Value.Date);
             dataGridReceipts.AutoResizeColumns();
             dataGridReceipts.AutoResizeRows();

@@ -30,66 +30,14 @@ namespace _3FS_System
             dataGridCustomers.Columns["CustomerID"].Visible = false;
             dataGridCustomers.Columns["ContactNumber"].Visible = false;
             dataGridCustomers.Columns["Email"].Visible = false;
+            dataGridCustomers.Columns["Address"].Visible = false;
+            dataGridCustomers.Columns["Terms"].Visible = false;
             dataGridCustomers.Columns["UpdatedDate"].Visible = false;
             dataGridCustomers.AutoResizeColumns();
             dataGridCustomers.AutoResizeRows();
         }
 
-        private void dataGridCustomers_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            _ = new DataAccess();
-            var val = dataGridCustomers.CurrentCell.Value;
-            if (val != null)
-            {
-                int[] c_r = { dataGridCustomers.CurrentCellAddress.X, dataGridCustomers.CurrentCellAddress.Y };
-                int CustomerID = int.Parse(dataGridCustomers.Rows[c_r[1]].Cells[0].Value.ToString());
-                
-                float totalpayment = 0;
-                float totalcredit = 0;
-
-                remainingtextbox.Text = String.Format("P{0:N2}", dataGridCustomers.Rows[c_r[1]].Cells[6].Value);
-
-                ReceiptRepository receiptRepository = new ReceiptRepository();
-                dataGridReceipts.DataSource = receiptRepository.GetReceipt_ByCustomerID(CustomerID);
-                dataGridReceipts.Columns["CustomerID"].Visible = false;
-                dataGridReceipts.Columns["UpdatedDate"].Visible = false;
-                dataGridReceipts.AutoResizeColumns();
-                dataGridReceipts.AutoResizeRows();
-                if (dataGridReceipts.Rows.Count != 0)
-                {
-                    for (int i = 0; i < dataGridReceipts.RowCount; i++)
-                    {
-                        totalcredit += (float)Convert.ToDouble(dataGridReceipts.Rows[i].Cells[4].Value) - (float)Convert.ToDouble(dataGridReceipts.Rows[i].Cells[3].Value);
-                    }
-                    totalorderstextbox.Text = String.Format("P{0:N2}", totalcredit);
-                }
-                else
-                {
-                    totalorderstextbox.Clear();
-                }
-
-
-                CollectiblesRepository collectiblesRepository = new CollectiblesRepository();
-                dataCollectiblesLog.DataSource = collectiblesRepository.GetCollectibleLogs_ByCustomerID(CustomerID);
-                dataCollectiblesLog.Columns["CollectiblesLogID"].Visible = false;
-                dataCollectiblesLog.Columns["CustomerID"].Visible = false;
-                dataCollectiblesLog.Columns["UpdatedDate"].Visible = false;
-                dataCollectiblesLog.AutoResizeColumns();
-                dataCollectiblesLog.AutoResizeRows();
-                if (dataCollectiblesLog.Rows.Count != 0)
-                {
-                    for (int i = 0; i < dataCollectiblesLog.RowCount; i++)
-                    {
-                        totalpayment += (float)Convert.ToDouble(dataCollectiblesLog.Rows[i].Cells[3].Value);
-                    }
-                    totalpaymentstextbox.Text = String.Format("P{0:N2}", totalpayment);
-                }
-                else
-                {
-                    totalpaymentstextbox.Clear();
-                }
-            }
-        }
+        
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -184,8 +132,8 @@ namespace _3FS_System
         private void dataGridReceipts_SelectionChanged(object sender, EventArgs e)
         {
             _ = new DataAccess();
-            var val = dataGridReceipts.CurrentCell.Value;
-            if (val != null)
+            
+            if (dataGridReceipts.Rows.Count != 0)
             {
                 int[] c_r = { dataGridReceipts.CurrentCellAddress.X, dataGridReceipts.CurrentCellAddress.Y };
                 string ReceiptNum = dataGridReceipts.Rows[c_r[1]].Cells[1].Value.ToString();
@@ -194,6 +142,65 @@ namespace _3FS_System
                 dataGridReceiptDetails.DataSource = salesRepository.GetSale_ByReceipt(ReceiptNum);
                 dataGridReceiptDetails.AutoResizeColumns();
                 dataGridReceiptDetails.AutoResizeRows();
+            }
+        }
+
+        private void dataGridCustomers_SelectionChanged(object sender, EventArgs e)
+        {
+            _ = new DataAccess();
+            if (dataGridCustomers.Rows.Count != 0)
+            {
+                int[] c_r = { dataGridCustomers.CurrentCellAddress.X, dataGridCustomers.CurrentCellAddress.Y };
+                int CustomerID = int.Parse(dataGridCustomers.Rows[c_r[1]].Cells[0].Value.ToString());
+
+                float totalpayment = 0;
+                float totalcredit = 0;
+                float totalorders = 0;
+
+                remainingtextbox.Text = String.Format("P{0:N2}", dataGridCustomers.Rows[c_r[1]].Cells[6].Value);
+
+                ReceiptRepository receiptRepository = new ReceiptRepository();
+                dataGridReceipts.DataSource = receiptRepository.GetReceipt_ByCustomerID(CustomerID);
+                dataGridReceipts.Columns["CustomerID"].Visible = false;
+                dataGridReceipts.Columns["UpdatedDate"].Visible = false;
+                dataGridReceipts.AutoResizeColumns();
+                dataGridReceipts.AutoResizeRows();
+                if (dataGridReceipts.Rows.Count != 0)
+                {
+                    for (int i = 0; i < dataGridReceipts.RowCount; i++)
+                    {
+                        totalcredit += (float)Convert.ToDouble(dataGridReceipts.Rows[i].Cells[4].Value) - (float)Convert.ToDouble(dataGridReceipts.Rows[i].Cells[3].Value);
+                        totalorders += (float)Convert.ToDouble(dataGridReceipts.Rows[i].Cells[4].Value);
+                    }
+                    totalcredittextbox.Text = String.Format("P{0:N2}", totalcredit);
+                    totalorderstextbox.Text = String.Format("P{0:N2}", totalorders);
+                }
+                else
+                {
+                    totalorderstextbox.Clear();
+                    totalcredittextbox.Clear();
+                }
+
+
+                CollectiblesRepository collectiblesRepository = new CollectiblesRepository();
+                dataCollectiblesLog.DataSource = collectiblesRepository.GetCollectibleLogs_ByCustomerID(CustomerID);
+                dataCollectiblesLog.Columns["CollectiblesLogID"].Visible = false;
+                dataCollectiblesLog.Columns["CustomerID"].Visible = false;
+                dataCollectiblesLog.Columns["UpdatedDate"].Visible = false;
+                dataCollectiblesLog.AutoResizeColumns();
+                dataCollectiblesLog.AutoResizeRows();
+                if (dataCollectiblesLog.Rows.Count != 0)
+                {
+                    for (int i = 0; i < dataCollectiblesLog.RowCount; i++)
+                    {
+                        totalpayment += (float)Convert.ToDouble(dataCollectiblesLog.Rows[i].Cells[3].Value);
+                    }
+                    totalpaymentstextbox.Text = String.Format("P{0:N2}", totalpayment);
+                }
+                else
+                {
+                    totalpaymentstextbox.Clear();
+                }
             }
         }
     }

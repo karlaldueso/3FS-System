@@ -15,6 +15,7 @@ namespace _3FS_System.Models
         public string Email { get; set; }
         public string Address { get; set; }
         public float Credit { get; set; }  
+        public int Terms { get; set; }
         public DateTime UpdatedDate { get; set; }
     }
 }

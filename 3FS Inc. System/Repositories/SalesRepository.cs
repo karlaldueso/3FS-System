@@ -26,7 +26,7 @@ namespace _3FS_System.Repositories
             object totalsales;
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                totalsales = connection.ExecuteScalar("dbo.spSales_TotalSalesForTheDay @Date", datetime);
+                totalsales = connection.ExecuteScalar("dbo.spReceipts_TotalSalesForTheDay @Date", datetime);
             }
             if (totalsales!=null)
                 return (float)Convert.ToDouble(totalsales.ToString());

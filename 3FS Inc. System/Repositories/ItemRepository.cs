@@ -60,7 +60,7 @@ namespace _3FS_System.Repositories
                         item.CategoryID = int.Parse(input);
                         break;
                     case 4:
-                        item.Quantity = int.Parse(input);
+                        item.Quantity = float.Parse(input);
                         break;
                     case 5:
                         item.Unit = input;

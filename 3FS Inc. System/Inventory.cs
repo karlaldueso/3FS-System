@@ -59,8 +59,8 @@ namespace _3FS_System
                     SRPText.Text = "";
                     CapitalText.Text = "";
                     StorageText.Text = "";
-                    dataGridView1.DataSource = itemRepository.GetItems_All();
-                    dataGridView1.Columns["UpdatedDate"].Visible = false;
+                    dataGridInventory.DataSource = itemRepository.GetItems_All();
+                    dataGridInventory.Columns["UpdatedDate"].Visible = false;
 
                     //Adding to ItemLogs
                     item.ItemID = itemRepository.GetItemID(new Items { ItemName = item.ItemName, BrandName = item.BrandName });
@@ -74,12 +74,12 @@ namespace _3FS_System
                         UpdatedDate = DateTime.Now
                     };
                     itemsLogsRepository.Insert(itemlogs, 0);
-                    dataGridView2.DataSource = itemsLogsRepository.GetItemLogs_All();
-                    dataGridView2.Columns["UpdatedDate"].Visible = false;
-                    dataGridView1.AutoResizeColumns();
-                    dataGridView1.AutoResizeRows();
-                    dataGridView2.AutoResizeColumns();
-                    dataGridView2.AutoResizeRows();
+                    dataGridLogs.DataSource = itemsLogsRepository.GetItemLogs_All();
+                    dataGridLogs.Columns["UpdatedDate"].Visible = false;
+                    dataGridInventory.AutoResizeColumns();
+                    dataGridInventory.AutoResizeRows();
+                    dataGridLogs.AutoResizeColumns();
+                    dataGridLogs.AutoResizeRows();
                 }
                 catch
                 {
@@ -93,16 +93,16 @@ namespace _3FS_System
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             Global.ITEMID = 0;
-            DataAccess db = new DataAccess();
+            _ = new DataAccess();
             ItemLogsRepository itemsLogsRepository = new ItemLogsRepository();
 
-            var val = dataGridView1.CurrentCell.Value;
-            int[] c_r = { dataGridView1.CurrentCellAddress.X, dataGridView1.CurrentCellAddress.Y };
+            var val = dataGridInventory.CurrentCell.Value;
+            int[] c_r = { dataGridInventory.CurrentCellAddress.X, dataGridInventory.CurrentCellAddress.Y };
             if (val != null)
             {
                 Console.WriteLine(Global.ITEMID);
-                Global.ITEMID = int.Parse(dataGridView1.Rows[c_r[1]].Cells[0].Value.ToString());
-                EditText.Text = dataGridView1.Rows[c_r[1]].Cells[c_r[0]].Value.ToString();
+                Global.ITEMID = int.Parse(dataGridInventory.Rows[c_r[1]].Cells[0].Value.ToString());
+                EditText.Text = dataGridInventory.Rows[c_r[1]].Cells[c_r[0]].Value.ToString();
 
                 if (c_r[0] == 0 || c_r[0] == 9) //0, 8th columns of ItemInventoryTable
                 {
@@ -115,7 +115,7 @@ namespace _3FS_System
                     UpdateButton.Enabled = true;
                 }
             }
-            dataGridView2.DataSource = itemsLogsRepository.GetItemLogs_ByID(Global.ITEMID);
+            dataGridLogs.DataSource = itemsLogsRepository.GetItemLogs_ByID(Global.ITEMID);
             switch (c_r[0])
             {
                 case 0:
@@ -153,19 +153,19 @@ namespace _3FS_System
             DataAccess db = new DataAccess();
             ItemRepository itemRepository = new ItemRepository();
             ItemLogsRepository itemsLogsRepository = new ItemLogsRepository();
-            int[] c_r = { dataGridView1.CurrentCellAddress.X, dataGridView1.CurrentCellAddress.Y };
+            int[] c_r = { dataGridInventory.CurrentCellAddress.X, dataGridInventory.CurrentCellAddress.Y };
             Items item = new Items
             {
                 //Assign parameters based on selected row on datagridview1
                 ItemID = Global.ITEMID,
-                ItemName = dataGridView1.Rows[c_r[1]].Cells[1].Value.ToString(),
-                BrandName = dataGridView1.Rows[c_r[1]].Cells[2].Value.ToString(),
-                CategoryID = float.Parse(dataGridView1.Rows[c_r[1]].Cells[3].Value.ToString()),
-                Quantity = float.Parse(dataGridView1.Rows[c_r[1]].Cells[4].Value.ToString()),
-                Unit = dataGridView1.Rows[c_r[1]].Cells[5].Value.ToString(),
-                SRP = float.Parse(dataGridView1.Rows[c_r[1]].Cells[6].Value.ToString()),
-                Capital = float.Parse(dataGridView1.Rows[c_r[1]].Cells[7].Value.ToString()),
-                Storage = dataGridView1.Rows[c_r[1]].Cells[8].Value.ToString(),
+                ItemName = dataGridInventory.Rows[c_r[1]].Cells[1].Value.ToString(),
+                BrandName = dataGridInventory.Rows[c_r[1]].Cells[2].Value.ToString(),
+                CategoryID = float.Parse(dataGridInventory.Rows[c_r[1]].Cells[3].Value.ToString()),
+                Quantity = float.Parse(dataGridInventory.Rows[c_r[1]].Cells[4].Value.ToString()),
+                Unit = dataGridInventory.Rows[c_r[1]].Cells[5].Value.ToString(),
+                SRP = float.Parse(dataGridInventory.Rows[c_r[1]].Cells[6].Value.ToString()),
+                Capital = float.Parse(dataGridInventory.Rows[c_r[1]].Cells[7].Value.ToString()),
+                Storage = dataGridInventory.Rows[c_r[1]].Cells[8].Value.ToString(),
                 UpdatedDate = DateTime.Now
             };
             itemRepository.Update(item, c_r[0], EditText.Text); //update selected row
@@ -174,38 +174,38 @@ namespace _3FS_System
             {
                 ItemID = item.ItemID,
                 TransactionType = "Update",
-                Previous = dataGridView1.Rows[c_r[1]].Cells[c_r[0]].Value.ToString(),
+                Previous = dataGridInventory.Rows[c_r[1]].Cells[c_r[0]].Value.ToString(),
                 Present = EditText.Text,
                 TransactionDate = DateTime.Now,
                 UpdatedDate = DateTime.Now
             };
             itemsLogsRepository.Insert(itemlogs, c_r[0]);
-            dataGridView1.DataSource = itemRepository.GetItems_All();
-            dataGridView2.DataSource = itemsLogsRepository.GetItemLogs_ByID(itemlogs.ItemID);
-            dataGridView1.Columns["UpdatedDate"].Visible = false;
-            dataGridView1.AutoResizeColumns();
-            dataGridView1.AutoResizeRows();
-            dataGridView2.AutoResizeColumns();
-            dataGridView2.AutoResizeRows();
+            dataGridInventory.DataSource = itemRepository.GetItems_All();
+            dataGridLogs.DataSource = itemsLogsRepository.GetItemLogs_ByID(itemlogs.ItemID);
+            dataGridInventory.Columns["UpdatedDate"].Visible = false;
+            dataGridInventory.AutoResizeColumns();
+            dataGridInventory.AutoResizeRows();
+            dataGridLogs.AutoResizeColumns();
+            dataGridLogs.AutoResizeRows();
         }
 
         private void searchName_TextChanged(object sender, EventArgs e)
         {
             DataAccess db = new DataAccess();
             ItemRepository itemRepository = new ItemRepository();
-            dataGridView1.DataSource = itemRepository.GetItems_ByName(searchName.Text, searchBrandName.Text);
-            dataGridView1.Columns["UpdatedDate"].Visible = false;
-            dataGridView1.AutoResizeColumns();
+            dataGridInventory.DataSource = itemRepository.GetItems_ByName(searchName.Text, searchBrandName.Text);
+            dataGridInventory.Columns["UpdatedDate"].Visible = false;
+            dataGridInventory.AutoResizeColumns();
         }
 
         private void searchBrandName_TextChanged(object sender, EventArgs e)
         {
             DataAccess db = new DataAccess();
             ItemRepository itemRepository = new ItemRepository();
-            dataGridView1.DataSource = itemRepository.GetItems_ByName(searchName.Text, searchBrandName.Text);
-            dataGridView1.Columns["UpdatedDate"].Visible = false;
-            dataGridView1.AutoResizeColumns();
-            dataGridView1.AutoResizeRows();
+            dataGridInventory.DataSource = itemRepository.GetItems_ByName(searchName.Text, searchBrandName.Text);
+            dataGridInventory.Columns["UpdatedDate"].Visible = false;
+            dataGridInventory.AutoResizeColumns();
+            dataGridInventory.AutoResizeRows();
         }
 
         private void refreshButton_Click(object sender, EventArgs e)
@@ -213,10 +213,10 @@ namespace _3FS_System
             DataAccess db = new DataAccess();
             ItemRepository itemRepository = new ItemRepository();
             ItemLogsRepository itemsLogsRepository = new ItemLogsRepository();
-            dataGridView1.DataSource = itemRepository.GetItems_All();
-            dataGridView1.Columns["UpdatedDate"].Visible = false;
-            dataGridView1.AutoResizeColumns();
-            dataGridView1.AutoResizeRows();
+            dataGridInventory.DataSource = itemRepository.GetItems_All();
+            dataGridInventory.Columns["UpdatedDate"].Visible = false;
+            dataGridInventory.AutoResizeColumns();
+            dataGridInventory.AutoResizeRows();
         }
 
         private void Inventory_Load(object sender, EventArgs e)

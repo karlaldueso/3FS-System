@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.remainingtextbox = new System.Windows.Forms.TextBox();
             this.remaininglabel = new System.Windows.Forms.Label();
@@ -57,6 +57,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridReceiptDetails = new System.Windows.Forms.DataGridView();
+            this.totalcredittextbox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridReceipts)).BeginInit();
@@ -125,14 +127,14 @@
             this.dataGridCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridCustomers.BackgroundColor = System.Drawing.Color.White;
             this.dataGridCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridCustomers.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridCustomers.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridCustomers.Location = new System.Drawing.Point(13, 78);
             this.dataGridCustomers.Name = "dataGridCustomers";
             this.dataGridCustomers.ReadOnly = true;
@@ -141,7 +143,7 @@
             this.dataGridCustomers.Size = new System.Drawing.Size(497, 145);
             this.dataGridCustomers.StandardTab = true;
             this.dataGridCustomers.TabIndex = 49;
-            this.dataGridCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCustomers_CellClick);
+            this.dataGridCustomers.SelectionChanged += new System.EventHandler(this.dataGridCustomers_SelectionChanged);
             // 
             // customerLabel
             // 
@@ -175,20 +177,20 @@
             this.dataGridReceipts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridReceipts.BackgroundColor = System.Drawing.Color.IndianRed;
             this.dataGridReceipts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridReceipts.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridReceipts.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridReceipts.Location = new System.Drawing.Point(10, 39);
             this.dataGridReceipts.Name = "dataGridReceipts";
             this.dataGridReceipts.ReadOnly = true;
             this.dataGridReceipts.RowHeadersVisible = false;
             this.dataGridReceipts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridReceipts.Size = new System.Drawing.Size(521, 253);
+            this.dataGridReceipts.Size = new System.Drawing.Size(633, 174);
             this.dataGridReceipts.TabIndex = 53;
             this.dataGridReceipts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridReceipts_CellClick);
             this.dataGridReceipts.SelectionChanged += new System.EventHandler(this.dataGridReceipts_SelectionChanged);
@@ -203,14 +205,14 @@
             this.dataCollectiblesLog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataCollectiblesLog.BackgroundColor = System.Drawing.Color.IndianRed;
             this.dataCollectiblesLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataCollectiblesLog.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataCollectiblesLog.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataCollectiblesLog.Location = new System.Drawing.Point(9, 38);
             this.dataCollectiblesLog.Name = "dataCollectiblesLog";
             this.dataCollectiblesLog.ReadOnly = true;
@@ -223,13 +225,15 @@
             // 
             this.panel1.AutoSize = true;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.totalcredittextbox);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.totalorderstextbox);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.ordersLabel);
             this.panel1.Controls.Add(this.dataGridReceipts);
             this.panel1.Location = new System.Drawing.Point(12, 311);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(683, 302);
+            this.panel1.Size = new System.Drawing.Size(648, 302);
             this.panel1.TabIndex = 60;
             // 
             // totalorderstextbox
@@ -238,10 +242,10 @@
             this.totalorderstextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalorderstextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalorderstextbox.ForeColor = System.Drawing.Color.Black;
-            this.totalorderstextbox.Location = new System.Drawing.Point(537, 67);
+            this.totalorderstextbox.Location = new System.Drawing.Point(462, 264);
             this.totalorderstextbox.Name = "totalorderstextbox";
             this.totalorderstextbox.ReadOnly = true;
-            this.totalorderstextbox.Size = new System.Drawing.Size(126, 29);
+            this.totalorderstextbox.Size = new System.Drawing.Size(181, 29);
             this.totalorderstextbox.TabIndex = 67;
             // 
             // label1
@@ -249,11 +253,12 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(532, 39);
+            this.label1.Location = new System.Drawing.Point(310, 225);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 24);
             this.label1.TabIndex = 67;
-            this.label1.Text = "Total Orders:";
+            this.label1.Text = "Total Credit:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ordersLabel
             // 
@@ -361,9 +366,9 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.dataGridReceiptDetails);
-            this.panel5.Location = new System.Drawing.Point(701, 311);
+            this.panel5.Location = new System.Drawing.Point(666, 311);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(456, 302);
+            this.panel5.Size = new System.Drawing.Size(491, 302);
             this.panel5.TabIndex = 62;
             // 
             // label3
@@ -386,21 +391,45 @@
             this.dataGridReceiptDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridReceiptDetails.BackgroundColor = System.Drawing.Color.IndianRed;
             this.dataGridReceiptDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridReceiptDetails.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridReceiptDetails.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridReceiptDetails.Location = new System.Drawing.Point(3, 39);
             this.dataGridReceiptDetails.Name = "dataGridReceiptDetails";
             this.dataGridReceiptDetails.ReadOnly = true;
             this.dataGridReceiptDetails.RowHeadersVisible = false;
             this.dataGridReceiptDetails.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridReceiptDetails.Size = new System.Drawing.Size(447, 254);
+            this.dataGridReceiptDetails.Size = new System.Drawing.Size(483, 254);
             this.dataGridReceiptDetails.TabIndex = 59;
+            // 
+            // totalcredittextbox
+            // 
+            this.totalcredittextbox.BackColor = System.Drawing.Color.White;
+            this.totalcredittextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.totalcredittextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalcredittextbox.ForeColor = System.Drawing.Color.Black;
+            this.totalcredittextbox.Location = new System.Drawing.Point(462, 224);
+            this.totalcredittextbox.Name = "totalcredittextbox";
+            this.totalcredittextbox.ReadOnly = true;
+            this.totalcredittextbox.Size = new System.Drawing.Size(181, 29);
+            this.totalcredittextbox.TabIndex = 68;
+            // 
+            // label2
+            // 
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gold;
+            this.label2.Location = new System.Drawing.Point(310, 265);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(146, 24);
+            this.label2.TabIndex = 69;
+            this.label2.Text = "Total Orders:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Collectibles
             // 
@@ -459,5 +488,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridReceiptDetails;
         private System.Windows.Forms.Label receiptDetailslabel;
+        private System.Windows.Forms.TextBox totalcredittextbox;
+        private System.Windows.Forms.Label label2;
     }
 }

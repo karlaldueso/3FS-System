@@ -53,9 +53,9 @@
             this.SRPText = new System.Windows.Forms.TextBox();
             this.brandlabel = new System.Windows.Forms.Label();
             this.inventorypanel = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridInventory = new System.Windows.Forms.DataGridView();
             this.inventorylabel = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridLogs = new System.Windows.Forms.DataGridView();
             this.inventorylog = new System.Windows.Forms.Label();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.EditText = new System.Windows.Forms.TextBox();
@@ -64,8 +64,8 @@
             this.searchName = new System.Windows.Forms.TextBox();
             this.addpanel.SuspendLayout();
             this.inventorypanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridInventory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridLogs)).BeginInit();
             this.searchpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -352,9 +352,9 @@
             // 
             this.inventorypanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.inventorypanel.Controls.Add(this.editlabel);
-            this.inventorypanel.Controls.Add(this.dataGridView1);
+            this.inventorypanel.Controls.Add(this.dataGridInventory);
             this.inventorypanel.Controls.Add(this.inventorylabel);
-            this.inventorypanel.Controls.Add(this.dataGridView2);
+            this.inventorypanel.Controls.Add(this.dataGridLogs);
             this.inventorypanel.Controls.Add(this.inventorylog);
             this.inventorypanel.Controls.Add(this.UpdateButton);
             this.inventorypanel.Controls.Add(this.EditText);
@@ -365,24 +365,24 @@
             this.inventorypanel.Size = new System.Drawing.Size(764, 465);
             this.inventorypanel.TabIndex = 39;
             // 
-            // dataGridView1
+            // dataGridInventory
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.IndianRed;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 42);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(754, 224);
-            this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            this.dataGridInventory.AllowUserToAddRows = false;
+            this.dataGridInventory.AllowUserToDeleteRows = false;
+            this.dataGridInventory.AllowUserToResizeRows = false;
+            this.dataGridInventory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridInventory.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.dataGridInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridInventory.Location = new System.Drawing.Point(4, 42);
+            this.dataGridInventory.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridInventory.MultiSelect = false;
+            this.dataGridInventory.Name = "dataGridInventory";
+            this.dataGridInventory.ReadOnly = true;
+            this.dataGridInventory.RowHeadersVisible = false;
+            this.dataGridInventory.RowHeadersWidth = 51;
+            this.dataGridInventory.Size = new System.Drawing.Size(754, 224);
+            this.dataGridInventory.TabIndex = 4;
+            this.dataGridInventory.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // inventorylabel
             // 
@@ -396,23 +396,23 @@
             this.inventorylabel.TabIndex = 24;
             this.inventorylabel.Text = "Inventory";
             // 
-            // dataGridView2
+            // dataGridLogs
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToResizeRows = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.IndianRed;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(4, 339);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView2.MultiSelect = false;
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(754, 120);
-            this.dataGridView2.TabIndex = 26;
+            this.dataGridLogs.AllowUserToAddRows = false;
+            this.dataGridLogs.AllowUserToDeleteRows = false;
+            this.dataGridLogs.AllowUserToResizeRows = false;
+            this.dataGridLogs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridLogs.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.dataGridLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridLogs.Location = new System.Drawing.Point(4, 339);
+            this.dataGridLogs.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridLogs.MultiSelect = false;
+            this.dataGridLogs.Name = "dataGridLogs";
+            this.dataGridLogs.ReadOnly = true;
+            this.dataGridLogs.RowHeadersVisible = false;
+            this.dataGridLogs.RowHeadersWidth = 51;
+            this.dataGridLogs.Size = new System.Drawing.Size(754, 120);
+            this.dataGridLogs.TabIndex = 26;
             // 
             // inventorylog
             // 
@@ -515,8 +515,8 @@
             this.addpanel.PerformLayout();
             this.inventorypanel.ResumeLayout(false);
             this.inventorypanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridInventory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridLogs)).EndInit();
             this.searchpanel.ResumeLayout(false);
             this.searchpanel.PerformLayout();
             this.ResumeLayout(false);
@@ -550,9 +550,9 @@
         private System.Windows.Forms.TextBox SRPText;
         private System.Windows.Forms.Label brandlabel;
         private System.Windows.Forms.Panel inventorypanel;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridInventory;
         private System.Windows.Forms.Label inventorylabel;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridLogs;
         private System.Windows.Forms.Label inventorylog;
         private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.TextBox EditText;
