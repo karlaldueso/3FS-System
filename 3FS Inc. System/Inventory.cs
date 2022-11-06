@@ -60,6 +60,8 @@ namespace _3FS_System
                     CapitalText.Text = "";
                     StorageText.Text = "";
                     dataGridInventory.DataSource = itemRepository.GetItems_All();
+                    dataGridInventory.Columns["ItemID"].Visible = false;
+                    dataGridInventory.Columns["CategoryID"].Visible = false;
                     dataGridInventory.Columns["UpdatedDate"].Visible = false;
 
                     //Adding to ItemLogs
@@ -75,7 +77,6 @@ namespace _3FS_System
                     };
                     itemsLogsRepository.Insert(itemlogs, 0);
                     dataGridLogs.DataSource = itemsLogsRepository.GetItemLogs_All();
-                    dataGridLogs.Columns["UpdatedDate"].Visible = false;
                     dataGridInventory.AutoResizeColumns();
                     dataGridInventory.AutoResizeRows();
                     dataGridLogs.AutoResizeColumns();
@@ -95,11 +96,9 @@ namespace _3FS_System
             Global.ITEMID = 0;
             _ = new DataAccess();
             ItemLogsRepository itemsLogsRepository = new ItemLogsRepository();
-
-            var val = dataGridInventory.CurrentCell.Value;
-            int[] c_r = { dataGridInventory.CurrentCellAddress.X, dataGridInventory.CurrentCellAddress.Y };
-            if (val != null)
+            if (dataGridInventory.Rows.Count != 0)
             {
+                int[] c_r = { dataGridInventory.CurrentCellAddress.X, dataGridInventory.CurrentCellAddress.Y };
                 Console.WriteLine(Global.ITEMID);
                 Global.ITEMID = int.Parse(dataGridInventory.Rows[c_r[1]].Cells[0].Value.ToString());
                 EditText.Text = dataGridInventory.Rows[c_r[1]].Cells[c_r[0]].Value.ToString();
@@ -114,38 +113,39 @@ namespace _3FS_System
                     EditText.Enabled = true;
                     UpdateButton.Enabled = true;
                 }
+                dataGridLogs.DataSource = itemsLogsRepository.GetItemLogs_ByID(Global.ITEMID);
+                switch (c_r[0])
+                {
+                    case 0:
+                        editlabel.Text = "Item ID:";
+                        break;
+                    case 1:
+                        editlabel.Text = "Item Name:";
+                        break;
+                    case 2:
+                        editlabel.Text = "Brand Name:";
+                        break;
+                    case 3:
+                        editlabel.Text = "Category ID:";
+                        break;
+                    case 4:
+                        editlabel.Text = "Quantity:";
+                        break;
+                    case 5:
+                        editlabel.Text = "Unit:";
+                        break;
+                    case 6:
+                        editlabel.Text = "SRP:";
+                        break;
+                    case 7:
+                        editlabel.Text = "Capital:";
+                        break;
+                    case 8:
+                        editlabel.Text = "Storage:";
+                        break;
+                }
             }
-            dataGridLogs.DataSource = itemsLogsRepository.GetItemLogs_ByID(Global.ITEMID);
-            switch (c_r[0])
-            {
-                case 0:
-                    editlabel.Text = "Item ID:";
-                    break;
-                case 1:
-                    editlabel.Text = "Item Name:";
-                    break;
-                case 2:
-                    editlabel.Text = "Brand Name:";
-                    break;
-                case 3:
-                    editlabel.Text = "Category ID:";
-                    break;
-                case 4:
-                    editlabel.Text = "Quantity:";
-                    break;
-                case 5:
-                    editlabel.Text = "Unit:";
-                    break;
-                case 6:
-                    editlabel.Text = "SRP:";
-                    break;
-                case 7:
-                    editlabel.Text = "Capital:";
-                    break;
-                case 8:
-                    editlabel.Text = "Storage:";
-                    break;
-            }
+            
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
@@ -183,6 +183,8 @@ namespace _3FS_System
             dataGridInventory.DataSource = itemRepository.GetItems_All();
             dataGridLogs.DataSource = itemsLogsRepository.GetItemLogs_ByID(itemlogs.ItemID);
             dataGridInventory.Columns["UpdatedDate"].Visible = false;
+            dataGridInventory.Columns["ItemID"].Visible = false;
+            dataGridInventory.Columns["CategoryID"].Visible = false;
             dataGridInventory.AutoResizeColumns();
             dataGridInventory.AutoResizeRows();
             dataGridLogs.AutoResizeColumns();
@@ -195,6 +197,8 @@ namespace _3FS_System
             ItemRepository itemRepository = new ItemRepository();
             dataGridInventory.DataSource = itemRepository.GetItems_ByName(searchName.Text, searchBrandName.Text);
             dataGridInventory.Columns["UpdatedDate"].Visible = false;
+            dataGridInventory.Columns["ItemID"].Visible = false;
+            dataGridInventory.Columns["CategoryID"].Visible = false;
             dataGridInventory.AutoResizeColumns();
         }
 
@@ -204,6 +208,8 @@ namespace _3FS_System
             ItemRepository itemRepository = new ItemRepository();
             dataGridInventory.DataSource = itemRepository.GetItems_ByName(searchName.Text, searchBrandName.Text);
             dataGridInventory.Columns["UpdatedDate"].Visible = false;
+            dataGridInventory.Columns["ItemID"].Visible = false;
+            dataGridInventory.Columns["CategoryID"].Visible = false;
             dataGridInventory.AutoResizeColumns();
             dataGridInventory.AutoResizeRows();
         }
@@ -215,6 +221,8 @@ namespace _3FS_System
             ItemLogsRepository itemsLogsRepository = new ItemLogsRepository();
             dataGridInventory.DataSource = itemRepository.GetItems_All();
             dataGridInventory.Columns["UpdatedDate"].Visible = false;
+            dataGridInventory.Columns["ItemID"].Visible = false;
+            dataGridInventory.Columns["CategoryID"].Visible = false;
             dataGridInventory.AutoResizeColumns();
             dataGridInventory.AutoResizeRows();
         }

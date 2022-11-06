@@ -110,6 +110,8 @@ namespace _3FS_System
             ItemRepository itemRepository = new ItemRepository();
             dataGridInventory.DataSource = itemRepository.GetItems_ByName(searchName.Text, searchBrandName.Text);
             dataGridInventory.Columns["UpdatedDate"].Visible = false;
+            dataGridInventory.Columns["ItemID"].Visible = false;
+            dataGridInventory.Columns["CategoryID"].Visible = false;
             dataGridInventory.AutoResizeColumns();
         }
 
@@ -119,6 +121,8 @@ namespace _3FS_System
             ItemRepository itemRepository = new ItemRepository();
             dataGridInventory.DataSource = itemRepository.GetItems_ByName(searchName.Text, searchBrandName.Text);
             dataGridInventory.Columns["UpdatedDate"].Visible = false;
+            dataGridInventory.Columns["ItemID"].Visible = false;
+            dataGridInventory.Columns["CategoryID"].Visible = false;
             dataGridInventory.AutoResizeColumns();
             dataGridInventory.AutoResizeRows();
         }
@@ -234,9 +238,12 @@ namespace _3FS_System
                         totalSales.Text = String.Format("P{0:N2}", salesRepository.GetTotalSalesOfTheDay(DateTime.Today));
 
                         dataGridItems.Rows.Clear();
+                        searchName.Clear();
                         amountPaidTextbox.Clear();
                         grandtotalTextbox.Clear();
                         receiptnumTextbox.Clear();
+
+                        MessageBox.Show("Added successfully!", "Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else 
                     {
@@ -272,82 +279,79 @@ namespace _3FS_System
 
         private void dataGridInventory_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridInventory.SelectedCells.Count > 0)
+            int[] c_r = { dataGridInventory.CurrentCellAddress.X, dataGridInventory.CurrentCellAddress.Y };
+            int row_count = dataGridItems.RowCount;
+            string exstID = dataGridInventory.Rows[c_r[1]].Cells[0].Value.ToString();
+            bool exst = false;
+            int index = 0;
+            dataGridItems.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            if (row_count >= 0)
             {
-                int[] c_r = { dataGridInventory.CurrentCellAddress.X, dataGridInventory.CurrentCellAddress.Y };
-                int row_count = dataGridItems.RowCount;
-                string exstID = dataGridInventory.Rows[c_r[1]].Cells[0].Value.ToString();
-                bool exst = false;
-                int index = 0;
-                dataGridItems.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                if (row_count >= 0)
+                try
                 {
-                    try
+                    foreach (DataGridViewRow row in dataGridItems.Rows) //Check if item to be added exits in the list
                     {
-                        foreach (DataGridViewRow row in dataGridItems.Rows) //Check if item to be added exits in the list
+                        if (row.Cells[0].Value.ToString().Equals(exstID))
                         {
-                            if (row.Cells[0].Value.ToString().Equals(exstID))
-                            {
-                                index = (int)Convert.ToInt32(row.Index);
-                                exst = true;
-                                break;
-                            }
+                            index = (int)Convert.ToInt32(row.Index);
+                            exst = true;
+                            break;
                         }
                     }
-                    catch
-                    {
+                }
+                catch
+                {
 
-                    }
                 }
-                if (exst == true)
+            }
+            if (exst == true)
+            {
+                //Qty
+                dataGridItems.Rows[index].Cells[2].Value = (float)Convert.ToDouble(dataGridItems.Rows[index].Cells[2].Value) + 1.00;
+                float qty = (float)Convert.ToDouble(dataGridItems.Rows[index].Cells[2].Value);
+                float unitprice = (float)Convert.ToDouble(dataGridItems.Rows[index].Cells[8].Value);
+                float subtot = qty * unitprice;
+                float grandtot = 0;
+                //Sub Total
+                dataGridItems.Rows[index].Cells[9].Value = String.Format("{0:0.##}", subtot);
+                for (int i = 0; i < row_count; i++)
                 {
-                    //Qty
-                    dataGridItems.Rows[index].Cells[2].Value = (float)Convert.ToDouble(dataGridItems.Rows[index].Cells[2].Value) + 1.00;
-                    float qty = (float)Convert.ToDouble(dataGridItems.Rows[index].Cells[2].Value);
-                    float unitprice = (float)Convert.ToDouble(dataGridItems.Rows[index].Cells[8].Value);
-                    float subtot = qty * unitprice;
-                    float grandtot = 0;
-                    //Sub Total
-                    dataGridItems.Rows[index].Cells[9].Value = String.Format("{0:0.##}", subtot);
-                    for (int i = 0; i < row_count; i++)
-                    {
-                        grandtot += (float)Convert.ToDouble(dataGridItems.Rows[i].Cells[9].Value);
-                    }
-                    grandtotalTextbox.Text = String.Format("{0:N2}", grandtot);
+                    grandtot += (float)Convert.ToDouble(dataGridItems.Rows[i].Cells[9].Value);
                 }
-                else if (exst == false)
+                grandtotalTextbox.Text = String.Format("{0:N2}", grandtot);
+            }
+            else if (exst == false)
+            {
+                dataGridItems.RowCount++;
+                //ItemID
+                dataGridItems.Rows[row_count].Cells[0].Value = dataGridInventory.Rows[c_r[1]].Cells[0].Value;
+                //Item#
+                dataGridItems.Rows[row_count].Cells[1].Value = row_count + 1;
+                //Qty
+                dataGridItems.Rows[row_count].Cells[2].Value = 1.00;
+                //Unit
+                dataGridItems.Rows[row_count].Cells[3].Value = dataGridInventory.Rows[c_r[1]].Cells[5].Value;
+                //Name
+                dataGridItems.Rows[row_count].Cells[4].Value = dataGridInventory.Rows[c_r[1]].Cells[1].Value;
+                //Brand
+                dataGridItems.Rows[row_count].Cells[5].Value = dataGridInventory.Rows[c_r[1]].Cells[2].Value;
+                //SRP
+                dataGridItems.Rows[row_count].Cells[6].Value = dataGridInventory.Rows[c_r[1]].Cells[6].Value;
+                //Capital
+                dataGridItems.Rows[row_count].Cells[7].Value = dataGridInventory.Rows[c_r[1]].Cells[7].Value;
+                //Unit Price
+                dataGridItems.Rows[row_count].Cells[8].Value = dataGridInventory.Rows[c_r[1]].Cells[6].Value;
+                float qty = (float)Convert.ToDouble(dataGridItems.Rows[row_count].Cells[2].Value);
+                float unitprice = (float)Convert.ToDouble(dataGridItems.Rows[row_count].Cells[8].Value);
+                float subtot = qty * unitprice;
+                float grandtot = 0;
+                //Sub Total
+                dataGridItems.Rows[row_count].Cells[9].Value = String.Format("{0:0.##}", subtot);
+                for (int i = 0; i <= row_count; i++)
                 {
-                    dataGridItems.RowCount++;
-                    //ItemID
-                    dataGridItems.Rows[row_count].Cells[0].Value = dataGridInventory.Rows[c_r[1]].Cells[0].Value;
-                    //Item#
-                    dataGridItems.Rows[row_count].Cells[1].Value = row_count + 1;
-                    //Qty
-                    dataGridItems.Rows[row_count].Cells[2].Value = 1.00;
-                    //Unit
-                    dataGridItems.Rows[row_count].Cells[3].Value = dataGridInventory.Rows[c_r[1]].Cells[5].Value;
-                    //Name
-                    dataGridItems.Rows[row_count].Cells[4].Value = dataGridInventory.Rows[c_r[1]].Cells[1].Value;
-                    //Brand
-                    dataGridItems.Rows[row_count].Cells[5].Value = dataGridInventory.Rows[c_r[1]].Cells[2].Value;
-                    //SRP
-                    dataGridItems.Rows[row_count].Cells[6].Value = dataGridInventory.Rows[c_r[1]].Cells[6].Value;
-                    //Capital
-                    dataGridItems.Rows[row_count].Cells[7].Value = dataGridInventory.Rows[c_r[1]].Cells[7].Value;
-                    //Unit Price
-                    dataGridItems.Rows[row_count].Cells[8].Value = dataGridInventory.Rows[c_r[1]].Cells[6].Value;
-                    float qty = (float)Convert.ToDouble(dataGridItems.Rows[row_count].Cells[2].Value);
-                    float unitprice = (float)Convert.ToDouble(dataGridItems.Rows[row_count].Cells[8].Value);
-                    float subtot = qty * unitprice;
-                    float grandtot = 0;
-                    //Sub Total
-                    dataGridItems.Rows[row_count].Cells[9].Value = String.Format("{0:0.##}", subtot);
-                    for (int i = 0; i <= row_count; i++)
-                    {
-                        grandtot += (float)Convert.ToDouble(dataGridItems.Rows[i].Cells[9].Value);
-                    }
-                    grandtotalTextbox.Text = String.Format("{0:N2}", grandtot);
+                    grandtot += (float)Convert.ToDouble(dataGridItems.Rows[i].Cells[9].Value);
                 }
+                grandtotalTextbox.Text = String.Format("{0:N2}", grandtot);
             }
         }
 

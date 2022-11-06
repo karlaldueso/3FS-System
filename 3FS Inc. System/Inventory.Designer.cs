@@ -79,6 +79,7 @@
             this.namesearchlabel.Size = new System.Drawing.Size(55, 20);
             this.namesearchlabel.TabIndex = 29;
             this.namesearchlabel.Text = "Name:";
+            this.namesearchlabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // additemlabel
             // 
@@ -183,89 +184,97 @@
             // 
             this.itemnamelabel.AutoSize = true;
             this.itemnamelabel.ForeColor = System.Drawing.Color.Gold;
-            this.itemnamelabel.Location = new System.Drawing.Point(21, 53);
+            this.itemnamelabel.Location = new System.Drawing.Point(12, 52);
             this.itemnamelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.itemnamelabel.Name = "itemnamelabel";
             this.itemnamelabel.Size = new System.Drawing.Size(91, 20);
             this.itemnamelabel.TabIndex = 6;
             this.itemnamelabel.Text = "Item Name:";
+            this.itemnamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // brandnamelabel
             // 
             this.brandnamelabel.AutoSize = true;
             this.brandnamelabel.ForeColor = System.Drawing.Color.Gold;
-            this.brandnamelabel.Location = new System.Drawing.Point(11, 81);
+            this.brandnamelabel.Location = new System.Drawing.Point(1, 80);
             this.brandnamelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.brandnamelabel.Name = "brandnamelabel";
             this.brandnamelabel.Size = new System.Drawing.Size(102, 20);
             this.brandnamelabel.TabIndex = 7;
             this.brandnamelabel.Text = "Brand Name:";
+            this.brandnamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // categorylabel
             // 
             this.categorylabel.AutoSize = true;
             this.categorylabel.ForeColor = System.Drawing.Color.Gold;
-            this.categorylabel.Location = new System.Drawing.Point(33, 108);
+            this.categorylabel.Location = new System.Drawing.Point(26, 107);
             this.categorylabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.categorylabel.Name = "categorylabel";
             this.categorylabel.Size = new System.Drawing.Size(77, 20);
             this.categorylabel.TabIndex = 8;
             this.categorylabel.Text = "Category:";
+            this.categorylabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // quantitylabel
             // 
             this.quantitylabel.AutoSize = true;
             this.quantitylabel.ForeColor = System.Drawing.Color.Gold;
-            this.quantitylabel.Location = new System.Drawing.Point(37, 135);
+            this.quantitylabel.Location = new System.Drawing.Point(31, 134);
             this.quantitylabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.quantitylabel.Name = "quantitylabel";
             this.quantitylabel.Size = new System.Drawing.Size(72, 20);
             this.quantitylabel.TabIndex = 9;
             this.quantitylabel.Text = "Quantity:";
+            this.quantitylabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // unitlabel
             // 
             this.unitlabel.AutoSize = true;
             this.unitlabel.ForeColor = System.Drawing.Color.Gold;
-            this.unitlabel.Location = new System.Drawing.Point(64, 162);
+            this.unitlabel.Location = new System.Drawing.Point(61, 161);
             this.unitlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.unitlabel.Name = "unitlabel";
             this.unitlabel.Size = new System.Drawing.Size(42, 20);
             this.unitlabel.TabIndex = 10;
             this.unitlabel.Text = "Unit:";
+            this.unitlabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // SRPlabel
             // 
             this.SRPlabel.AutoSize = true;
             this.SRPlabel.ForeColor = System.Drawing.Color.Gold;
-            this.SRPlabel.Location = new System.Drawing.Point(60, 190);
+            this.SRPlabel.Location = new System.Drawing.Point(57, 189);
             this.SRPlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SRPlabel.Name = "SRPlabel";
             this.SRPlabel.Size = new System.Drawing.Size(46, 20);
             this.SRPlabel.TabIndex = 11;
             this.SRPlabel.Text = "SRP:";
+            this.SRPlabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // capitallabel
             // 
             this.capitallabel.AutoSize = true;
             this.capitallabel.ForeColor = System.Drawing.Color.Gold;
-            this.capitallabel.Location = new System.Drawing.Point(47, 217);
+            this.capitallabel.Location = new System.Drawing.Point(41, 216);
             this.capitallabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.capitallabel.Name = "capitallabel";
             this.capitallabel.Size = new System.Drawing.Size(62, 20);
             this.capitallabel.TabIndex = 12;
             this.capitallabel.Text = "Capital:";
+            this.capitallabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // storagelabel
             // 
             this.storagelabel.AutoSize = true;
             this.storagelabel.ForeColor = System.Drawing.Color.Gold;
-            this.storagelabel.Location = new System.Drawing.Point(40, 244);
+            this.storagelabel.Location = new System.Drawing.Point(33, 243);
             this.storagelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.storagelabel.Name = "storagelabel";
             this.storagelabel.Size = new System.Drawing.Size(70, 20);
             this.storagelabel.TabIndex = 13;
             this.storagelabel.Text = "Storage:";
+            this.storagelabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // BrandNameText
             // 
@@ -341,12 +350,13 @@
             // 
             this.brandlabel.AutoSize = true;
             this.brandlabel.ForeColor = System.Drawing.Color.Gold;
-            this.brandlabel.Location = new System.Drawing.Point(11, 81);
+            this.brandlabel.Location = new System.Drawing.Point(1, 81);
             this.brandlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.brandlabel.Name = "brandlabel";
             this.brandlabel.Size = new System.Drawing.Size(102, 20);
             this.brandlabel.TabIndex = 31;
             this.brandlabel.Text = "Brand Name:";
+            this.brandlabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // inventorypanel
             // 
@@ -495,6 +505,7 @@
             // 
             // Inventory
             // 
+            this.AcceptButton = this.AddItemButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;

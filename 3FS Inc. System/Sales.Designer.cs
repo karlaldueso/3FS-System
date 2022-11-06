@@ -212,7 +212,7 @@
             this.dataGridInventory.ReadOnly = true;
             this.dataGridInventory.RowHeadersVisible = false;
             this.dataGridInventory.RowHeadersWidth = 51;
-            this.dataGridInventory.Size = new System.Drawing.Size(803, 122);
+            this.dataGridInventory.Size = new System.Drawing.Size(803, 163);
             this.dataGridInventory.TabIndex = 1;
             this.dataGridInventory.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridInventory_CellContentDoubleClick);
             // 
@@ -220,6 +220,7 @@
             // 
             this.searchpanel.BackColor = System.Drawing.Color.Firebrick;
             this.searchpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchpanel.Controls.Add(this.addItem);
             this.searchpanel.Controls.Add(this.searchName);
             this.searchpanel.Controls.Add(this.namesearchlabel);
             this.searchpanel.Controls.Add(this.searchBrandName);
@@ -228,7 +229,7 @@
             this.searchpanel.Location = new System.Drawing.Point(7, 50);
             this.searchpanel.Margin = new System.Windows.Forms.Padding(4);
             this.searchpanel.Name = "searchpanel";
-            this.searchpanel.Size = new System.Drawing.Size(261, 121);
+            this.searchpanel.Size = new System.Drawing.Size(261, 163);
             this.searchpanel.TabIndex = 39;
             // 
             // searchName
@@ -292,7 +293,7 @@
             this.addItem.BackColor = System.Drawing.Color.IndianRed;
             this.addItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addItem.ForeColor = System.Drawing.Color.Gold;
-            this.addItem.Location = new System.Drawing.Point(4, 203);
+            this.addItem.Location = new System.Drawing.Point(72, 106);
             this.addItem.Margin = new System.Windows.Forms.Padding(4);
             this.addItem.Name = "addItem";
             this.addItem.Size = new System.Drawing.Size(109, 36);
@@ -371,7 +372,7 @@
             this.removeitemButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.removeitemButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.removeitemButton.ForeColor = System.Drawing.Color.Gold;
-            this.removeitemButton.Location = new System.Drawing.Point(132, 203);
+            this.removeitemButton.Location = new System.Drawing.Point(4, 203);
             this.removeitemButton.Margin = new System.Windows.Forms.Padding(4);
             this.removeitemButton.Name = "removeitemButton";
             this.removeitemButton.Size = new System.Drawing.Size(109, 36);
@@ -447,7 +448,6 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.addItem);
             this.panel1.Controls.Add(this.dataGridItems);
             this.panel1.Controls.Add(this.grandtotalTextbox);
             this.panel1.Controls.Add(this.removeitemButton);
@@ -506,7 +506,7 @@
             this.panel4.Location = new System.Drawing.Point(16, 284);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1086, 182);
+            this.panel4.Size = new System.Drawing.Size(1086, 219);
             this.panel4.TabIndex = 58;
             // 
             // label1
@@ -558,7 +558,7 @@
             // receiptsToolStripMenuItem
             // 
             this.receiptsToolStripMenuItem.Name = "receiptsToolStripMenuItem";
-            this.receiptsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.receiptsToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.receiptsToolStripMenuItem.Text = "Receipts";
             this.receiptsToolStripMenuItem.Click += new System.EventHandler(this.receiptsToolStripMenuItem_Click);
             // 
@@ -567,7 +567,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(13, 488);
+            this.label2.Location = new System.Drawing.Point(13, 543);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(632, 52);
@@ -579,7 +579,7 @@
             this.totalSales.BackColor = System.Drawing.Color.Maroon;
             this.totalSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalSales.ForeColor = System.Drawing.Color.Yellow;
-            this.totalSales.Location = new System.Drawing.Point(641, 485);
+            this.totalSales.Location = new System.Drawing.Point(641, 540);
             this.totalSales.Margin = new System.Windows.Forms.Padding(4);
             this.totalSales.Name = "totalSales";
             this.totalSales.ReadOnly = true;
@@ -589,12 +589,13 @@
             // 
             // Sales
             // 
+            this.AcceptButton = this.addItem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.Firebrick;
-            this.ClientSize = new System.Drawing.Size(1113, 560);
+            this.ClientSize = new System.Drawing.Size(1113, 607);
             this.Controls.Add(this.totalSales);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel4);
