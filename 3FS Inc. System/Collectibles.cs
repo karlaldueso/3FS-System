@@ -203,5 +203,21 @@ namespace _3FS_System
                 }
             }
         }
+
+        private void Collectibles_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Properties.Settings.Default.FormBackground;
+            panel3.BackColor = Properties.Settings.Default.FormBackground;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

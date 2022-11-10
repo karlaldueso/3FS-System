@@ -229,7 +229,12 @@ namespace _3FS_System
 
         private void Inventory_Load(object sender, EventArgs e)
         {
-            
+            this.BackColor = Properties.Settings.Default.FormBackground;
+        }
+
+        private void inventorypanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

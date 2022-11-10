@@ -159,13 +159,11 @@ namespace _3FS_System
 
         private void Main_Load(object sender, EventArgs e)
         {
-            IsMdiContainer = true;
+            
 
-            // Set the child form's MdiParent property to 
-            // the current form.
 
-            // Call the method that changes the background color.
-           
+
+            this.BackColor = Properties.Settings.Default.FormBackground;
             int myvalue = panel1.Height+4;
             myvalue = myvalue / 5;
             int buttonheight = myvalue;
@@ -186,7 +184,7 @@ namespace _3FS_System
                 // If the control is the correct type,
                 // change the color.
                 {
-                    ctl.BackColor = System.Drawing.Color.IndianRed;
+                    ctl.BackColor = Properties.Settings.Default.FormBackground;
                 }
             }
         }
@@ -278,8 +276,23 @@ namespace _3FS_System
                 invtry.MdiParent = this;
 
                 invtry.Show();
+               
             }
+            
 
+        }
+
+        private void backgroundColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDLG = new ColorDialog();
+            if (colorDLG.ShowDialog() == DialogResult.OK)
+            {
+
+                Properties.Settings.Default.FormBackground = colorDLG.Color;
+                Properties.Settings.Default.Save();
+                //this.BackColor = colorDLG.Color;
+                SetBackGroundColorOfMDIForm();
+            }
         }
     }
 }

@@ -20,3 +20,25 @@ D:\3FS System\3FS-System\3FS Inc. System\obj\Debug\3FS System.exe
 D:\3FS System\3FS-System\3FS Inc. System\obj\Debug\3FS System.pdb
 D:\3FS System\3FS-System\3FS Inc. System\obj\Debug\3FS System.csproj.AssemblyReference.cache
 D:\3FS System\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Receipts.resources
+D:\Projects\3FS-System\3FS Inc. System\bin\Debug\3FS System.exe.config
+D:\Projects\3FS-System\3FS Inc. System\bin\Debug\3FS System.exe
+D:\Projects\3FS-System\3FS Inc. System\bin\Debug\3FS System.pdb
+D:\Projects\3FS-System\3FS Inc. System\bin\Debug\Dapper.dll
+D:\Projects\3FS-System\3FS Inc. System\bin\Debug\Dapper.xml
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\3FS System.csproj.AssemblyReference.cache
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\3FS System.csproj.SuggestedBindingRedirects.cache
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Collectibles.resources
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.CustomerProfile.resources
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Receipts.resources
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.splashscreen.resources
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Inventory.resources
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Login.resources
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Main.resources
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Properties.Resources.resources
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Sales.resources
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Users.resources
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\3FS System.csproj.GenerateResource.cache
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\3FS System.csproj.CoreCompileInputs.cache
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\3FS System.csproj.CopyComplete
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\3FS System.exe
+D:\Projects\3FS-System\3FS Inc. System\obj\Debug\3FS System.pdb

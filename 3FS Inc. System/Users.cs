@@ -79,5 +79,17 @@ namespace _3FS_System
                 }
             }
         }
+
+        private void Users_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Properties.Settings.Default.FormBackground;
+            this.Height = 480;
+            this.Width = 852;
+        }
+
+        private void userslabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

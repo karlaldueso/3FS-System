@@ -43,6 +43,8 @@
             this.dataGridReceipts = new System.Windows.Forms.DataGridView();
             this.dataCollectiblesLog = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.totalcredittextbox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.totalorderstextbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ordersLabel = new System.Windows.Forms.Label();
@@ -57,8 +59,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridReceiptDetails = new System.Windows.Forms.DataGridView();
-            this.totalcredittextbox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridReceipts)).BeginInit();
@@ -175,7 +175,7 @@
             this.dataGridReceipts.AllowUserToResizeColumns = false;
             this.dataGridReceipts.AllowUserToResizeRows = false;
             this.dataGridReceipts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridReceipts.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.dataGridReceipts.BackgroundColor = System.Drawing.Color.White;
             this.dataGridReceipts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
@@ -203,7 +203,7 @@
             this.dataCollectiblesLog.AllowUserToResizeColumns = false;
             this.dataCollectiblesLog.AllowUserToResizeRows = false;
             this.dataCollectiblesLog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataCollectiblesLog.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.dataCollectiblesLog.BackgroundColor = System.Drawing.Color.White;
             this.dataCollectiblesLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
@@ -235,6 +235,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(648, 302);
             this.panel1.TabIndex = 60;
+            // 
+            // totalcredittextbox
+            // 
+            this.totalcredittextbox.BackColor = System.Drawing.Color.White;
+            this.totalcredittextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.totalcredittextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalcredittextbox.ForeColor = System.Drawing.Color.Black;
+            this.totalcredittextbox.Location = new System.Drawing.Point(462, 224);
+            this.totalcredittextbox.Name = "totalcredittextbox";
+            this.totalcredittextbox.ReadOnly = true;
+            this.totalcredittextbox.Size = new System.Drawing.Size(181, 29);
+            this.totalcredittextbox.TabIndex = 68;
+            // 
+            // label2
+            // 
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gold;
+            this.label2.Location = new System.Drawing.Point(310, 265);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(146, 24);
+            this.label2.TabIndex = 69;
+            this.label2.Text = "Total Orders:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // totalorderstextbox
             // 
@@ -284,6 +308,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(607, 293);
             this.panel2.TabIndex = 61;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // totalpaymentstextbox
             // 
@@ -310,10 +335,11 @@
             // 
             // paidButton
             // 
-            this.paidButton.BackColor = System.Drawing.Color.IndianRed;
-            this.paidButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.paidButton.BackColor = System.Drawing.Color.White;
+            this.paidButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.paidButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.paidButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paidButton.ForeColor = System.Drawing.Color.Gold;
+            this.paidButton.ForeColor = System.Drawing.Color.Black;
             this.paidButton.Location = new System.Drawing.Point(479, 78);
             this.paidButton.Name = "paidButton";
             this.paidButton.Size = new System.Drawing.Size(123, 30);
@@ -359,6 +385,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1168, 621);
             this.panel4.TabIndex = 62;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // panel5
             // 
@@ -389,7 +416,7 @@
             this.dataGridReceiptDetails.AllowUserToResizeColumns = false;
             this.dataGridReceiptDetails.AllowUserToResizeRows = false;
             this.dataGridReceiptDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridReceiptDetails.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.dataGridReceiptDetails.BackgroundColor = System.Drawing.Color.White;
             this.dataGridReceiptDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
@@ -407,30 +434,6 @@
             this.dataGridReceiptDetails.Size = new System.Drawing.Size(483, 254);
             this.dataGridReceiptDetails.TabIndex = 59;
             // 
-            // totalcredittextbox
-            // 
-            this.totalcredittextbox.BackColor = System.Drawing.Color.White;
-            this.totalcredittextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.totalcredittextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalcredittextbox.ForeColor = System.Drawing.Color.Black;
-            this.totalcredittextbox.Location = new System.Drawing.Point(462, 224);
-            this.totalcredittextbox.Name = "totalcredittextbox";
-            this.totalcredittextbox.ReadOnly = true;
-            this.totalcredittextbox.Size = new System.Drawing.Size(181, 29);
-            this.totalcredittextbox.TabIndex = 68;
-            // 
-            // label2
-            // 
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(310, 265);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 24);
-            this.label2.TabIndex = 69;
-            this.label2.Text = "Total Orders:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // Collectibles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -444,6 +447,7 @@
             this.Name = "Collectibles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Collectibles";
+            this.Load += new System.EventHandler(this.Collectibles_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCustomers)).EndInit();

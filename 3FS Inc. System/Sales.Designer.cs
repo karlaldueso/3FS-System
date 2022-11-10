@@ -41,12 +41,12 @@
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridInventory = new System.Windows.Forms.DataGridView();
             this.searchpanel = new System.Windows.Forms.Panel();
+            this.addItem = new System.Windows.Forms.Button();
             this.searchName = new System.Windows.Forms.TextBox();
             this.namesearchlabel = new System.Windows.Forms.Label();
             this.searchBrandName = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.brandlabel = new System.Windows.Forms.Label();
-            this.addItem = new System.Windows.Forms.Button();
             this.doneButton = new System.Windows.Forms.Button();
             this.receiptnumTextbox = new System.Windows.Forms.TextBox();
             this.receiptLabel = new System.Windows.Forms.Label();
@@ -90,7 +90,7 @@
             this.dataGridItems.AllowUserToResizeRows = false;
             this.dataGridItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridItems.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridItems.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.dataGridItems.BackgroundColor = System.Drawing.Color.White;
             this.dataGridItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ItemID,
@@ -127,7 +127,7 @@
             this.ItemNum.MinimumWidth = 6;
             this.ItemNum.Name = "ItemNum";
             this.ItemNum.ReadOnly = true;
-            this.ItemNum.Width = 60;
+            this.ItemNum.Width = 62;
             // 
             // Qty
             // 
@@ -135,7 +135,7 @@
             this.Qty.HeaderText = "Qty";
             this.Qty.MinimumWidth = 6;
             this.Qty.Name = "Qty";
-            this.Qty.Width = 46;
+            this.Qty.Width = 48;
             // 
             // Unit
             // 
@@ -144,7 +144,7 @@
             this.Unit.MinimumWidth = 6;
             this.Unit.Name = "Unit";
             this.Unit.ReadOnly = true;
-            this.Unit.Width = 49;
+            this.Unit.Width = 51;
             // 
             // ItemName
             // 
@@ -153,7 +153,7 @@
             this.ItemName.MinimumWidth = 6;
             this.ItemName.Name = "ItemName";
             this.ItemName.ReadOnly = true;
-            this.ItemName.Width = 58;
+            this.ItemName.Width = 60;
             // 
             // Brand
             // 
@@ -162,7 +162,7 @@
             this.Brand.MinimumWidth = 6;
             this.Brand.Name = "Brand";
             this.Brand.ReadOnly = true;
-            this.Brand.Width = 58;
+            this.Brand.Width = 60;
             // 
             // SRP
             // 
@@ -186,7 +186,7 @@
             this.UnitPrice.HeaderText = "Unit Price";
             this.UnitPrice.MinimumWidth = 6;
             this.UnitPrice.Name = "UnitPrice";
-            this.UnitPrice.Width = 76;
+            this.UnitPrice.Width = 78;
             // 
             // SubTotal
             // 
@@ -195,7 +195,7 @@
             this.SubTotal.MinimumWidth = 6;
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.ReadOnly = true;
-            this.SubTotal.Width = 76;
+            this.SubTotal.Width = 78;
             // 
             // dataGridInventory
             // 
@@ -204,7 +204,7 @@
             this.dataGridInventory.AllowUserToResizeColumns = false;
             this.dataGridInventory.AllowUserToResizeRows = false;
             this.dataGridInventory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridInventory.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.dataGridInventory.BackgroundColor = System.Drawing.Color.White;
             this.dataGridInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridInventory.Location = new System.Drawing.Point(276, 50);
             this.dataGridInventory.Margin = new System.Windows.Forms.Padding(4);
@@ -218,7 +218,7 @@
             // 
             // searchpanel
             // 
-            this.searchpanel.BackColor = System.Drawing.Color.Firebrick;
+            this.searchpanel.BackColor = global::_3FS_System.Properties.Settings.Default.FormBackground;
             this.searchpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.searchpanel.Controls.Add(this.addItem);
             this.searchpanel.Controls.Add(this.searchName);
@@ -232,36 +232,54 @@
             this.searchpanel.Size = new System.Drawing.Size(261, 163);
             this.searchpanel.TabIndex = 39;
             // 
+            // addItem
+            // 
+            this.addItem.BackColor = System.Drawing.Color.White;
+            this.addItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.addItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addItem.ForeColor = System.Drawing.Color.Black;
+            this.addItem.Location = new System.Drawing.Point(60, 107);
+            this.addItem.Margin = new System.Windows.Forms.Padding(4);
+            this.addItem.Name = "addItem";
+            this.addItem.Size = new System.Drawing.Size(139, 36);
+            this.addItem.TabIndex = 33;
+            this.addItem.Text = "ADD ITEM";
+            this.addItem.UseVisualStyleBackColor = false;
+            this.addItem.Click += new System.EventHandler(this.addItem_Click);
+            // 
             // searchName
             // 
-            this.searchName.BackColor = System.Drawing.Color.Maroon;
-            this.searchName.ForeColor = System.Drawing.Color.Yellow;
-            this.searchName.Location = new System.Drawing.Point(107, 46);
+            this.searchName.BackColor = System.Drawing.Color.White;
+            this.searchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchName.ForeColor = System.Drawing.Color.Black;
+            this.searchName.Location = new System.Drawing.Point(107, 44);
             this.searchName.Margin = new System.Windows.Forms.Padding(4);
             this.searchName.Name = "searchName";
-            this.searchName.Size = new System.Drawing.Size(132, 20);
+            this.searchName.Size = new System.Drawing.Size(132, 24);
             this.searchName.TabIndex = 28;
             this.searchName.TextChanged += new System.EventHandler(this.searchName_TextChanged);
             // 
             // namesearchlabel
             // 
             this.namesearchlabel.AutoSize = true;
+            this.namesearchlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.namesearchlabel.ForeColor = System.Drawing.Color.Gold;
-            this.namesearchlabel.Location = new System.Drawing.Point(48, 49);
+            this.namesearchlabel.Location = new System.Drawing.Point(47, 46);
             this.namesearchlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.namesearchlabel.Name = "namesearchlabel";
-            this.namesearchlabel.Size = new System.Drawing.Size(38, 13);
+            this.namesearchlabel.Size = new System.Drawing.Size(52, 18);
             this.namesearchlabel.TabIndex = 29;
             this.namesearchlabel.Text = "Name:";
             // 
             // searchBrandName
             // 
-            this.searchBrandName.BackColor = System.Drawing.Color.Maroon;
-            this.searchBrandName.ForeColor = System.Drawing.Color.Yellow;
-            this.searchBrandName.Location = new System.Drawing.Point(107, 78);
+            this.searchBrandName.BackColor = System.Drawing.Color.White;
+            this.searchBrandName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBrandName.ForeColor = System.Drawing.Color.Black;
+            this.searchBrandName.Location = new System.Drawing.Point(107, 75);
             this.searchBrandName.Margin = new System.Windows.Forms.Padding(4);
             this.searchBrandName.Name = "searchBrandName";
-            this.searchBrandName.Size = new System.Drawing.Size(132, 20);
+            this.searchBrandName.Size = new System.Drawing.Size(132, 24);
             this.searchBrandName.TabIndex = 30;
             this.searchBrandName.TextChanged += new System.EventHandler(this.searchBrandName_TextChanged);
             // 
@@ -280,34 +298,22 @@
             // brandlabel
             // 
             this.brandlabel.AutoSize = true;
+            this.brandlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brandlabel.ForeColor = System.Drawing.Color.Gold;
-            this.brandlabel.Location = new System.Drawing.Point(11, 81);
+            this.brandlabel.Location = new System.Drawing.Point(4, 77);
             this.brandlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.brandlabel.Name = "brandlabel";
-            this.brandlabel.Size = new System.Drawing.Size(69, 13);
+            this.brandlabel.Size = new System.Drawing.Size(95, 18);
             this.brandlabel.TabIndex = 31;
             this.brandlabel.Text = "Brand Name:";
             // 
-            // addItem
-            // 
-            this.addItem.BackColor = System.Drawing.Color.IndianRed;
-            this.addItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addItem.ForeColor = System.Drawing.Color.Gold;
-            this.addItem.Location = new System.Drawing.Point(72, 106);
-            this.addItem.Margin = new System.Windows.Forms.Padding(4);
-            this.addItem.Name = "addItem";
-            this.addItem.Size = new System.Drawing.Size(109, 36);
-            this.addItem.TabIndex = 33;
-            this.addItem.Text = "Add Item";
-            this.addItem.UseVisualStyleBackColor = false;
-            this.addItem.Click += new System.EventHandler(this.addItem_Click);
-            // 
             // doneButton
             // 
-            this.doneButton.BackColor = System.Drawing.Color.IndianRed;
+            this.doneButton.BackColor = System.Drawing.Color.White;
+            this.doneButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             this.doneButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.doneButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doneButton.ForeColor = System.Drawing.Color.Gold;
+            this.doneButton.ForeColor = System.Drawing.Color.Black;
             this.doneButton.Location = new System.Drawing.Point(27, 192);
             this.doneButton.Margin = new System.Windows.Forms.Padding(4);
             this.doneButton.Name = "doneButton";
@@ -319,10 +325,10 @@
             // 
             // receiptnumTextbox
             // 
-            this.receiptnumTextbox.BackColor = System.Drawing.Color.Maroon;
+            this.receiptnumTextbox.BackColor = System.Drawing.Color.White;
             this.receiptnumTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.receiptnumTextbox.ForeColor = System.Drawing.Color.Yellow;
-            this.receiptnumTextbox.Location = new System.Drawing.Point(0, 0);
+            this.receiptnumTextbox.ForeColor = System.Drawing.Color.Black;
+            this.receiptnumTextbox.Location = new System.Drawing.Point(0, 31);
             this.receiptnumTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.receiptnumTextbox.Name = "receiptnumTextbox";
             this.receiptnumTextbox.Size = new System.Drawing.Size(200, 29);
@@ -334,7 +340,7 @@
             this.receiptLabel.AutoSize = true;
             this.receiptLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.receiptLabel.ForeColor = System.Drawing.Color.Gold;
-            this.receiptLabel.Location = new System.Drawing.Point(23, 4);
+            this.receiptLabel.Location = new System.Drawing.Point(3, 4);
             this.receiptLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.receiptLabel.Name = "receiptLabel";
             this.receiptLabel.Size = new System.Drawing.Size(91, 20);
@@ -343,9 +349,9 @@
             // 
             // grandtotalTextbox
             // 
-            this.grandtotalTextbox.BackColor = System.Drawing.Color.Maroon;
+            this.grandtotalTextbox.BackColor = System.Drawing.Color.White;
             this.grandtotalTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grandtotalTextbox.ForeColor = System.Drawing.Color.Yellow;
+            this.grandtotalTextbox.ForeColor = System.Drawing.Color.Black;
             this.grandtotalTextbox.Location = new System.Drawing.Point(403, 203);
             this.grandtotalTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.grandtotalTextbox.Name = "grandtotalTextbox";
@@ -368,14 +374,15 @@
             // 
             // removeitemButton
             // 
-            this.removeitemButton.BackColor = System.Drawing.Color.IndianRed;
+            this.removeitemButton.BackColor = System.Drawing.Color.White;
+            this.removeitemButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             this.removeitemButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.removeitemButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.removeitemButton.ForeColor = System.Drawing.Color.Gold;
+            this.removeitemButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeitemButton.ForeColor = System.Drawing.Color.Black;
             this.removeitemButton.Location = new System.Drawing.Point(4, 203);
             this.removeitemButton.Margin = new System.Windows.Forms.Padding(4);
             this.removeitemButton.Name = "removeitemButton";
-            this.removeitemButton.Size = new System.Drawing.Size(109, 36);
+            this.removeitemButton.Size = new System.Drawing.Size(150, 36);
             this.removeitemButton.TabIndex = 47;
             this.removeitemButton.Text = "Remove Item";
             this.removeitemButton.UseVisualStyleBackColor = false;
@@ -387,7 +394,7 @@
             this.dataGridCustomers.AllowUserToDeleteRows = false;
             this.dataGridCustomers.AllowUserToResizeColumns = false;
             this.dataGridCustomers.AllowUserToResizeRows = false;
-            this.dataGridCustomers.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.dataGridCustomers.BackgroundColor = System.Drawing.Color.White;
             this.dataGridCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCustomers.Location = new System.Drawing.Point(12, 75);
             this.dataGridCustomers.Margin = new System.Windows.Forms.Padding(4);
@@ -401,19 +408,20 @@
             // customerLabel
             // 
             this.customerLabel.AutoSize = true;
+            this.customerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerLabel.ForeColor = System.Drawing.Color.Gold;
-            this.customerLabel.Location = new System.Drawing.Point(4, 42);
+            this.customerLabel.Location = new System.Drawing.Point(4, 39);
             this.customerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.customerLabel.Name = "customerLabel";
-            this.customerLabel.Size = new System.Drawing.Size(54, 13);
+            this.customerLabel.Size = new System.Drawing.Size(67, 16);
             this.customerLabel.TabIndex = 50;
             this.customerLabel.Text = "Customer:";
             // 
             // searchCustomerTextbox
             // 
-            this.searchCustomerTextbox.BackColor = System.Drawing.Color.Maroon;
+            this.searchCustomerTextbox.BackColor = System.Drawing.Color.White;
             this.searchCustomerTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.searchCustomerTextbox.ForeColor = System.Drawing.Color.Yellow;
+            this.searchCustomerTextbox.ForeColor = System.Drawing.Color.Black;
             this.searchCustomerTextbox.Location = new System.Drawing.Point(80, 32);
             this.searchCustomerTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.searchCustomerTextbox.Name = "searchCustomerTextbox";
@@ -423,9 +431,9 @@
             // 
             // amountPaidTextbox
             // 
-            this.amountPaidTextbox.BackColor = System.Drawing.Color.Maroon;
+            this.amountPaidTextbox.BackColor = System.Drawing.Color.White;
             this.amountPaidTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.amountPaidTextbox.ForeColor = System.Drawing.Color.Yellow;
+            this.amountPaidTextbox.ForeColor = System.Drawing.Color.Black;
             this.amountPaidTextbox.Location = new System.Drawing.Point(27, 149);
             this.amountPaidTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.amountPaidTextbox.Name = "amountPaidTextbox";
@@ -524,16 +532,17 @@
             // menuStrip1
             // 
             this.menuStrip1.AllowMerge = false;
-            this.menuStrip1.BackColor = System.Drawing.Color.IndianRed;
+            this.menuStrip1.BackColor = global::_3FS_System.Properties.Settings.Default.FormBackground;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1113, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1112, 24);
             this.menuStrip1.TabIndex = 59;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -576,15 +585,17 @@
             // 
             // totalSales
             // 
-            this.totalSales.BackColor = System.Drawing.Color.Maroon;
+            this.totalSales.BackColor = System.Drawing.Color.White;
+            this.totalSales.Cursor = System.Windows.Forms.Cursors.Default;
             this.totalSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalSales.ForeColor = System.Drawing.Color.Yellow;
+            this.totalSales.ForeColor = System.Drawing.Color.Black;
+            this.totalSales.HideSelection = false;
             this.totalSales.Location = new System.Drawing.Point(641, 540);
             this.totalSales.Margin = new System.Windows.Forms.Padding(4);
             this.totalSales.Name = "totalSales";
             this.totalSales.ReadOnly = true;
             this.totalSales.Size = new System.Drawing.Size(461, 58);
-            this.totalSales.TabIndex = 48;
+            this.totalSales.TabIndex = 8;
             this.totalSales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Sales
@@ -595,7 +606,7 @@
             this.AutoScroll = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.Firebrick;
-            this.ClientSize = new System.Drawing.Size(1113, 607);
+            this.ClientSize = new System.Drawing.Size(1112, 607);
             this.Controls.Add(this.totalSales);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel4);
@@ -605,10 +616,10 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
             this.Name = "Sales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Sales";
+            this.Load += new System.EventHandler(this.Sales_Load);
             this.DockChanged += new System.EventHandler(this.Sales_DockChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInventory)).EndInit();

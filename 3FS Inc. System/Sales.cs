@@ -379,5 +379,17 @@ namespace _3FS_System
                 receipts.Show();
             }
         }
+
+        private void Sales_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Properties.Settings.Default.FormBackground;
+            this.Height = 646;
+            this.Width = 1128;
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

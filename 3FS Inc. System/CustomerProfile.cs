@@ -200,5 +200,10 @@ namespace _3FS_System
             }
             
         }
+
+        private void CustomerProfile_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Properties.Settings.Default.FormBackground;
+        }
     }
 }

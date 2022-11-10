@@ -95,8 +95,8 @@
             // 
             // searchBrandName
             // 
-            this.searchBrandName.BackColor = System.Drawing.Color.Maroon;
-            this.searchBrandName.ForeColor = System.Drawing.Color.Yellow;
+            this.searchBrandName.BackColor = System.Drawing.Color.White;
+            this.searchBrandName.ForeColor = System.Drawing.Color.Black;
             this.searchBrandName.Location = new System.Drawing.Point(107, 78);
             this.searchBrandName.Margin = new System.Windows.Forms.Padding(4);
             this.searchBrandName.Name = "searchBrandName";
@@ -119,13 +119,12 @@
             // editlabel
             // 
             this.editlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.editlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editlabel.Location = new System.Drawing.Point(373, 290);
             this.editlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.editlabel.Name = "editlabel";
             this.editlabel.Size = new System.Drawing.Size(113, 21);
             this.editlabel.TabIndex = 33;
-            this.editlabel.Text = "Label:";
             this.editlabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // addpanel
@@ -157,8 +156,8 @@
             // 
             // ItemNameText
             // 
-            this.ItemNameText.BackColor = System.Drawing.Color.Maroon;
-            this.ItemNameText.ForeColor = System.Drawing.Color.Yellow;
+            this.ItemNameText.BackColor = System.Drawing.Color.White;
+            this.ItemNameText.ForeColor = System.Drawing.Color.Black;
             this.ItemNameText.Location = new System.Drawing.Point(111, 49);
             this.ItemNameText.Margin = new System.Windows.Forms.Padding(4);
             this.ItemNameText.Name = "ItemNameText";
@@ -167,16 +166,17 @@
             // 
             // AddItemButton
             // 
-            this.AddItemButton.BackColor = System.Drawing.Color.IndianRed;
+            this.AddItemButton.BackColor = System.Drawing.Color.White;
+            this.AddItemButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             this.AddItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddItemButton.ForeColor = System.Drawing.Color.Gold;
+            this.AddItemButton.ForeColor = System.Drawing.Color.Black;
             this.AddItemButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddItemButton.Location = new System.Drawing.Point(128, 272);
+            this.AddItemButton.Location = new System.Drawing.Point(111, 272);
             this.AddItemButton.Margin = new System.Windows.Forms.Padding(4);
             this.AddItemButton.Name = "AddItemButton";
-            this.AddItemButton.Size = new System.Drawing.Size(100, 28);
+            this.AddItemButton.Size = new System.Drawing.Size(132, 26);
             this.AddItemButton.TabIndex = 5;
-            this.AddItemButton.Text = "Add";
+            this.AddItemButton.Text = "&ADD";
             this.AddItemButton.UseVisualStyleBackColor = false;
             this.AddItemButton.Click += new System.EventHandler(this.AddItemButton_Click);
             // 
@@ -278,8 +278,8 @@
             // 
             // BrandNameText
             // 
-            this.BrandNameText.BackColor = System.Drawing.Color.Maroon;
-            this.BrandNameText.ForeColor = System.Drawing.Color.Yellow;
+            this.BrandNameText.BackColor = System.Drawing.Color.White;
+            this.BrandNameText.ForeColor = System.Drawing.Color.Black;
             this.BrandNameText.Location = new System.Drawing.Point(111, 78);
             this.BrandNameText.Margin = new System.Windows.Forms.Padding(4);
             this.BrandNameText.Name = "BrandNameText";
@@ -288,8 +288,8 @@
             // 
             // CategoryText
             // 
-            this.CategoryText.BackColor = System.Drawing.Color.Maroon;
-            this.CategoryText.ForeColor = System.Drawing.Color.Yellow;
+            this.CategoryText.BackColor = System.Drawing.Color.White;
+            this.CategoryText.ForeColor = System.Drawing.Color.Black;
             this.CategoryText.Location = new System.Drawing.Point(111, 105);
             this.CategoryText.Margin = new System.Windows.Forms.Padding(4);
             this.CategoryText.Name = "CategoryText";
@@ -298,8 +298,8 @@
             // 
             // StorageText
             // 
-            this.StorageText.BackColor = System.Drawing.Color.Maroon;
-            this.StorageText.ForeColor = System.Drawing.Color.Yellow;
+            this.StorageText.BackColor = System.Drawing.Color.White;
+            this.StorageText.ForeColor = System.Drawing.Color.Black;
             this.StorageText.Location = new System.Drawing.Point(111, 240);
             this.StorageText.Margin = new System.Windows.Forms.Padding(4);
             this.StorageText.Name = "StorageText";
@@ -308,8 +308,8 @@
             // 
             // QuantityText
             // 
-            this.QuantityText.BackColor = System.Drawing.Color.Maroon;
-            this.QuantityText.ForeColor = System.Drawing.Color.Yellow;
+            this.QuantityText.BackColor = System.Drawing.Color.White;
+            this.QuantityText.ForeColor = System.Drawing.Color.Black;
             this.QuantityText.Location = new System.Drawing.Point(111, 132);
             this.QuantityText.Margin = new System.Windows.Forms.Padding(4);
             this.QuantityText.Name = "QuantityText";
@@ -318,8 +318,8 @@
             // 
             // CapitalText
             // 
-            this.CapitalText.BackColor = System.Drawing.Color.Maroon;
-            this.CapitalText.ForeColor = System.Drawing.Color.Yellow;
+            this.CapitalText.BackColor = System.Drawing.Color.White;
+            this.CapitalText.ForeColor = System.Drawing.Color.Black;
             this.CapitalText.Location = new System.Drawing.Point(111, 213);
             this.CapitalText.Margin = new System.Windows.Forms.Padding(4);
             this.CapitalText.Name = "CapitalText";
@@ -328,8 +328,8 @@
             // 
             // UnitText
             // 
-            this.UnitText.BackColor = System.Drawing.Color.Maroon;
-            this.UnitText.ForeColor = System.Drawing.Color.Yellow;
+            this.UnitText.BackColor = System.Drawing.Color.White;
+            this.UnitText.ForeColor = System.Drawing.Color.Black;
             this.UnitText.Location = new System.Drawing.Point(111, 159);
             this.UnitText.Margin = new System.Windows.Forms.Padding(4);
             this.UnitText.Name = "UnitText";
@@ -338,8 +338,8 @@
             // 
             // SRPText
             // 
-            this.SRPText.BackColor = System.Drawing.Color.Maroon;
-            this.SRPText.ForeColor = System.Drawing.Color.Yellow;
+            this.SRPText.BackColor = System.Drawing.Color.White;
+            this.SRPText.ForeColor = System.Drawing.Color.Black;
             this.SRPText.Location = new System.Drawing.Point(111, 186);
             this.SRPText.Margin = new System.Windows.Forms.Padding(4);
             this.SRPText.Name = "SRPText";
@@ -374,6 +374,7 @@
             this.inventorypanel.Name = "inventorypanel";
             this.inventorypanel.Size = new System.Drawing.Size(764, 465);
             this.inventorypanel.TabIndex = 39;
+            this.inventorypanel.Paint += new System.Windows.Forms.PaintEventHandler(this.inventorypanel_Paint);
             // 
             // dataGridInventory
             // 
@@ -381,7 +382,7 @@
             this.dataGridInventory.AllowUserToDeleteRows = false;
             this.dataGridInventory.AllowUserToResizeRows = false;
             this.dataGridInventory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridInventory.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.dataGridInventory.BackgroundColor = System.Drawing.Color.White;
             this.dataGridInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridInventory.Location = new System.Drawing.Point(4, 42);
             this.dataGridInventory.Margin = new System.Windows.Forms.Padding(4);
@@ -412,7 +413,7 @@
             this.dataGridLogs.AllowUserToDeleteRows = false;
             this.dataGridLogs.AllowUserToResizeRows = false;
             this.dataGridLogs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridLogs.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.dataGridLogs.BackgroundColor = System.Drawing.Color.White;
             this.dataGridLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridLogs.Location = new System.Drawing.Point(4, 339);
             this.dataGridLogs.Margin = new System.Windows.Forms.Padding(4);
@@ -438,25 +439,26 @@
             // 
             // UpdateButton
             // 
-            this.UpdateButton.BackColor = System.Drawing.Color.IndianRed;
+            this.UpdateButton.BackColor = System.Drawing.Color.White;
             this.UpdateButton.Enabled = false;
+            this.UpdateButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.UpdateButton.ForeColor = System.Drawing.Color.Gold;
+            this.UpdateButton.ForeColor = System.Drawing.Color.Black;
             this.UpdateButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UpdateButton.Location = new System.Drawing.Point(640, 286);
+            this.UpdateButton.Location = new System.Drawing.Point(639, 286);
             this.UpdateButton.Margin = new System.Windows.Forms.Padding(4);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(118, 26);
             this.UpdateButton.TabIndex = 23;
-            this.UpdateButton.Text = "Update";
+            this.UpdateButton.Text = "&Update";
             this.UpdateButton.UseVisualStyleBackColor = false;
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // EditText
             // 
-            this.EditText.BackColor = System.Drawing.Color.Maroon;
+            this.EditText.BackColor = System.Drawing.Color.White;
             this.EditText.Enabled = false;
-            this.EditText.ForeColor = System.Drawing.Color.Yellow;
+            this.EditText.ForeColor = System.Drawing.Color.Black;
             this.EditText.Location = new System.Drawing.Point(495, 286);
             this.EditText.Margin = new System.Windows.Forms.Padding(4);
             this.EditText.Name = "EditText";
@@ -465,16 +467,17 @@
             // 
             // refreshButton
             // 
-            this.refreshButton.BackColor = System.Drawing.Color.IndianRed;
+            this.refreshButton.BackColor = System.Drawing.Color.White;
+            this.refreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.refreshButton.ForeColor = System.Drawing.Color.Gold;
+            this.refreshButton.ForeColor = System.Drawing.Color.Black;
             this.refreshButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.refreshButton.Location = new System.Drawing.Point(4, 273);
             this.refreshButton.Margin = new System.Windows.Forms.Padding(4);
             this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(100, 25);
+            this.refreshButton.Size = new System.Drawing.Size(134, 25);
             this.refreshButton.TabIndex = 3;
-            this.refreshButton.Text = "Refresh";
+            this.refreshButton.Text = "&Refresh";
             this.refreshButton.UseVisualStyleBackColor = false;
             this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
@@ -494,8 +497,8 @@
             // 
             // searchName
             // 
-            this.searchName.BackColor = System.Drawing.Color.Maroon;
-            this.searchName.ForeColor = System.Drawing.Color.Yellow;
+            this.searchName.BackColor = System.Drawing.Color.White;
+            this.searchName.ForeColor = System.Drawing.Color.Black;
             this.searchName.Location = new System.Drawing.Point(107, 46);
             this.searchName.Margin = new System.Windows.Forms.Padding(4);
             this.searchName.Name = "searchName";
@@ -519,7 +522,7 @@
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Inventory";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.Inventory_Load);
             this.addpanel.ResumeLayout(false);
