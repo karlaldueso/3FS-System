@@ -127,7 +127,7 @@
             this.ItemNum.MinimumWidth = 6;
             this.ItemNum.Name = "ItemNum";
             this.ItemNum.ReadOnly = true;
-            this.ItemNum.Width = 62;
+            this.ItemNum.Width = 60;
             // 
             // Qty
             // 
@@ -135,7 +135,7 @@
             this.Qty.HeaderText = "Qty";
             this.Qty.MinimumWidth = 6;
             this.Qty.Name = "Qty";
-            this.Qty.Width = 48;
+            this.Qty.Width = 46;
             // 
             // Unit
             // 
@@ -144,7 +144,7 @@
             this.Unit.MinimumWidth = 6;
             this.Unit.Name = "Unit";
             this.Unit.ReadOnly = true;
-            this.Unit.Width = 51;
+            this.Unit.Width = 49;
             // 
             // ItemName
             // 
@@ -153,7 +153,7 @@
             this.ItemName.MinimumWidth = 6;
             this.ItemName.Name = "ItemName";
             this.ItemName.ReadOnly = true;
-            this.ItemName.Width = 60;
+            this.ItemName.Width = 58;
             // 
             // Brand
             // 
@@ -162,7 +162,7 @@
             this.Brand.MinimumWidth = 6;
             this.Brand.Name = "Brand";
             this.Brand.ReadOnly = true;
-            this.Brand.Width = 60;
+            this.Brand.Width = 58;
             // 
             // SRP
             // 
@@ -186,7 +186,7 @@
             this.UnitPrice.HeaderText = "Unit Price";
             this.UnitPrice.MinimumWidth = 6;
             this.UnitPrice.Name = "UnitPrice";
-            this.UnitPrice.Width = 78;
+            this.UnitPrice.Width = 76;
             // 
             // SubTotal
             // 
@@ -195,7 +195,7 @@
             this.SubTotal.MinimumWidth = 6;
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.ReadOnly = true;
-            this.SubTotal.Width = 78;
+            this.SubTotal.Width = 76;
             // 
             // dataGridInventory
             // 
@@ -263,7 +263,7 @@
             // 
             this.namesearchlabel.AutoSize = true;
             this.namesearchlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.namesearchlabel.ForeColor = System.Drawing.Color.Gold;
+            this.namesearchlabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.namesearchlabel.Location = new System.Drawing.Point(47, 46);
             this.namesearchlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.namesearchlabel.Name = "namesearchlabel";
@@ -287,7 +287,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Gold;
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label11.Location = new System.Drawing.Point(9, 12);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
@@ -299,7 +299,7 @@
             // 
             this.brandlabel.AutoSize = true;
             this.brandlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brandlabel.ForeColor = System.Drawing.Color.Gold;
+            this.brandlabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.brandlabel.Location = new System.Drawing.Point(4, 77);
             this.brandlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.brandlabel.Name = "brandlabel";
@@ -339,7 +339,7 @@
             // 
             this.receiptLabel.AutoSize = true;
             this.receiptLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.receiptLabel.ForeColor = System.Drawing.Color.Gold;
+            this.receiptLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.receiptLabel.Location = new System.Drawing.Point(3, 4);
             this.receiptLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.receiptLabel.Name = "receiptLabel";
@@ -364,7 +364,7 @@
             // 
             this.grandtotalLabel.AutoSize = true;
             this.grandtotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grandtotalLabel.ForeColor = System.Drawing.Color.Gold;
+            this.grandtotalLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.grandtotalLabel.Location = new System.Drawing.Point(249, 209);
             this.grandtotalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.grandtotalLabel.Name = "grandtotalLabel";
@@ -409,7 +409,7 @@
             // 
             this.customerLabel.AutoSize = true;
             this.customerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerLabel.ForeColor = System.Drawing.Color.Gold;
+            this.customerLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.customerLabel.Location = new System.Drawing.Point(4, 39);
             this.customerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.customerLabel.Name = "customerLabel";
@@ -445,7 +445,7 @@
             // 
             this.amountPaid.AutoSize = true;
             this.amountPaid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.amountPaid.ForeColor = System.Drawing.Color.Gold;
+            this.amountPaid.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.amountPaid.Location = new System.Drawing.Point(24, 121);
             this.amountPaid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.amountPaid.Name = "amountPaid";
@@ -521,7 +521,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(464, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -575,7 +575,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gold;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(13, 543);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";

@@ -32,6 +32,7 @@
             this.usersDataGrid = new System.Windows.Forms.DataGridView();
             this.firstNametext = new System.Windows.Forms.TextBox();
             this.panel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.AddItemButton = new System.Windows.Forms.Button();
             this.userTypelabel = new System.Windows.Forms.Label();
             this.userTypecombobox = new System.Windows.Forms.ComboBox();
@@ -46,7 +47,6 @@
             this.lastNamelabel = new System.Windows.Forms.Label();
             this.lastNametext = new System.Windows.Forms.TextBox();
             this.firstNamelabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGrid)).BeginInit();
             this.panel.SuspendLayout();
@@ -109,6 +109,19 @@
             this.panel.Size = new System.Drawing.Size(310, 413);
             this.panel.TabIndex = 2;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(3, 253);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 18);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Re-Type Password:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // AddItemButton
             // 
             this.AddItemButton.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -131,7 +144,7 @@
             this.userTypelabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.userTypelabel.AutoSize = true;
             this.userTypelabel.BackColor = System.Drawing.Color.Transparent;
-            this.userTypelabel.ForeColor = System.Drawing.Color.Gold;
+            this.userTypelabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.userTypelabel.Location = new System.Drawing.Point(56, 290);
             this.userTypelabel.Name = "userTypelabel";
             this.userTypelabel.Size = new System.Drawing.Size(80, 18);
@@ -161,7 +174,7 @@
             this.userslabel.AutoSize = true;
             this.userslabel.BackColor = System.Drawing.Color.Transparent;
             this.userslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userslabel.ForeColor = System.Drawing.Color.Gold;
+            this.userslabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.userslabel.Location = new System.Drawing.Point(14, 23);
             this.userslabel.Name = "userslabel";
             this.userslabel.Size = new System.Drawing.Size(175, 25);
@@ -186,7 +199,7 @@
             this.PWlabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PWlabel1.AutoSize = true;
             this.PWlabel1.BackColor = System.Drawing.Color.Transparent;
-            this.PWlabel1.ForeColor = System.Drawing.Color.Gold;
+            this.PWlabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.PWlabel1.Location = new System.Drawing.Point(62, 218);
             this.PWlabel1.Name = "PWlabel1";
             this.PWlabel1.Size = new System.Drawing.Size(79, 18);
@@ -210,7 +223,7 @@
             this.usernamelabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.usernamelabel.AutoSize = true;
             this.usernamelabel.BackColor = System.Drawing.Color.Transparent;
-            this.usernamelabel.ForeColor = System.Drawing.Color.Gold;
+            this.usernamelabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.usernamelabel.Location = new System.Drawing.Point(60, 187);
             this.usernamelabel.Name = "usernamelabel";
             this.usernamelabel.Size = new System.Drawing.Size(81, 18);
@@ -233,7 +246,7 @@
             this.contactNumberlabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.contactNumberlabel.AutoSize = true;
             this.contactNumberlabel.BackColor = System.Drawing.Color.Transparent;
-            this.contactNumberlabel.ForeColor = System.Drawing.Color.Gold;
+            this.contactNumberlabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.contactNumberlabel.Location = new System.Drawing.Point(65, 152);
             this.contactNumberlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.contactNumberlabel.Name = "contactNumberlabel";
@@ -257,7 +270,7 @@
             this.lastNamelabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lastNamelabel.AutoSize = true;
             this.lastNamelabel.BackColor = System.Drawing.Color.Transparent;
-            this.lastNamelabel.ForeColor = System.Drawing.Color.Gold;
+            this.lastNamelabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lastNamelabel.Location = new System.Drawing.Point(57, 121);
             this.lastNamelabel.Name = "lastNamelabel";
             this.lastNamelabel.Size = new System.Drawing.Size(84, 18);
@@ -280,26 +293,13 @@
             this.firstNamelabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.firstNamelabel.AutoSize = true;
             this.firstNamelabel.BackColor = System.Drawing.Color.Transparent;
-            this.firstNamelabel.ForeColor = System.Drawing.Color.Gold;
+            this.firstNamelabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.firstNamelabel.Location = new System.Drawing.Point(56, 85);
             this.firstNamelabel.Name = "firstNamelabel";
             this.firstNamelabel.Size = new System.Drawing.Size(85, 18);
             this.firstNamelabel.TabIndex = 2;
             this.firstNamelabel.Text = "First Name:";
             this.firstNamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(3, 253);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 18);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Re-Type Password:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Users
             // 

@@ -68,9 +68,9 @@
             // 
             // totalSales
             // 
-            this.totalSales.BackColor = System.Drawing.Color.Maroon;
+            this.totalSales.BackColor = System.Drawing.Color.White;
             this.totalSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalSales.ForeColor = System.Drawing.Color.Yellow;
+            this.totalSales.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.totalSales.Location = new System.Drawing.Point(192, 303);
             this.totalSales.Margin = new System.Windows.Forms.Padding(4);
             this.totalSales.Name = "totalSales";
