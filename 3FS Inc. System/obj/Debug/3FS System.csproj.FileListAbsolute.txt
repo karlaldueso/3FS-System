@@ -42,3 +42,4 @@ D:\Projects\3FS-System\3FS Inc. System\obj\Debug\3FS System.csproj.CoreCompileIn
 D:\Projects\3FS-System\3FS Inc. System\obj\Debug\3FS System.csproj.CopyComplete
 D:\Projects\3FS-System\3FS Inc. System\obj\Debug\3FS System.exe
 D:\Projects\3FS-System\3FS Inc. System\obj\Debug\3FS System.pdb
+D:\3FS System\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Reports.resources

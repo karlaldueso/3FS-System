@@ -294,5 +294,32 @@ namespace _3FS_System
                 SetBackGroundColorOfMDIForm();
             }
         }
+
+        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCollection fc = Application.OpenForms;
+            bool bFormNameOpen = false;
+            foreach (Form frm in fc)
+            {
+                if (frm.Name == "Reports")
+                {
+                    bFormNameOpen = true;
+                    frm.Focus();
+                    break;
+                }
+                else
+                {
+                    bFormNameOpen = false;
+                }
+            }
+            if (bFormNameOpen == false)
+            {
+                Reports reports = new Reports();
+                reports.MdiParent = this;
+
+                reports.Show();
+
+            }
+        }
     }
 }

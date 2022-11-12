@@ -29,16 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridItems = new System.Windows.Forms.DataGridView();
-            this.ItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SRP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Capital = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridInventory = new System.Windows.Forms.DataGridView();
             this.searchpanel = new System.Windows.Forms.Panel();
             this.addItem = new System.Windows.Forms.Button();
@@ -71,6 +61,16 @@
             this.receiptsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.totalSales = new System.Windows.Forms.TextBox();
+            this.ItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SRP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Capital = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInventory)).BeginInit();
             this.searchpanel.SuspendLayout();
@@ -111,91 +111,6 @@
             this.dataGridItems.Size = new System.Drawing.Size(569, 192);
             this.dataGridItems.TabIndex = 0;
             this.dataGridItems.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridItems_CellEnter);
-            // 
-            // ItemID
-            // 
-            this.ItemID.HeaderText = "ItemID";
-            this.ItemID.MinimumWidth = 6;
-            this.ItemID.Name = "ItemID";
-            this.ItemID.ReadOnly = true;
-            this.ItemID.Visible = false;
-            // 
-            // ItemNum
-            // 
-            this.ItemNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ItemNum.HeaderText = "Item #";
-            this.ItemNum.MinimumWidth = 6;
-            this.ItemNum.Name = "ItemNum";
-            this.ItemNum.ReadOnly = true;
-            this.ItemNum.Width = 60;
-            // 
-            // Qty
-            // 
-            this.Qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Qty.HeaderText = "Qty";
-            this.Qty.MinimumWidth = 6;
-            this.Qty.Name = "Qty";
-            this.Qty.Width = 46;
-            // 
-            // Unit
-            // 
-            this.Unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Unit.HeaderText = "Unit";
-            this.Unit.MinimumWidth = 6;
-            this.Unit.Name = "Unit";
-            this.Unit.ReadOnly = true;
-            this.Unit.Width = 49;
-            // 
-            // ItemName
-            // 
-            this.ItemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ItemName.HeaderText = "Name";
-            this.ItemName.MinimumWidth = 6;
-            this.ItemName.Name = "ItemName";
-            this.ItemName.ReadOnly = true;
-            this.ItemName.Width = 58;
-            // 
-            // Brand
-            // 
-            this.Brand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Brand.HeaderText = "Brand";
-            this.Brand.MinimumWidth = 6;
-            this.Brand.Name = "Brand";
-            this.Brand.ReadOnly = true;
-            this.Brand.Width = 58;
-            // 
-            // SRP
-            // 
-            this.SRP.HeaderText = "SRP";
-            this.SRP.MinimumWidth = 6;
-            this.SRP.Name = "SRP";
-            this.SRP.ReadOnly = true;
-            this.SRP.Visible = false;
-            // 
-            // Capital
-            // 
-            this.Capital.HeaderText = "Capital";
-            this.Capital.MinimumWidth = 6;
-            this.Capital.Name = "Capital";
-            this.Capital.ReadOnly = true;
-            this.Capital.Visible = false;
-            // 
-            // UnitPrice
-            // 
-            this.UnitPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.UnitPrice.HeaderText = "Unit Price";
-            this.UnitPrice.MinimumWidth = 6;
-            this.UnitPrice.Name = "UnitPrice";
-            this.UnitPrice.Width = 76;
-            // 
-            // SubTotal
-            // 
-            this.SubTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.SubTotal.HeaderText = "Sub Total";
-            this.SubTotal.MinimumWidth = 6;
-            this.SubTotal.Name = "SubTotal";
-            this.SubTotal.ReadOnly = true;
-            this.SubTotal.Width = 76;
             // 
             // dataGridInventory
             // 
@@ -586,17 +501,102 @@
             // totalSales
             // 
             this.totalSales.BackColor = System.Drawing.Color.White;
-            this.totalSales.Cursor = System.Windows.Forms.Cursors.Default;
+            this.totalSales.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.totalSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalSales.ForeColor = System.Drawing.Color.Black;
-            this.totalSales.HideSelection = false;
             this.totalSales.Location = new System.Drawing.Point(641, 540);
             this.totalSales.Margin = new System.Windows.Forms.Padding(4);
             this.totalSales.Name = "totalSales";
             this.totalSales.ReadOnly = true;
             this.totalSales.Size = new System.Drawing.Size(461, 58);
             this.totalSales.TabIndex = 8;
+            this.totalSales.TabStop = false;
             this.totalSales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ItemID
+            // 
+            this.ItemID.HeaderText = "ItemID";
+            this.ItemID.MinimumWidth = 6;
+            this.ItemID.Name = "ItemID";
+            this.ItemID.ReadOnly = true;
+            this.ItemID.Visible = false;
+            // 
+            // ItemNum
+            // 
+            this.ItemNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ItemNum.HeaderText = "Item #";
+            this.ItemNum.MinimumWidth = 6;
+            this.ItemNum.Name = "ItemNum";
+            this.ItemNum.ReadOnly = true;
+            this.ItemNum.Width = 60;
+            // 
+            // Qty
+            // 
+            this.Qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Qty.HeaderText = "Qty";
+            this.Qty.MinimumWidth = 6;
+            this.Qty.Name = "Qty";
+            this.Qty.Width = 46;
+            // 
+            // Unit
+            // 
+            this.Unit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Unit.HeaderText = "Unit";
+            this.Unit.MinimumWidth = 6;
+            this.Unit.Name = "Unit";
+            this.Unit.ReadOnly = true;
+            this.Unit.Width = 49;
+            // 
+            // ItemName
+            // 
+            this.ItemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ItemName.HeaderText = "Name";
+            this.ItemName.MinimumWidth = 6;
+            this.ItemName.Name = "ItemName";
+            this.ItemName.ReadOnly = true;
+            this.ItemName.Width = 58;
+            // 
+            // Brand
+            // 
+            this.Brand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Brand.HeaderText = "Brand";
+            this.Brand.MinimumWidth = 6;
+            this.Brand.Name = "Brand";
+            this.Brand.ReadOnly = true;
+            this.Brand.Width = 58;
+            // 
+            // SRP
+            // 
+            this.SRP.HeaderText = "SRP";
+            this.SRP.MinimumWidth = 6;
+            this.SRP.Name = "SRP";
+            this.SRP.ReadOnly = true;
+            this.SRP.Visible = false;
+            // 
+            // Capital
+            // 
+            this.Capital.HeaderText = "Capital";
+            this.Capital.MinimumWidth = 6;
+            this.Capital.Name = "Capital";
+            this.Capital.ReadOnly = true;
+            this.Capital.Visible = false;
+            // 
+            // UnitPrice
+            // 
+            this.UnitPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.UnitPrice.HeaderText = "Unit Price";
+            this.UnitPrice.MinimumWidth = 6;
+            this.UnitPrice.Name = "UnitPrice";
+            this.UnitPrice.Width = 76;
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.SubTotal.HeaderText = "Sub Total";
+            this.SubTotal.MinimumWidth = 6;
+            this.SubTotal.Name = "SubTotal";
+            this.SubTotal.ReadOnly = true;
+            this.SubTotal.Width = 76;
             // 
             // Sales
             // 
@@ -658,16 +658,6 @@
         private System.Windows.Forms.TextBox grandtotalTextbox;
         private System.Windows.Forms.Label grandtotalLabel;
         private System.Windows.Forms.Button removeitemButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ItemID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ItemNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Brand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SRP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Capital;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.DataGridView dataGridCustomers;
         private System.Windows.Forms.Label customerLabel;
         private System.Windows.Forms.TextBox searchCustomerTextbox;
@@ -686,5 +676,15 @@
         private System.Windows.Forms.ToolStripMenuItem receiptsToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox totalSales;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Brand;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SRP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Capital;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
     }
 }

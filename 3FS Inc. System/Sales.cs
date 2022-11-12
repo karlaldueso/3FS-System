@@ -159,7 +159,7 @@ namespace _3FS_System
             float grandtot = 0;
             if (unitprice < capital)
             {
-                MessageBox.Show(String.Format("Capital: P{0:N2}\nSRP: P{0:N2}", capital, srp), "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(String.Format("Capital: P{0:N2}\nSRP: P{1:N2}", capital, srp), "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //Unit Price
                 dataGridItems.Rows[c_r[1]].Cells[8].Value = srp;
                 subtot = qty * srp;
