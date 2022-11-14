@@ -38,13 +38,14 @@ namespace _3FS_System
                 MaximumSize = new Size(screenWidth, screenHeight);
                 this.WindowState = FormWindowState.Maximized;
                 int newval = panel1.Height + 4;
-                newval /= 5;
+                newval /= 6;
                 int buttonheight = newval;
                 customers_button.Height = buttonheight;
                 customerProfile.Height = buttonheight;
                 sales_button.Height = buttonheight;
                 Inventory_new.Height = buttonheight;
                 users.Height = buttonheight;
+                suppliers_button.Height = buttonheight;
                 this.BackgroundImage = null;
                 // string myfile = System.Reflection.Assembly.GetExecutingAssembly().Location + "hardware_logo transparent.png";
                 this.BackgroundImage = Properties.Resources.hardware_logo_transparent;
@@ -56,13 +57,14 @@ namespace _3FS_System
                 this.Height = 650;
                 this.Width = 1200;
                 int newval = panel1.Height + 4;
-                newval /= 5;
+                newval /= 6;
                 int buttonheight = newval;
                 customers_button.Height = buttonheight;
                 customerProfile.Height = buttonheight;
                 sales_button.Height = buttonheight;
                 Inventory_new.Height = buttonheight;
                 users.Height = buttonheight;
+                suppliers_button.Height = buttonheight;
                 this.BackgroundImage = null;
 
                 this.BackgroundImage = Properties.Resources.hardware_logo_transparent;
@@ -165,13 +167,14 @@ namespace _3FS_System
 
             this.BackColor = Properties.Settings.Default.FormBackground;
             int myvalue = panel1.Height+4;
-            myvalue = myvalue / 5;
+            myvalue = myvalue / 6;
             int buttonheight = myvalue;
             customers_button.Height = buttonheight;
             customerProfile.Height = buttonheight;
             sales_button.Height = buttonheight;
             Inventory_new.Height = buttonheight;
             users.Height = buttonheight;
+            suppliers_button.Height = buttonheight;
 
             SetBackGroundColorOfMDIForm();
         }
@@ -319,6 +322,46 @@ namespace _3FS_System
 
                 reports.Show();
 
+            }
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCollection fc = Application.OpenForms;
+            bool bFormNameOpen = false;
+            foreach (Form frm in fc)
+            {
+                if (frm.Name == "Reports")
+                {
+                    bFormNameOpen = true;
+                    frm.Focus();
+                    break;
+                }
+                else
+                {
+                    bFormNameOpen = false;
+                }
+            }
+            if (bFormNameOpen == false)
+            {
+                Reports reports = new Reports();
+                reports.MdiParent = this;
+
+                reports.Show();
+
+            }
+        }
+
+        private void toolsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDLG = new ColorDialog();
+            if (colorDLG.ShowDialog() == DialogResult.OK)
+            {
+
+                Properties.Settings.Default.FormBackground = colorDLG.Color;
+                Properties.Settings.Default.Save();
+                //this.BackColor = colorDLG.Color;
+                SetBackGroundColorOfMDIForm();
             }
         }
     }
