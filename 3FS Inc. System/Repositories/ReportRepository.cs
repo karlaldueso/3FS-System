@@ -12,9 +12,9 @@ namespace _3FS_System.Repositories
 {
     internal class ReportRepository : IReportRepository
     {
-        public IEnumerable<Report_SalesPerItem> GetReport_SalesPerItem(DateTime TransactionDate)
+        public IEnumerable<Report_SalesPerItem> GetReport_SalesPerItem(DateTime StartDate, DateTime EndDate)
         {
-            string qry = string.Format("dbo.spSales_GetPerItem @Date='{0}'", TransactionDate);
+            string qry = string.Format("dbo.spSales_GetPerItem @StartDate='{0}', @EndDate='{1}'", StartDate, EndDate);
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
                 var output = connection.Query<Report_SalesPerItem>(qry);

@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.reportChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.startdateTime = new System.Windows.Forms.DateTimePicker();
+            this.enddateTime = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reportChart)).BeginInit();
             this.SuspendLayout();
@@ -84,36 +85,45 @@
             // 
             // reportChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.reportChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.reportChart.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.reportChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.reportChart.Legends.Add(legend2);
             this.reportChart.Location = new System.Drawing.Point(265, 52);
             this.reportChart.Name = "reportChart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Sales";
-            this.reportChart.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Sales";
+            this.reportChart.Series.Add(series2);
             this.reportChart.Size = new System.Drawing.Size(699, 405);
             this.reportChart.TabIndex = 2;
             this.reportChart.Text = "chart1";
-            title1.Name = "Sales per Item";
-            this.reportChart.Titles.Add(title1);
+            title2.Name = "Sales per Item";
+            this.reportChart.Titles.Add(title2);
             // 
-            // dateTimePicker1
+            // startdateTime
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(38, 101);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 3;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.startdateTime.Location = new System.Drawing.Point(38, 101);
+            this.startdateTime.Name = "startdateTime";
+            this.startdateTime.Size = new System.Drawing.Size(200, 20);
+            this.startdateTime.TabIndex = 3;
+            this.startdateTime.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // enddateTime
+            // 
+            this.enddateTime.Location = new System.Drawing.Point(38, 156);
+            this.enddateTime.Name = "enddateTime";
+            this.enddateTime.Size = new System.Drawing.Size(200, 20);
+            this.enddateTime.TabIndex = 4;
+            this.enddateTime.ValueChanged += new System.EventHandler(this.enddateTime_ValueChanged);
             // 
             // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(976, 469);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.enddateTime);
+            this.Controls.Add(this.startdateTime);
             this.Controls.Add(this.reportChart);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.menuStrip1);
@@ -135,6 +145,7 @@
         private System.Windows.Forms.ToolStripMenuItem printReportToolStripMenuItem;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataVisualization.Charting.Chart reportChart;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker startdateTime;
+        private System.Windows.Forms.DateTimePicker enddateTime;
     }
 }

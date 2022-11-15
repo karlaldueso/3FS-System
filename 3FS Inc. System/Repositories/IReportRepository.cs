@@ -9,7 +9,7 @@ namespace _3FS_System.Repositories
 {
     public interface IReportRepository
     {
-        IEnumerable<Report_SalesPerItem> GetReport_SalesPerItem(DateTime TransactionDate);
+        IEnumerable<Report_SalesPerItem> GetReport_SalesPerItem(DateTime StartDate, DateTime EndDate);
     }
 
 }

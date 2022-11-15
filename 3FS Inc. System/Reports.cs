@@ -18,6 +18,9 @@ namespace _3FS_System
         public Reports()
         {
             InitializeComponent();
+
+            //reportChart.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
+            //reportChart.ChartAreas[0].AxisY.ScaleView.Zoomable = true;
         }
 
         private void printReportToolStripMenuItem_Click(object sender, EventArgs e)
@@ -29,7 +32,7 @@ namespace _3FS_System
         {
             _ = new DataAccess();
             ReportRepository reportrepository = new ReportRepository();
-            reportChart.DataSource = reportrepository.GetReport_SalesPerItem(dateTimePicker1.Value.Date);
+            reportChart.DataSource = reportrepository.GetReport_SalesPerItem(startdateTime.Value.Date, enddateTime.Value.Date);
 
             if (reportChart.Series.IndexOf("Sales") != -1)
             {
@@ -66,10 +69,50 @@ namespace _3FS_System
                     reportChart.Titles["Sales per Item"].Text = "Sales per Item";
                 }
             }
-            
 
+        }
 
+        private void enddateTime_ValueChanged(object sender, EventArgs e)
+        {
+            _ = new DataAccess();
+            ReportRepository reportrepository = new ReportRepository();
+            reportChart.DataSource = reportrepository.GetReport_SalesPerItem(startdateTime.Value.Date, enddateTime.Value.Date);
 
+            if (reportChart.Series.IndexOf("Sales") != -1)
+            {
+                if (reportChart.Titles.IndexOf("Sales per Item") != -1)
+                {
+                    reportChart.Series["Sales"].XValueMember = "Item";
+                    reportChart.Series["Sales"].YValueMembers = "Sales";
+                    reportChart.Titles["Sales per Item"].Text = "Sales per Item";
+                }
+                else
+                {
+                    reportChart.Series["Sales"].XValueMember = "Item";
+                    reportChart.Series["Sales"].YValueMembers = "Sales";
+                    reportChart.Titles.Add("Sales per Item");
+                    reportChart.Titles["Sales per Item"].Text = "Sales per Item";
+                }
+
+            }
+            else
+            {
+                if (reportChart.Titles.IndexOf("Sales per Item") != -1)
+                {
+                    reportChart.Series.Add("Sales");
+                    reportChart.Series["Sales"].XValueMember = "Item";
+                    reportChart.Series["Sales"].YValueMembers = "Sales";
+                    reportChart.Titles["Sales per Item"].Text = "Sales per Item";
+                }
+                else
+                {
+                    reportChart.Series.Add("Sales");
+                    reportChart.Series["Sales"].XValueMember = "Item";
+                    reportChart.Series["Sales"].YValueMembers = "Sales";
+                    reportChart.Titles.Add("Sales per Item");
+                    reportChart.Titles["Sales per Item"].Text = "Sales per Item";
+                }
+            }
         }
     }
 }
