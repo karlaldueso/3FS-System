@@ -82,7 +82,7 @@
             this.panel3.Controls.Add(this.datetimeLabel);
             this.panel3.Location = new System.Drawing.Point(12, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(532, 293);
+            this.panel3.Size = new System.Drawing.Size(596, 293);
             this.panel3.TabIndex = 58;
             // 
             // remainingtextbox
@@ -90,17 +90,17 @@
             this.remainingtextbox.BackColor = System.Drawing.Color.White;
             this.remainingtextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.remainingtextbox.ForeColor = System.Drawing.Color.Black;
-            this.remainingtextbox.Location = new System.Drawing.Point(188, 237);
+            this.remainingtextbox.Location = new System.Drawing.Point(351, 237);
             this.remainingtextbox.Name = "remainingtextbox";
             this.remainingtextbox.ReadOnly = true;
-            this.remainingtextbox.Size = new System.Drawing.Size(322, 29);
+            this.remainingtextbox.Size = new System.Drawing.Size(240, 29);
             this.remainingtextbox.TabIndex = 64;
             // 
             // remaininglabel
             // 
             this.remaininglabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.remaininglabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.remaininglabel.Location = new System.Drawing.Point(109, 240);
+            this.remaininglabel.Location = new System.Drawing.Point(255, 240);
             this.remaininglabel.Name = "remaininglabel";
             this.remaininglabel.Size = new System.Drawing.Size(90, 24);
             this.remaininglabel.TabIndex = 64;
@@ -114,7 +114,7 @@
             this.searchCustomerTextbox.ForeColor = System.Drawing.Color.Black;
             this.searchCustomerTextbox.Location = new System.Drawing.Point(109, 43);
             this.searchCustomerTextbox.Name = "searchCustomerTextbox";
-            this.searchCustomerTextbox.Size = new System.Drawing.Size(401, 29);
+            this.searchCustomerTextbox.Size = new System.Drawing.Size(482, 29);
             this.searchCustomerTextbox.TabIndex = 51;
             this.searchCustomerTextbox.TextChanged += new System.EventHandler(this.searchCustomerTextbox_TextChanged);
             // 
@@ -140,7 +140,7 @@
             this.dataGridCustomers.ReadOnly = true;
             this.dataGridCustomers.RowHeadersVisible = false;
             this.dataGridCustomers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridCustomers.Size = new System.Drawing.Size(497, 145);
+            this.dataGridCustomers.Size = new System.Drawing.Size(578, 145);
             this.dataGridCustomers.StandardTab = true;
             this.dataGridCustomers.TabIndex = 49;
             this.dataGridCustomers.SelectionChanged += new System.EventHandler(this.dataGridCustomers_SelectionChanged);
@@ -190,7 +190,7 @@
             this.dataGridReceipts.ReadOnly = true;
             this.dataGridReceipts.RowHeadersVisible = false;
             this.dataGridReceipts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridReceipts.Size = new System.Drawing.Size(633, 174);
+            this.dataGridReceipts.Size = new System.Drawing.Size(581, 174);
             this.dataGridReceipts.TabIndex = 53;
             this.dataGridReceipts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridReceipts_CellClick);
             this.dataGridReceipts.SelectionChanged += new System.EventHandler(this.dataGridReceipts_SelectionChanged);
@@ -213,12 +213,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataCollectiblesLog.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataCollectiblesLog.Location = new System.Drawing.Point(9, 38);
+            this.dataCollectiblesLog.Location = new System.Drawing.Point(7, 38);
             this.dataCollectiblesLog.Name = "dataCollectiblesLog";
             this.dataCollectiblesLog.ReadOnly = true;
             this.dataCollectiblesLog.RowHeadersVisible = false;
             this.dataCollectiblesLog.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataCollectiblesLog.Size = new System.Drawing.Size(464, 185);
+            this.dataCollectiblesLog.Size = new System.Drawing.Size(391, 185);
             this.dataCollectiblesLog.TabIndex = 59;
             // 
             // panel1
@@ -233,7 +233,7 @@
             this.panel1.Controls.Add(this.dataGridReceipts);
             this.panel1.Location = new System.Drawing.Point(12, 311);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(648, 302);
+            this.panel1.Size = new System.Drawing.Size(596, 302);
             this.panel1.TabIndex = 60;
             // 
             // totalcredittextbox
@@ -242,7 +242,7 @@
             this.totalcredittextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalcredittextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalcredittextbox.ForeColor = System.Drawing.Color.Black;
-            this.totalcredittextbox.Location = new System.Drawing.Point(462, 224);
+            this.totalcredittextbox.Location = new System.Drawing.Point(410, 228);
             this.totalcredittextbox.Name = "totalcredittextbox";
             this.totalcredittextbox.ReadOnly = true;
             this.totalcredittextbox.Size = new System.Drawing.Size(181, 29);
@@ -253,7 +253,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(310, 265);
+            this.label2.Location = new System.Drawing.Point(258, 269);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 24);
             this.label2.TabIndex = 69;
@@ -266,7 +266,7 @@
             this.totalorderstextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalorderstextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalorderstextbox.ForeColor = System.Drawing.Color.Black;
-            this.totalorderstextbox.Location = new System.Drawing.Point(462, 264);
+            this.totalorderstextbox.Location = new System.Drawing.Point(410, 268);
             this.totalorderstextbox.Name = "totalorderstextbox";
             this.totalorderstextbox.ReadOnly = true;
             this.totalorderstextbox.Size = new System.Drawing.Size(181, 29);
@@ -277,7 +277,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(310, 225);
+            this.label1.Location = new System.Drawing.Point(258, 229);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 24);
             this.label1.TabIndex = 67;
@@ -304,9 +304,9 @@
             this.panel2.Controls.Add(this.amountText);
             this.panel2.Controls.Add(this.paymentsLabel);
             this.panel2.Controls.Add(this.dataCollectiblesLog);
-            this.panel2.Location = new System.Drawing.Point(550, 12);
+            this.panel2.Location = new System.Drawing.Point(614, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(607, 293);
+            this.panel2.Size = new System.Drawing.Size(543, 293);
             this.panel2.TabIndex = 61;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -316,7 +316,7 @@
             this.totalpaymentstextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalpaymentstextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalpaymentstextbox.ForeColor = System.Drawing.Color.Black;
-            this.totalpaymentstextbox.Location = new System.Drawing.Point(263, 240);
+            this.totalpaymentstextbox.Location = new System.Drawing.Point(188, 240);
             this.totalpaymentstextbox.Name = "totalpaymentstextbox";
             this.totalpaymentstextbox.ReadOnly = true;
             this.totalpaymentstextbox.Size = new System.Drawing.Size(210, 29);
@@ -327,7 +327,7 @@
             this.totalpaymentslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalpaymentslabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.totalpaymentslabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.totalpaymentslabel.Location = new System.Drawing.Point(183, 241);
+            this.totalpaymentslabel.Location = new System.Drawing.Point(108, 241);
             this.totalpaymentslabel.Name = "totalpaymentslabel";
             this.totalpaymentslabel.Size = new System.Drawing.Size(74, 24);
             this.totalpaymentslabel.TabIndex = 66;
@@ -340,7 +340,7 @@
             this.paidButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.paidButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paidButton.ForeColor = System.Drawing.Color.Black;
-            this.paidButton.Location = new System.Drawing.Point(479, 78);
+            this.paidButton.Location = new System.Drawing.Point(404, 78);
             this.paidButton.Name = "paidButton";
             this.paidButton.Size = new System.Drawing.Size(123, 30);
             this.paidButton.TabIndex = 63;
@@ -354,7 +354,7 @@
             this.amountText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.amountText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.amountText.ForeColor = System.Drawing.Color.Black;
-            this.amountText.Location = new System.Drawing.Point(479, 39);
+            this.amountText.Location = new System.Drawing.Point(404, 39);
             this.amountText.Name = "amountText";
             this.amountText.Size = new System.Drawing.Size(123, 29);
             this.amountText.TabIndex = 62;
@@ -363,7 +363,7 @@
             // 
             this.paymentsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paymentsLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.paymentsLabel.Location = new System.Drawing.Point(4, 10);
+            this.paymentsLabel.Location = new System.Drawing.Point(2, 10);
             this.paymentsLabel.Name = "paymentsLabel";
             this.paymentsLabel.Size = new System.Drawing.Size(101, 25);
             this.paymentsLabel.TabIndex = 54;
@@ -393,9 +393,9 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.dataGridReceiptDetails);
-            this.panel5.Location = new System.Drawing.Point(666, 311);
+            this.panel5.Location = new System.Drawing.Point(614, 311);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(491, 302);
+            this.panel5.Size = new System.Drawing.Size(543, 302);
             this.panel5.TabIndex = 62;
             // 
             // label3
@@ -431,7 +431,7 @@
             this.dataGridReceiptDetails.ReadOnly = true;
             this.dataGridReceiptDetails.RowHeadersVisible = false;
             this.dataGridReceiptDetails.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridReceiptDetails.Size = new System.Drawing.Size(483, 254);
+            this.dataGridReceiptDetails.Size = new System.Drawing.Size(524, 254);
             this.dataGridReceiptDetails.TabIndex = 59;
             // 
             // Collectibles
