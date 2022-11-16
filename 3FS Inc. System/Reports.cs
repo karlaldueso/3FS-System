@@ -27,92 +27,109 @@ namespace _3FS_System
         {
 
         }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void chart_report(object sender, EventArgs e)
         {
-            _ = new DataAccess();
             ReportRepository reportrepository = new ReportRepository();
-            reportChart.DataSource = reportrepository.GetReport_SalesPerItem(startdateTime.Value.Date, enddateTime.Value.Date);
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    reportChart.DataSource = reportrepository.GetReport_SalesPerItem(startdateTime.Value.Date, enddateTime.Value.Date);
+                    if (reportChart.Series.IndexOf("Sales") != -1)
+                    {
+                        if (reportChart.Titles.IndexOf("Sales per Item") != -1)
+                        {
+                            reportChart.Series["Sales"].XValueMember = "Item";
+                            reportChart.Series["Sales"].YValueMembers = "Sales";
+                            reportChart.Titles["Sales per Item"].Text = "Sales per Item";
+                        }
+                        else
+                        {
+                            reportChart.Series["Sales"].XValueMember = "Item";
+                            reportChart.Series["Sales"].YValueMembers = "Sales";
+                            reportChart.Titles.Add("Sales per Item");
+                            reportChart.Titles["Sales per Item"].Text = "Sales per Item";
+                        }
 
-            if (reportChart.Series.IndexOf("Sales") != -1)
-            {
-                if (reportChart.Titles.IndexOf("Sales per Item") != -1)
-                {
-                    reportChart.Series["Sales"].XValueMember = "Item";
-                    reportChart.Series["Sales"].YValueMembers = "Sales";
-                    reportChart.Titles["Sales per Item"].Text = "Sales per Item";
-                }
-                else
-                {
-                    reportChart.Series["Sales"].XValueMember = "Item";
-                    reportChart.Series["Sales"].YValueMembers = "Sales";
-                    reportChart.Titles.Add("Sales per Item");
-                    reportChart.Titles["Sales per Item"].Text = "Sales per Item";
-                }
-                    
+                    }
+                    else
+                    {
+                        if (reportChart.Titles.IndexOf("Sales per Item") != -1)
+                        {
+                            reportChart.Series.Add("Sales");
+                            reportChart.Series["Sales"].XValueMember = "Item";
+                            reportChart.Series["Sales"].YValueMembers = "Sales";
+                            reportChart.Titles["Sales per Item"].Text = "Sales per Item";
+                        }
+                        else
+                        {
+                            reportChart.Series.Add("Sales");
+                            reportChart.Series["Sales"].XValueMember = "Item";
+                            reportChart.Series["Sales"].YValueMembers = "Sales";
+                            reportChart.Titles.Add("Sales per Item");
+                            reportChart.Titles["Sales per Item"].Text = "Sales per Item";
+                        }
+                    }
+                    reportChart.Series["Sales"].IsValueShownAsLabel = true;
+                    reportChart.ChartAreas["ChartArea1"].AxisX.Interval = 1;
+                    reportChart.ChartAreas["ChartArea1"].RecalculateAxesScale();
+                    break;
+                case 1:
+                    reportChart.DataSource = reportrepository.GetReport_SalesPerItem(startdateTime.Value.Date, enddateTime.Value.Date);
+                    if (reportChart.Series.IndexOf("Sales") != -1)
+                    {
+                        if (reportChart.Titles.IndexOf("Sales per Item") != -1)
+                        {
+                            reportChart.Series["Sales"].XValueMember = "Item";
+                            reportChart.Series["Sales"].YValueMembers = "Quantity";
+                            reportChart.Titles["Sales per Item"].Text = "Quantity Sold per Item";
+                        }
+                        else
+                        {
+                            reportChart.Series["Sales"].XValueMember = "Item";
+                            reportChart.Series["Sales"].YValueMembers = "Quantity";
+                            reportChart.Titles.Add("Sales per Item");
+                            reportChart.Titles["Sales per Item"].Text = "Quantity Sold per Item";
+                        }
+
+                    }
+                    else
+                    {
+                        if (reportChart.Titles.IndexOf("Sales per Item") != -1)
+                        {
+                            reportChart.Series.Add("Sales");
+                            reportChart.Series["Sales"].XValueMember = "Item";
+                            reportChart.Series["Sales"].YValueMembers = "Quantity";
+                            reportChart.Titles["Sales per Item"].Text = "Quantity Sold per Item";
+                        }
+                        else
+                        {
+                            reportChart.Series.Add("Sales");
+                            reportChart.Series["Sales"].XValueMember = "Item";
+                            reportChart.Series["Sales"].YValueMembers = "Quantity";
+                            reportChart.Titles.Add("Sales per Item");
+                            reportChart.Titles["Sales per Item"].Text = "Quantity Sold per Item";
+                        }
+                    }
+                    reportChart.Series["Sales"].IsValueShownAsLabel = true;
+                    reportChart.ChartAreas["ChartArea1"].AxisX.Interval = 1;
+                    reportChart.ChartAreas["ChartArea1"].RecalculateAxesScale();
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
             }
-            else
-            {
-                if (reportChart.Titles.IndexOf("Sales per Item") != -1)
-                {
-                    reportChart.Series.Add("Sales");
-                    reportChart.Series["Sales"].XValueMember = "Item";
-                    reportChart.Series["Sales"].YValueMembers = "Sales";
-                    reportChart.Titles["Sales per Item"].Text = "Sales per Item";
-                }
-                else
-                {
-                    reportChart.Series.Add("Sales");
-                    reportChart.Series["Sales"].XValueMember = "Item";
-                    reportChart.Series["Sales"].YValueMembers = "Sales";
-                    reportChart.Titles.Add("Sales per Item");
-                    reportChart.Titles["Sales per Item"].Text = "Sales per Item";
-                }
-            }
+
+
 
         }
-
-        private void enddateTime_ValueChanged(object sender, EventArgs e)
+        private void dateTime_ValueChanged(object sender, EventArgs e)
         {
-            _ = new DataAccess();
-            ReportRepository reportrepository = new ReportRepository();
-            reportChart.DataSource = reportrepository.GetReport_SalesPerItem(startdateTime.Value.Date, enddateTime.Value.Date);
 
-            if (reportChart.Series.IndexOf("Sales") != -1)
-            {
-                if (reportChart.Titles.IndexOf("Sales per Item") != -1)
-                {
-                    reportChart.Series["Sales"].XValueMember = "Item";
-                    reportChart.Series["Sales"].YValueMembers = "Sales";
-                    reportChart.Titles["Sales per Item"].Text = "Sales per Item";
-                }
-                else
-                {
-                    reportChart.Series["Sales"].XValueMember = "Item";
-                    reportChart.Series["Sales"].YValueMembers = "Sales";
-                    reportChart.Titles.Add("Sales per Item");
-                    reportChart.Titles["Sales per Item"].Text = "Sales per Item";
-                }
-
-            }
-            else
-            {
-                if (reportChart.Titles.IndexOf("Sales per Item") != -1)
-                {
-                    reportChart.Series.Add("Sales");
-                    reportChart.Series["Sales"].XValueMember = "Item";
-                    reportChart.Series["Sales"].YValueMembers = "Sales";
-                    reportChart.Titles["Sales per Item"].Text = "Sales per Item";
-                }
-                else
-                {
-                    reportChart.Series.Add("Sales");
-                    reportChart.Series["Sales"].XValueMember = "Item";
-                    reportChart.Series["Sales"].YValueMembers = "Sales";
-                    reportChart.Titles.Add("Sales per Item");
-                    reportChart.Titles["Sales per Item"].Text = "Sales per Item";
-                }
-            }
         }
     }
 }
