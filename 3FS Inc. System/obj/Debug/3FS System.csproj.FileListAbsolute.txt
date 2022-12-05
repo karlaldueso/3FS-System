@@ -67,3 +67,8 @@ D:\3FS-System\3FS Inc. System\obj\Debug\3FS System.csproj.CoreCompileInputs.cach
 D:\3FS-System\3FS Inc. System\obj\Debug\3FS System.csproj.CopyComplete
 D:\3FS-System\3FS Inc. System\obj\Debug\3FS System.exe
 D:\3FS-System\3FS Inc. System\obj\Debug\3FS System.pdb
+D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.DatabaseSetting.resources
+D:\3FS-System\3FS Inc. System\bin\Debug\3FS System.exe.manifest
+D:\3FS-System\3FS Inc. System\bin\Debug\3FS System.application
+D:\3FS-System\3FS Inc. System\obj\Debug\3FS System.exe.manifest
+D:\3FS-System\3FS Inc. System\obj\Debug\3FS System.application

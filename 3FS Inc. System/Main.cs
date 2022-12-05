@@ -364,5 +364,32 @@ namespace _3FS_System
                 SetBackGroundColorOfMDIForm();
             }
         }
+
+        private void databaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCollection fc = Application.OpenForms;
+            bool bFormNameOpen = false;
+            foreach (Form frm in fc)
+            {
+                if (frm.Name == "DatabaseSetting")
+                {
+                    bFormNameOpen = true;
+                    frm.Focus();
+                    break;
+                }
+                else
+                {
+                    bFormNameOpen = false;
+                }
+            }
+            if (bFormNameOpen == false)
+            {
+                DatabaseSetting reports = new DatabaseSetting();
+                reports.MdiParent = this;
+
+                reports.Show();
+
+            }
+        }
     }
 }

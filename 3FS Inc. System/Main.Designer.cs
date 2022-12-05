@@ -38,8 +38,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -150,6 +152,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editToolStripMenuItem,
             this.toolsToolStripMenuItem,
+            this.SettingToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -172,11 +175,26 @@
             this.toolsToolStripMenuItem.Text = "&Set Background Color";
             this.toolsToolStripMenuItem.Click += new System.EventHandler(this.toolsToolStripMenuItem_Click);
             // 
+            // SettingToolStripMenuItem
+            // 
+            this.SettingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.databaseToolStripMenuItem});
+            this.SettingToolStripMenuItem.Name = "SettingToolStripMenuItem";
+            this.SettingToolStripMenuItem.Size = new System.Drawing.Size(83, 27);
+            this.SettingToolStripMenuItem.Text = "&Settings";
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(69, 27);
             this.aboutToolStripMenuItem.Text = "A&bout";
+            // 
+            // databaseToolStripMenuItem
+            // 
+            this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
+            this.databaseToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.databaseToolStripMenuItem.Text = "Database";
+            this.databaseToolStripMenuItem.Click += new System.EventHandler(this.databaseToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -225,5 +243,7 @@
         private System.Windows.Forms.Button Inventory_new;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button suppliers_button;
+        private System.Windows.Forms.ToolStripMenuItem SettingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
     }
 }
