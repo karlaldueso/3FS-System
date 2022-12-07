@@ -29,7 +29,7 @@ namespace _3FS_System.Repositories
 
         public IEnumerable<Receipt_PerDay> GetReceipt_ByDate(DateTime TransactionDate)
         {
-            string qry = string.Format("dbo.spReceipts_GetByDate @Date='{0}'", TransactionDate);
+            string qry = string.Format("dbo.spReceipts_GetByDate @Date='{0}'", TransactionDate.ToString("yyyy/MM/dd"));
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
                 var output = connection.Query<Receipt_PerDay>(qry);
