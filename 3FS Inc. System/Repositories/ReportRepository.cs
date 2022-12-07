@@ -14,7 +14,7 @@ namespace _3FS_System.Repositories
     {
         public IEnumerable<Report_SalesPerItem> GetReport_SalesPerItem(DateTime StartDate, DateTime EndDate)
         {
-            string qry = string.Format("dbo.spSales_GetPerItem @StartDate='{0}', @EndDate='{1}'", StartDate, EndDate);
+            string qry = string.Format("dbo.spSales_GetPerItem @StartDate='{0}', @EndDate='{1}'", StartDate.ToString("yyyy/MM/dd"), EndDate.ToString("yyyy/MM/dd"));
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
                 var output = connection.Query<Report_SalesPerItem>(qry);

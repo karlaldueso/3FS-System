@@ -44,6 +44,7 @@
             this.dataGridReceipts.Location = new System.Drawing.Point(25, 48);
             this.dataGridReceipts.Name = "dataGridReceipts";
             this.dataGridReceipts.RowHeadersVisible = false;
+            this.dataGridReceipts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridReceipts.Size = new System.Drawing.Size(385, 252);
             this.dataGridReceipts.TabIndex = 0;
             this.dataGridReceipts.SelectionChanged += new System.EventHandler(this.dataGridReceipts_SelectionChanged);
@@ -55,6 +56,7 @@
             this.dataGridReceiptDetails.Location = new System.Drawing.Point(440, 48);
             this.dataGridReceiptDetails.Name = "dataGridReceiptDetails";
             this.dataGridReceiptDetails.RowHeadersVisible = false;
+            this.dataGridReceiptDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridReceiptDetails.Size = new System.Drawing.Size(398, 252);
             this.dataGridReceiptDetails.TabIndex = 1;
             // 
