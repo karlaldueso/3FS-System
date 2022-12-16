@@ -12,6 +12,15 @@ namespace _3FS_System.Repositories
 {
     internal class SalesRepository : ISalesRepository
     {
+        public IEnumerable<SalesPerReceipt_byDate> GetSale_ByDateRange(DateTime StartDate, DateTime EndDate)
+        {
+            string qry = string.Format("dbo.SalesPerReceipt_GetByDate @StartDate='{0}', @EndDate='{1}'", StartDate.ToString("yyyy/MM/dd"), EndDate.ToString("yyyy/MM/dd"));
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
+            {
+                var output = connection.Query<SalesPerReceipt_byDate>(qry);
+                return output;
+            }
+        }
         public IEnumerable<ReceiptDetails_DisplayFormat> GetSale_ByReceipt(string ReceiptNum)
         {
             string qry = string.Format("dbo.spSales_GetByReceipt @ReceiptNum={0}", ReceiptNum);

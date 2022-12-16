@@ -154,41 +154,48 @@ namespace _3FS_System
             ItemRepository itemRepository = new ItemRepository();
             ItemLogsRepository itemsLogsRepository = new ItemLogsRepository();
             int[] c_r = { dataGridInventory.CurrentCellAddress.X, dataGridInventory.CurrentCellAddress.Y };
-            Items item = new Items
+            if (dataGridInventory.Rows[c_r[1]].Cells[c_r[0]].Value.ToString() != EditText.Text)
+            { 
+                Items item = new Items
+                {
+                    //Assign parameters based on selected row on datagridview1
+                    ItemID = Global.ITEMID,
+                    ItemName = dataGridInventory.Rows[c_r[1]].Cells[1].Value.ToString(),
+                    BrandName = dataGridInventory.Rows[c_r[1]].Cells[2].Value.ToString(),
+                    CategoryID = float.Parse(dataGridInventory.Rows[c_r[1]].Cells[3].Value.ToString()),
+                    Quantity = float.Parse(dataGridInventory.Rows[c_r[1]].Cells[4].Value.ToString()),
+                    Unit = dataGridInventory.Rows[c_r[1]].Cells[5].Value.ToString(),
+                    SRP = float.Parse(dataGridInventory.Rows[c_r[1]].Cells[6].Value.ToString()),
+                    Capital = float.Parse(dataGridInventory.Rows[c_r[1]].Cells[7].Value.ToString()),
+                    Storage = dataGridInventory.Rows[c_r[1]].Cells[8].Value.ToString(),
+                    UpdatedDate = DateTime.Now
+                };
+                itemRepository.Update(item, c_r[0], EditText.Text); //update selected row
+                item.ItemID = Global.ITEMID;
+                ItemLogs itemlogs = new ItemLogs
+                {
+                    ItemID = item.ItemID,
+                    TransactionType = "Update",
+                    Previous = dataGridInventory.Rows[c_r[1]].Cells[c_r[0]].Value.ToString(),
+                    Present = EditText.Text,
+                    TransactionDate = DateTime.Now,
+                    UpdatedDate = DateTime.Now
+                };
+                itemsLogsRepository.Insert(itemlogs, c_r[0]);
+                dataGridInventory.DataSource = itemRepository.GetItems_All();
+                dataGridLogs.DataSource = itemsLogsRepository.GetItemLogs_ByID(itemlogs.ItemID);
+                dataGridInventory.Columns["UpdatedDate"].Visible = false;
+                dataGridInventory.Columns["ItemID"].Visible = false;
+                dataGridInventory.Columns["CategoryID"].Visible = false;
+                dataGridInventory.AutoResizeColumns();
+                dataGridInventory.AutoResizeRows();
+                dataGridLogs.AutoResizeColumns();
+                dataGridLogs.AutoResizeRows();
+            }
+            else
             {
-                //Assign parameters based on selected row on datagridview1
-                ItemID = Global.ITEMID,
-                ItemName = dataGridInventory.Rows[c_r[1]].Cells[1].Value.ToString(),
-                BrandName = dataGridInventory.Rows[c_r[1]].Cells[2].Value.ToString(),
-                CategoryID = float.Parse(dataGridInventory.Rows[c_r[1]].Cells[3].Value.ToString()),
-                Quantity = float.Parse(dataGridInventory.Rows[c_r[1]].Cells[4].Value.ToString()),
-                Unit = dataGridInventory.Rows[c_r[1]].Cells[5].Value.ToString(),
-                SRP = float.Parse(dataGridInventory.Rows[c_r[1]].Cells[6].Value.ToString()),
-                Capital = float.Parse(dataGridInventory.Rows[c_r[1]].Cells[7].Value.ToString()),
-                Storage = dataGridInventory.Rows[c_r[1]].Cells[8].Value.ToString(),
-                UpdatedDate = DateTime.Now
-            };
-            itemRepository.Update(item, c_r[0], EditText.Text); //update selected row
-            item.ItemID = Global.ITEMID;
-            ItemLogs itemlogs = new ItemLogs
-            {
-                ItemID = item.ItemID,
-                TransactionType = "Update",
-                Previous = dataGridInventory.Rows[c_r[1]].Cells[c_r[0]].Value.ToString(),
-                Present = EditText.Text,
-                TransactionDate = DateTime.Now,
-                UpdatedDate = DateTime.Now
-            };
-            itemsLogsRepository.Insert(itemlogs, c_r[0]);
-            dataGridInventory.DataSource = itemRepository.GetItems_All();
-            dataGridLogs.DataSource = itemsLogsRepository.GetItemLogs_ByID(itemlogs.ItemID);
-            dataGridInventory.Columns["UpdatedDate"].Visible = false;
-            dataGridInventory.Columns["ItemID"].Visible = false;
-            dataGridInventory.Columns["CategoryID"].Visible = false;
-            dataGridInventory.AutoResizeColumns();
-            dataGridInventory.AutoResizeRows();
-            dataGridLogs.AutoResizeColumns();
-            dataGridLogs.AutoResizeRows();
+                MessageBox.Show("Input is the same!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void searchName_TextChanged(object sender, EventArgs e)

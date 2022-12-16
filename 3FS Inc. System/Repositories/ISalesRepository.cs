@@ -9,6 +9,7 @@ namespace _3FS_System.Repositories
 {
     public interface ISalesRepository
     {
+        IEnumerable<SalesPerReceipt_byDate> GetSale_ByDateRange(DateTime StartDate, DateTime EndDate);
         IEnumerable<ReceiptDetails_DisplayFormat> GetSale_ByReceipt(string ReceiptNum);
 
         float GetTotalSalesOfTheDay(DateTime datetime);
