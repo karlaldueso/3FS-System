@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="3FS System.exe" size="593816">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="3FS System.exe" size="952216">
       <assemblyIdentity name="3FS System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>chJ7kLwNOvhsUdTxfksYZQVGAG4WOkMaMYbknTEegZI=</dsig:DigestValue>
+        <dsig:DigestValue>4X9phXNG7PRtJHo6hxF40VYTdOl8t0/jLjPr+lqO/AU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1044,6 +1044,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>str3y6B0Nxo2GLj+sWgbgq5P4kAF7ejhujgRTfEBwrk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Media\3FS_LOGO.png" size="119278">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cv/toK+BMruSMZn+wElApaphxw1uBft5mQK+oSBuZZo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SqlServerTypes\readme.htm" size="2369">

@@ -224,6 +224,8 @@
     <EmbeddedResource Include="Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\_3FS_System.Models.Report_SalesPerItem.datasource" />
+    <EmbeddedResource Include="Reports\SalesPerItem.rdlc" />
     <EmbeddedResource Include="Reports\SalesPerReceipt.rdlc" />
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
@@ -306,6 +308,7 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Media\3FS_LOGO.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

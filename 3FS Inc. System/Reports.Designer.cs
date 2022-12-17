@@ -40,8 +40,8 @@
             this.startdateTime = new System.Windows.Forms.DateTimePicker();
             this.enddateTime = new System.Windows.Forms.DateTimePicker();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reportChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -54,7 +54,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1173, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1112, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,15 +77,16 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Sales (Amount)",
-            "Sales (Qty)",
+            "Sales per Item (Amount)",
+            "Sales per Item (Qty)",
+            "Sales per Receipt (Amount)",
             "Expenses",
             "Collectibles",
             "Payables",
             "Inventory"});
             this.comboBox1.Location = new System.Drawing.Point(12, 27);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(145, 21);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.Text = "Choose Category";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.chart_report);
@@ -96,27 +97,29 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
             chartArea1.CursorX.IsUserSelectionEnabled = true;
             chartArea1.CursorY.IsUserSelectionEnabled = true;
             chartArea1.Name = "ChartArea1";
             this.reportChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.reportChart.Legends.Add(legend1);
-            this.reportChart.Location = new System.Drawing.Point(0, 54);
+            this.reportChart.Location = new System.Drawing.Point(545, 54);
             this.reportChart.Name = "reportChart";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Sales";
             this.reportChart.Series.Add(series1);
-            this.reportChart.Size = new System.Drawing.Size(528, 502);
+            this.reportChart.Size = new System.Drawing.Size(555, 503);
             this.reportChart.TabIndex = 2;
             this.reportChart.Text = "chart1";
-            title1.Name = "Sales per Item";
+            title1.Name = "GraphicReport";
             this.reportChart.Titles.Add(title1);
             // 
             // startdateTime
             // 
-            this.startdateTime.Location = new System.Drawing.Point(139, 28);
+            this.startdateTime.Location = new System.Drawing.Point(163, 28);
             this.startdateTime.Name = "startdateTime";
             this.startdateTime.Size = new System.Drawing.Size(185, 20);
             this.startdateTime.TabIndex = 3;
@@ -124,7 +127,7 @@
             // 
             // enddateTime
             // 
-            this.enddateTime.Location = new System.Drawing.Point(330, 28);
+            this.enddateTime.Location = new System.Drawing.Point(354, 28);
             this.enddateTime.Name = "enddateTime";
             this.enddateTime.Size = new System.Drawing.Size(185, 20);
             this.enddateTime.TabIndex = 4;
@@ -135,30 +138,31 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "_3FS_System.Reports.SalesPerReceipt.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(549, 299);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(543, 190);
-            this.reportViewer1.TabIndex = 5;
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(549, 54);
+            this.dataGridView1.Location = new System.Drawing.Point(545, 28);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(543, 191);
+            this.dataGridView1.Size = new System.Drawing.Size(555, 20);
             this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.Visible = false;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(12, 54);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(527, 503);
+            this.reportViewer1.TabIndex = 9;
             // 
             // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1173, 569);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1112, 569);
             this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.enddateTime);
             this.Controls.Add(this.startdateTime);
             this.Controls.Add(this.reportChart);
@@ -188,7 +192,7 @@
         private System.Windows.Forms.DateTimePicker startdateTime;
         private System.Windows.Forms.DateTimePicker enddateTime;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

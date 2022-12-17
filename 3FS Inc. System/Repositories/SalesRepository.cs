@@ -14,7 +14,7 @@ namespace _3FS_System.Repositories
     {
         public IEnumerable<SalesPerReceipt_byDate> GetSale_ByDateRange(DateTime StartDate, DateTime EndDate)
         {
-            string qry = string.Format("dbo.SalesPerReceipt_GetByDate @StartDate='{0}', @EndDate='{1}'", StartDate.ToString("yyyy/MM/dd"), EndDate.ToString("yyyy/MM/dd"));
+            string qry = string.Format("dbo.spSalesPerReceipt_GetByDate @StartDate='{0}', @EndDate='{1}'", StartDate.ToString("yyyy/MM/dd"), EndDate.ToString("yyyy/MM/dd"));
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
                 var output = connection.Query<SalesPerReceipt_byDate>(qry);
