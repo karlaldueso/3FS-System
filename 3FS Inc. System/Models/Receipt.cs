@@ -14,5 +14,6 @@ namespace _3FS_System.Models
         public float AmountPaid { get; set; }
         public float GrandTotal { get; set; }
         public DateTime UpdatedDate { get; set; }
+        public int StoreID { get; set; }
     }
 }

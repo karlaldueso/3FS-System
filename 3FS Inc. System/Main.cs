@@ -391,5 +391,32 @@ namespace _3FS_System
 
             }
         }
+
+        private void suppliers_button_Click(object sender, EventArgs e)
+        {
+            FormCollection fc = Application.OpenForms;
+            bool bFormNameOpen = false;
+            foreach (Form frm in fc)
+            {
+                if (frm.Name == "Suppliers")
+                {
+                    bFormNameOpen = true;
+                    frm.Focus();
+                    break;
+                }
+                else
+                {
+                    bFormNameOpen = false;
+                }
+            }
+            if (bFormNameOpen == false)
+            {
+                Suppliers suppliers = new Suppliers();
+                suppliers.MdiParent = this;
+
+                suppliers.Show();
+
+            }
+        }
     }
 }

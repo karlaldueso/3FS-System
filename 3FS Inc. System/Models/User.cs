@@ -16,5 +16,6 @@ namespace _3FS_System.Models
         public string LastName { get; set; }
         public string ContactNum { get; set; }
         public DateTime UpdatedDate { get; set; }
+        public int StoreID { get; set; }
     }
 }

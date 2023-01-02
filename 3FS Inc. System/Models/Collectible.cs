@@ -13,5 +13,6 @@ namespace _3FS_System.Models
         public DateTime TransactionDate { get; set; }
         public float Amount { get; set; }
         public DateTime UpdatedDate { get; set; }
+        public int StoreID { get; set; }
     }
 }

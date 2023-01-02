@@ -17,6 +17,6 @@ namespace _3FS_System.Models
         public float SubTotal { get; set; }
         public DateTime TransactionDate { get; set; }
         public DateTime UpdatedDate { get; set; }
-
+        public int StoreID { get; set; }
     }
 }

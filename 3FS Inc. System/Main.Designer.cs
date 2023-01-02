@@ -39,9 +39,9 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -131,6 +131,7 @@
             this.suppliers_button.TabIndex = 5;
             this.suppliers_button.Text = "Suppliers";
             this.suppliers_button.UseVisualStyleBackColor = true;
+            this.suppliers_button.Click += new System.EventHandler(this.suppliers_button_Click);
             // 
             // Inventory_new
             // 
@@ -183,18 +184,18 @@
             this.SettingToolStripMenuItem.Size = new System.Drawing.Size(83, 27);
             this.SettingToolStripMenuItem.Text = "&Settings";
             // 
+            // databaseToolStripMenuItem
+            // 
+            this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
+            this.databaseToolStripMenuItem.Size = new System.Drawing.Size(151, 28);
+            this.databaseToolStripMenuItem.Text = "Database";
+            this.databaseToolStripMenuItem.Click += new System.EventHandler(this.databaseToolStripMenuItem_Click);
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(69, 27);
             this.aboutToolStripMenuItem.Text = "A&bout";
-            // 
-            // databaseToolStripMenuItem
-            // 
-            this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
-            this.databaseToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
-            this.databaseToolStripMenuItem.Text = "Database";
-            this.databaseToolStripMenuItem.Click += new System.EventHandler(this.databaseToolStripMenuItem_Click);
             // 
             // Main
             // 

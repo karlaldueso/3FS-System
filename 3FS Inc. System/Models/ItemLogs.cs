@@ -15,5 +15,6 @@ namespace _3FS_System.Models
         public string Present { get; set; }
         public DateTime TransactionDate { get; set; }
         public DateTime UpdatedDate { get; set; }
+        public int StoreID { get; set; }
     }
 }

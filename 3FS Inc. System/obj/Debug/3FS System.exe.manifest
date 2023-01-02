@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="3FS System.exe" size="952216">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="3FS System.exe" size="957336">
       <assemblyIdentity name="3FS System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4X9phXNG7PRtJHo6hxF40VYTdOl8t0/jLjPr+lqO/AU=</dsig:DigestValue>
+        <dsig:DigestValue>JqhBAjNsqWaowLmuGjvvfwHAZ5WcRJSEOEutgwmkxHQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -942,14 +942,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualStudio.ProjectAggregator.dll" size="13200">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualStudio.ProjectAggregator.dll" size="13176">
       <assemblyIdentity name="Microsoft.VisualStudio.ProjectAggregator" version="8.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>RbFBNWbQ5c8intWa5pimSNZ8VpTkt4UPd7m5BMSW8Lc=</dsig:DigestValue>
+        <dsig:DigestValue>3GqtEGzE/aiWGhmshwGtJD/uNgsMyQfUYmJJT+kcQU8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -978,14 +978,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="504320">
-      <assemblyIdentity name="Newtonsoft.Json" version="6.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="675240">
+      <assemblyIdentity name="Newtonsoft.Json" version="12.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>eL7dn86HenGo2P+agTZi2CSDYeRnBcTvevxh1ED/Lus=</dsig:DigestValue>
+        <dsig:DigestValue>tmdJuB4UifzY11SyrTnr4NtoE0TjkqP0nckjVkO9vQY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.Bson.dll" size="97720">
+      <assemblyIdentity name="Newtonsoft.Json.Bson" version="1.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>NKaGUhyobcSs48lvvrvFms6e2sb+fvDIm3xY3zaurSY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1037,13 +1049,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="3FS System.exe.config" size="1754">
+  <file name="3FS System.exe.config" size="2087">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>str3y6B0Nxo2GLj+sWgbgq5P4kAF7ejhujgRTfEBwrk=</dsig:DigestValue>
+      <dsig:DigestValue>E7tSBQdHBhYFBS5dbbYR8p5jqiun7JDcHXaz74Asrs8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Media\3FS_LOGO.png" size="119278">

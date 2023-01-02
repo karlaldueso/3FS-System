@@ -17,5 +17,6 @@ namespace _3FS_System.Models
         public float Credit { get; set; }  
         public int Terms { get; set; }
         public DateTime UpdatedDate { get; set; }
+        public int StoreID { get; set; }
     }
 }
