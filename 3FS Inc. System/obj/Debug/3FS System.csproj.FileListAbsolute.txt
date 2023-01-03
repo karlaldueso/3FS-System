@@ -263,3 +263,9 @@ D:\3FS-System\3FS Inc. System\bin\Debug\Newtonsoft.Json.pdb
 D:\3FS-System\3FS Inc. System\bin\Debug\Newtonsoft.Json.xml
 D:\3FS-System\3FS Inc. System\bin\Debug\Newtonsoft.Json.Bson.pdb
 D:\3FS-System\3FS Inc. System\bin\Debug\Newtonsoft.Json.Bson.xml
+D:\3FS System\3FS-System\3FS Inc. System\bin\Debug\Newtonsoft.Json.Bson.dll
+D:\3FS System\3FS-System\3FS Inc. System\bin\Debug\Newtonsoft.Json.pdb
+D:\3FS System\3FS-System\3FS Inc. System\bin\Debug\Newtonsoft.Json.xml
+D:\3FS System\3FS-System\3FS Inc. System\bin\Debug\Newtonsoft.Json.Bson.pdb
+D:\3FS System\3FS-System\3FS Inc. System\bin\Debug\Newtonsoft.Json.Bson.xml
+D:\3FS System\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Suppliers.resources

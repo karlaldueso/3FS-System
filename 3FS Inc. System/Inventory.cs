@@ -36,7 +36,7 @@ namespace _3FS_System
                     DataAccess db = new DataAccess();
                     ItemRepository itemRepository = new ItemRepository();
                     ItemLogsRepository itemsLogsRepository = new ItemLogsRepository();
-                    Items item = new Items
+                    ItemInventory item = new ItemInventory
                     {
                         //Assign parameters based on input
                         ItemName = ItemNameText.Text,
@@ -47,7 +47,9 @@ namespace _3FS_System
                         SRP = float.Parse(SRPText.Text),
                         Capital = float.Parse(CapitalText.Text),
                         Storage = StorageText.Text,
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        CreatedDate = DateTime.Now,
+                        StoreID = 0
                     };
                     itemRepository.Insert(item);
                     //Display and clear textbox
@@ -65,7 +67,7 @@ namespace _3FS_System
                     dataGridInventory.Columns["UpdatedDate"].Visible = false;
 
                     //Adding to ItemLogs
-                    item.ItemID = itemRepository.GetItemID(new Items { ItemName = item.ItemName, BrandName = item.BrandName });
+                    item.ItemID = itemRepository.GetItemID(new ItemInventory { ItemName = item.ItemName, BrandName = item.BrandName });
                     ItemLogs itemlogs = new ItemLogs
                     {
                         ItemID = item.ItemID,
@@ -73,7 +75,9 @@ namespace _3FS_System
                         Previous = "",
                         Present = "",
                         TransactionDate = DateTime.Now,
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        CreatedDate = DateTime.Now,
+                        StoreID = 0
                     };
                     itemsLogsRepository.Insert(itemlogs, 0);
                     dataGridLogs.DataSource = itemsLogsRepository.GetItemLogs_All();
@@ -156,7 +160,7 @@ namespace _3FS_System
             int[] c_r = { dataGridInventory.CurrentCellAddress.X, dataGridInventory.CurrentCellAddress.Y };
             if (dataGridInventory.Rows[c_r[1]].Cells[c_r[0]].Value.ToString() != EditText.Text)
             { 
-                Items item = new Items
+                ItemInventory item = new ItemInventory
                 {
                     //Assign parameters based on selected row on datagridview1
                     ItemID = Global.ITEMID,
@@ -179,7 +183,9 @@ namespace _3FS_System
                     Previous = dataGridInventory.Rows[c_r[1]].Cells[c_r[0]].Value.ToString(),
                     Present = EditText.Text,
                     TransactionDate = DateTime.Now,
-                    UpdatedDate = DateTime.Now
+                    UpdatedDate = DateTime.Now,
+                    CreatedDate = DateTime.Now,
+                    StoreID = 0
                 };
                 itemsLogsRepository.Insert(itemlogs, c_r[0]);
                 dataGridInventory.DataSource = itemRepository.GetItems_All();

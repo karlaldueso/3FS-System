@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="3FS System.exe" size="957336">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="3FS System.exe" size="958872">
       <assemblyIdentity name="3FS System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JqhBAjNsqWaowLmuGjvvfwHAZ5WcRJSEOEutgwmkxHQ=</dsig:DigestValue>
+        <dsig:DigestValue>JGZsZy2ewPWg+sKYSB1XM261thht5E2KYmEEaTHdnbo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -942,14 +942,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualStudio.ProjectAggregator.dll" size="13176">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualStudio.ProjectAggregator.dll" size="13200">
       <assemblyIdentity name="Microsoft.VisualStudio.ProjectAggregator" version="8.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3GqtEGzE/aiWGhmshwGtJD/uNgsMyQfUYmJJT+kcQU8=</dsig:DigestValue>
+        <dsig:DigestValue>RbFBNWbQ5c8intWa5pimSNZ8VpTkt4UPd7m5BMSW8Lc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

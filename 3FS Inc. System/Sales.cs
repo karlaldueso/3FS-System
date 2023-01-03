@@ -198,7 +198,9 @@ namespace _3FS_System
                             ReceiptNum = receiptnumTextbox.Text,
                             CustomerID = customerID,
                             TransactionDate = dateTime,
-                            UpdatedDate = DateTime.Now
+                            UpdatedDate = DateTime.Now,
+                            CreatedDate = DateTime.Now,
+                            StoreID = 0
                         };
                         receipt.AmountPaid = float.Parse(String.Format("{0:0.##}", amountPaidTextbox.Text));
                         receipt.GrandTotal = float.Parse(String.Format("{0:N2}", grandtotalTextbox.Text));
@@ -209,7 +211,9 @@ namespace _3FS_System
                         ItemRepository itemRepository = new ItemRepository();
                         Sale sales = new Sale();
                         sales.TransactionDate = dateTime;
-                        sales.UpdatedDate = receipt.UpdatedDate; 
+                        sales.UpdatedDate = receipt.UpdatedDate;
+                        sales.CreatedDate = dateTime;
+                        sales.StoreID = 0;
                         for (int i = 0; i < dataGridItems.Rows.Count; i++)
                         {
                             sales.ReceiptNum = receiptnumTextbox.Text;
@@ -226,7 +230,7 @@ namespace _3FS_System
                         {
                             CustomerRepository customerRepository = new CustomerRepository();
                             //Update Customer Credit
-                            Customer customer = new Customer
+                            Models.CustomerProfile customer = new Models.CustomerProfile
                             {
                                 CustomerID = receipt.CustomerID,
                                 UpdatedDate = receipt.UpdatedDate

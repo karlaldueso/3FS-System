@@ -64,16 +64,18 @@ namespace _3FS_System
 
                         float amount = float.Parse(amountText.Text);
                         float totalpayment = 0;
-                        CollectiblesRepository collectiblesRepository = new CollectiblesRepository();
-                        Collectible collectible = new Collectible
+                        CollectiblesLogRepository collectiblesRepository = new CollectiblesLogRepository();
+                        CollectiblesLog collectible = new CollectiblesLog
                         {
                             CustomerID = CustomerID,
                             Amount = amount,
                             TransactionDate = DateTime.Now,
-                            UpdatedDate = DateTime.Now
+                            UpdatedDate = DateTime.Now,
+                            CreatedDate = DateTime.Now,
+                            StoreID = 0
                         };
                         CustomerRepository customerRepository = new CustomerRepository();
-                        Customer customer = new Customer
+                        Models.CustomerProfile customer = new Models.CustomerProfile
                         {
                             CustomerID = CustomerID,
                             UpdatedDate = DateTime.Now,
@@ -182,7 +184,7 @@ namespace _3FS_System
                 }
 
 
-                CollectiblesRepository collectiblesRepository = new CollectiblesRepository();
+                CollectiblesLogRepository collectiblesRepository = new CollectiblesLogRepository();
                 dataCollectiblesLog.DataSource = collectiblesRepository.GetCollectibleLogs_ByCustomerID(CustomerID);
                 dataCollectiblesLog.Columns["CollectiblesLogID"].Visible = false;
                 dataCollectiblesLog.Columns["CustomerID"].Visible = false;

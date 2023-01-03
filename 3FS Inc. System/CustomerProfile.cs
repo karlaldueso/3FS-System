@@ -64,7 +64,7 @@ namespace _3FS_System
                 }
 
 
-                CollectiblesRepository collectiblesRepository = new CollectiblesRepository();
+                CollectiblesLogRepository collectiblesRepository = new CollectiblesLogRepository();
                 dataCollectiblesLog.DataSource = collectiblesRepository.GetCollectibleLogs_ByCustomerID(CustomerID);
                 dataCollectiblesLog.Columns["CollectiblesLogID"].Visible = false;
                 dataCollectiblesLog.Columns["CustomerID"].Visible = false;
@@ -124,17 +124,18 @@ namespace _3FS_System
                     //Declaring and Init
                     _ = new DataAccess();
                     CustomerRepository customerRepository = new CustomerRepository();
-                    Customer customer = new Customer
+                    Models.CustomerProfile customer = new Models.CustomerProfile
                     {
                         //Assign parameters based on input
-                        FirstName=firstNametext.Text,
-                        LastName=lastNametext.Text,
-                        ContactNumber=contacttext.Text,
-                        Email=emailtext.Text,
-                        Address=addresstext.Text,
+                        FirstName= firstNametext.Text,
+                        LastName= lastNametext.Text,
+                        ContactNumber= contacttext.Text,
+                        Email= emailtext.Text,
+                        Address= addresstext.Text,
                         Credit=float.Parse(credittext.Text),
-                        Terms=int.Parse(termstext.Text),
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        CreatedDate= DateTime.Now,
+                        StoreID = 0
                     };
                     customerRepository.Insert(customer);
                     //Display and clear textbox
@@ -176,7 +177,7 @@ namespace _3FS_System
             int[] c_r = { dataGridCustomers.CurrentCellAddress.X, dataGridCustomers.CurrentCellAddress.Y };
             if (dataGridCustomers.Rows[c_r[1]].Cells[c_r[0]].Value.ToString() != EditText.Text)
             {
-                Customer customer = new Customer
+                Models.CustomerProfile customer = new Models.CustomerProfile
                 {
                     //Assign parameters based on selected row on datagridview1
                     CustomerID = int.Parse(dataGridCustomers.Rows[c_r[1]].Cells[0].Value.ToString()),
@@ -186,7 +187,7 @@ namespace _3FS_System
                     Email = dataGridCustomers.Rows[c_r[1]].Cells[4].Value.ToString(),
                     Address = dataGridCustomers.Rows[c_r[1]].Cells[5].Value.ToString(),
                     Credit = float.Parse(dataGridCustomers.Rows[c_r[1]].Cells[6].Value.ToString()),
-                    Terms = int.Parse(dataGridCustomers.Rows[c_r[1]].Cells[7].Value.ToString()),
+                    CreditDueDate = DateTime.Parse(dataGridCustomers.Rows[c_r[1]].Cells[7].Value.ToString()),
                     UpdatedDate = DateTime.Now
                 };
                 customerRepository.Update(customer, c_r[0], EditText.Text); //update selected row

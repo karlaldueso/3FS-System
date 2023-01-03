@@ -12,38 +12,38 @@ namespace _3FS_System.Repositories
 {
     internal class CustomerRepository : ICustomerRepository
     {
-        public bool Delete(Customer customer)
+        public bool Delete(Models.CustomerProfile customer)
         {
             throw new NotImplementedException();
         }
-        public IEnumerable<Customer> GetCustomer()
+        public IEnumerable<Models.CustomerProfile> GetCustomer()
         {
             string qry = string.Format("dbo.spCustomerProfile_GetAll");
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                var output = connection.Query<Customer>(qry);
+                var output = connection.Query<Models.CustomerProfile>(qry);
                 return output;
             }
         }
-        public IEnumerable<Customer> GetCustomer_ByName(string Name)
+        public IEnumerable<Models.CustomerProfile> GetCustomer_ByName(string Name)
         {
             string qry = string.Format("dbo.spCustomerProfile_GetByName @FirstName='{0}', @LastName='{0}'", Name);
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                var output = connection.Query<Customer>(qry);
+                var output = connection.Query<Models.CustomerProfile>(qry);
                 return output;
             }
         }
 
-        public bool Insert(Customer customer)
+        public bool Insert(Models.CustomerProfile customer)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                var output = connection.Execute("dbo.spCustomerProfile_AddProfile @FirstName, @LastName, @ContactNumber, @Email, @Address, @Credit, @Terms, @UpdatedDate", customer);
+                var output = connection.Execute("dbo.spCustomerProfile_AddProfile @FirstName, @LastName, @ContactNumber, @Email, @Address, @Credit, @Terms, @UpdatedDate, @CreatedDate, @StoreID", customer);
                 return true;
             }
         }
-        public bool Update(Customer customer, int col, string input)
+        public bool Update(Models.CustomerProfile customer, int col, string input)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
@@ -68,14 +68,14 @@ namespace _3FS_System.Repositories
                         customer.Credit = float.Parse(input);
                         break;
                     case 7:
-                        customer.Terms = int.Parse(input);
+                        customer.CreditDueDate = DateTime.Parse(input);
                         break;
                 }
                 _ = connection.Execute("dbo.spCustomerProfile_UpdateProfile @CustomerID, @FirstName, @LastName, @ContactNumber, @Email, @Address, @Credit, @Terms, @UpdatedDate", customer);
                 return true;
             }
         }
-        public bool UpdateCredit(Customer customer, float amount)
+        public bool UpdateCredit(Models.CustomerProfile customer, float amount)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {

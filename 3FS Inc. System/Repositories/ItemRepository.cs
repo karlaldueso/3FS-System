@@ -12,39 +12,39 @@ namespace _3FS_System.Repositories
 {
     internal class ItemRepository : IItemRepository
     {
-        public bool Delete(Items item)
+        public bool Delete(ItemInventory item)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Items> GetItems_All()
+        public IEnumerable<ItemInventory> GetItems_All()
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                var output = connection.Query<Items>("dbo.spItemInventory_GetAll");
+                var output = connection.Query<ItemInventory>("dbo.spItemInventory_GetAll");
                 return output;
             }
         }
-        public IEnumerable<Items> GetItems_ByName(string ItemName, string BrandName)
+        public IEnumerable<ItemInventory> GetItems_ByName(string ItemName, string BrandName)
         {
             string qry = string.Format("dbo.spItemInventory_GetByName @ItemName='{0}', @BrandName='{1}'", ItemName, BrandName);
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                var output = connection.Query<Items>(qry);
+                var output = connection.Query<ItemInventory>(qry);
                 return output;
             }
         }
 
-        public bool Insert(Items item)
+        public bool Insert(ItemInventory item)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                var output = connection.Execute("dbo.spItemInventory_AddItem @ItemName, @BrandName, @CategoryID, @Quantity, @Unit, @SRP, @Capital, @Storage, @UpdatedDate", item);
+                var output = connection.Execute("dbo.spItemInventory_AddItem @ItemName, @BrandName, @CategoryID, @Quantity, @Unit, @SRP, @Capital, @Storage, @UpdatedDate, @CreatedDate, @StoreID", item);
                 return true;
             }
         }
 
-        public bool Update(Items item, int col, string input)
+        public bool Update(ItemInventory item, int col, string input)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
@@ -87,7 +87,7 @@ namespace _3FS_System.Repositories
                 return true;
             }
         }
-        public int GetItemID(Items item)
+        public int GetItemID(ItemInventory item)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {

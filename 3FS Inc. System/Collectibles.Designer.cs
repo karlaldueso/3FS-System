@@ -491,7 +491,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridReceiptDetails;
-        private System.Windows.Forms.Label receiptDetailslabel;
+        //private System.Windows.Forms.Label receiptDetailslabel;
         private System.Windows.Forms.TextBox totalcredittextbox;
         private System.Windows.Forms.Label label2;
     }

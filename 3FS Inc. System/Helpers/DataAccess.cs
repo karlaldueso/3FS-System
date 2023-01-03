@@ -11,11 +11,11 @@ namespace _3FS_System.Helpers
 {
     public class DataAccess
     {
-        public List<Items> GetItem()
+        public List<ItemInventory> GetItem()
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                var output = connection.Query<Items>("dbo.spItemInventory_GetAll").ToList();
+                var output = connection.Query<ItemInventory>("dbo.spItemInventory_GetAll").ToList();
                 return output;
             }
         }

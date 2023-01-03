@@ -53,7 +53,9 @@ namespace _3FS_System
                         PW = PWtextbox1.Text,
                         ContactNum = contacttext.Text,
                         UserType = userTypecombobox.SelectedIndex,
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        CreatedDate = DateTime.Now,
+                        StoreID = 0
                     };
 
                     userRepository.Insert(user);

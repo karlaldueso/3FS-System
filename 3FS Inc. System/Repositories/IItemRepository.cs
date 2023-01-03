@@ -12,12 +12,12 @@ namespace _3FS_System.Repositories
 {
     public interface IItemRepository
     {
-        IEnumerable<Items> GetItems_All();
-        IEnumerable<Items> GetItems_ByName(string ItemName, string BrandName);
-        bool Insert(Items item);
-        bool Update(Items item, int col, string input);
+        IEnumerable<ItemInventory> GetItems_All();
+        IEnumerable<ItemInventory> GetItems_ByName(string ItemName, string BrandName);
+        bool Insert(ItemInventory item);
+        bool Update(ItemInventory item, int col, string input);
         bool UpdateQty(int itemID, float qty, int transactiontype, DateTime updatedDate);
-        bool Delete(Items item);
-        int GetItemID(Items item);
+        bool Delete(ItemInventory item);
+        int GetItemID(ItemInventory item);
     }
 }

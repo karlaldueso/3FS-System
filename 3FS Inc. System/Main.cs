@@ -18,8 +18,8 @@ namespace _3FS_System
 {
     public partial class Main : Form
     {
-        int screenWidth = Screen.PrimaryScreen.Bounds.Width;
-        int screenHeight = Screen.PrimaryScreen.Bounds.Height;
+        readonly int screenWidth = Screen.PrimaryScreen.Bounds.Width;
+        readonly int screenHeight = Screen.PrimaryScreen.Bounds.Height;
         public Main()
         {
             InitializeComponent();
@@ -167,7 +167,7 @@ namespace _3FS_System
 
             this.BackColor = Properties.Settings.Default.FormBackground;
             int myvalue = panel1.Height+4;
-            myvalue = myvalue / 6;
+            myvalue /= 6;
             int buttonheight = myvalue;
             customers_button.Height = buttonheight;
             customerProfile.Height = buttonheight;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _3FS_System.Models
 {
-    public class Items
+    public class ItemInventory
     {
         public int ItemID { get; set; }
         public string ItemName { get; set; }
@@ -18,6 +18,7 @@ namespace _3FS_System.Models
         public float Capital { get; set; }
         public string Storage { get; set; }
         public DateTime UpdatedDate { get; set; }
+        public DateTime CreatedDate { get; set; }
         public int StoreID { get; set; }
     }
 }
