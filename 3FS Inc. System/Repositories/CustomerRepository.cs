@@ -39,7 +39,7 @@ namespace _3FS_System.Repositories
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                var output = connection.Execute("dbo.spCustomerProfile_AddProfile @FirstName, @LastName, @ContactNumber, @Email, @Address, @Credit, @Terms, @UpdatedDate, @CreatedDate, @StoreID", customer);
+                var output = connection.Execute("dbo.spCustomerProfile_AddProfile @FirstName, @LastName, @ContactNumber, @Email, @Address, @UpdatedDate, @CreatedDate, @StoreID", customer);
                 return true;
             }
         }
@@ -64,22 +64,8 @@ namespace _3FS_System.Repositories
                     case 5:
                         customer.Address = input;
                         break;
-                    case 6:
-                        customer.Credit = float.Parse(input);
-                        break;
-                    case 7:
-                        customer.CreditDueDate = DateTime.Parse(input);
-                        break;
                 }
                 _ = connection.Execute("dbo.spCustomerProfile_UpdateProfile @CustomerID, @FirstName, @LastName, @ContactNumber, @Email, @Address, @Credit, @Terms, @UpdatedDate", customer);
-                return true;
-            }
-        }
-        public bool UpdateCredit(Models.CustomerProfile customer, float amount)
-        {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
-            {
-                var output = connection.Execute("dbo.spCustomerProfile_UpdateCredit @CustomerID, @Amount, @UpdatedDate", new { customer.CustomerID, amount, customer.UpdatedDate });
                 return true;
             }
         }

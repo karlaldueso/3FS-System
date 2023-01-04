@@ -14,6 +14,7 @@ namespace _3FS_System.Models
         public float Amount { get; set; }
         public float Balance { get; set; }
         public int Paid { get; set; }
+        public DateTime DueDate { get; set; }
         public DateTime TransactionDate { get; set; }
         public DateTime UpdatedDate { get; set; }
         public DateTime CreatedDate { get; set; }

@@ -422,6 +422,7 @@
             this.dataGridLogs.ReadOnly = true;
             this.dataGridLogs.RowHeadersVisible = false;
             this.dataGridLogs.RowHeadersWidth = 51;
+            this.dataGridLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridLogs.Size = new System.Drawing.Size(754, 120);
             this.dataGridLogs.TabIndex = 26;
             // 

@@ -30,11 +30,7 @@
         {
             this.panel = new System.Windows.Forms.Panel();
             this.AddItemButton = new System.Windows.Forms.Button();
-            this.termslabel = new System.Windows.Forms.Label();
-            this.termstext = new System.Windows.Forms.TextBox();
-            this.creditlabel = new System.Windows.Forms.Label();
             this.customerlabel = new System.Windows.Forms.Label();
-            this.credittext = new System.Windows.Forms.TextBox();
             this.addresslabel = new System.Windows.Forms.Label();
             this.addresstext = new System.Windows.Forms.TextBox();
             this.emaillabel = new System.Windows.Forms.Label();
@@ -77,11 +73,7 @@
             // 
             this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel.Controls.Add(this.AddItemButton);
-            this.panel.Controls.Add(this.termslabel);
-            this.panel.Controls.Add(this.termstext);
-            this.panel.Controls.Add(this.creditlabel);
             this.panel.Controls.Add(this.customerlabel);
-            this.panel.Controls.Add(this.credittext);
             this.panel.Controls.Add(this.addresslabel);
             this.panel.Controls.Add(this.addresstext);
             this.panel.Controls.Add(this.emaillabel);
@@ -94,7 +86,7 @@
             this.panel.Controls.Add(this.firstNametext);
             this.panel.Location = new System.Drawing.Point(12, 12);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(263, 286);
+            this.panel.Size = new System.Drawing.Size(263, 228);
             this.panel.TabIndex = 3;
             // 
             // AddItemButton
@@ -105,7 +97,7 @@
             this.AddItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddItemButton.ForeColor = System.Drawing.Color.Black;
             this.AddItemButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddItemButton.Location = new System.Drawing.Point(108, 241);
+            this.AddItemButton.Location = new System.Drawing.Point(108, 182);
             this.AddItemButton.Margin = new System.Windows.Forms.Padding(4);
             this.AddItemButton.Name = "AddItemButton";
             this.AddItemButton.Size = new System.Drawing.Size(127, 28);
@@ -113,39 +105,6 @@
             this.AddItemButton.Text = "ADD";
             this.AddItemButton.UseVisualStyleBackColor = false;
             this.AddItemButton.Click += new System.EventHandler(this.AddItemButton_Click);
-            // 
-            // termslabel
-            // 
-            this.termslabel.AutoSize = true;
-            this.termslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.termslabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.termslabel.Location = new System.Drawing.Point(0, 207);
-            this.termslabel.Name = "termslabel";
-            this.termslabel.Size = new System.Drawing.Size(103, 20);
-            this.termslabel.TabIndex = 15;
-            this.termslabel.Text = "Terms(Days):";
-            this.termslabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // termstext
-            // 
-            this.termstext.BackColor = System.Drawing.Color.White;
-            this.termstext.ForeColor = System.Drawing.Color.Black;
-            this.termstext.Location = new System.Drawing.Point(108, 207);
-            this.termstext.Name = "termstext";
-            this.termstext.Size = new System.Drawing.Size(127, 20);
-            this.termstext.TabIndex = 14;
-            // 
-            // creditlabel
-            // 
-            this.creditlabel.AutoSize = true;
-            this.creditlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.creditlabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.creditlabel.Location = new System.Drawing.Point(48, 181);
-            this.creditlabel.Name = "creditlabel";
-            this.creditlabel.Size = new System.Drawing.Size(55, 20);
-            this.creditlabel.TabIndex = 13;
-            this.creditlabel.Text = "Credit:";
-            this.creditlabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // customerlabel
             // 
@@ -158,15 +117,6 @@
             this.customerlabel.TabIndex = 12;
             this.customerlabel.Text = "Customer Information:";
             this.customerlabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // credittext
-            // 
-            this.credittext.BackColor = System.Drawing.Color.White;
-            this.credittext.ForeColor = System.Drawing.Color.Black;
-            this.credittext.Location = new System.Drawing.Point(108, 181);
-            this.credittext.Name = "credittext";
-            this.credittext.Size = new System.Drawing.Size(127, 20);
-            this.credittext.TabIndex = 11;
             // 
             // addresslabel
             // 
@@ -285,14 +235,14 @@
             this.panel1.Controls.Add(this.dataGridCustomers);
             this.panel1.Location = new System.Drawing.Point(281, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(676, 285);
+            this.panel1.Size = new System.Drawing.Size(676, 227);
             this.panel1.TabIndex = 4;
             // 
             // searchName
             // 
             this.searchName.BackColor = System.Drawing.Color.White;
             this.searchName.ForeColor = System.Drawing.Color.Black;
-            this.searchName.Location = new System.Drawing.Point(78, 255);
+            this.searchName.Location = new System.Drawing.Point(77, 195);
             this.searchName.Margin = new System.Windows.Forms.Padding(4);
             this.searchName.Name = "searchName";
             this.searchName.Size = new System.Drawing.Size(127, 20);
@@ -304,7 +254,7 @@
             this.namesearchlabel.AutoSize = true;
             this.namesearchlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.namesearchlabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.namesearchlabel.Location = new System.Drawing.Point(4, 255);
+            this.namesearchlabel.Location = new System.Drawing.Point(3, 195);
             this.namesearchlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.namesearchlabel.Name = "namesearchlabel";
             this.namesearchlabel.Size = new System.Drawing.Size(71, 20);
@@ -315,7 +265,7 @@
             // 
             this.editlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.editlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editlabel.Location = new System.Drawing.Point(211, 255);
+            this.editlabel.Location = new System.Drawing.Point(210, 195);
             this.editlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.editlabel.Name = "editlabel";
             this.editlabel.Size = new System.Drawing.Size(138, 20);
@@ -329,7 +279,7 @@
             this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.UpdateButton.ForeColor = System.Drawing.Color.Black;
             this.UpdateButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UpdateButton.Location = new System.Drawing.Point(552, 255);
+            this.UpdateButton.Location = new System.Drawing.Point(551, 195);
             this.UpdateButton.Margin = new System.Windows.Forms.Padding(4);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(118, 26);
@@ -343,7 +293,7 @@
             this.EditText.BackColor = System.Drawing.Color.White;
             this.EditText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EditText.ForeColor = System.Drawing.Color.Black;
-            this.EditText.Location = new System.Drawing.Point(357, 255);
+            this.EditText.Location = new System.Drawing.Point(356, 195);
             this.EditText.Margin = new System.Windows.Forms.Padding(4);
             this.EditText.Name = "EditText";
             this.EditText.Size = new System.Drawing.Size(187, 20);
@@ -358,7 +308,7 @@
             this.dataGridCustomers.Name = "dataGridCustomers";
             this.dataGridCustomers.ReadOnly = true;
             this.dataGridCustomers.RowHeadersVisible = false;
-            this.dataGridCustomers.Size = new System.Drawing.Size(668, 245);
+            this.dataGridCustomers.Size = new System.Drawing.Size(668, 185);
             this.dataGridCustomers.TabIndex = 0;
             this.dataGridCustomers.SelectionChanged += new System.EventHandler(this.dataGridCustomers_SelectionChanged);
             // 
@@ -371,7 +321,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.dataGridReceipts);
-            this.panel2.Location = new System.Drawing.Point(12, 303);
+            this.panel2.Location = new System.Drawing.Point(12, 246);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(475, 285);
             this.panel2.TabIndex = 5;
@@ -443,6 +393,7 @@
             this.dataGridReceipts.Name = "dataGridReceipts";
             this.dataGridReceipts.ReadOnly = true;
             this.dataGridReceipts.RowHeadersVisible = false;
+            this.dataGridReceipts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridReceipts.Size = new System.Drawing.Size(467, 178);
             this.dataGridReceipts.TabIndex = 1;
             // 
@@ -453,7 +404,7 @@
             this.panel3.Controls.Add(this.totalpaymentslabel);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.dataCollectiblesLog);
-            this.panel3.Location = new System.Drawing.Point(493, 303);
+            this.panel3.Location = new System.Drawing.Point(493, 246);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(464, 285);
             this.panel3.TabIndex = 6;
@@ -502,19 +453,20 @@
             this.dataCollectiblesLog.Name = "dataCollectiblesLog";
             this.dataCollectiblesLog.ReadOnly = true;
             this.dataCollectiblesLog.RowHeadersVisible = false;
+            this.dataCollectiblesLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataCollectiblesLog.Size = new System.Drawing.Size(456, 222);
             this.dataCollectiblesLog.TabIndex = 2;
             // 
-            // CustomerProfile
+            // CustomersProfile
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(976, 599);
+            this.ClientSize = new System.Drawing.Size(976, 541);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "CustomerProfile";
+            this.Name = "CustomersProfile";
             this.Text = "Customer Profile";
             this.Load += new System.EventHandler(this.CustomerProfile_Load);
             this.panel.ResumeLayout(false);
@@ -536,7 +488,6 @@
 
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label customerlabel;
-        private System.Windows.Forms.TextBox credittext;
         private System.Windows.Forms.Label addresslabel;
         private System.Windows.Forms.TextBox addresstext;
         private System.Windows.Forms.Label emaillabel;
@@ -547,9 +498,6 @@
         private System.Windows.Forms.TextBox lastNametext;
         private System.Windows.Forms.Label firstNamelabel;
         private System.Windows.Forms.TextBox firstNametext;
-        private System.Windows.Forms.Label termslabel;
-        private System.Windows.Forms.TextBox termstext;
-        private System.Windows.Forms.Label creditlabel;
         private System.Windows.Forms.Button AddItemButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;

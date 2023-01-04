@@ -12,7 +12,6 @@ namespace _3FS_System.Repositories
         IEnumerable<Models.CustomerProfile> GetCustomer();
         IEnumerable<Models.CustomerProfile> GetCustomer_ByName(string Name);
         bool Insert(Models.CustomerProfile customer);
-        bool UpdateCredit(Models.CustomerProfile customer, float amount);
         bool Update(Models.CustomerProfile customer, int col, string input);
         bool Delete(Models.CustomerProfile customer);
     }

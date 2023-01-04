@@ -43,13 +43,26 @@ namespace _3FS_System.Repositories
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                var output = connection.Execute("dbo.spCollectibles_AddCollectible @CustomerID, @ReceiptNum, @Amount, @Balance, @Paid, @TransactionDate, @UpdatedDate, @CreatedDate, @StoreID", collectible);
+                var output = connection.Execute("dbo.spCollectibles_AddCollectible @CustomerID, @ReceiptNum, @Amount, @Balance, @Paid, @DueDate, @TransactionDate, @UpdatedDate, @CreatedDate, @StoreID", collectible);
                 return true;
             }
         }
         public bool Update(Collectible collectible)
         {
             throw new NotImplementedException();
+        }
+        public float GetBalanceByCustomerID(int customerID)
+        {
+            object totalbalance;
+            string qry = string.Format("dbo.spCollectibles_TotalBalancePerCustomerID @CustomerID={0}", customerID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
+            {
+                totalbalance = connection.ExecuteScalar(qry);
+            }
+            if (totalbalance != null)
+                return (float)Convert.ToDouble(totalbalance.ToString());
+            else
+                return 0;
         }
     }
 }

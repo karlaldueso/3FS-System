@@ -15,5 +15,6 @@ namespace _3FS_System.Repositories
         bool DeleteLog(CollectiblesLog collectibles);
         bool Insert(Collectible collectible);
         bool Update(Collectible collectible);
+        float GetBalanceByCustomerID(int customerID);
     }
 }

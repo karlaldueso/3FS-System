@@ -119,7 +119,7 @@ namespace _3FS_System
 
         private void AddItemButton_Click(object sender, EventArgs e)
         {
-            if ((String.IsNullOrEmpty(firstNametext.Text)) || (String.IsNullOrEmpty(lastNametext.Text)) || (String.IsNullOrEmpty(contacttext.Text)) || (String.IsNullOrEmpty(emailtext.Text)) || (String.IsNullOrEmpty(addresstext.Text)) || (String.IsNullOrEmpty(credittext.Text)) || (String.IsNullOrEmpty(termstext.Text)))
+            if ((String.IsNullOrEmpty(firstNametext.Text)) || (String.IsNullOrEmpty(lastNametext.Text)) || (String.IsNullOrEmpty(contacttext.Text)) || (String.IsNullOrEmpty(emailtext.Text)) || (String.IsNullOrEmpty(addresstext.Text)))
             {
                 MessageBox.Show("Enter complete details!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -138,7 +138,6 @@ namespace _3FS_System
                         ContactNumber= contacttext.Text,
                         Email= emailtext.Text,
                         Address= addresstext.Text,
-                        Credit=float.Parse(credittext.Text),
                         UpdatedDate = DateTime.Now,
                         CreatedDate= DateTime.Now,
                         StoreID = 0
@@ -150,8 +149,6 @@ namespace _3FS_System
                     contacttext.Clear();
                     emailtext.Clear();
                     addresstext.Clear();
-                    credittext.Clear();
-                    termstext.Clear();
 
 
                     dataGridCustomers.DataSource = customerRepository.GetCustomer();
@@ -187,7 +184,7 @@ namespace _3FS_System
             int[] c_r = { dataGridCustomers.CurrentCellAddress.X, dataGridCustomers.CurrentCellAddress.Y };
             if (dataGridCustomers.Rows[c_r[1]].Cells[c_r[0]].Value.ToString() != EditText.Text)
             {
-                Models.CustomerProfile customer = new Models.CustomerProfile
+                CustomerProfile customer = new CustomerProfile
                 {
                     //Assign parameters based on selected row on datagridview1
                     CustomerID = int.Parse(dataGridCustomers.Rows[c_r[1]].Cells[0].Value.ToString()),
@@ -196,8 +193,6 @@ namespace _3FS_System
                     ContactNumber = dataGridCustomers.Rows[c_r[1]].Cells[3].Value.ToString(),
                     Email = dataGridCustomers.Rows[c_r[1]].Cells[4].Value.ToString(),
                     Address = dataGridCustomers.Rows[c_r[1]].Cells[5].Value.ToString(),
-                    Credit = float.Parse(dataGridCustomers.Rows[c_r[1]].Cells[6].Value.ToString()),
-                    CreditDueDate = DateTime.Parse(dataGridCustomers.Rows[c_r[1]].Cells[7].Value.ToString()),
                     UpdatedDate = DateTime.Now
                 };
                 customerRepository.Update(customer, c_r[0], EditText.Text); //update selected row

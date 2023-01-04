@@ -232,15 +232,7 @@ namespace _3FS_System
 
                         if (receipt.CustomerID != 3)
                         {
-                            CustomerRepository customerRepository = new CustomerRepository();
-                            //Update Customer Credit
-                            CustomerProfile customer = new CustomerProfile
-                            {
-                                CustomerID = receipt.CustomerID,
-                                UpdatedDate = receipt.UpdatedDate
-                            };
                             float credit = receipt.GrandTotal-receipt.AmountPaid;
-                            customerRepository.UpdateCredit(customer, credit);
                             if (credit > 0)
                             {
                                 Collectible collectible = new Collectible
@@ -250,6 +242,7 @@ namespace _3FS_System
                                     Amount = credit,
                                     Balance = credit,
                                     Paid = 0,
+                                    DueDate = dateTimePicker2.Value,
                                     TransactionDate = receipt.TransactionDate,
                                     UpdatedDate = receipt.UpdatedDate,
                                     CreatedDate = receipt.CreatedDate,
