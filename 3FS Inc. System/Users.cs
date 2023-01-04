@@ -28,6 +28,8 @@ namespace _3FS_System
             usersDataGrid.Columns["UpdatedDate"].Visible = false;
             usersDataGrid.Columns["UserID"].Visible = false;
             usersDataGrid.Columns["PW"].Visible = false;
+            usersDataGrid.Columns["CreatedDate"].Visible = false;
+            usersDataGrid.Columns["StoreID"].Visible = false;
             usersDataGrid.AutoResizeColumns();
             usersDataGrid.AutoResizeRows();
 
@@ -64,6 +66,8 @@ namespace _3FS_System
                     usersDataGrid.Columns["UpdatedDate"].Visible = false;
                     usersDataGrid.Columns["UserID"].Visible = false;
                     usersDataGrid.Columns["PW"].Visible = false;
+                    usersDataGrid.Columns["CreatedDate"].Visible = false;
+                    usersDataGrid.Columns["StoreID"].Visible = false;
                     usersDataGrid.AutoResizeColumns();
                     usersDataGrid.AutoResizeRows();
 

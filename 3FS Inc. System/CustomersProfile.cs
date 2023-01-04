@@ -15,9 +15,9 @@ using _3FS_System.Global_Variables;
 
 namespace _3FS_System
 {
-    public partial class CustomerProfile : Form
+    public partial class CustomersProfile : Form
     {
-        public CustomerProfile()
+        public CustomersProfile()
         {
             InitializeComponent();
 
@@ -26,6 +26,8 @@ namespace _3FS_System
             dataGridCustomers.DataSource = customerRepository.GetCustomer();
             dataGridCustomers.Columns["CustomerID"].Visible = false;
             dataGridCustomers.Columns["UpdatedDate"].Visible = false;
+            dataGridCustomers.Columns["CreatedDate"].Visible = false;
+            dataGridCustomers.Columns["StoreID"].Visible = false;
         }
 
         private void dataGridCustomers_SelectionChanged(object sender, EventArgs e)
@@ -45,6 +47,8 @@ namespace _3FS_System
                 dataGridReceipts.DataSource = receiptRepository.GetReceipt_ByCustomerID(CustomerID);
                 dataGridReceipts.Columns["CustomerID"].Visible = false;
                 dataGridReceipts.Columns["UpdatedDate"].Visible = false;
+                dataGridReceipts.Columns["CreatedDate"].Visible = false;
+                dataGridReceipts.Columns["StoreID"].Visible = false;
                 dataGridReceipts.AutoResizeColumns();
                 dataGridReceipts.AutoResizeRows();
                 if (dataGridReceipts.Rows.Count != 0)
@@ -64,11 +68,13 @@ namespace _3FS_System
                 }
 
 
-                CollectiblesLogRepository collectiblesRepository = new CollectiblesLogRepository();
+                CollectiblesRepository collectiblesRepository = new CollectiblesRepository();
                 dataCollectiblesLog.DataSource = collectiblesRepository.GetCollectibleLogs_ByCustomerID(CustomerID);
                 dataCollectiblesLog.Columns["CollectiblesLogID"].Visible = false;
                 dataCollectiblesLog.Columns["CustomerID"].Visible = false;
                 dataCollectiblesLog.Columns["UpdatedDate"].Visible = false;
+                dataCollectiblesLog.Columns["CreatedDate"].Visible = false;
+                dataCollectiblesLog.Columns["StoreID"].Visible = false;
                 dataCollectiblesLog.AutoResizeColumns();
                 dataCollectiblesLog.AutoResizeRows();
                 if (dataCollectiblesLog.Rows.Count != 0)
@@ -151,6 +157,8 @@ namespace _3FS_System
                     dataGridCustomers.DataSource = customerRepository.GetCustomer();
                     dataGridCustomers.Columns["CustomerID"].Visible = false;
                     dataGridCustomers.Columns["UpdatedDate"].Visible = false;
+                    dataGridCustomers.Columns["CreatedDate"].Visible = false;
+                    dataGridCustomers.Columns["StoreID"].Visible = false;
 
                 }
                 catch
@@ -168,6 +176,8 @@ namespace _3FS_System
             dataGridCustomers.DataSource = customerRepository.GetCustomer_ByName(searchName.Text);
             dataGridCustomers.Columns["CustomerID"].Visible = false;
             dataGridCustomers.Columns["UpdatedDate"].Visible = false;
+            dataGridCustomers.Columns["CreatedDate"].Visible = false;
+            dataGridCustomers.Columns["StoreID"].Visible = false;
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
@@ -194,6 +204,8 @@ namespace _3FS_System
                 dataGridCustomers.DataSource = customerRepository.GetCustomer();
                 dataGridCustomers.Columns["CustomerID"].Visible = false;
                 dataGridCustomers.Columns["UpdatedDate"].Visible = false;
+                dataGridCustomers.Columns["CreatedDate"].Visible = false;
+                dataGridCustomers.Columns["StoreID"].Visible = false;
             }
             else
             {

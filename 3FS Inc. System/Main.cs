@@ -241,7 +241,7 @@ namespace _3FS_System
             }
             if (bFormNameOpen == false)
             {
-                CustomerProfile customerprofile = new CustomerProfile();
+                CustomersProfile customerprofile = new CustomersProfile();
                 customerprofile.MdiParent = this;
                 customerprofile.Show();
             }

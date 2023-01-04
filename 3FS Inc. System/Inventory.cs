@@ -65,6 +65,8 @@ namespace _3FS_System
                     dataGridInventory.Columns["ItemID"].Visible = false;
                     dataGridInventory.Columns["CategoryID"].Visible = false;
                     dataGridInventory.Columns["UpdatedDate"].Visible = false;
+                    dataGridInventory.Columns["CreatedDate"].Visible = false;
+                    dataGridInventory.Columns["StoreID"].Visible = false;
 
                     //Adding to ItemLogs
                     item.ItemID = itemRepository.GetItemID(new ItemInventory { ItemName = item.ItemName, BrandName = item.BrandName });
@@ -193,6 +195,8 @@ namespace _3FS_System
                 dataGridInventory.Columns["UpdatedDate"].Visible = false;
                 dataGridInventory.Columns["ItemID"].Visible = false;
                 dataGridInventory.Columns["CategoryID"].Visible = false;
+                dataGridInventory.Columns["CreatedDate"].Visible = false;
+                dataGridInventory.Columns["StoreID"].Visible = false;
                 dataGridInventory.AutoResizeColumns();
                 dataGridInventory.AutoResizeRows();
                 dataGridLogs.AutoResizeColumns();
@@ -212,6 +216,8 @@ namespace _3FS_System
             dataGridInventory.Columns["UpdatedDate"].Visible = false;
             dataGridInventory.Columns["ItemID"].Visible = false;
             dataGridInventory.Columns["CategoryID"].Visible = false;
+            dataGridInventory.Columns["CreatedDate"].Visible = false;
+            dataGridInventory.Columns["StoreID"].Visible = false;
             dataGridInventory.AutoResizeColumns();
         }
 
@@ -223,6 +229,8 @@ namespace _3FS_System
             dataGridInventory.Columns["UpdatedDate"].Visible = false;
             dataGridInventory.Columns["ItemID"].Visible = false;
             dataGridInventory.Columns["CategoryID"].Visible = false;
+            dataGridInventory.Columns["CreatedDate"].Visible = false;
+            dataGridInventory.Columns["StoreID"].Visible = false;
             dataGridInventory.AutoResizeColumns();
             dataGridInventory.AutoResizeRows();
         }
@@ -236,6 +244,8 @@ namespace _3FS_System
             dataGridInventory.Columns["UpdatedDate"].Visible = false;
             dataGridInventory.Columns["ItemID"].Visible = false;
             dataGridInventory.Columns["CategoryID"].Visible = false;
+            dataGridInventory.Columns["CreatedDate"].Visible = false;
+            dataGridInventory.Columns["StoreID"].Visible = false;
             dataGridInventory.AutoResizeColumns();
             dataGridInventory.AutoResizeRows();
         }

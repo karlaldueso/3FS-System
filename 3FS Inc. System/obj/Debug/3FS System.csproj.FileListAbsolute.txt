@@ -52,7 +52,6 @@ D:\3FS-System\3FS Inc. System\bin\Debug\Dapper.xml
 D:\3FS-System\3FS Inc. System\obj\Debug\3FS System.csproj.AssemblyReference.cache
 D:\3FS-System\3FS Inc. System\obj\Debug\3FS System.csproj.SuggestedBindingRedirects.cache
 D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Collectibles.resources
-D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.CustomerProfile.resources
 D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Receipts.resources
 D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Reports.resources
 D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.splashscreen.resources
@@ -269,3 +268,4 @@ D:\3FS System\3FS-System\3FS Inc. System\bin\Debug\Newtonsoft.Json.xml
 D:\3FS System\3FS-System\3FS Inc. System\bin\Debug\Newtonsoft.Json.Bson.pdb
 D:\3FS System\3FS-System\3FS Inc. System\bin\Debug\Newtonsoft.Json.Bson.xml
 D:\3FS System\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Suppliers.resources
+D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.CustomersProfile.resources

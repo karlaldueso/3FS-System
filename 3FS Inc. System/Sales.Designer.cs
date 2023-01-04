@@ -71,6 +71,8 @@
             this.receiptsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.totalSales = new System.Windows.Forms.TextBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.duedatelabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInventory)).BeginInit();
             this.searchpanel.SuspendLayout();
@@ -127,7 +129,7 @@
             this.ItemNum.MinimumWidth = 6;
             this.ItemNum.Name = "ItemNum";
             this.ItemNum.ReadOnly = true;
-            this.ItemNum.Width = 62;
+            this.ItemNum.Width = 60;
             // 
             // Qty
             // 
@@ -135,7 +137,7 @@
             this.Qty.HeaderText = "Qty";
             this.Qty.MinimumWidth = 6;
             this.Qty.Name = "Qty";
-            this.Qty.Width = 48;
+            this.Qty.Width = 46;
             // 
             // Unit
             // 
@@ -144,7 +146,7 @@
             this.Unit.MinimumWidth = 6;
             this.Unit.Name = "Unit";
             this.Unit.ReadOnly = true;
-            this.Unit.Width = 51;
+            this.Unit.Width = 49;
             // 
             // ItemName
             // 
@@ -153,7 +155,7 @@
             this.ItemName.MinimumWidth = 6;
             this.ItemName.Name = "ItemName";
             this.ItemName.ReadOnly = true;
-            this.ItemName.Width = 60;
+            this.ItemName.Width = 58;
             // 
             // Brand
             // 
@@ -162,7 +164,7 @@
             this.Brand.MinimumWidth = 6;
             this.Brand.Name = "Brand";
             this.Brand.ReadOnly = true;
-            this.Brand.Width = 60;
+            this.Brand.Width = 58;
             // 
             // SRP
             // 
@@ -186,7 +188,7 @@
             this.UnitPrice.HeaderText = "Unit Price";
             this.UnitPrice.MinimumWidth = 6;
             this.UnitPrice.Name = "UnitPrice";
-            this.UnitPrice.Width = 78;
+            this.UnitPrice.Width = 76;
             // 
             // SubTotal
             // 
@@ -195,7 +197,7 @@
             this.SubTotal.MinimumWidth = 6;
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.ReadOnly = true;
-            this.SubTotal.Width = 78;
+            this.SubTotal.Width = 76;
             // 
             // dataGridInventory
             // 
@@ -314,7 +316,7 @@
             this.doneButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.doneButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.doneButton.ForeColor = System.Drawing.Color.Black;
-            this.doneButton.Location = new System.Drawing.Point(27, 192);
+            this.doneButton.Location = new System.Drawing.Point(26, 192);
             this.doneButton.Margin = new System.Windows.Forms.Padding(4);
             this.doneButton.Name = "doneButton";
             this.doneButton.Size = new System.Drawing.Size(149, 34);
@@ -435,19 +437,20 @@
             this.amountPaidTextbox.BackColor = System.Drawing.Color.White;
             this.amountPaidTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.amountPaidTextbox.ForeColor = System.Drawing.Color.Black;
-            this.amountPaidTextbox.Location = new System.Drawing.Point(27, 149);
+            this.amountPaidTextbox.Location = new System.Drawing.Point(0, 88);
             this.amountPaidTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.amountPaidTextbox.Name = "amountPaidTextbox";
-            this.amountPaidTextbox.Size = new System.Drawing.Size(148, 29);
+            this.amountPaidTextbox.Size = new System.Drawing.Size(200, 29);
             this.amountPaidTextbox.TabIndex = 53;
             this.amountPaidTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.amountPaidTextbox.TextChanged += new System.EventHandler(this.amountPaidTextbox_TextChanged);
             // 
             // amountPaid
             // 
             this.amountPaid.AutoSize = true;
             this.amountPaid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.amountPaid.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.amountPaid.Location = new System.Drawing.Point(24, 121);
+            this.amountPaid.Location = new System.Drawing.Point(3, 64);
             this.amountPaid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.amountPaid.Name = "amountPaid";
             this.amountPaid.Size = new System.Drawing.Size(116, 20);
@@ -470,6 +473,8 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.duedatelabel);
+            this.panel2.Controls.Add(this.dateTimePicker2);
             this.panel2.Controls.Add(this.receiptLabel);
             this.panel2.Controls.Add(this.doneButton);
             this.panel2.Controls.Add(this.amountPaidTextbox);
@@ -599,6 +604,30 @@
             this.totalSales.TabStop = false;
             this.totalSales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CalendarForeColor = System.Drawing.Color.Gold;
+            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.Color.Maroon;
+            this.dateTimePicker2.CalendarTitleForeColor = System.Drawing.Color.Gold;
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(0, 150);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(201, 26);
+            this.dateTimePicker2.TabIndex = 55;
+            // 
+            // duedatelabel
+            // 
+            this.duedatelabel.AutoSize = true;
+            this.duedatelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.duedatelabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.duedatelabel.Location = new System.Drawing.Point(3, 126);
+            this.duedatelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.duedatelabel.Name = "duedatelabel";
+            this.duedatelabel.Size = new System.Drawing.Size(91, 20);
+            this.duedatelabel.TabIndex = 56;
+            this.duedatelabel.Text = "Due Date:";
+            // 
             // Sales
             // 
             this.AcceptButton = this.addItem;
@@ -687,5 +716,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Capital;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
+        private System.Windows.Forms.Label duedatelabel;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

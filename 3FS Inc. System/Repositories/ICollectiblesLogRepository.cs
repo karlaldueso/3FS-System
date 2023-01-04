@@ -9,9 +9,11 @@ namespace _3FS_System.Repositories
 {
     public interface ICollectiblesLogRepository
     {
-        IEnumerable<Models.CollectiblesLog> GetCollectibleLogs_ByCustomerID(int CustomerID);
-        bool Insert(Models.CollectiblesLog collectibles);
-        bool Update(Models.CollectiblesLog collectibles);
-        bool Delete(Models.CollectiblesLog collectibles);
+        IEnumerable<CollectiblesLog> GetCollectibleLogs_ByCustomerID(int CustomerID);
+        bool InsertLog(CollectiblesLog collectibles);
+        bool UpdateLog(CollectiblesLog collectibles);
+        bool DeleteLog(CollectiblesLog collectibles);
+        bool Insert(Collectible collectible);
+        bool Update(Collectible collectible);
     }
 }

@@ -9,24 +9,24 @@ using _3FS_System.Helpers;
 using System.Data;
 namespace _3FS_System.Repositories
 {
-    internal class CollectiblesLogRepository : ICollectiblesLogRepository
+    internal class CollectiblesRepository : ICollectiblesLogRepository
     {
-        public bool Delete(Models.CollectiblesLog collectibles)
+        public bool DeleteLog(CollectiblesLog collectibles)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Models.CollectiblesLog> GetCollectibleLogs_ByCustomerID(int CustomerID)
+        public IEnumerable<CollectiblesLog> GetCollectibleLogs_ByCustomerID(int CustomerID)
         {
             string qry = string.Format("dbo.spCollectiblesLog_GetByCustomerID @CustomerID={0}", CustomerID);
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                var output = connection.Query<Models.CollectiblesLog>(qry);
+                var output = connection.Query<CollectiblesLog>(qry);
                 return output;
             }
         }
 
-        public bool Insert(Models.CollectiblesLog collectibles)
+        public bool InsertLog(CollectiblesLog collectibles)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
@@ -35,7 +35,19 @@ namespace _3FS_System.Repositories
             }
         }
 
-        public bool Update(Models.CollectiblesLog collectibles)
+        public bool UpdateLog(CollectiblesLog collectibles)
+        {
+            throw new NotImplementedException();
+        }
+        public bool Insert(Collectible collectible)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
+            {
+                var output = connection.Execute("dbo.spCollectibles_AddCollectible @CustomerID, @ReceiptNum, @Amount, @Balance, @Paid, @TransactionDate, @UpdatedDate, @CreatedDate, @StoreID", collectible);
+                return true;
+            }
+        }
+        public bool Update(Collectible collectible)
         {
             throw new NotImplementedException();
         }

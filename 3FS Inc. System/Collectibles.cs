@@ -33,6 +33,8 @@ namespace _3FS_System
             dataGridCustomers.Columns["Address"].Visible = false;
             dataGridCustomers.Columns["Terms"].Visible = false;
             dataGridCustomers.Columns["UpdatedDate"].Visible = false;
+            dataGridCustomers.Columns["CreatedDate"].Visible = false;
+            dataGridCustomers.Columns["StoreID"].Visible = false;
             dataGridCustomers.AutoResizeColumns();
             dataGridCustomers.AutoResizeRows();
         }
@@ -64,7 +66,7 @@ namespace _3FS_System
 
                         float amount = float.Parse(amountText.Text);
                         float totalpayment = 0;
-                        CollectiblesLogRepository collectiblesRepository = new CollectiblesLogRepository();
+                        CollectiblesRepository collectiblesRepository = new CollectiblesRepository();
                         CollectiblesLog collectible = new CollectiblesLog
                         {
                             CustomerID = CustomerID,
@@ -80,13 +82,15 @@ namespace _3FS_System
                             CustomerID = CustomerID,
                             UpdatedDate = DateTime.Now,
                         };
-                        collectiblesRepository.Insert(collectible);
+                        collectiblesRepository.InsertLog(collectible);
                         customerRepository.UpdateCredit(customer, -amount);
                         //Update Collectibles Display
                         dataCollectiblesLog.DataSource = collectiblesRepository.GetCollectibleLogs_ByCustomerID(CustomerID);
                         dataCollectiblesLog.Columns["CollectiblesLogID"].Visible = false;
                         dataCollectiblesLog.Columns["CustomerID"].Visible = false;
                         dataCollectiblesLog.Columns["UpdatedDate"].Visible = false;
+                        dataGridCustomers.Columns["CreatedDate"].Visible = false;
+                        dataGridCustomers.Columns["StoreID"].Visible = false;
                         dataCollectiblesLog.AutoResizeColumns();
                         dataCollectiblesLog.AutoResizeRows();
                         if (dataCollectiblesLog.Rows.Count != 0)
@@ -107,6 +111,8 @@ namespace _3FS_System
                         dataGridCustomers.Columns["ContactNumber"].Visible = false;
                         dataGridCustomers.Columns["Email"].Visible = false;
                         dataGridCustomers.Columns["UpdatedDate"].Visible = false;
+                        dataGridCustomers.Columns["CreatedDate"].Visible = false;
+                        dataGridCustomers.Columns["StoreID"].Visible = false;
                         dataGridCustomers.AutoResizeColumns();
                         dataGridCustomers.AutoResizeRows();
 
@@ -165,6 +171,8 @@ namespace _3FS_System
                 dataGridReceipts.DataSource = receiptRepository.GetReceipt_ByCustomerID(CustomerID);
                 dataGridReceipts.Columns["CustomerID"].Visible = false;
                 dataGridReceipts.Columns["UpdatedDate"].Visible = false;
+                dataGridCustomers.Columns["CreatedDate"].Visible = false;
+                dataGridCustomers.Columns["StoreID"].Visible = false;
                 dataGridReceipts.AutoResizeColumns();
                 dataGridReceipts.AutoResizeRows();
                 if (dataGridReceipts.Rows.Count != 0)
@@ -184,11 +192,13 @@ namespace _3FS_System
                 }
 
 
-                CollectiblesLogRepository collectiblesRepository = new CollectiblesLogRepository();
+                CollectiblesRepository collectiblesRepository = new CollectiblesRepository();
                 dataCollectiblesLog.DataSource = collectiblesRepository.GetCollectibleLogs_ByCustomerID(CustomerID);
                 dataCollectiblesLog.Columns["CollectiblesLogID"].Visible = false;
                 dataCollectiblesLog.Columns["CustomerID"].Visible = false;
                 dataCollectiblesLog.Columns["UpdatedDate"].Visible = false;
+                dataGridCustomers.Columns["CreatedDate"].Visible = false;
+                dataGridCustomers.Columns["StoreID"].Visible = false;
                 dataCollectiblesLog.AutoResizeColumns();
                 dataCollectiblesLog.AutoResizeRows();
                 if (dataCollectiblesLog.Rows.Count != 0)

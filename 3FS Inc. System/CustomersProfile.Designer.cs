@@ -1,6 +1,6 @@
 ﻿namespace _3FS_System
 {
-    partial class CustomerProfile
+    partial class CustomersProfile
     {
         /// <summary>
         /// Required designer variable.

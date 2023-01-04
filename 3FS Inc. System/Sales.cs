@@ -112,6 +112,8 @@ namespace _3FS_System
             dataGridInventory.Columns["UpdatedDate"].Visible = false;
             dataGridInventory.Columns["ItemID"].Visible = false;
             dataGridInventory.Columns["CategoryID"].Visible = false;
+            dataGridInventory.Columns["CreatedDate"].Visible = false;
+            dataGridInventory.Columns["StoreID"].Visible = false;
             dataGridInventory.AutoResizeColumns();
         }
 
@@ -123,6 +125,8 @@ namespace _3FS_System
             dataGridInventory.Columns["UpdatedDate"].Visible = false;
             dataGridInventory.Columns["ItemID"].Visible = false;
             dataGridInventory.Columns["CategoryID"].Visible = false;
+            dataGridInventory.Columns["CreatedDate"].Visible = false;
+            dataGridInventory.Columns["StoreID"].Visible = false;
             dataGridInventory.AutoResizeColumns();
             dataGridInventory.AutoResizeRows();
         }
@@ -230,13 +234,30 @@ namespace _3FS_System
                         {
                             CustomerRepository customerRepository = new CustomerRepository();
                             //Update Customer Credit
-                            Models.CustomerProfile customer = new Models.CustomerProfile
+                            CustomerProfile customer = new CustomerProfile
                             {
                                 CustomerID = receipt.CustomerID,
                                 UpdatedDate = receipt.UpdatedDate
                             };
                             float credit = receipt.GrandTotal-receipt.AmountPaid;
                             customerRepository.UpdateCredit(customer, credit);
+                            if (credit > 0)
+                            {
+                                Collectible collectible = new Collectible
+                                {
+                                    CustomerID = receipt.CustomerID,
+                                    ReceiptNum = receipt.ReceiptNum,
+                                    Amount = credit,
+                                    Balance = credit,
+                                    Paid = 0,
+                                    TransactionDate = receipt.TransactionDate,
+                                    UpdatedDate = receipt.UpdatedDate,
+                                    CreatedDate = receipt.CreatedDate,
+                                    StoreID = 0
+                                };
+                                CollectiblesRepository collectiblesRepository = new CollectiblesRepository();   
+                                collectiblesRepository.Insert(collectible);
+                            }
                         }
 
                         totalSales.Text = String.Format("P{0:N2}", salesRepository.GetTotalSalesOfTheDay(DateTime.Today));
@@ -273,6 +294,8 @@ namespace _3FS_System
             dataGridCustomers.Columns["ContactNumber"].Visible = false;
             dataGridCustomers.Columns["Email"].Visible = false;
             dataGridCustomers.Columns["UpdatedDate"].Visible = false;
+            dataGridCustomers.Columns["CreatedDate"].Visible = false;
+            dataGridCustomers.Columns["StoreID"].Visible = false;
             dataGridCustomers.AutoResizeColumns();
         }
 
@@ -394,6 +417,21 @@ namespace _3FS_System
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void amountPaidTextbox_TextChanged(object sender, EventArgs e)
+        {
+            if(float.TryParse(amountPaidTextbox.Text.ToString(), out float amountPaid) && (float.TryParse(grandtotalTextbox.Text.ToString(), out float grandTotal)))
+            {
+                if (amountPaid == grandTotal)
+                {
+                    dateTimePicker2.Enabled = false;
+                }
+                else
+                {
+                    dateTimePicker2.Enabled = true;
+                }
+            }
         }
     }
 }
