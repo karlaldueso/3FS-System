@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace _3FS_System.Models
 {
-    public class Collectible
+    public class Expense
     {
-        public int CollectiblesID { get; set; }
-        public int CustomerID   { get; set; }
-        public string ReceiptNum { get; set; }
-        public float Amount { get; set; }
-        public float Balance { get; set; }
-        public int Paid { get; set; }
-        public DateTime DueDate { get; set; }
+        public int ExpenseID { get; set; }
+        public string ExpenseReceipt { get; set; }
+        public string Details { get; set; }
         public DateTime TransactionDate { get; set; }
         public DateTime UpdatedDate { get; set; }
         public DateTime CreatedDate { get; set; }

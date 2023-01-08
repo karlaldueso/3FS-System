@@ -9,7 +9,7 @@ using _3FS_System.Helpers;
 using System.Data;
 namespace _3FS_System.Repositories
 {
-    internal class CollectiblesRepository : ICollectiblesLogRepository
+    internal class CollectiblesRepository : ICollectiblesRepository
     {
         public bool DeleteLog(CollectiblesLog collectibles)
         {
@@ -22,6 +22,15 @@ namespace _3FS_System.Repositories
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
                 var output = connection.Query<CollectiblesLog>(qry);
+                return output;
+            }
+        }
+        public IEnumerable<Collectible> GetCollectible_ByCustomerID(int CustomerID)
+        {
+            string qry = string.Format("dbo.spCollectibles_GetByCustomerID @CustomerID={0}", CustomerID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
+            {
+                var output = connection.Query<Collectible>(qry);
                 return output;
             }
         }
@@ -47,9 +56,14 @@ namespace _3FS_System.Repositories
                 return true;
             }
         }
-        public bool Update(Collectible collectible)
+        public bool UpdateBalance(int CollectibleID, float Amount, DateTime UpdatedDate)
         {
-            throw new NotImplementedException();
+            string qry = string.Format("dbo.spCollectibles_UpdateBalance @CollectiblesID={0}, @AmountPaid={1}, @UpdatedDate='{2}'", CollectibleID, Amount, UpdatedDate);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
+            {
+                var output = connection.ExecuteScalar(qry);
+                return true;
+            }
         }
         public float GetBalanceByCustomerID(int customerID)
         {

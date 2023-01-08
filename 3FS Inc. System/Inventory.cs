@@ -41,7 +41,7 @@ namespace _3FS_System
                         //Assign parameters based on input
                         ItemName = ItemNameText.Text,
                         BrandName = BrandNameText.Text,
-                        CategoryID = float.Parse(CategoryText.Text),
+                        CategoryID = int.Parse(CategoryText.Text),
                         Quantity = float.Parse(QuantityText.Text),
                         Unit = UnitText.Text,
                         SRP = float.Parse(SRPText.Text),
@@ -106,7 +106,7 @@ namespace _3FS_System
             {
                 int[] c_r = { dataGridInventory.CurrentCellAddress.X, dataGridInventory.CurrentCellAddress.Y };
                 Console.WriteLine(Global.ITEMID);
-                Global.ITEMID = int.Parse(dataGridInventory.Rows[c_r[1]].Cells[0].Value.ToString());
+                Global.ITEMID = int.Parse(dataGridInventory.Rows[c_r[1]].Cells["ItemID"].Value.ToString());
                 EditText.Text = dataGridInventory.Rows[c_r[1]].Cells[c_r[0]].Value.ToString();
 
                 if (c_r[0] == 0 || c_r[0] == 9) //0, 8th columns of ItemInventoryTable
@@ -166,14 +166,14 @@ namespace _3FS_System
                 {
                     //Assign parameters based on selected row on datagridview1
                     ItemID = Global.ITEMID,
-                    ItemName = dataGridInventory.Rows[c_r[1]].Cells[1].Value.ToString(),
-                    BrandName = dataGridInventory.Rows[c_r[1]].Cells[2].Value.ToString(),
-                    CategoryID = float.Parse(dataGridInventory.Rows[c_r[1]].Cells[3].Value.ToString()),
-                    Quantity = float.Parse(dataGridInventory.Rows[c_r[1]].Cells[4].Value.ToString()),
-                    Unit = dataGridInventory.Rows[c_r[1]].Cells[5].Value.ToString(),
-                    SRP = float.Parse(dataGridInventory.Rows[c_r[1]].Cells[6].Value.ToString()),
-                    Capital = float.Parse(dataGridInventory.Rows[c_r[1]].Cells[7].Value.ToString()),
-                    Storage = dataGridInventory.Rows[c_r[1]].Cells[8].Value.ToString(),
+                    ItemName = dataGridInventory.Rows[c_r[1]].Cells["ItemName"].Value.ToString(),
+                    BrandName = dataGridInventory.Rows[c_r[1]].Cells["BrandName"].Value.ToString(),
+                    CategoryID = int.Parse(dataGridInventory.Rows[c_r[1]].Cells["CategoryID"].Value.ToString()),
+                    Quantity = float.Parse(dataGridInventory.Rows[c_r[1]].Cells["Quantity"].Value.ToString()),
+                    Unit = dataGridInventory.Rows[c_r[1]].Cells["Unit"].Value.ToString(),
+                    SRP = float.Parse(dataGridInventory.Rows[c_r[1]].Cells["SRP"].Value.ToString()),
+                    Capital = float.Parse(dataGridInventory.Rows[c_r[1]].Cells["Capital"].Value.ToString()),
+                    Storage = dataGridInventory.Rows[c_r[1]].Cells["Storage"].Value.ToString(),
                     UpdatedDate = DateTime.Now
                 };
                 itemRepository.Update(item, c_r[0], EditText.Text); //update selected row

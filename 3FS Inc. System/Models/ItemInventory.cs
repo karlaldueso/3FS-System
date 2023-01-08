@@ -11,7 +11,7 @@ namespace _3FS_System.Models
         public int ItemID { get; set; }
         public string ItemName { get; set; }
         public string BrandName { get; set; }
-        public float CategoryID { get; set; }
+        public int CategoryID { get; set; }
         public float Quantity { get; set; }
         public string Unit { get; set; }
         public float SRP { get; set; }

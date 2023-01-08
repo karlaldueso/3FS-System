@@ -132,13 +132,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SalesPerReceipt.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Expenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expenses.Designer.cs">
+      <DependentUpon>Expenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\AppSetting.cs" />
     <Compile Include="Helpers\JSON.cs" />
     <Compile Include="Models\Collectible.cs" />
+    <Compile Include="Models\Expense.cs" />
+    <Compile Include="Models\ItemCategory.cs" />
     <Compile Include="Models\ReceiptDetails_DisplayFormat.cs" />
     <Compile Include="Models\Receipt_PerDay.cs" />
     <Compile Include="Models\Report_SalesPerItem.cs" />
     <Compile Include="Models\SalesPerReceipt_byDate.cs" />
+    <Compile Include="Models\Store.cs" />
     <Compile Include="Receipts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,7 +202,7 @@
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Repositories\CollectiblesRepository.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
-    <Compile Include="Repositories\ICollectiblesLogRepository.cs" />
+    <Compile Include="Repositories\ICollectiblesRepository.cs" />
     <Compile Include="Repositories\ICustomerRepository.cs" />
     <Compile Include="Repositories\IItemLogsRepository.cs" />
     <Compile Include="Repositories\IItemRepository.cs" />
@@ -231,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DatabaseSetting.resx">
       <DependentUpon>DatabaseSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expenses.resx">
+      <DependentUpon>Expenses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Receipts.resx">
       <DependentUpon>Receipts.cs</DependentUpon>

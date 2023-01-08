@@ -190,7 +190,16 @@ namespace _3FS_System
                     float parsedValue;
                     if (float.TryParse(amountPaidTextbox.Text, out parsedValue))
                     {
-                        DateTime dateTime = dateTimePicker1.Value;
+                        DateTime dateTime;
+                        if (dateTimePicker1.Value.Date == DateTime.Now.Date)
+                        {
+                            dateTime = DateTime.Now;
+                        }
+                        else
+                        {
+                            dateTime = dateTimePicker1.Value;
+                        }
+                        
                         DataAccess db = new DataAccess();
 
                         //Insert to Receipt Table
