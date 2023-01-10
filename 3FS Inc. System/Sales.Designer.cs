@@ -60,6 +60,8 @@
             this.amountPaid = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.duedatelabel = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -71,8 +73,7 @@
             this.receiptsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.totalSales = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.duedatelabel = new System.Windows.Forms.Label();
+            this.expensesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInventory)).BeginInit();
             this.searchpanel.SuspendLayout();
@@ -486,6 +487,30 @@
             this.panel2.Size = new System.Drawing.Size(202, 248);
             this.panel2.TabIndex = 56;
             // 
+            // duedatelabel
+            // 
+            this.duedatelabel.AutoSize = true;
+            this.duedatelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.duedatelabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.duedatelabel.Location = new System.Drawing.Point(3, 126);
+            this.duedatelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.duedatelabel.Name = "duedatelabel";
+            this.duedatelabel.Size = new System.Drawing.Size(91, 20);
+            this.duedatelabel.TabIndex = 56;
+            this.duedatelabel.Text = "Due Date:";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CalendarForeColor = System.Drawing.Color.Gold;
+            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.Color.Maroon;
+            this.dateTimePicker2.CalendarTitleForeColor = System.Drawing.Color.Gold;
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(0, 150);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(201, 26);
+            this.dateTimePicker2.TabIndex = 55;
+            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -565,7 +590,8 @@
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.receiptsToolStripMenuItem});
+            this.receiptsToolStripMenuItem,
+            this.expensesToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
@@ -573,7 +599,7 @@
             // receiptsToolStripMenuItem
             // 
             this.receiptsToolStripMenuItem.Name = "receiptsToolStripMenuItem";
-            this.receiptsToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.receiptsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.receiptsToolStripMenuItem.Text = "Receipts";
             this.receiptsToolStripMenuItem.Click += new System.EventHandler(this.receiptsToolStripMenuItem_Click);
             // 
@@ -604,29 +630,12 @@
             this.totalSales.TabStop = false;
             this.totalSales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // dateTimePicker2
+            // expensesToolStripMenuItem
             // 
-            this.dateTimePicker2.CalendarForeColor = System.Drawing.Color.Gold;
-            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.Color.Maroon;
-            this.dateTimePicker2.CalendarTitleForeColor = System.Drawing.Color.Gold;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(0, 150);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(201, 26);
-            this.dateTimePicker2.TabIndex = 55;
-            // 
-            // duedatelabel
-            // 
-            this.duedatelabel.AutoSize = true;
-            this.duedatelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.duedatelabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.duedatelabel.Location = new System.Drawing.Point(3, 126);
-            this.duedatelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.duedatelabel.Name = "duedatelabel";
-            this.duedatelabel.Size = new System.Drawing.Size(91, 20);
-            this.duedatelabel.TabIndex = 56;
-            this.duedatelabel.Text = "Due Date:";
+            this.expensesToolStripMenuItem.Name = "expensesToolStripMenuItem";
+            this.expensesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.expensesToolStripMenuItem.Text = "Expenses";
+            this.expensesToolStripMenuItem.Click += new System.EventHandler(this.expensesToolStripMenuItem_Click);
             // 
             // Sales
             // 
@@ -718,5 +727,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.Label duedatelabel;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.ToolStripMenuItem expensesToolStripMenuItem;
     }
 }
