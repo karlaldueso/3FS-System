@@ -21,5 +21,23 @@ namespace _3FS_System
         {
             InitializeComponent();
         }
+
+        private void addRowButton_Click(object sender, EventArgs e)
+        {
+            dataGridAddExpenses.RowCount++;
+        }
+
+        private void removeRowButton_Click(object sender, EventArgs e)
+        {
+            if(dataGridAddExpenses.Rows.Count > 1)
+            {
+                if(dataGridAddExpenses.CurrentCell.RowIndex >= 0)
+                {
+                    dataGridAddExpenses.Rows.RemoveAt(dataGridAddExpenses.CurrentCellAddress.Y);
+                }
+                
+            }
+            
+        }
     }
 }

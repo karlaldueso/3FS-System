@@ -35,14 +35,14 @@
             this.dataGridExpenses = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.removeRowButton = new System.Windows.Forms.Button();
+            this.addRowButton = new System.Windows.Forms.Button();
+            this.doneButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridAddExpenses = new System.Windows.Forms.DataGridView();
-            this.doneButton = new System.Windows.Forms.Button();
             this.ExpenseReceipt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Details = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addRowButton = new System.Windows.Forms.Button();
-            this.removeRowButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridExpenses)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -127,6 +127,35 @@
             this.panel2.Size = new System.Drawing.Size(399, 318);
             this.panel2.TabIndex = 68;
             // 
+            // removeRowButton
+            // 
+            this.removeRowButton.Location = new System.Drawing.Point(50, 286);
+            this.removeRowButton.Name = "removeRowButton";
+            this.removeRowButton.Size = new System.Drawing.Size(38, 23);
+            this.removeRowButton.TabIndex = 69;
+            this.removeRowButton.Text = "-";
+            this.removeRowButton.UseVisualStyleBackColor = true;
+            this.removeRowButton.Click += new System.EventHandler(this.removeRowButton_Click);
+            // 
+            // addRowButton
+            // 
+            this.addRowButton.Location = new System.Drawing.Point(6, 286);
+            this.addRowButton.Name = "addRowButton";
+            this.addRowButton.Size = new System.Drawing.Size(38, 23);
+            this.addRowButton.TabIndex = 68;
+            this.addRowButton.Text = "+";
+            this.addRowButton.UseVisualStyleBackColor = true;
+            this.addRowButton.Click += new System.EventHandler(this.addRowButton_Click);
+            // 
+            // doneButton
+            // 
+            this.doneButton.Location = new System.Drawing.Point(320, 288);
+            this.doneButton.Name = "doneButton";
+            this.doneButton.Size = new System.Drawing.Size(75, 23);
+            this.doneButton.TabIndex = 67;
+            this.doneButton.Text = "Done";
+            this.doneButton.UseVisualStyleBackColor = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -141,6 +170,7 @@
             // 
             // dataGridAddExpenses
             // 
+            this.dataGridAddExpenses.AllowUserToResizeRows = false;
             this.dataGridAddExpenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridAddExpenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAddExpenses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -153,15 +183,6 @@
             this.dataGridAddExpenses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridAddExpenses.Size = new System.Drawing.Size(390, 252);
             this.dataGridAddExpenses.TabIndex = 62;
-            // 
-            // doneButton
-            // 
-            this.doneButton.Location = new System.Drawing.Point(320, 288);
-            this.doneButton.Name = "doneButton";
-            this.doneButton.Size = new System.Drawing.Size(75, 23);
-            this.doneButton.TabIndex = 67;
-            this.doneButton.Text = "Done";
-            this.doneButton.UseVisualStyleBackColor = true;
             // 
             // ExpenseReceipt
             // 
@@ -177,24 +198,6 @@
             // 
             this.Amount.HeaderText = "Amount";
             this.Amount.Name = "Amount";
-            // 
-            // addRowButton
-            // 
-            this.addRowButton.Location = new System.Drawing.Point(6, 286);
-            this.addRowButton.Name = "addRowButton";
-            this.addRowButton.Size = new System.Drawing.Size(38, 23);
-            this.addRowButton.TabIndex = 68;
-            this.addRowButton.Text = "+";
-            this.addRowButton.UseVisualStyleBackColor = true;
-            // 
-            // removeRowButton
-            // 
-            this.removeRowButton.Location = new System.Drawing.Point(50, 286);
-            this.removeRowButton.Name = "removeRowButton";
-            this.removeRowButton.Size = new System.Drawing.Size(38, 23);
-            this.removeRowButton.TabIndex = 69;
-            this.removeRowButton.Text = "-";
-            this.removeRowButton.UseVisualStyleBackColor = true;
             // 
             // Expenses
             // 
