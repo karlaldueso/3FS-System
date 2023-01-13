@@ -11,6 +11,7 @@ namespace _3FS_System.Models
         public int ExpenseID { get; set; }
         public string ExpenseReceipt { get; set; }
         public string Details { get; set; }
+        public float Amount { get; set; }
         public DateTime TransactionDate { get; set; }
         public DateTime UpdatedDate { get; set; }
         public DateTime CreatedDate { get; set; }

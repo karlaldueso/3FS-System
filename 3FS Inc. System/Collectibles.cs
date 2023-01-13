@@ -79,7 +79,7 @@ namespace _3FS_System
                                     TransactionDate = DateTime.Now,
                                     UpdatedDate = DateTime.Now,
                                     CreatedDate = DateTime.Now,
-                                    StoreID = 0
+                                    StoreID = 1
                                 };
                                 collectiblesRepository.InsertLog(collectiblelog);
                                 collectiblesRepository.UpdateBalance(CollectiblesID, amount, collectiblelog.UpdatedDate);
@@ -171,19 +171,6 @@ namespace _3FS_System
                 }
             }
         }
-        private void dataGridCollectibles_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridCollectibles.Rows.Count != 0)
-            {
-                int[] c_r = { dataGridCollectibles.CurrentCellAddress.X, dataGridCollectibles.CurrentCellAddress.Y };
-                string ReceiptNum = dataGridCollectibles.Rows[c_r[1]].Cells["ReceiptNum"].Value.ToString();
-
-                SalesRepository salesRepository = new SalesRepository();
-                dataGridReceiptDetails.DataSource = salesRepository.GetSale_ByReceipt(ReceiptNum);
-                dataGridReceiptDetails.AutoResizeColumns();
-                dataGridReceiptDetails.AutoResizeRows();
-            }
-        }
         private void dataGridCustomers_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridCustomers.Rows.Count != 0)
@@ -248,7 +235,19 @@ namespace _3FS_System
                 }
             }
         }
+        private void dataGridCollectibles_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridCollectibles.Rows.Count != 0)
+            {
+                int[] c_r = { dataGridCollectibles.CurrentCellAddress.X, dataGridCollectibles.CurrentCellAddress.Y };
+                string ReceiptNum = dataGridCollectibles.Rows[c_r[1]].Cells["ReceiptNum"].Value.ToString();
 
+                SalesRepository salesRepository = new SalesRepository();
+                dataGridReceiptDetails.DataSource = salesRepository.GetSale_ByReceipt(ReceiptNum);
+                dataGridReceiptDetails.AutoResizeColumns();
+                dataGridReceiptDetails.AutoResizeRows();
+            }
+        }
         private void Collectibles_Load(object sender, EventArgs e)
         {
             this.BackColor = Properties.Settings.Default.FormBackground;
@@ -264,6 +263,5 @@ namespace _3FS_System
         {
 
         }
-
     }
 }

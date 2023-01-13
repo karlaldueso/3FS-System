@@ -92,13 +92,17 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 63;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // dataGridExpenses
             // 
+            this.dataGridExpenses.AllowUserToAddRows = false;
+            this.dataGridExpenses.AllowUserToResizeRows = false;
             this.dataGridExpenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridExpenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridExpenses.Location = new System.Drawing.Point(6, 28);
             this.dataGridExpenses.Name = "dataGridExpenses";
+            this.dataGridExpenses.ReadOnly = true;
             this.dataGridExpenses.RowHeadersVisible = false;
             this.dataGridExpenses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridExpenses.Size = new System.Drawing.Size(385, 252);
@@ -106,6 +110,7 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.totalSales);
             this.panel1.Controls.Add(this.label2);
@@ -117,6 +122,7 @@
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.removeRowButton);
             this.panel2.Controls.Add(this.addRowButton);
             this.panel2.Controls.Add(this.doneButton);
@@ -155,6 +161,7 @@
             this.doneButton.TabIndex = 67;
             this.doneButton.Text = "Done";
             this.doneButton.UseVisualStyleBackColor = true;
+            this.doneButton.Click += new System.EventHandler(this.doneButton_Click);
             // 
             // label1
             // 
@@ -170,6 +177,7 @@
             // 
             // dataGridAddExpenses
             // 
+            this.dataGridAddExpenses.AllowUserToAddRows = false;
             this.dataGridAddExpenses.AllowUserToResizeRows = false;
             this.dataGridAddExpenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridAddExpenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

@@ -109,6 +109,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CashCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashCount.Designer.cs">
+      <DependentUpon>CashCount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Collectibles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,8 @@
     <Compile Include="Reports.Designer.cs">
       <DependentUpon>Reports.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repositories\ExpensesRepository.cs" />
+    <Compile Include="Repositories\IExpensesRepository.cs" />
     <Compile Include="Repositories\IReportRepository.cs" />
     <Compile Include="Repositories\ReportRepository.cs" />
     <Compile Include="splash.cs">
@@ -232,6 +240,9 @@
     <Compile Include="Users.Designer.cs">
       <DependentUpon>Users.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CashCount.resx">
+      <DependentUpon>CashCount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Collectibles.resx">
       <DependentUpon>Collectibles.cs</DependentUpon>
     </EmbeddedResource>

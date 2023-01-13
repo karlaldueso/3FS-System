@@ -140,7 +140,7 @@ namespace _3FS_System
                         Address= addresstext.Text,
                         UpdatedDate = DateTime.Now,
                         CreatedDate= DateTime.Now,
-                        StoreID = 0
+                        StoreID = 1
                     };
                     customerRepository.Insert(customer);
                     //Display and clear textbox

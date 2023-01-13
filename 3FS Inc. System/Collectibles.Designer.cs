@@ -192,7 +192,7 @@
             this.dataGridCollectibles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridCollectibles.Size = new System.Drawing.Size(581, 223);
             this.dataGridCollectibles.TabIndex = 53;
-            this.dataGridCollectibles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCollectibles_CellClick);
+            this.dataGridCollectibles.SelectionChanged += new System.EventHandler(this.dataGridCollectibles_SelectionChanged);
             // 
             // dataCollectiblesLog
             // 

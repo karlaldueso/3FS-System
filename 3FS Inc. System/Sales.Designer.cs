@@ -71,9 +71,10 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.receiptsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.expensesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.totalSales = new System.Windows.Forms.TextBox();
-            this.expensesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cashCountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInventory)).BeginInit();
             this.searchpanel.SuspendLayout();
@@ -591,7 +592,8 @@
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.receiptsToolStripMenuItem,
-            this.expensesToolStripMenuItem});
+            this.expensesToolStripMenuItem,
+            this.cashCountToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
@@ -600,8 +602,15 @@
             // 
             this.receiptsToolStripMenuItem.Name = "receiptsToolStripMenuItem";
             this.receiptsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.receiptsToolStripMenuItem.Text = "Receipts";
+            this.receiptsToolStripMenuItem.Text = "&Receipts";
             this.receiptsToolStripMenuItem.Click += new System.EventHandler(this.receiptsToolStripMenuItem_Click);
+            // 
+            // expensesToolStripMenuItem
+            // 
+            this.expensesToolStripMenuItem.Name = "expensesToolStripMenuItem";
+            this.expensesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.expensesToolStripMenuItem.Text = "&Expenses";
+            this.expensesToolStripMenuItem.Click += new System.EventHandler(this.expensesToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -630,12 +639,12 @@
             this.totalSales.TabStop = false;
             this.totalSales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // expensesToolStripMenuItem
+            // cashCountToolStripMenuItem
             // 
-            this.expensesToolStripMenuItem.Name = "expensesToolStripMenuItem";
-            this.expensesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.expensesToolStripMenuItem.Text = "Expenses";
-            this.expensesToolStripMenuItem.Click += new System.EventHandler(this.expensesToolStripMenuItem_Click);
+            this.cashCountToolStripMenuItem.Name = "cashCountToolStripMenuItem";
+            this.cashCountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cashCountToolStripMenuItem.Text = "&Cash Count";
+            this.cashCountToolStripMenuItem.Click += new System.EventHandler(this.cashCountToolStripMenuItem_Click);
             // 
             // Sales
             // 
@@ -728,5 +737,6 @@
         private System.Windows.Forms.Label duedatelabel;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.ToolStripMenuItem expensesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cashCountToolStripMenuItem;
     }
 }

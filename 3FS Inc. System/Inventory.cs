@@ -33,7 +33,6 @@ namespace _3FS_System
                 try
                 {
                     //Declaring and Init
-                    DataAccess db = new DataAccess();
                     ItemRepository itemRepository = new ItemRepository();
                     ItemLogsRepository itemsLogsRepository = new ItemLogsRepository();
                     ItemInventory item = new ItemInventory
@@ -49,7 +48,7 @@ namespace _3FS_System
                         Storage = StorageText.Text,
                         UpdatedDate = DateTime.Now,
                         CreatedDate = DateTime.Now,
-                        StoreID = 0
+                        StoreID = 1
                     };
                     itemRepository.Insert(item);
                     //Display and clear textbox
@@ -79,7 +78,7 @@ namespace _3FS_System
                         TransactionDate = DateTime.Now,
                         UpdatedDate = DateTime.Now,
                         CreatedDate = DateTime.Now,
-                        StoreID = 0
+                        StoreID = 1
                     };
                     itemsLogsRepository.Insert(itemlogs, 0);
                     dataGridLogs.DataSource = itemsLogsRepository.GetItemLogs_All();
@@ -187,7 +186,7 @@ namespace _3FS_System
                     TransactionDate = DateTime.Now,
                     UpdatedDate = DateTime.Now,
                     CreatedDate = DateTime.Now,
-                    StoreID = 0
+                    StoreID = 1
                 };
                 itemsLogsRepository.Insert(itemlogs, c_r[0]);
                 dataGridInventory.DataSource = itemRepository.GetItems_All();

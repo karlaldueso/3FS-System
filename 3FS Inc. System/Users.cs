@@ -57,7 +57,7 @@ namespace _3FS_System
                         UserType = userTypecombobox.SelectedIndex,
                         UpdatedDate = DateTime.Now,
                         CreatedDate = DateTime.Now,
-                        StoreID = 0
+                        StoreID = 1
                     };
 
                     userRepository.Insert(user);
