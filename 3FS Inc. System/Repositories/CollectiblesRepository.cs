@@ -78,5 +78,18 @@ namespace _3FS_System.Repositories
             else
                 return 0;
         }
+        public float GetCollectedAmountByDate(DateTime date)
+        {
+            object amount;
+            string qry = string.Format("dbo.spCollectiblesLog_TotalCollectedByDate @Date='{0}'", date.ToString("yyyy/MM/dd"));
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
+            {
+                amount = connection.ExecuteScalar(qry);
+            }
+            if (amount != null)
+                return (float)Convert.ToDouble(amount.ToString());
+            else
+                return 0;
+        }
     }
 }

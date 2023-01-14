@@ -480,7 +480,7 @@ namespace _3FS_System
             }
             if (bFormNameOpen == false)
             {
-                CashCount cashCount = new CashCount();
+                CashCounts cashCount = new CashCounts();
                 cashCount.MdiParent = this.ParentForm;
                 cashCount.Show();
             }

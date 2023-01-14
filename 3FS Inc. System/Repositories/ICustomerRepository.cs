@@ -9,10 +9,10 @@ namespace _3FS_System.Repositories
 {
     public interface ICustomerRepository
     {
-        IEnumerable<Models.CustomerProfile> GetCustomer();
-        IEnumerable<Models.CustomerProfile> GetCustomer_ByName(string Name);
-        bool Insert(Models.CustomerProfile customer);
-        bool Update(Models.CustomerProfile customer, int col, string input);
-        bool Delete(Models.CustomerProfile customer);
+        IEnumerable<CustomerProfile> GetCustomer();
+        IEnumerable<CustomerProfile> GetCustomer_ByName(string Name);
+        bool Insert(CustomerProfile customer);
+        bool Update(CustomerProfile customer, int col, string input);
+        bool Delete(CustomerProfile customer);
     }
 }

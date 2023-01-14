@@ -1,6 +1,6 @@
 ﻿namespace _3FS_System
 {
-    partial class CashCount
+    partial class CashCounts
     {
         /// <summary>
         /// Required designer variable.
@@ -28,55 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.saveCashcount = new System.Windows.Forms.Button();
-            this.ItemNameText = new System.Windows.Forms.TextBox();
+            this.Cashcount = new System.Windows.Forms.Button();
+            this.BeginningCashText = new System.Windows.Forms.TextBox();
             this.begcashlabel = new System.Windows.Forms.Label();
             this.incashlabel = new System.Windows.Forms.Label();
             this.paymentlabel = new System.Windows.Forms.Label();
             this.totalsaleslabel = new System.Windows.Forms.Label();
             this.expenseslabel = new System.Windows.Forms.Label();
             this.depositslabel = new System.Windows.Forms.Label();
-            this.BrandNameText = new System.Windows.Forms.TextBox();
-            this.CategoryText = new System.Windows.Forms.TextBox();
-            this.QuantityText = new System.Windows.Forms.TextBox();
-            this.UnitText = new System.Windows.Forms.TextBox();
-            this.SRPText = new System.Windows.Forms.TextBox();
+            this.IncashText = new System.Windows.Forms.TextBox();
+            this.PaymentsText = new System.Windows.Forms.TextBox();
+            this.TotalSalesText = new System.Windows.Forms.TextBox();
+            this.ExpensesText = new System.Windows.Forms.TextBox();
+            this.DepositsText = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SubtotText1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.SubtotText2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.DifferenceText = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.ComputedText = new System.Windows.Forms.TextBox();
+            this.ActualText = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.save = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // saveCashcount
+            // Cashcount
             // 
-            this.saveCashcount.Location = new System.Drawing.Point(101, 387);
-            this.saveCashcount.Name = "saveCashcount";
-            this.saveCashcount.Size = new System.Drawing.Size(60, 31);
-            this.saveCashcount.TabIndex = 0;
-            this.saveCashcount.Text = "&Save";
-            this.saveCashcount.UseVisualStyleBackColor = true;
-            this.saveCashcount.Click += new System.EventHandler(this.cashCountbutton_Click);
+            this.Cashcount.Location = new System.Drawing.Point(42, 399);
+            this.Cashcount.Name = "Cashcount";
+            this.Cashcount.Size = new System.Drawing.Size(75, 31);
+            this.Cashcount.TabIndex = 0;
+            this.Cashcount.Text = "&Cash Count";
+            this.Cashcount.UseVisualStyleBackColor = true;
+            this.Cashcount.Click += new System.EventHandler(this.cashCountbutton_Click);
             // 
-            // ItemNameText
+            // BeginningCashText
             // 
-            this.ItemNameText.BackColor = System.Drawing.Color.White;
-            this.ItemNameText.ForeColor = System.Drawing.Color.Black;
-            this.ItemNameText.Location = new System.Drawing.Point(97, 9);
-            this.ItemNameText.Margin = new System.Windows.Forms.Padding(4);
-            this.ItemNameText.Name = "ItemNameText";
-            this.ItemNameText.Size = new System.Drawing.Size(132, 20);
-            this.ItemNameText.TabIndex = 26;
+            this.BeginningCashText.BackColor = System.Drawing.Color.White;
+            this.BeginningCashText.Enabled = false;
+            this.BeginningCashText.ForeColor = System.Drawing.Color.Black;
+            this.BeginningCashText.Location = new System.Drawing.Point(97, 9);
+            this.BeginningCashText.Margin = new System.Windows.Forms.Padding(4);
+            this.BeginningCashText.Name = "BeginningCashText";
+            this.BeginningCashText.Size = new System.Drawing.Size(132, 20);
+            this.BeginningCashText.TabIndex = 26;
             // 
             // begcashlabel
             // 
@@ -150,83 +154,86 @@
             this.depositslabel.Text = "Deposits:";
             this.depositslabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // BrandNameText
+            // IncashText
             // 
-            this.BrandNameText.BackColor = System.Drawing.Color.White;
-            this.BrandNameText.ForeColor = System.Drawing.Color.Black;
-            this.BrandNameText.Location = new System.Drawing.Point(97, 36);
-            this.BrandNameText.Margin = new System.Windows.Forms.Padding(4);
-            this.BrandNameText.Name = "BrandNameText";
-            this.BrandNameText.Size = new System.Drawing.Size(132, 20);
-            this.BrandNameText.TabIndex = 27;
+            this.IncashText.BackColor = System.Drawing.Color.White;
+            this.IncashText.ForeColor = System.Drawing.Color.Black;
+            this.IncashText.Location = new System.Drawing.Point(97, 36);
+            this.IncashText.Margin = new System.Windows.Forms.Padding(4);
+            this.IncashText.Name = "IncashText";
+            this.IncashText.Size = new System.Drawing.Size(132, 20);
+            this.IncashText.TabIndex = 27;
             // 
-            // CategoryText
+            // PaymentsText
             // 
-            this.CategoryText.BackColor = System.Drawing.Color.White;
-            this.CategoryText.ForeColor = System.Drawing.Color.Black;
-            this.CategoryText.Location = new System.Drawing.Point(97, 63);
-            this.CategoryText.Margin = new System.Windows.Forms.Padding(4);
-            this.CategoryText.Name = "CategoryText";
-            this.CategoryText.Size = new System.Drawing.Size(132, 20);
-            this.CategoryText.TabIndex = 28;
+            this.PaymentsText.BackColor = System.Drawing.Color.White;
+            this.PaymentsText.ForeColor = System.Drawing.Color.Black;
+            this.PaymentsText.Location = new System.Drawing.Point(97, 63);
+            this.PaymentsText.Margin = new System.Windows.Forms.Padding(4);
+            this.PaymentsText.Name = "PaymentsText";
+            this.PaymentsText.ReadOnly = true;
+            this.PaymentsText.Size = new System.Drawing.Size(132, 20);
+            this.PaymentsText.TabIndex = 28;
             // 
-            // QuantityText
+            // TotalSalesText
             // 
-            this.QuantityText.BackColor = System.Drawing.Color.White;
-            this.QuantityText.ForeColor = System.Drawing.Color.Black;
-            this.QuantityText.Location = new System.Drawing.Point(97, 90);
-            this.QuantityText.Margin = new System.Windows.Forms.Padding(4);
-            this.QuantityText.Name = "QuantityText";
-            this.QuantityText.Size = new System.Drawing.Size(132, 20);
-            this.QuantityText.TabIndex = 29;
+            this.TotalSalesText.BackColor = System.Drawing.Color.White;
+            this.TotalSalesText.ForeColor = System.Drawing.Color.Black;
+            this.TotalSalesText.Location = new System.Drawing.Point(97, 90);
+            this.TotalSalesText.Margin = new System.Windows.Forms.Padding(4);
+            this.TotalSalesText.Name = "TotalSalesText";
+            this.TotalSalesText.ReadOnly = true;
+            this.TotalSalesText.Size = new System.Drawing.Size(132, 20);
+            this.TotalSalesText.TabIndex = 29;
             // 
-            // UnitText
+            // ExpensesText
             // 
-            this.UnitText.BackColor = System.Drawing.Color.White;
-            this.UnitText.ForeColor = System.Drawing.Color.Black;
-            this.UnitText.Location = new System.Drawing.Point(97, 9);
-            this.UnitText.Margin = new System.Windows.Forms.Padding(4);
-            this.UnitText.Name = "UnitText";
-            this.UnitText.Size = new System.Drawing.Size(132, 20);
-            this.UnitText.TabIndex = 31;
+            this.ExpensesText.BackColor = System.Drawing.Color.White;
+            this.ExpensesText.ForeColor = System.Drawing.Color.Black;
+            this.ExpensesText.Location = new System.Drawing.Point(97, 9);
+            this.ExpensesText.Margin = new System.Windows.Forms.Padding(4);
+            this.ExpensesText.Name = "ExpensesText";
+            this.ExpensesText.Size = new System.Drawing.Size(132, 20);
+            this.ExpensesText.TabIndex = 31;
             // 
-            // SRPText
+            // DepositsText
             // 
-            this.SRPText.BackColor = System.Drawing.Color.White;
-            this.SRPText.ForeColor = System.Drawing.Color.Black;
-            this.SRPText.Location = new System.Drawing.Point(97, 36);
-            this.SRPText.Margin = new System.Windows.Forms.Padding(4);
-            this.SRPText.Name = "SRPText";
-            this.SRPText.Size = new System.Drawing.Size(132, 20);
-            this.SRPText.TabIndex = 32;
+            this.DepositsText.BackColor = System.Drawing.Color.White;
+            this.DepositsText.ForeColor = System.Drawing.Color.Black;
+            this.DepositsText.Location = new System.Drawing.Point(97, 36);
+            this.DepositsText.Margin = new System.Windows.Forms.Padding(4);
+            this.DepositsText.Name = "DepositsText";
+            this.DepositsText.Size = new System.Drawing.Size(132, 20);
+            this.DepositsText.TabIndex = 32;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.SubtotText1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.ItemNameText);
+            this.panel1.Controls.Add(this.BeginningCashText);
             this.panel1.Controls.Add(this.begcashlabel);
             this.panel1.Controls.Add(this.incashlabel);
             this.panel1.Controls.Add(this.paymentlabel);
-            this.panel1.Controls.Add(this.QuantityText);
+            this.panel1.Controls.Add(this.TotalSalesText);
             this.panel1.Controls.Add(this.totalsaleslabel);
-            this.panel1.Controls.Add(this.CategoryText);
-            this.panel1.Controls.Add(this.BrandNameText);
+            this.panel1.Controls.Add(this.PaymentsText);
+            this.panel1.Controls.Add(this.IncashText);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(238, 148);
             this.panel1.TabIndex = 32;
             // 
-            // textBox1
+            // SubtotText1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(97, 117);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 20);
-            this.textBox1.TabIndex = 30;
+            this.SubtotText1.BackColor = System.Drawing.Color.LightGray;
+            this.SubtotText1.ForeColor = System.Drawing.Color.Black;
+            this.SubtotText1.Location = new System.Drawing.Point(97, 117);
+            this.SubtotText1.Margin = new System.Windows.Forms.Padding(4);
+            this.SubtotText1.Name = "SubtotText1";
+            this.SubtotText1.ReadOnly = true;
+            this.SubtotText1.Size = new System.Drawing.Size(132, 20);
+            this.SubtotText1.TabIndex = 30;
             // 
             // label1
             // 
@@ -240,15 +247,16 @@
             this.label1.Text = "Sub-Total:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox2
+            // SubtotText2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(97, 64);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 20);
-            this.textBox2.TabIndex = 33;
+            this.SubtotText2.BackColor = System.Drawing.Color.LightGray;
+            this.SubtotText2.ForeColor = System.Drawing.Color.Black;
+            this.SubtotText2.Location = new System.Drawing.Point(97, 64);
+            this.SubtotText2.Margin = new System.Windows.Forms.Padding(4);
+            this.SubtotText2.Name = "SubtotText2";
+            this.SubtotText2.ReadOnly = true;
+            this.SubtotText2.Size = new System.Drawing.Size(132, 20);
+            this.SubtotText2.TabIndex = 33;
             // 
             // label2
             // 
@@ -265,9 +273,9 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.UnitText);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.SRPText);
+            this.panel2.Controls.Add(this.ExpensesText);
+            this.panel2.Controls.Add(this.SubtotText2);
+            this.panel2.Controls.Add(this.DepositsText);
             this.panel2.Controls.Add(this.expenseslabel);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.depositslabel);
@@ -279,36 +287,75 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.DifferenceText);
+            this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.textBox5);
+            this.panel3.Controls.Add(this.ComputedText);
+            this.panel3.Controls.Add(this.ActualText);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Location = new System.Drawing.Point(12, 268);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(238, 104);
+            this.panel3.Size = new System.Drawing.Size(238, 125);
             this.panel3.TabIndex = 37;
             // 
-            // textBox3
+            // DifferenceText
             // 
-            this.textBox3.BackColor = System.Drawing.Color.LightGray;
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(97, 39);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(132, 20);
-            this.textBox3.TabIndex = 31;
+            this.DifferenceText.BackColor = System.Drawing.Color.LightGray;
+            this.DifferenceText.ForeColor = System.Drawing.Color.Black;
+            this.DifferenceText.Location = new System.Drawing.Point(97, 96);
+            this.DifferenceText.Margin = new System.Windows.Forms.Padding(4);
+            this.DifferenceText.Name = "DifferenceText";
+            this.DifferenceText.ReadOnly = true;
+            this.DifferenceText.Size = new System.Drawing.Size(132, 20);
+            this.DifferenceText.TabIndex = 35;
             // 
-            // textBox5
+            // label6
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(97, 68);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(132, 20);
-            this.textBox5.TabIndex = 32;
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label6.Location = new System.Drawing.Point(30, 100);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 13);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "Difference:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Location = new System.Drawing.Point(49, 72);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Actual:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ComputedText
+            // 
+            this.ComputedText.BackColor = System.Drawing.Color.LightGray;
+            this.ComputedText.ForeColor = System.Drawing.Color.Black;
+            this.ComputedText.Location = new System.Drawing.Point(97, 39);
+            this.ComputedText.Margin = new System.Windows.Forms.Padding(4);
+            this.ComputedText.Name = "ComputedText";
+            this.ComputedText.ReadOnly = true;
+            this.ComputedText.Size = new System.Drawing.Size(132, 20);
+            this.ComputedText.TabIndex = 31;
+            // 
+            // ActualText
+            // 
+            this.ActualText.BackColor = System.Drawing.Color.White;
+            this.ActualText.ForeColor = System.Drawing.Color.Black;
+            this.ActualText.Location = new System.Drawing.Point(97, 68);
+            this.ActualText.Margin = new System.Windows.Forms.Padding(4);
+            this.ActualText.Name = "ActualText";
+            this.ActualText.Size = new System.Drawing.Size(132, 20);
+            this.ActualText.TabIndex = 32;
             // 
             // label3
             // 
@@ -336,29 +383,28 @@
             this.label5.Text = "Computed:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // save
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Location = new System.Drawing.Point(49, 72);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Actual:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.save.Enabled = false;
+            this.save.Location = new System.Drawing.Point(140, 399);
+            this.save.Name = "save";
+            this.save.Size = new System.Drawing.Size(75, 31);
+            this.save.TabIndex = 38;
+            this.save.Text = "&Save";
+            this.save.UseVisualStyleBackColor = true;
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
-            // CashCount
+            // CashCounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 432);
+            this.ClientSize = new System.Drawing.Size(262, 440);
+            this.Controls.Add(this.save);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.saveCashcount);
-            this.Name = "CashCount";
+            this.Controls.Add(this.Cashcount);
+            this.Name = "CashCounts";
             this.Text = "Cash Count";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -372,30 +418,33 @@
 
         #endregion
 
-        private System.Windows.Forms.Button saveCashcount;
-        private System.Windows.Forms.TextBox ItemNameText;
+        private System.Windows.Forms.Button Cashcount;
+        private System.Windows.Forms.TextBox BeginningCashText;
         private System.Windows.Forms.Label begcashlabel;
         private System.Windows.Forms.Label incashlabel;
         private System.Windows.Forms.Label paymentlabel;
         private System.Windows.Forms.Label totalsaleslabel;
         private System.Windows.Forms.Label expenseslabel;
         private System.Windows.Forms.Label depositslabel;
-        private System.Windows.Forms.TextBox BrandNameText;
-        private System.Windows.Forms.TextBox CategoryText;
-        private System.Windows.Forms.TextBox QuantityText;
-        private System.Windows.Forms.TextBox UnitText;
-        private System.Windows.Forms.TextBox SRPText;
+        private System.Windows.Forms.TextBox IncashText;
+        private System.Windows.Forms.TextBox PaymentsText;
+        private System.Windows.Forms.TextBox TotalSalesText;
+        private System.Windows.Forms.TextBox ExpensesText;
+        private System.Windows.Forms.TextBox DepositsText;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SubtotText1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox SubtotText2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox ComputedText;
+        private System.Windows.Forms.TextBox ActualText;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox DifferenceText;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button save;
     }
 }

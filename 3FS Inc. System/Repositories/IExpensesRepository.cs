@@ -13,5 +13,6 @@ namespace _3FS_System.Repositories
         bool Insert(Expense expense);
         bool Update(Expense expense);
         bool Delete(Expense expense);
+        float GetExpensesAmount_PerDate(DateTime date);
     }
 }

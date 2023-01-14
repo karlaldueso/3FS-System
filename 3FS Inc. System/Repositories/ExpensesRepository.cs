@@ -40,5 +40,18 @@ namespace _3FS_System.Repositories
         {
             throw new NotImplementedException();
         }
+        public float GetExpensesAmount_PerDate(DateTime date)
+        {
+            object amount;
+            string qry = string.Format("dbo.spExpenses_AmountByDate @Date='{0}'", date.ToString("yyyy/MM/dd"));
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
+            {
+                amount = connection.ExecuteScalar(qry);
+            }
+            if (amount != null)
+                return (float)Convert.ToDouble(amount.ToString());
+            else
+                return 0;
+        }
     }
 }

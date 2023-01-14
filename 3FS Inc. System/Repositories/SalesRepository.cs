@@ -33,9 +33,10 @@ namespace _3FS_System.Repositories
         public float GetTotalSalesOfTheDay(DateTime datetime)
         {
             object totalsales;
+            string qry = string.Format("dbo.spReceipts_TotalSalesForTheDay @Date='{0}'", datetime.ToString("yyyy/MM/dd"));
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
-                totalsales = connection.ExecuteScalar("dbo.spReceipts_TotalSalesForTheDay @Date", datetime);
+                totalsales = connection.ExecuteScalar(qry);
             }
             if (totalsales!=null)
                 return (float)Convert.ToDouble(totalsales.ToString());

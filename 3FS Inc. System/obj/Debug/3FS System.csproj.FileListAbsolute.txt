@@ -271,4 +271,4 @@ D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.CustomersProfile.resources
 D:\3FS System\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.CustomersProfile.resources
 D:\3FS System\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Expenses.resources
 D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Expenses.resources
-D:\3FS System\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.CashCount.resources
+D:\3FS System\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.CashCounts.resources

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="3FS System.exe" size="976280">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="3FS System.exe" size="984984">
       <assemblyIdentity name="3FS System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uUTe/4Pu1MwdKrfhZt9FD+dgQbIhQaMMc2gogYW/eG8=</dsig:DigestValue>
+        <dsig:DigestValue>oCkjmTtlGkl5LAUiPoKqFHb7ynT1C9twoo7GJC3W0TA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

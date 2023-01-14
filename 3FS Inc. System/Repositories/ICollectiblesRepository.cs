@@ -17,5 +17,6 @@ namespace _3FS_System.Repositories
         bool Insert(Collectible collectible);
         bool UpdateBalance(int CollectibleID, float Amount, DateTime UpdatedDate);
         float GetBalanceByCustomerID(int customerID);
+        float GetCollectedAmountByDate(DateTime date);
     }
 }

@@ -109,11 +109,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CashCount.cs">
+    <Compile Include="CashCounts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CashCount.Designer.cs">
-      <DependentUpon>CashCount.cs</DependentUpon>
+    <Compile Include="CashCounts.Designer.cs">
+      <DependentUpon>CashCounts.cs</DependentUpon>
     </Compile>
     <Compile Include="Collectibles.cs">
       <SubType>Form</SubType>
@@ -146,7 +146,9 @@
     </Compile>
     <Compile Include="Helpers\AppSetting.cs" />
     <Compile Include="Helpers\JSON.cs" />
+    <Compile Include="Models\CashCount.cs" />
     <Compile Include="Models\Collectible.cs" />
+    <Compile Include="Models\Deposit.cs" />
     <Compile Include="Models\Expense.cs" />
     <Compile Include="Models\ItemCategory.cs" />
     <Compile Include="Models\ReceiptDetails_DisplayFormat.cs" />
@@ -166,8 +168,12 @@
     <Compile Include="Reports.Designer.cs">
       <DependentUpon>Reports.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repositories\CashCountRepository.cs" />
+    <Compile Include="Repositories\DepositRepository.cs" />
     <Compile Include="Repositories\ExpensesRepository.cs" />
+    <Compile Include="Repositories\ICashCountsRepository.cs" />
     <Compile Include="Repositories\IExpensesRepository.cs" />
+    <Compile Include="Repositories\IDepositRepository.cs" />
     <Compile Include="Repositories\IReportRepository.cs" />
     <Compile Include="Repositories\ReportRepository.cs" />
     <Compile Include="splash.cs">
@@ -240,8 +246,8 @@
     <Compile Include="Users.Designer.cs">
       <DependentUpon>Users.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CashCount.resx">
-      <DependentUpon>CashCount.cs</DependentUpon>
+    <EmbeddedResource Include="CashCounts.resx">
+      <DependentUpon>CashCounts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Collectibles.resx">
       <DependentUpon>Collectibles.cs</DependentUpon>
