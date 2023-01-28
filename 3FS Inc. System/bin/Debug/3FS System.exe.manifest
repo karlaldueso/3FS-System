@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>oCkjmTtlGkl5LAUiPoKqFHb7ynT1C9twoo7GJC3W0TA=</dsig:DigestValue>
+        <dsig:DigestValue>eeXHWYPdw8A5CE26IxTLJkSRvBvtNYSf8tGP2usQEss=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -942,14 +942,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualStudio.ProjectAggregator.dll" size="13200">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualStudio.ProjectAggregator.dll" size="13176">
       <assemblyIdentity name="Microsoft.VisualStudio.ProjectAggregator" version="8.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>RbFBNWbQ5c8intWa5pimSNZ8VpTkt4UPd7m5BMSW8Lc=</dsig:DigestValue>
+        <dsig:DigestValue>3GqtEGzE/aiWGhmshwGtJD/uNgsMyQfUYmJJT+kcQU8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1049,13 +1049,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="3FS System.exe.config" size="2137">
+  <file name="3FS System.exe.config" size="2138">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/+Y/l8bmrc7xtIkMiP6k9cNqcn2BKaK+yKVrSi3WzvA=</dsig:DigestValue>
+      <dsig:DigestValue>zMVms6wJZJEiaBLg0g/8qmG4MMCEBAATSOiDHejT2es=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Media\3FS_LOGO.png" size="119278">

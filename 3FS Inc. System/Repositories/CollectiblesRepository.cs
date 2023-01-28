@@ -58,7 +58,7 @@ namespace _3FS_System.Repositories
         }
         public bool UpdateBalance(int CollectibleID, float Amount, DateTime UpdatedDate)
         {
-            string qry = string.Format("dbo.spCollectibles_UpdateBalance @CollectiblesID={0}, @AmountPaid={1}, @UpdatedDate='{2}'", CollectibleID, Amount, UpdatedDate);
+            string qry = string.Format("dbo.spCollectibles_UpdateBalance @CollectiblesID={0}, @AmountPaid={1}, @UpdatedDate='{2}'", CollectibleID, Amount, UpdatedDate.ToString("yyyy/MM/dd"));
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
             {
                 var output = connection.ExecuteScalar(qry);
