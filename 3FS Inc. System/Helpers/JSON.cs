@@ -55,7 +55,7 @@ namespace _3FS_System.Helpers
                 try
                 {
                     //Dummy data
-                    ItemInventory item = new ItemInventory()
+                    Item item = new Item()
                     {
                         ItemID = 23,
                         BrandName = "Holcim",
@@ -63,7 +63,6 @@ namespace _3FS_System.Helpers
                         CategoryID = 1,
                         SRP = 200,
                         Capital = 190,
-                        Storage = "Bodega A",
                         UpdatedDate = DateTime.Now
                     };
 

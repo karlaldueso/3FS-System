@@ -150,12 +150,14 @@
     <Compile Include="Models\Collectible.cs" />
     <Compile Include="Models\Deposit.cs" />
     <Compile Include="Models\Expense.cs" />
+    <Compile Include="Models\Inventory.cs" />
     <Compile Include="Models\ItemCategory.cs" />
     <Compile Include="Models\ReceiptDetails_DisplayFormat.cs" />
     <Compile Include="Models\Receipt_PerDay.cs" />
     <Compile Include="Models\Report_SalesPerItem.cs" />
     <Compile Include="Models\SalesPerReceipt_byDate.cs" />
     <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\Warehouse.cs" />
     <Compile Include="Receipts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,11 +171,14 @@
       <DependentUpon>Reports.cs</DependentUpon>
     </Compile>
     <Compile Include="Repositories\CashCountRepository.cs" />
+    <Compile Include="Repositories\IInventoryRepository.cs" />
+    <Compile Include="Repositories\WarehouseRepository.cs" />
     <Compile Include="Repositories\DepositRepository.cs" />
     <Compile Include="Repositories\ExpensesRepository.cs" />
     <Compile Include="Repositories\ICashCountsRepository.cs" />
     <Compile Include="Repositories\IExpensesRepository.cs" />
     <Compile Include="Repositories\IDepositRepository.cs" />
+    <Compile Include="Repositories\IWarehouseRepository.cs" />
     <Compile Include="Repositories\IReportRepository.cs" />
     <Compile Include="Repositories\ReportRepository.cs" />
     <Compile Include="splash.cs">
@@ -185,11 +190,11 @@
     <Compile Include="Global Variables\Global.cs" />
     <Compile Include="Helpers\DataAccess.cs" />
     <Compile Include="Helpers\Helper.cs" />
-    <Compile Include="Inventory.cs">
+    <Compile Include="Items.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventory.Designer.cs">
-      <DependentUpon>Inventory.cs</DependentUpon>
+    <Compile Include="Items.Designer.cs">
+      <DependentUpon>Items.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -207,7 +212,7 @@
     <Compile Include="Models\CustomerProfile.cs" />
     <Compile Include="Models\ItemLogs.cs" />
     <Compile Include="Models\ItemLogs_DisplayFormat.cs" />
-    <Compile Include="Models\ItemInventory.cs" />
+    <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Receipt.cs" />
     <Compile Include="Models\Sale.cs" />
     <Compile Include="Models\User.cs" />
@@ -246,6 +251,12 @@
     <Compile Include="Users.Designer.cs">
       <DependentUpon>Users.cs</DependentUpon>
     </Compile>
+    <Compile Include="Warehouses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouses.Designer.cs">
+      <DependentUpon>Warehouses.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CashCounts.resx">
       <DependentUpon>CashCounts.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,14 +278,17 @@
     <EmbeddedResource Include="Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Warehouses.resx">
+      <DependentUpon>Warehouses.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\DataSources\_3FS_System.Models.Report_SalesPerItem.datasource" />
     <EmbeddedResource Include="Reports\SalesPerItem.rdlc" />
     <EmbeddedResource Include="Reports\SalesPerReceipt.rdlc" />
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory.resx">
-      <DependentUpon>Inventory.cs</DependentUpon>
+    <EmbeddedResource Include="Items.resx">
+      <DependentUpon>Items.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

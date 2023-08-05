@@ -275,7 +275,7 @@ namespace _3FS_System
             }
             if (bFormNameOpen == false)
             {
-                Inventory invtry = new Inventory();
+                Items invtry = new Items();
                 invtry.MdiParent = this;
 
                 invtry.Show();

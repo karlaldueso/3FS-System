@@ -1,6 +1,6 @@
 ﻿namespace _3FS_System
 {
-    partial class Inventory
+    partial class Items
     {
         /// <summary>
         /// Required designer variable.
@@ -35,19 +35,15 @@
             this.editlabel = new System.Windows.Forms.Label();
             this.addpanel = new System.Windows.Forms.Panel();
             this.ItemNameText = new System.Windows.Forms.TextBox();
-            this.AddItemButton = new System.Windows.Forms.Button();
             this.itemnamelabel = new System.Windows.Forms.Label();
             this.brandnamelabel = new System.Windows.Forms.Label();
+            this.AddItemButton = new System.Windows.Forms.Button();
             this.categorylabel = new System.Windows.Forms.Label();
-            this.quantitylabel = new System.Windows.Forms.Label();
             this.unitlabel = new System.Windows.Forms.Label();
             this.SRPlabel = new System.Windows.Forms.Label();
             this.capitallabel = new System.Windows.Forms.Label();
-            this.storagelabel = new System.Windows.Forms.Label();
             this.BrandNameText = new System.Windows.Forms.TextBox();
             this.CategoryText = new System.Windows.Forms.TextBox();
-            this.StorageText = new System.Windows.Forms.TextBox();
-            this.QuantityText = new System.Windows.Forms.TextBox();
             this.CapitalText = new System.Windows.Forms.TextBox();
             this.UnitText = new System.Windows.Forms.TextBox();
             this.SRPText = new System.Windows.Forms.TextBox();
@@ -61,6 +57,8 @@
             this.EditText = new System.Windows.Forms.TextBox();
             this.refreshButton = new System.Windows.Forms.Button();
             this.searchpanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.warehouseSearchComboBox = new System.Windows.Forms.ComboBox();
             this.searchName = new System.Windows.Forms.TextBox();
             this.addpanel.SuspendLayout();
             this.inventorypanel.SuspendLayout();
@@ -120,7 +118,7 @@
             // 
             this.editlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.editlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editlabel.Location = new System.Drawing.Point(373, 290);
+            this.editlabel.Location = new System.Drawing.Point(375, 236);
             this.editlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.editlabel.Name = "editlabel";
             this.editlabel.Size = new System.Drawing.Size(113, 21);
@@ -132,26 +130,22 @@
             this.addpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.addpanel.Controls.Add(this.additemlabel);
             this.addpanel.Controls.Add(this.ItemNameText);
-            this.addpanel.Controls.Add(this.AddItemButton);
             this.addpanel.Controls.Add(this.itemnamelabel);
             this.addpanel.Controls.Add(this.brandnamelabel);
+            this.addpanel.Controls.Add(this.AddItemButton);
             this.addpanel.Controls.Add(this.categorylabel);
-            this.addpanel.Controls.Add(this.quantitylabel);
             this.addpanel.Controls.Add(this.unitlabel);
             this.addpanel.Controls.Add(this.SRPlabel);
             this.addpanel.Controls.Add(this.capitallabel);
-            this.addpanel.Controls.Add(this.storagelabel);
             this.addpanel.Controls.Add(this.BrandNameText);
             this.addpanel.Controls.Add(this.CategoryText);
-            this.addpanel.Controls.Add(this.StorageText);
-            this.addpanel.Controls.Add(this.QuantityText);
             this.addpanel.Controls.Add(this.CapitalText);
             this.addpanel.Controls.Add(this.UnitText);
             this.addpanel.Controls.Add(this.SRPText);
             this.addpanel.Location = new System.Drawing.Point(16, 7);
             this.addpanel.Margin = new System.Windows.Forms.Padding(4);
             this.addpanel.Name = "addpanel";
-            this.addpanel.Size = new System.Drawing.Size(261, 324);
+            this.addpanel.Size = new System.Drawing.Size(261, 267);
             this.addpanel.TabIndex = 37;
             // 
             // ItemNameText
@@ -163,22 +157,6 @@
             this.ItemNameText.Name = "ItemNameText";
             this.ItemNameText.Size = new System.Drawing.Size(132, 26);
             this.ItemNameText.TabIndex = 14;
-            // 
-            // AddItemButton
-            // 
-            this.AddItemButton.BackColor = System.Drawing.Color.White;
-            this.AddItemButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
-            this.AddItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddItemButton.ForeColor = System.Drawing.Color.Black;
-            this.AddItemButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddItemButton.Location = new System.Drawing.Point(111, 272);
-            this.AddItemButton.Margin = new System.Windows.Forms.Padding(4);
-            this.AddItemButton.Name = "AddItemButton";
-            this.AddItemButton.Size = new System.Drawing.Size(132, 26);
-            this.AddItemButton.TabIndex = 5;
-            this.AddItemButton.Text = "&ADD";
-            this.AddItemButton.UseVisualStyleBackColor = false;
-            this.AddItemButton.Click += new System.EventHandler(this.AddItemButton_Click);
             // 
             // itemnamelabel
             // 
@@ -196,7 +174,7 @@
             // 
             this.brandnamelabel.AutoSize = true;
             this.brandnamelabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.brandnamelabel.Location = new System.Drawing.Point(1, 80);
+            this.brandnamelabel.Location = new System.Drawing.Point(1, 78);
             this.brandnamelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.brandnamelabel.Name = "brandnamelabel";
             this.brandnamelabel.Size = new System.Drawing.Size(102, 20);
@@ -204,11 +182,27 @@
             this.brandnamelabel.Text = "Brand Name:";
             this.brandnamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // AddItemButton
+            // 
+            this.AddItemButton.BackColor = System.Drawing.Color.White;
+            this.AddItemButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.AddItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddItemButton.ForeColor = System.Drawing.Color.Black;
+            this.AddItemButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddItemButton.Location = new System.Drawing.Point(111, 218);
+            this.AddItemButton.Margin = new System.Windows.Forms.Padding(4);
+            this.AddItemButton.Name = "AddItemButton";
+            this.AddItemButton.Size = new System.Drawing.Size(132, 26);
+            this.AddItemButton.TabIndex = 5;
+            this.AddItemButton.Text = "&ADD";
+            this.AddItemButton.UseVisualStyleBackColor = false;
+            this.AddItemButton.Click += new System.EventHandler(this.AddItemButton_Click);
+            // 
             // categorylabel
             // 
             this.categorylabel.AutoSize = true;
             this.categorylabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.categorylabel.Location = new System.Drawing.Point(26, 107);
+            this.categorylabel.Location = new System.Drawing.Point(26, 105);
             this.categorylabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.categorylabel.Name = "categorylabel";
             this.categorylabel.Size = new System.Drawing.Size(77, 20);
@@ -216,23 +210,11 @@
             this.categorylabel.Text = "Category:";
             this.categorylabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // quantitylabel
-            // 
-            this.quantitylabel.AutoSize = true;
-            this.quantitylabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.quantitylabel.Location = new System.Drawing.Point(31, 134);
-            this.quantitylabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.quantitylabel.Name = "quantitylabel";
-            this.quantitylabel.Size = new System.Drawing.Size(72, 20);
-            this.quantitylabel.TabIndex = 9;
-            this.quantitylabel.Text = "Quantity:";
-            this.quantitylabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // unitlabel
             // 
             this.unitlabel.AutoSize = true;
             this.unitlabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.unitlabel.Location = new System.Drawing.Point(61, 161);
+            this.unitlabel.Location = new System.Drawing.Point(61, 132);
             this.unitlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.unitlabel.Name = "unitlabel";
             this.unitlabel.Size = new System.Drawing.Size(42, 20);
@@ -244,7 +226,7 @@
             // 
             this.SRPlabel.AutoSize = true;
             this.SRPlabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SRPlabel.Location = new System.Drawing.Point(57, 189);
+            this.SRPlabel.Location = new System.Drawing.Point(57, 160);
             this.SRPlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SRPlabel.Name = "SRPlabel";
             this.SRPlabel.Size = new System.Drawing.Size(46, 20);
@@ -256,7 +238,7 @@
             // 
             this.capitallabel.AutoSize = true;
             this.capitallabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.capitallabel.Location = new System.Drawing.Point(41, 216);
+            this.capitallabel.Location = new System.Drawing.Point(41, 187);
             this.capitallabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.capitallabel.Name = "capitallabel";
             this.capitallabel.Size = new System.Drawing.Size(62, 20);
@@ -264,23 +246,11 @@
             this.capitallabel.Text = "Capital:";
             this.capitallabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // storagelabel
-            // 
-            this.storagelabel.AutoSize = true;
-            this.storagelabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.storagelabel.Location = new System.Drawing.Point(33, 243);
-            this.storagelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.storagelabel.Name = "storagelabel";
-            this.storagelabel.Size = new System.Drawing.Size(70, 20);
-            this.storagelabel.TabIndex = 13;
-            this.storagelabel.Text = "Storage:";
-            this.storagelabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // BrandNameText
             // 
             this.BrandNameText.BackColor = System.Drawing.Color.White;
             this.BrandNameText.ForeColor = System.Drawing.Color.Black;
-            this.BrandNameText.Location = new System.Drawing.Point(111, 78);
+            this.BrandNameText.Location = new System.Drawing.Point(111, 76);
             this.BrandNameText.Margin = new System.Windows.Forms.Padding(4);
             this.BrandNameText.Name = "BrandNameText";
             this.BrandNameText.Size = new System.Drawing.Size(132, 26);
@@ -290,37 +260,17 @@
             // 
             this.CategoryText.BackColor = System.Drawing.Color.White;
             this.CategoryText.ForeColor = System.Drawing.Color.Black;
-            this.CategoryText.Location = new System.Drawing.Point(111, 105);
+            this.CategoryText.Location = new System.Drawing.Point(111, 103);
             this.CategoryText.Margin = new System.Windows.Forms.Padding(4);
             this.CategoryText.Name = "CategoryText";
             this.CategoryText.Size = new System.Drawing.Size(132, 26);
             this.CategoryText.TabIndex = 16;
             // 
-            // StorageText
-            // 
-            this.StorageText.BackColor = System.Drawing.Color.White;
-            this.StorageText.ForeColor = System.Drawing.Color.Black;
-            this.StorageText.Location = new System.Drawing.Point(111, 240);
-            this.StorageText.Margin = new System.Windows.Forms.Padding(4);
-            this.StorageText.Name = "StorageText";
-            this.StorageText.Size = new System.Drawing.Size(132, 26);
-            this.StorageText.TabIndex = 21;
-            // 
-            // QuantityText
-            // 
-            this.QuantityText.BackColor = System.Drawing.Color.White;
-            this.QuantityText.ForeColor = System.Drawing.Color.Black;
-            this.QuantityText.Location = new System.Drawing.Point(111, 132);
-            this.QuantityText.Margin = new System.Windows.Forms.Padding(4);
-            this.QuantityText.Name = "QuantityText";
-            this.QuantityText.Size = new System.Drawing.Size(132, 26);
-            this.QuantityText.TabIndex = 17;
-            // 
             // CapitalText
             // 
             this.CapitalText.BackColor = System.Drawing.Color.White;
             this.CapitalText.ForeColor = System.Drawing.Color.Black;
-            this.CapitalText.Location = new System.Drawing.Point(111, 213);
+            this.CapitalText.Location = new System.Drawing.Point(111, 184);
             this.CapitalText.Margin = new System.Windows.Forms.Padding(4);
             this.CapitalText.Name = "CapitalText";
             this.CapitalText.Size = new System.Drawing.Size(132, 26);
@@ -330,7 +280,7 @@
             // 
             this.UnitText.BackColor = System.Drawing.Color.White;
             this.UnitText.ForeColor = System.Drawing.Color.Black;
-            this.UnitText.Location = new System.Drawing.Point(111, 159);
+            this.UnitText.Location = new System.Drawing.Point(111, 130);
             this.UnitText.Margin = new System.Windows.Forms.Padding(4);
             this.UnitText.Name = "UnitText";
             this.UnitText.Size = new System.Drawing.Size(132, 26);
@@ -340,7 +290,7 @@
             // 
             this.SRPText.BackColor = System.Drawing.Color.White;
             this.SRPText.ForeColor = System.Drawing.Color.Black;
-            this.SRPText.Location = new System.Drawing.Point(111, 186);
+            this.SRPText.Location = new System.Drawing.Point(111, 157);
             this.SRPText.Margin = new System.Windows.Forms.Padding(4);
             this.SRPText.Name = "SRPText";
             this.SRPText.Size = new System.Drawing.Size(132, 26);
@@ -372,7 +322,7 @@
             this.inventorypanel.Location = new System.Drawing.Point(282, 7);
             this.inventorypanel.Margin = new System.Windows.Forms.Padding(4);
             this.inventorypanel.Name = "inventorypanel";
-            this.inventorypanel.Size = new System.Drawing.Size(764, 465);
+            this.inventorypanel.Size = new System.Drawing.Size(764, 463);
             this.inventorypanel.TabIndex = 39;
             this.inventorypanel.Paint += new System.Windows.Forms.PaintEventHandler(this.inventorypanel_Paint);
             // 
@@ -391,7 +341,7 @@
             this.dataGridInventory.ReadOnly = true;
             this.dataGridInventory.RowHeadersVisible = false;
             this.dataGridInventory.RowHeadersWidth = 51;
-            this.dataGridInventory.Size = new System.Drawing.Size(754, 224);
+            this.dataGridInventory.Size = new System.Drawing.Size(754, 183);
             this.dataGridInventory.TabIndex = 4;
             this.dataGridInventory.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -400,12 +350,12 @@
             this.inventorylabel.AutoSize = true;
             this.inventorylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventorylabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.inventorylabel.Location = new System.Drawing.Point(391, 9);
+            this.inventorylabel.Location = new System.Drawing.Point(4, 14);
             this.inventorylabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.inventorylabel.Name = "inventorylabel";
-            this.inventorylabel.Size = new System.Drawing.Size(95, 24);
+            this.inventorylabel.Size = new System.Drawing.Size(59, 24);
             this.inventorylabel.TabIndex = 24;
-            this.inventorylabel.Text = "Inventory";
+            this.inventorylabel.Text = "Items";
             // 
             // dataGridLogs
             // 
@@ -415,7 +365,7 @@
             this.dataGridLogs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridLogs.BackgroundColor = System.Drawing.Color.White;
             this.dataGridLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridLogs.Location = new System.Drawing.Point(4, 339);
+            this.dataGridLogs.Location = new System.Drawing.Point(4, 306);
             this.dataGridLogs.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridLogs.MultiSelect = false;
             this.dataGridLogs.Name = "dataGridLogs";
@@ -423,7 +373,7 @@
             this.dataGridLogs.RowHeadersVisible = false;
             this.dataGridLogs.RowHeadersWidth = 51;
             this.dataGridLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridLogs.Size = new System.Drawing.Size(754, 120);
+            this.dataGridLogs.Size = new System.Drawing.Size(754, 151);
             this.dataGridLogs.TabIndex = 26;
             // 
             // inventorylog
@@ -431,7 +381,7 @@
             this.inventorylog.AutoSize = true;
             this.inventorylog.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventorylog.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.inventorylog.Location = new System.Drawing.Point(0, 309);
+            this.inventorylog.Location = new System.Drawing.Point(4, 278);
             this.inventorylog.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.inventorylog.Name = "inventorylog";
             this.inventorylog.Size = new System.Drawing.Size(55, 24);
@@ -446,7 +396,7 @@
             this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.UpdateButton.ForeColor = System.Drawing.Color.Black;
             this.UpdateButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UpdateButton.Location = new System.Drawing.Point(639, 286);
+            this.UpdateButton.Location = new System.Drawing.Point(640, 233);
             this.UpdateButton.Margin = new System.Windows.Forms.Padding(4);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(118, 26);
@@ -460,7 +410,7 @@
             this.EditText.BackColor = System.Drawing.Color.White;
             this.EditText.Enabled = false;
             this.EditText.ForeColor = System.Drawing.Color.Black;
-            this.EditText.Location = new System.Drawing.Point(495, 286);
+            this.EditText.Location = new System.Drawing.Point(496, 233);
             this.EditText.Margin = new System.Windows.Forms.Padding(4);
             this.EditText.Name = "EditText";
             this.EditText.Size = new System.Drawing.Size(128, 26);
@@ -473,7 +423,7 @@
             this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.refreshButton.ForeColor = System.Drawing.Color.Black;
             this.refreshButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.refreshButton.Location = new System.Drawing.Point(4, 273);
+            this.refreshButton.Location = new System.Drawing.Point(4, 232);
             this.refreshButton.Margin = new System.Windows.Forms.Padding(4);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(134, 25);
@@ -485,16 +435,39 @@
             // searchpanel
             // 
             this.searchpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchpanel.Controls.Add(this.label1);
+            this.searchpanel.Controls.Add(this.warehouseSearchComboBox);
             this.searchpanel.Controls.Add(this.searchName);
             this.searchpanel.Controls.Add(this.namesearchlabel);
             this.searchpanel.Controls.Add(this.searchBrandName);
             this.searchpanel.Controls.Add(this.label11);
             this.searchpanel.Controls.Add(this.brandlabel);
-            this.searchpanel.Location = new System.Drawing.Point(16, 339);
+            this.searchpanel.Location = new System.Drawing.Point(16, 306);
             this.searchpanel.Margin = new System.Windows.Forms.Padding(4);
             this.searchpanel.Name = "searchpanel";
-            this.searchpanel.Size = new System.Drawing.Size(261, 133);
+            this.searchpanel.Size = new System.Drawing.Size(261, 164);
             this.searchpanel.TabIndex = 38;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(33, 115);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 20);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Storage:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // warehouseSearchComboBox
+            // 
+            this.warehouseSearchComboBox.FormattingEnabled = true;
+            this.warehouseSearchComboBox.Location = new System.Drawing.Point(107, 112);
+            this.warehouseSearchComboBox.Name = "warehouseSearchComboBox";
+            this.warehouseSearchComboBox.Size = new System.Drawing.Size(132, 28);
+            this.warehouseSearchComboBox.TabIndex = 33;
+            this.warehouseSearchComboBox.Click += new System.EventHandler(this.warehouseSearchCombobox_Click);
             // 
             // searchName
             // 
@@ -507,7 +480,7 @@
             this.searchName.TabIndex = 28;
             this.searchName.TextChanged += new System.EventHandler(this.searchName_TextChanged);
             // 
-            // Inventory
+            // Items
             // 
             this.AcceptButton = this.AddItemButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -515,16 +488,16 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Firebrick;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1059, 488);
+            this.ClientSize = new System.Drawing.Size(1059, 484);
             this.Controls.Add(this.addpanel);
             this.Controls.Add(this.inventorypanel);
             this.Controls.Add(this.searchpanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Inventory";
+            this.Name = "Items";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Inventory";
+            this.Text = "Items";
             this.Load += new System.EventHandler(this.Inventory_Load);
             this.addpanel.ResumeLayout(false);
             this.addpanel.PerformLayout();
@@ -551,15 +524,11 @@
         private System.Windows.Forms.Label itemnamelabel;
         private System.Windows.Forms.Label brandnamelabel;
         private System.Windows.Forms.Label categorylabel;
-        private System.Windows.Forms.Label quantitylabel;
         private System.Windows.Forms.Label unitlabel;
         private System.Windows.Forms.Label SRPlabel;
         private System.Windows.Forms.Label capitallabel;
-        private System.Windows.Forms.Label storagelabel;
         private System.Windows.Forms.TextBox BrandNameText;
         private System.Windows.Forms.TextBox CategoryText;
-        private System.Windows.Forms.TextBox StorageText;
-        private System.Windows.Forms.TextBox QuantityText;
         private System.Windows.Forms.TextBox CapitalText;
         private System.Windows.Forms.TextBox UnitText;
         private System.Windows.Forms.TextBox SRPText;
@@ -574,5 +543,7 @@
         private System.Windows.Forms.Button refreshButton;
         private System.Windows.Forms.Panel searchpanel;
         private System.Windows.Forms.TextBox searchName;
+        private System.Windows.Forms.ComboBox warehouseSearchComboBox;
+        private System.Windows.Forms.Label label1;
     }
 }

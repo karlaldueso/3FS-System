@@ -15,16 +15,16 @@ using _3FS_System.Global_Variables;
 
 namespace _3FS_System
 {
-    public partial class Inventory : Form
+    public partial class Items : Form
     {
-        public Inventory()
+        public Items()
         {
             InitializeComponent();
         }
 
         private void AddItemButton_Click(object sender, EventArgs e)
         {
-            if ((String.IsNullOrEmpty(ItemNameText.Text)) || (String.IsNullOrEmpty(BrandNameText.Text)) || (String.IsNullOrEmpty(CategoryText.Text)) || (String.IsNullOrEmpty(QuantityText.Text)) || (String.IsNullOrEmpty(UnitText.Text)) || (String.IsNullOrEmpty(SRPText.Text)) || (String.IsNullOrEmpty(CapitalText.Text)) || (String.IsNullOrEmpty(StorageText.Text)))
+            if ((String.IsNullOrEmpty(ItemNameText.Text)) || (String.IsNullOrEmpty(BrandNameText.Text)) || (String.IsNullOrEmpty(CategoryText.Text)) || (String.IsNullOrEmpty(QuantityText.Text)) || (String.IsNullOrEmpty(UnitText.Text)) || (String.IsNullOrEmpty(SRPText.Text)) || (String.IsNullOrEmpty(CapitalText.Text)))
             {
                 MessageBox.Show("Enter complete details!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -35,17 +35,15 @@ namespace _3FS_System
                     //Declaring and Init
                     ItemRepository itemRepository = new ItemRepository();
                     ItemLogsRepository itemsLogsRepository = new ItemLogsRepository();
-                    ItemInventory item = new ItemInventory
+                    Item item = new Item
                     {
                         //Assign parameters based on input
                         ItemName = ItemNameText.Text,
                         BrandName = BrandNameText.Text,
                         CategoryID = int.Parse(CategoryText.Text),
-                        Quantity = float.Parse(QuantityText.Text),
                         Unit = UnitText.Text,
                         SRP = float.Parse(SRPText.Text),
                         Capital = float.Parse(CapitalText.Text),
-                        Storage = StorageText.Text,
                         UpdatedDate = DateTime.Now,
                         CreatedDate = DateTime.Now,
                         StoreID = 1
@@ -55,11 +53,9 @@ namespace _3FS_System
                     ItemNameText.Text = "";
                     BrandNameText.Text = "";
                     CategoryText.Text = "";
-                    QuantityText.Text = "";
                     UnitText.Text = "";
                     SRPText.Text = "";
                     CapitalText.Text = "";
-                    StorageText.Text = "";
                     dataGridInventory.DataSource = itemRepository.GetItems_All();
                     dataGridInventory.Columns["ItemID"].Visible = false;
                     dataGridInventory.Columns["CategoryID"].Visible = false;
@@ -68,7 +64,7 @@ namespace _3FS_System
                     dataGridInventory.Columns["StoreID"].Visible = false;
 
                     //Adding to ItemLogs
-                    item.ItemID = itemRepository.GetItemID(new ItemInventory { ItemName = item.ItemName, BrandName = item.BrandName });
+                    item.ItemID = itemRepository.GetItemID(new Item { ItemName = item.ItemName, BrandName = item.BrandName });
                     ItemLogs itemlogs = new ItemLogs
                     {
                         ItemID = item.ItemID,
@@ -99,7 +95,6 @@ namespace _3FS_System
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             Global.ITEMID = 0;
-            _ = new DataAccess();
             ItemLogsRepository itemsLogsRepository = new ItemLogsRepository();
             if (dataGridInventory.Rows.Count != 0)
             {
@@ -134,19 +129,13 @@ namespace _3FS_System
                         editlabel.Text = "Category ID:";
                         break;
                     case 4:
-                        editlabel.Text = "Quantity:";
-                        break;
-                    case 5:
                         editlabel.Text = "Unit:";
                         break;
-                    case 6:
+                    case 5:
                         editlabel.Text = "SRP:";
                         break;
-                    case 7:
+                    case 6:
                         editlabel.Text = "Capital:";
-                        break;
-                    case 8:
-                        editlabel.Text = "Storage:";
                         break;
                 }
             }
@@ -155,24 +144,21 @@ namespace _3FS_System
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
             ItemRepository itemRepository = new ItemRepository();
             ItemLogsRepository itemsLogsRepository = new ItemLogsRepository();
             int[] c_r = { dataGridInventory.CurrentCellAddress.X, dataGridInventory.CurrentCellAddress.Y };
             if (dataGridInventory.Rows[c_r[1]].Cells[c_r[0]].Value.ToString() != EditText.Text)
             { 
-                ItemInventory item = new ItemInventory
+                Item item = new Item
                 {
                     //Assign parameters based on selected row on datagridview1
                     ItemID = Global.ITEMID,
                     ItemName = dataGridInventory.Rows[c_r[1]].Cells["ItemName"].Value.ToString(),
                     BrandName = dataGridInventory.Rows[c_r[1]].Cells["BrandName"].Value.ToString(),
                     CategoryID = int.Parse(dataGridInventory.Rows[c_r[1]].Cells["CategoryID"].Value.ToString()),
-                    Quantity = float.Parse(dataGridInventory.Rows[c_r[1]].Cells["Quantity"].Value.ToString()),
                     Unit = dataGridInventory.Rows[c_r[1]].Cells["Unit"].Value.ToString(),
                     SRP = float.Parse(dataGridInventory.Rows[c_r[1]].Cells["SRP"].Value.ToString()),
                     Capital = float.Parse(dataGridInventory.Rows[c_r[1]].Cells["Capital"].Value.ToString()),
-                    Storage = dataGridInventory.Rows[c_r[1]].Cells["Storage"].Value.ToString(),
                     UpdatedDate = DateTime.Now
                 };
                 itemRepository.Update(item, c_r[0], EditText.Text); //update selected row
@@ -209,7 +195,6 @@ namespace _3FS_System
 
         private void searchName_TextChanged(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
             ItemRepository itemRepository = new ItemRepository();
             dataGridInventory.DataSource = itemRepository.GetItems_ByName(searchName.Text, searchBrandName.Text);
             dataGridInventory.Columns["UpdatedDate"].Visible = false;
@@ -222,7 +207,6 @@ namespace _3FS_System
 
         private void searchBrandName_TextChanged(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
             ItemRepository itemRepository = new ItemRepository();
             dataGridInventory.DataSource = itemRepository.GetItems_ByName(searchName.Text, searchBrandName.Text);
             dataGridInventory.Columns["UpdatedDate"].Visible = false;
@@ -236,9 +220,7 @@ namespace _3FS_System
 
         private void refreshButton_Click(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
             ItemRepository itemRepository = new ItemRepository();
-            ItemLogsRepository itemsLogsRepository = new ItemLogsRepository();
             dataGridInventory.DataSource = itemRepository.GetItems_All();
             dataGridInventory.Columns["UpdatedDate"].Visible = false;
             dataGridInventory.Columns["ItemID"].Visible = false;
@@ -258,5 +240,16 @@ namespace _3FS_System
         {
 
         }
+
+        private void warehouseSearchCombobox_Click(object sender, EventArgs e)
+        {
+            WarehouseRepository warehouseRepository = new WarehouseRepository();
+            IEnumerable<Warehouse> warehouse = warehouseRepository.GetWarehouse_All();
+            var warehouselist = warehouse.Select(x => x.Name).ToList();
+            var warehouseID = warehouse.Select(x => x.WarehouseID).ToList();
+            warehouseSearchComboBox.Items.Clear();
+            warehouseSearchComboBox.Items.AddRange(warehouselist.ToArray());
+        }
+
     }
 }
