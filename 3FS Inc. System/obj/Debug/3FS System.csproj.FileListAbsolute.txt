@@ -54,7 +54,6 @@ D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Collectibles.resources
 D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Receipts.resources
 D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Reports.resources
 D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.splashscreen.resources
-D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Inventory.resources
 D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Login.resources
 D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Main.resources
 D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Properties.Resources.resources
@@ -273,3 +272,5 @@ D:\3FS System\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Expenses.resource
 D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Expenses.resources
 D:\3FS System\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.CashCounts.resources
 D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.CashCounts.resources
+D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Warehouses.resources
+D:\3FS-System\3FS Inc. System\obj\Debug\_3FS_System.Items.resources

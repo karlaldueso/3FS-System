@@ -9,13 +9,12 @@ namespace _3FS_System.Repositories
 {
     public interface IInventoryRepository
     {
-        IEnumerable<Item> GetAll_ByWarehouse();
-        IEnumerable<Item> GetByName(string ItemName, string BrandName);
-        IEnumerable<Item> GetByName_ByWareHouse(string ItemName, string BrandName);
-        bool Insert(Item item);
-        bool Update(Item item, int col, string input);
-        bool UpdateQty(int itemID, float qty, int transactiontype, DateTime updatedDate);
-        bool Delete(Item item);
-        int GetItemID(Item item);
+        IEnumerable<Inventory> GetAll_ByWarehouse();
+        IEnumerable<Inventory> GetByName(string ItemName, string BrandName);
+        IEnumerable<Inventory> GetByName_ByWareHouse(string ItemName, string BrandName, int warehouseID);
+        bool Insert(Inventory inventory);
+        bool Update(Inventory inventory);
+        bool UpdateQty(Inventory inventory);
+        bool Delete(Inventory inventory);
     }
 }

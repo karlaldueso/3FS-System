@@ -49,6 +49,8 @@
             this.SRPText = new System.Windows.Forms.TextBox();
             this.brandlabel = new System.Windows.Forms.Label();
             this.inventorypanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridQuantity = new System.Windows.Forms.DataGridView();
             this.dataGridInventory = new System.Windows.Forms.DataGridView();
             this.inventorylabel = new System.Windows.Forms.Label();
             this.dataGridLogs = new System.Windows.Forms.DataGridView();
@@ -60,8 +62,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.warehouseSearchComboBox = new System.Windows.Forms.ComboBox();
             this.searchName = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.addpanel.SuspendLayout();
             this.inventorypanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLogs)).BeginInit();
             this.searchpanel.SuspendLayout();
@@ -311,6 +315,8 @@
             // inventorypanel
             // 
             this.inventorypanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.inventorypanel.Controls.Add(this.label2);
+            this.inventorypanel.Controls.Add(this.dataGridQuantity);
             this.inventorypanel.Controls.Add(this.editlabel);
             this.inventorypanel.Controls.Add(this.dataGridInventory);
             this.inventorypanel.Controls.Add(this.inventorylabel);
@@ -322,9 +328,41 @@
             this.inventorypanel.Location = new System.Drawing.Point(282, 7);
             this.inventorypanel.Margin = new System.Windows.Forms.Padding(4);
             this.inventorypanel.Name = "inventorypanel";
-            this.inventorypanel.Size = new System.Drawing.Size(764, 463);
+            this.inventorypanel.Size = new System.Drawing.Size(764, 559);
             this.inventorypanel.TabIndex = 39;
             this.inventorypanel.Paint += new System.Windows.Forms.PaintEventHandler(this.inventorypanel_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.label2.Location = new System.Drawing.Point(4, 272);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 24);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Quantity";
+            // 
+            // dataGridQuantity
+            // 
+            this.dataGridQuantity.AllowUserToAddRows = false;
+            this.dataGridQuantity.AllowUserToDeleteRows = false;
+            this.dataGridQuantity.AllowUserToResizeRows = false;
+            this.dataGridQuantity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridQuantity.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridQuantity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridQuantity.Location = new System.Drawing.Point(4, 300);
+            this.dataGridQuantity.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridQuantity.MultiSelect = false;
+            this.dataGridQuantity.Name = "dataGridQuantity";
+            this.dataGridQuantity.ReadOnly = true;
+            this.dataGridQuantity.RowHeadersVisible = false;
+            this.dataGridQuantity.RowHeadersWidth = 51;
+            this.dataGridQuantity.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridQuantity.Size = new System.Drawing.Size(754, 92);
+            this.dataGridQuantity.TabIndex = 34;
             // 
             // dataGridInventory
             // 
@@ -365,7 +403,7 @@
             this.dataGridLogs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridLogs.BackgroundColor = System.Drawing.Color.White;
             this.dataGridLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridLogs.Location = new System.Drawing.Point(4, 306);
+            this.dataGridLogs.Location = new System.Drawing.Point(4, 424);
             this.dataGridLogs.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridLogs.MultiSelect = false;
             this.dataGridLogs.Name = "dataGridLogs";
@@ -373,7 +411,7 @@
             this.dataGridLogs.RowHeadersVisible = false;
             this.dataGridLogs.RowHeadersWidth = 51;
             this.dataGridLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridLogs.Size = new System.Drawing.Size(754, 151);
+            this.dataGridLogs.Size = new System.Drawing.Size(754, 115);
             this.dataGridLogs.TabIndex = 26;
             // 
             // inventorylog
@@ -381,7 +419,7 @@
             this.inventorylog.AutoSize = true;
             this.inventorylog.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventorylog.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.inventorylog.Location = new System.Drawing.Point(4, 278);
+            this.inventorylog.Location = new System.Drawing.Point(4, 396);
             this.inventorylog.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.inventorylog.Name = "inventorylog";
             this.inventorylog.Size = new System.Drawing.Size(55, 24);
@@ -442,7 +480,7 @@
             this.searchpanel.Controls.Add(this.searchBrandName);
             this.searchpanel.Controls.Add(this.label11);
             this.searchpanel.Controls.Add(this.brandlabel);
-            this.searchpanel.Location = new System.Drawing.Point(16, 306);
+            this.searchpanel.Location = new System.Drawing.Point(13, 318);
             this.searchpanel.Margin = new System.Windows.Forms.Padding(4);
             this.searchpanel.Name = "searchpanel";
             this.searchpanel.Size = new System.Drawing.Size(261, 164);
@@ -480,6 +518,22 @@
             this.searchName.TabIndex = 28;
             this.searchName.TextChanged += new System.EventHandler(this.searchName_TextChanged);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(51, 510);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(175, 26);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Open &Warehouse";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Items
             // 
             this.AcceptButton = this.AddItemButton;
@@ -488,7 +542,8 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Firebrick;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1059, 484);
+            this.ClientSize = new System.Drawing.Size(1059, 569);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.addpanel);
             this.Controls.Add(this.inventorypanel);
             this.Controls.Add(this.searchpanel);
@@ -503,6 +558,7 @@
             this.addpanel.PerformLayout();
             this.inventorypanel.ResumeLayout(false);
             this.inventorypanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLogs)).EndInit();
             this.searchpanel.ResumeLayout(false);
@@ -545,5 +601,8 @@
         private System.Windows.Forms.TextBox searchName;
         private System.Windows.Forms.ComboBox warehouseSearchComboBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridQuantity;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -172,6 +172,7 @@
     </Compile>
     <Compile Include="Repositories\CashCountRepository.cs" />
     <Compile Include="Repositories\IInventoryRepository.cs" />
+    <Compile Include="Repositories\InventoryRepository.cs" />
     <Compile Include="Repositories\WarehouseRepository.cs" />
     <Compile Include="Repositories\DepositRepository.cs" />
     <Compile Include="Repositories\ExpensesRepository.cs" />

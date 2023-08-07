@@ -30,25 +30,25 @@
         {
             this.dataGridLogs = new System.Windows.Forms.DataGridView();
             this.searchpanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.warehouseSearchComboBox = new System.Windows.Forms.ComboBox();
+            this.addButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.storageComboBox = new System.Windows.Forms.ComboBox();
+            this.quantityText = new System.Windows.Forms.TextBox();
+            this.quantityLabel = new System.Windows.Forms.Label();
             this.searchName = new System.Windows.Forms.TextBox();
             this.namesearchlabel = new System.Windows.Forms.Label();
             this.searchBrandName = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.brandlabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.storageAcombobox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.storageBcombobox = new System.Windows.Forms.ComboBox();
             this.transfer1 = new System.Windows.Forms.Button();
             this.transfer2 = new System.Windows.Forms.Button();
-            this.quantityText = new System.Windows.Forms.TextBox();
-            this.quantityLabel = new System.Windows.Forms.Label();
             this.dataGridInventory = new System.Windows.Forms.DataGridView();
             this.inventorylabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -89,9 +89,9 @@
             // searchpanel
             // 
             this.searchpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.searchpanel.Controls.Add(this.button1);
+            this.searchpanel.Controls.Add(this.addButton);
             this.searchpanel.Controls.Add(this.label3);
-            this.searchpanel.Controls.Add(this.comboBox2);
+            this.searchpanel.Controls.Add(this.storageComboBox);
             this.searchpanel.Controls.Add(this.quantityText);
             this.searchpanel.Controls.Add(this.quantityLabel);
             this.searchpanel.Controls.Add(this.searchName);
@@ -105,25 +105,60 @@
             this.searchpanel.Size = new System.Drawing.Size(235, 177);
             this.searchpanel.TabIndex = 40;
             // 
-            // label1
+            // addButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(247, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Storage:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.addButton.Location = new System.Drawing.Point(81, 147);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.TabIndex = 37;
+            this.addButton.Text = "Add";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // warehouseSearchComboBox
+            // label3
             // 
-            this.warehouseSearchComboBox.FormattingEnabled = true;
-            this.warehouseSearchComboBox.Location = new System.Drawing.Point(301, 5);
-            this.warehouseSearchComboBox.Name = "warehouseSearchComboBox";
-            this.warehouseSearchComboBox.Size = new System.Drawing.Size(132, 21);
-            this.warehouseSearchComboBox.TabIndex = 33;
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(27, 120);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Storage:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // storageComboBox
+            // 
+            this.storageComboBox.DisplayMember = "1";
+            this.storageComboBox.FormattingEnabled = true;
+            this.storageComboBox.Location = new System.Drawing.Point(81, 120);
+            this.storageComboBox.Name = "storageComboBox";
+            this.storageComboBox.Size = new System.Drawing.Size(132, 21);
+            this.storageComboBox.TabIndex = 36;
+            this.storageComboBox.SelectionChangeCommitted += new System.EventHandler(this.storageComboBox_SelectionChangeCommitted);
+            this.storageComboBox.Click += new System.EventHandler(this.storageComboBox_Click);
+            // 
+            // quantityText
+            // 
+            this.quantityText.BackColor = System.Drawing.Color.White;
+            this.quantityText.ForeColor = System.Drawing.Color.Black;
+            this.quantityText.Location = new System.Drawing.Point(81, 93);
+            this.quantityText.Margin = new System.Windows.Forms.Padding(4);
+            this.quantityText.Name = "quantityText";
+            this.quantityText.Size = new System.Drawing.Size(132, 20);
+            this.quantityText.TabIndex = 33;
+            // 
+            // quantityLabel
+            // 
+            this.quantityLabel.AutoSize = true;
+            this.quantityLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.quantityLabel.Location = new System.Drawing.Point(24, 93);
+            this.quantityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.quantityLabel.Name = "quantityLabel";
+            this.quantityLabel.Size = new System.Drawing.Size(49, 13);
+            this.quantityLabel.TabIndex = 34;
+            this.quantityLabel.Text = "Quantity:";
+            this.quantityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // searchName
             // 
@@ -134,6 +169,7 @@
             this.searchName.Name = "searchName";
             this.searchName.Size = new System.Drawing.Size(132, 20);
             this.searchName.TabIndex = 28;
+            this.searchName.TextChanged += new System.EventHandler(this.searchName_TextChanged);
             // 
             // namesearchlabel
             // 
@@ -156,6 +192,7 @@
             this.searchBrandName.Name = "searchBrandName";
             this.searchBrandName.Size = new System.Drawing.Size(132, 20);
             this.searchBrandName.TabIndex = 30;
+            this.searchBrandName.TextChanged += new System.EventHandler(this.searchBrandName_TextChanged);
             // 
             // label11
             // 
@@ -180,6 +217,26 @@
             this.brandlabel.TabIndex = 31;
             this.brandlabel.Text = "Brand Name:";
             this.brandlabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(247, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Storage:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // storageAcombobox
+            // 
+            this.storageAcombobox.FormattingEnabled = true;
+            this.storageAcombobox.Location = new System.Drawing.Point(301, 5);
+            this.storageAcombobox.Name = "storageAcombobox";
+            this.storageAcombobox.Size = new System.Drawing.Size(132, 21);
+            this.storageAcombobox.TabIndex = 33;
             // 
             // label2
             // 
@@ -212,13 +269,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(299, 151);
             this.dataGridView1.TabIndex = 43;
             // 
-            // comboBox1
+            // storageBcombobox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(682, 5);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(132, 21);
-            this.comboBox1.TabIndex = 42;
+            this.storageBcombobox.FormattingEnabled = true;
+            this.storageBcombobox.Location = new System.Drawing.Point(682, 5);
+            this.storageBcombobox.Name = "storageBcombobox";
+            this.storageBcombobox.Size = new System.Drawing.Size(132, 21);
+            this.storageBcombobox.TabIndex = 42;
             // 
             // transfer1
             // 
@@ -237,28 +294,6 @@
             this.transfer2.TabIndex = 45;
             this.transfer2.Text = "<<";
             this.transfer2.UseVisualStyleBackColor = true;
-            // 
-            // quantityText
-            // 
-            this.quantityText.BackColor = System.Drawing.Color.White;
-            this.quantityText.ForeColor = System.Drawing.Color.Black;
-            this.quantityText.Location = new System.Drawing.Point(81, 93);
-            this.quantityText.Margin = new System.Windows.Forms.Padding(4);
-            this.quantityText.Name = "quantityText";
-            this.quantityText.Size = new System.Drawing.Size(132, 20);
-            this.quantityText.TabIndex = 33;
-            // 
-            // quantityLabel
-            // 
-            this.quantityLabel.AutoSize = true;
-            this.quantityLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.quantityLabel.Location = new System.Drawing.Point(24, 93);
-            this.quantityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.quantityLabel.Name = "quantityLabel";
-            this.quantityLabel.Size = new System.Drawing.Size(49, 13);
-            this.quantityLabel.TabIndex = 34;
-            this.quantityLabel.Text = "Quantity:";
-            this.quantityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dataGridInventory
             // 
@@ -289,35 +324,6 @@
             this.inventorylabel.Size = new System.Drawing.Size(59, 24);
             this.inventorylabel.TabIndex = 47;
             this.inventorylabel.Text = "Items";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(27, 120);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Storage:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(81, 120);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(132, 21);
-            this.comboBox2.TabIndex = 36;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(81, 147);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -407,12 +413,12 @@
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.dataGridLogs);
             this.panel3.Controls.Add(this.transfer2);
-            this.panel3.Controls.Add(this.warehouseSearchComboBox);
+            this.panel3.Controls.Add(this.storageAcombobox);
             this.panel3.Controls.Add(this.transfer1);
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.storageBcombobox);
             this.panel3.Location = new System.Drawing.Point(3, 203);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(932, 190);
@@ -457,7 +463,7 @@
         private System.Windows.Forms.DataGridView dataGridLogs;
         private System.Windows.Forms.Panel searchpanel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox warehouseSearchComboBox;
+        private System.Windows.Forms.ComboBox storageAcombobox;
         private System.Windows.Forms.TextBox searchName;
         private System.Windows.Forms.Label namesearchlabel;
         private System.Windows.Forms.TextBox searchBrandName;
@@ -465,7 +471,7 @@
         private System.Windows.Forms.Label brandlabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox storageBcombobox;
         private System.Windows.Forms.Button transfer1;
         private System.Windows.Forms.Button transfer2;
         private System.Windows.Forms.TextBox quantityText;
@@ -473,8 +479,8 @@
         private System.Windows.Forms.DataGridView dataGridInventory;
         private System.Windows.Forms.Label inventorylabel;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox storageComboBox;
+        private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;

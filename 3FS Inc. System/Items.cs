@@ -24,7 +24,7 @@ namespace _3FS_System
 
         private void AddItemButton_Click(object sender, EventArgs e)
         {
-            if ((String.IsNullOrEmpty(ItemNameText.Text)) || (String.IsNullOrEmpty(BrandNameText.Text)) || (String.IsNullOrEmpty(CategoryText.Text)) || (String.IsNullOrEmpty(QuantityText.Text)) || (String.IsNullOrEmpty(UnitText.Text)) || (String.IsNullOrEmpty(SRPText.Text)) || (String.IsNullOrEmpty(CapitalText.Text)))
+            if ((String.IsNullOrEmpty(ItemNameText.Text)) || (String.IsNullOrEmpty(BrandNameText.Text)) || (String.IsNullOrEmpty(CategoryText.Text)) || (String.IsNullOrEmpty(UnitText.Text)) || (String.IsNullOrEmpty(SRPText.Text)) || (String.IsNullOrEmpty(CapitalText.Text)))
             {
                 MessageBox.Show("Enter complete details!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -96,13 +96,21 @@ namespace _3FS_System
         {
             Global.ITEMID = 0;
             ItemLogsRepository itemsLogsRepository = new ItemLogsRepository();
+            InventoryRepository inventoryRepository = new InventoryRepository();
             if (dataGridInventory.Rows.Count != 0)
             {
                 int[] c_r = { dataGridInventory.CurrentCellAddress.X, dataGridInventory.CurrentCellAddress.Y };
                 Console.WriteLine(Global.ITEMID);
                 Global.ITEMID = int.Parse(dataGridInventory.Rows[c_r[1]].Cells["ItemID"].Value.ToString());
+                string itemname = dataGridInventory.Rows[c_r[1]].Cells["ItemName"].Value.ToString();
+                string brandname = dataGridInventory.Rows[c_r[1]].Cells["BrandName"].Value.ToString();
                 EditText.Text = dataGridInventory.Rows[c_r[1]].Cells[c_r[0]].Value.ToString();
-
+                dataGridQuantity.DataSource = inventoryRepository.GetByName(itemname, brandname);
+                dataGridQuantity.Columns["InventoryID"].Visible = false;
+                dataGridQuantity.Columns["ItemID"].Visible = false;
+                dataGridQuantity.Columns["WarehouseID"].Visible = false;
+                dataGridQuantity.Columns["UpdatedDate"].Visible = false;
+                dataGridQuantity.Columns["CreatedDate"].Visible = false;
                 if (c_r[0] == 0 || c_r[0] == 9) //0, 8th columns of ItemInventoryTable
                 {
                     EditText.Enabled = false;
@@ -203,6 +211,7 @@ namespace _3FS_System
             dataGridInventory.Columns["CreatedDate"].Visible = false;
             dataGridInventory.Columns["StoreID"].Visible = false;
             dataGridInventory.AutoResizeColumns();
+            dataGridInventory.AutoResizeRows();
         }
 
         private void searchBrandName_TextChanged(object sender, EventArgs e)
@@ -251,5 +260,29 @@ namespace _3FS_System
             warehouseSearchComboBox.Items.AddRange(warehouselist.ToArray());
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormCollection fc = Application.OpenForms;
+            bool bFormNameOpen = false;
+            foreach (Form frm in fc)
+            {
+                if (frm.Name == "Warehouses")
+                {
+                    bFormNameOpen = true;
+                    frm.Focus();
+                    break;
+                }
+                else
+                {
+                    bFormNameOpen = false;
+                }
+            }
+            if (bFormNameOpen == false)
+            {
+                Warehouses warehouses = new Warehouses();
+                warehouses.MdiParent = this.MdiParent;
+                warehouses.Show();
+            }
+        }
     }
 }
