@@ -34,7 +34,12 @@ namespace _3FS_System.Repositories
 
         public IEnumerable<Inventory> GetByName_ByWareHouse(string ItemName, string BrandName, int warehouseID)
         {
-            throw new NotImplementedException();
+            string qry = string.Format("dbo.spItemInventory_GetByNameNWarehouse @ItemName='{0}', @BrandName='{1}', @WarehouseID='{2}'", ItemName, BrandName, warehouseID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
+            {
+                var output = connection.Query<Inventory>(qry);
+                return output;
+            }
         }
 
         public bool Insert(Inventory inventory)
@@ -52,9 +57,26 @@ namespace _3FS_System.Repositories
             throw new NotImplementedException();
         }
 
-        public bool UpdateQty(Inventory inventory)
+        public bool UpdateQty(Inventory inventory, int transactiontype)
         {
-            throw new NotImplementedException();
+            string qry = string.Format("dbo.spInventory_UpdateQtyByID @ItemID='{0}', @WarehouseID='{1}', @Qty='{2}', @TransactionType='{3}', @UpdatedDate='{4}'", inventory.ItemID, inventory.WarehouseID, inventory.Quantity, transactiontype, inventory.UpdatedDate);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
+            {
+                var output = connection.Execute(qry);
+                return true;
+            }
+        }
+        public bool IfExists(Inventory inventory)
+        {
+            string qry = string.Format("dbo.spInventory_IfExists @ItemID='{0}', @WarehouseID='{1}'", inventory.ItemID, inventory.WarehouseID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))
+            {
+                int output = (int)Convert.ToInt16(connection.ExecuteScalar(qry).ToString());
+                if (output > 0)
+                    return true;
+                else 
+                    return false;
+            }
         }
     }
 }

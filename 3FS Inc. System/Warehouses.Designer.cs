@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridLogs = new System.Windows.Forms.DataGridView();
+            this.dataGridWarehouse1 = new System.Windows.Forms.DataGridView();
             this.searchpanel = new System.Windows.Forms.Panel();
             this.addButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,50 +41,50 @@
             this.label11 = new System.Windows.Forms.Label();
             this.brandlabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.storageAcombobox = new System.Windows.Forms.ComboBox();
+            this.storagecombobox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.storageBcombobox = new System.Windows.Forms.ComboBox();
-            this.transfer1 = new System.Windows.Forms.Button();
-            this.transfer2 = new System.Windows.Forms.Button();
+            this.dataGridWarehouse2 = new System.Windows.Forms.DataGridView();
+            this.storagecombobox2 = new System.Windows.Forms.ComboBox();
+            this.movebutton1 = new System.Windows.Forms.Button();
+            this.movebutton2 = new System.Windows.Forms.Button();
             this.dataGridInventory = new System.Windows.Forms.DataGridView();
             this.inventorylabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.searchNameMove = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.searchBrandNameMove = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridLogs)).BeginInit();
+            this.movequantityText = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridWarehouse1)).BeginInit();
             this.searchpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridWarehouse2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInventory)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridLogs
+            // dataGridWarehouse1
             // 
-            this.dataGridLogs.AllowUserToAddRows = false;
-            this.dataGridLogs.AllowUserToDeleteRows = false;
-            this.dataGridLogs.AllowUserToResizeRows = false;
-            this.dataGridLogs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridLogs.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridLogs.Location = new System.Drawing.Point(247, 33);
-            this.dataGridLogs.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridLogs.MultiSelect = false;
-            this.dataGridLogs.Name = "dataGridLogs";
-            this.dataGridLogs.ReadOnly = true;
-            this.dataGridLogs.RowHeadersVisible = false;
-            this.dataGridLogs.RowHeadersWidth = 51;
-            this.dataGridLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridLogs.Size = new System.Drawing.Size(299, 151);
-            this.dataGridLogs.TabIndex = 39;
+            this.dataGridWarehouse1.AllowUserToAddRows = false;
+            this.dataGridWarehouse1.AllowUserToDeleteRows = false;
+            this.dataGridWarehouse1.AllowUserToResizeRows = false;
+            this.dataGridWarehouse1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridWarehouse1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridWarehouse1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridWarehouse1.Location = new System.Drawing.Point(247, 33);
+            this.dataGridWarehouse1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridWarehouse1.MultiSelect = false;
+            this.dataGridWarehouse1.Name = "dataGridWarehouse1";
+            this.dataGridWarehouse1.ReadOnly = true;
+            this.dataGridWarehouse1.RowHeadersVisible = false;
+            this.dataGridWarehouse1.RowHeadersWidth = 51;
+            this.dataGridWarehouse1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridWarehouse1.Size = new System.Drawing.Size(299, 151);
+            this.dataGridWarehouse1.TabIndex = 39;
             // 
             // searchpanel
             // 
@@ -129,14 +129,17 @@
             // 
             // storageComboBox
             // 
+            this.storageComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.storageComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.storageComboBox.DisplayMember = "1";
             this.storageComboBox.FormattingEnabled = true;
             this.storageComboBox.Location = new System.Drawing.Point(81, 120);
             this.storageComboBox.Name = "storageComboBox";
             this.storageComboBox.Size = new System.Drawing.Size(132, 21);
             this.storageComboBox.TabIndex = 36;
+            this.storageComboBox.DropDown += new System.EventHandler(this.storageComboBox_DropDown);
             this.storageComboBox.SelectionChangeCommitted += new System.EventHandler(this.storageComboBox_SelectionChangeCommitted);
-            this.storageComboBox.Click += new System.EventHandler(this.storageComboBox_Click);
+            this.storageComboBox.Enter += new System.EventHandler(this.storageComboBox_Enter);
             // 
             // quantityText
             // 
@@ -230,13 +233,15 @@
             this.label1.Text = "Storage:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // storageAcombobox
+            // storagecombobox1
             // 
-            this.storageAcombobox.FormattingEnabled = true;
-            this.storageAcombobox.Location = new System.Drawing.Point(301, 5);
-            this.storageAcombobox.Name = "storageAcombobox";
-            this.storageAcombobox.Size = new System.Drawing.Size(132, 21);
-            this.storageAcombobox.TabIndex = 33;
+            this.storagecombobox1.FormattingEnabled = true;
+            this.storagecombobox1.Location = new System.Drawing.Point(301, 5);
+            this.storagecombobox1.Name = "storagecombobox1";
+            this.storagecombobox1.Size = new System.Drawing.Size(132, 21);
+            this.storagecombobox1.TabIndex = 33;
+            this.storagecombobox1.SelectionChangeCommitted += new System.EventHandler(this.storagecombobox1_SelectionChangeCommitted);
+            this.storagecombobox1.Click += new System.EventHandler(this.storagecombobox1_Click);
             // 
             // label2
             // 
@@ -250,50 +255,54 @@
             this.label2.Text = "Storage:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dataGridView1
+            // dataGridWarehouse2
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(627, 33);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(299, 151);
-            this.dataGridView1.TabIndex = 43;
+            this.dataGridWarehouse2.AllowUserToAddRows = false;
+            this.dataGridWarehouse2.AllowUserToDeleteRows = false;
+            this.dataGridWarehouse2.AllowUserToResizeRows = false;
+            this.dataGridWarehouse2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridWarehouse2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridWarehouse2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridWarehouse2.Location = new System.Drawing.Point(627, 33);
+            this.dataGridWarehouse2.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridWarehouse2.MultiSelect = false;
+            this.dataGridWarehouse2.Name = "dataGridWarehouse2";
+            this.dataGridWarehouse2.ReadOnly = true;
+            this.dataGridWarehouse2.RowHeadersVisible = false;
+            this.dataGridWarehouse2.RowHeadersWidth = 51;
+            this.dataGridWarehouse2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridWarehouse2.Size = new System.Drawing.Size(299, 151);
+            this.dataGridWarehouse2.TabIndex = 43;
             // 
-            // storageBcombobox
+            // storagecombobox2
             // 
-            this.storageBcombobox.FormattingEnabled = true;
-            this.storageBcombobox.Location = new System.Drawing.Point(682, 5);
-            this.storageBcombobox.Name = "storageBcombobox";
-            this.storageBcombobox.Size = new System.Drawing.Size(132, 21);
-            this.storageBcombobox.TabIndex = 42;
+            this.storagecombobox2.FormattingEnabled = true;
+            this.storagecombobox2.Location = new System.Drawing.Point(682, 5);
+            this.storagecombobox2.Name = "storagecombobox2";
+            this.storagecombobox2.Size = new System.Drawing.Size(132, 21);
+            this.storagecombobox2.TabIndex = 42;
+            this.storagecombobox2.SelectionChangeCommitted += new System.EventHandler(this.storagecombobox2_SelectionChangeCommitted);
+            this.storagecombobox2.Click += new System.EventHandler(this.storagecombobox2_Click);
             // 
-            // transfer1
+            // movebutton1
             // 
-            this.transfer1.Location = new System.Drawing.Point(559, 94);
-            this.transfer1.Name = "transfer1";
-            this.transfer1.Size = new System.Drawing.Size(54, 23);
-            this.transfer1.TabIndex = 44;
-            this.transfer1.Text = ">>";
-            this.transfer1.UseVisualStyleBackColor = true;
+            this.movebutton1.Location = new System.Drawing.Point(559, 94);
+            this.movebutton1.Name = "movebutton1";
+            this.movebutton1.Size = new System.Drawing.Size(54, 23);
+            this.movebutton1.TabIndex = 44;
+            this.movebutton1.Text = ">>";
+            this.movebutton1.UseVisualStyleBackColor = true;
+            this.movebutton1.Click += new System.EventHandler(this.movebutton1_Click);
             // 
-            // transfer2
+            // movebutton2
             // 
-            this.transfer2.Location = new System.Drawing.Point(559, 133);
-            this.transfer2.Name = "transfer2";
-            this.transfer2.Size = new System.Drawing.Size(54, 23);
-            this.transfer2.TabIndex = 45;
-            this.transfer2.Text = "<<";
-            this.transfer2.UseVisualStyleBackColor = true;
+            this.movebutton2.Location = new System.Drawing.Point(559, 133);
+            this.movebutton2.Name = "movebutton2";
+            this.movebutton2.Size = new System.Drawing.Size(54, 23);
+            this.movebutton2.TabIndex = 45;
+            this.movebutton2.Text = "<<";
+            this.movebutton2.UseVisualStyleBackColor = true;
+            this.movebutton2.Click += new System.EventHandler(this.movebutton2_Click);
             // 
             // dataGridInventory
             // 
@@ -328,9 +337,9 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.searchNameMove);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.searchBrandNameMove);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Location = new System.Drawing.Point(4, 33);
@@ -339,15 +348,16 @@
             this.panel1.Size = new System.Drawing.Size(235, 112);
             this.panel1.TabIndex = 48;
             // 
-            // textBox2
+            // searchNameMove
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(81, 35);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 20);
-            this.textBox2.TabIndex = 28;
+            this.searchNameMove.BackColor = System.Drawing.Color.White;
+            this.searchNameMove.ForeColor = System.Drawing.Color.Black;
+            this.searchNameMove.Location = new System.Drawing.Point(81, 35);
+            this.searchNameMove.Margin = new System.Windows.Forms.Padding(4);
+            this.searchNameMove.Name = "searchNameMove";
+            this.searchNameMove.Size = new System.Drawing.Size(132, 20);
+            this.searchNameMove.TabIndex = 28;
+            this.searchNameMove.TextChanged += new System.EventHandler(this.searchNameMove_TextChanged);
             // 
             // label6
             // 
@@ -361,15 +371,16 @@
             this.label6.Text = "Name:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox3
+            // searchBrandNameMove
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(81, 63);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 20);
-            this.textBox3.TabIndex = 30;
+            this.searchBrandNameMove.BackColor = System.Drawing.Color.White;
+            this.searchBrandNameMove.ForeColor = System.Drawing.Color.Black;
+            this.searchBrandNameMove.Location = new System.Drawing.Point(81, 63);
+            this.searchBrandNameMove.Margin = new System.Windows.Forms.Padding(4);
+            this.searchBrandNameMove.Name = "searchBrandNameMove";
+            this.searchBrandNameMove.Size = new System.Drawing.Size(132, 20);
+            this.searchBrandNameMove.TabIndex = 30;
+            this.searchBrandNameMove.TextChanged += new System.EventHandler(this.searchBrandNameMove_TextChanged);
             // 
             // label7
             // 
@@ -409,30 +420,30 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.movequantityText);
             this.panel3.Controls.Add(this.panel1);
-            this.panel3.Controls.Add(this.dataGridLogs);
-            this.panel3.Controls.Add(this.transfer2);
-            this.panel3.Controls.Add(this.storageAcombobox);
-            this.panel3.Controls.Add(this.transfer1);
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.dataGridWarehouse1);
+            this.panel3.Controls.Add(this.movebutton2);
+            this.panel3.Controls.Add(this.storagecombobox1);
+            this.panel3.Controls.Add(this.movebutton1);
+            this.panel3.Controls.Add(this.dataGridWarehouse2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.storageBcombobox);
+            this.panel3.Controls.Add(this.storagecombobox2);
             this.panel3.Location = new System.Drawing.Point(3, 203);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(932, 190);
             this.panel3.TabIndex = 50;
             // 
-            // textBox1
+            // movequantityText
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(559, 45);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(54, 20);
-            this.textBox1.TabIndex = 33;
+            this.movequantityText.BackColor = System.Drawing.Color.White;
+            this.movequantityText.ForeColor = System.Drawing.Color.Black;
+            this.movequantityText.Location = new System.Drawing.Point(559, 45);
+            this.movequantityText.Margin = new System.Windows.Forms.Padding(4);
+            this.movequantityText.Name = "movequantityText";
+            this.movequantityText.Size = new System.Drawing.Size(54, 20);
+            this.movequantityText.TabIndex = 33;
             // 
             // Warehouses
             // 
@@ -443,10 +454,10 @@
             this.Controls.Add(this.panel2);
             this.Name = "Warehouses";
             this.Text = "Warehouses";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridLogs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridWarehouse1)).EndInit();
             this.searchpanel.ResumeLayout(false);
             this.searchpanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridWarehouse2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridInventory)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -460,20 +471,20 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridLogs;
+        private System.Windows.Forms.DataGridView dataGridWarehouse1;
         private System.Windows.Forms.Panel searchpanel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox storageAcombobox;
+        private System.Windows.Forms.ComboBox storagecombobox1;
         private System.Windows.Forms.TextBox searchName;
         private System.Windows.Forms.Label namesearchlabel;
         private System.Windows.Forms.TextBox searchBrandName;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label brandlabel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox storageBcombobox;
-        private System.Windows.Forms.Button transfer1;
-        private System.Windows.Forms.Button transfer2;
+        private System.Windows.Forms.DataGridView dataGridWarehouse2;
+        private System.Windows.Forms.ComboBox storagecombobox2;
+        private System.Windows.Forms.Button movebutton1;
+        private System.Windows.Forms.Button movebutton2;
         private System.Windows.Forms.TextBox quantityText;
         private System.Windows.Forms.Label quantityLabel;
         private System.Windows.Forms.DataGridView dataGridInventory;
@@ -482,13 +493,13 @@
         private System.Windows.Forms.ComboBox storageComboBox;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox searchNameMove;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox searchBrandNameMove;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox movequantityText;
     }
 }

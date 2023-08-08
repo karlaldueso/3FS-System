@@ -14,7 +14,8 @@ namespace _3FS_System.Repositories
         IEnumerable<Inventory> GetByName_ByWareHouse(string ItemName, string BrandName, int warehouseID);
         bool Insert(Inventory inventory);
         bool Update(Inventory inventory);
-        bool UpdateQty(Inventory inventory);
+        bool UpdateQty(Inventory inventory, int transactiontype);
         bool Delete(Inventory inventory);
+        bool IfExists(Inventory inventory);
     }
 }
