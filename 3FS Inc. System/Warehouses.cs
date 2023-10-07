@@ -276,6 +276,7 @@ namespace _3FS_System
                         CreatedDate = DateTime.Now
                     };
                     float qty = float.Parse(dataGridWarehouse1.Rows[c_r[1]].Cells["Quantity"].Value.ToString());
+                    float qty_disp = float.Parse(movequantityText.Text);
                     string unit = dataGridWarehouse1.Rows[c_r[1]].Cells["Unit"].Value.ToString();
                     string itemname = dataGridWarehouse1.Rows[c_r[1]].Cells["ItemName"].Value.ToString();
                     string itembrandname = dataGridWarehouse1.Rows[c_r[1]].Cells["BrandName"].Value.ToString();
@@ -285,6 +286,7 @@ namespace _3FS_System
                     {
                         inventory1.Quantity = qty;
                         inventory2.Quantity = qty;
+                        qty_disp = qty;
                     }
 
                     inventoryRepository.UpdateQty(inventory1, 1);
@@ -315,7 +317,7 @@ namespace _3FS_System
                     dataGridWarehouse2.Columns["CreatedDate"].Visible = false;
                     dataGridWarehouse2.AutoResizeColumns();
                     dataGridWarehouse2.AutoResizeRows();
-                    string str = String.Format("Moved {0} {1} of {2}({3}) from {4} to {5}!", qty, unit, itemname, itembrandname, warehouse1, warehouse2);
+                    string str = String.Format("Moved {0} {1} of {2}({3}) from {4} to {5}!", qty_disp, unit, itemname, itembrandname, warehouse1, warehouse2);
                     MessageBox.Show(str, "Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
@@ -360,6 +362,7 @@ namespace _3FS_System
                         CreatedDate = DateTime.Now
                     };
                     float qty = float.Parse(dataGridWarehouse2.Rows[c_r[1]].Cells["Quantity"].Value.ToString());
+                    float qty_disp = float.Parse(movequantityText.Text);
                     string unit = dataGridWarehouse2.Rows[c_r[1]].Cells["Unit"].Value.ToString();
                     string itemname = dataGridWarehouse2.Rows[c_r[1]].Cells["ItemName"].Value.ToString();
                     string itembrandname = dataGridWarehouse2.Rows[c_r[1]].Cells["BrandName"].Value.ToString();
@@ -369,8 +372,9 @@ namespace _3FS_System
                     {
                         inventory1.Quantity = qty;
                         inventory2.Quantity = qty;
+                        qty_disp = qty;
+                        
                     }
-
                     inventoryRepository.UpdateQty(inventory2, 1);
                     if (inventoryRepository.IfExists(inventory1))
                     {
@@ -398,7 +402,7 @@ namespace _3FS_System
                     dataGridWarehouse2.Columns["CreatedDate"].Visible = false;
                     dataGridWarehouse2.AutoResizeColumns();
                     dataGridWarehouse2.AutoResizeRows();
-                    string str = String.Format("Moved {0} {1} of {2}({3}) from {4} to {5}!", qty, unit, itemname, itembrandname, warehouse2, warehouse1);
+                    string str = String.Format("Moved {0} {1} of {2}({3}) from {4} to {5}!", qty_disp, unit, itemname, itembrandname, warehouse2, warehouse1);
                     MessageBox.Show(str, "Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
