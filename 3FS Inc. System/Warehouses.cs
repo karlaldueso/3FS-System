@@ -107,6 +107,21 @@ namespace _3FS_System
                     {
                         inventoryRepository.Insert(inventory);
                     }
+                    ItemLogsRepository itemLogsRepository= new ItemLogsRepository();
+                    //Adding to ItemLogs
+                    ItemLogs itemlogs = new ItemLogs
+                    {
+                        ItemID = inventory.ItemID,
+                        TransactionType = String.Format("Added {0} {1}", inventory.Quantity, unit),
+                        Previous = "",
+                        Present = warehouse,
+                        TransactionDate = DateTime.Now,
+                        UpdatedDate = DateTime.Now,
+                        CreatedDate = DateTime.Now,
+                        StoreID = 1
+                    };
+                    itemLogsRepository.Insert(itemlogs, -1);
+
                     string msg = String.Format("Added {0} {1} of {2}({3}) to {4}!", inventory.Quantity, unit, item, brand, warehouse);
                     MessageBox.Show(msg, "Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     searchName.Clear();
@@ -299,6 +314,21 @@ namespace _3FS_System
                         inventoryRepository.Insert(inventory2);
                     }
 
+                    ItemLogsRepository itemLogsRepository = new ItemLogsRepository();
+                    //Adding to ItemLogs
+                    ItemLogs itemlogs = new ItemLogs
+                    {
+                        ItemID = inventory1.ItemID,
+                        TransactionType = String.Format("Transfer {0} {1}", inventory1.Quantity, unit),
+                        Previous = warehouse1,
+                        Present = warehouse2,
+                        TransactionDate = DateTime.Now,
+                        UpdatedDate = DateTime.Now,
+                        CreatedDate = DateTime.Now,
+                        StoreID = 1
+                    };
+                    itemLogsRepository.Insert(itemlogs, -1);
+
                     dataGridWarehouse1.DataSource = inventoryRepository.GetByName_ByWareHouse(searchNameMove.Text, searchBrandNameMove.Text, warehouseID[storagecombobox1.SelectedIndex]);
                     dataGridWarehouse1.Columns["InventoryID"].Visible = false;
                     dataGridWarehouse1.Columns["ItemID"].Visible = false;
@@ -384,6 +414,22 @@ namespace _3FS_System
                     {
                         inventoryRepository.Insert(inventory1);
                     }
+
+                    ItemLogsRepository itemLogsRepository = new ItemLogsRepository();
+                    //Adding to ItemLogs
+                    ItemLogs itemlogs = new ItemLogs
+                    {
+                        ItemID = inventory1.ItemID,
+                        TransactionType = String.Format("Transfer {0} {1}", inventory2.Quantity, unit),
+                        Previous = warehouse2,
+                        Present = warehouse1,
+                        TransactionDate = DateTime.Now,
+                        UpdatedDate = DateTime.Now,
+                        CreatedDate = DateTime.Now,
+                        StoreID = 1
+                    };
+                    itemLogsRepository.Insert(itemlogs, -1);
+
                     dataGridWarehouse1.DataSource = inventoryRepository.GetByName_ByWareHouse(searchNameMove.Text, searchBrandNameMove.Text, warehouseID[storagecombobox1.SelectedIndex]);
                     dataGridWarehouse1.Columns["InventoryID"].Visible = false;
                     dataGridWarehouse1.Columns["ItemID"].Visible = false;

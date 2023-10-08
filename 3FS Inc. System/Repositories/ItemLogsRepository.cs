@@ -73,7 +73,7 @@ namespace _3FS_System.Repositories
                     item.TransactionType = "Return";
                     break;
                 default:
-                    item.TransactionType = "";
+                    //item.TransactionType = "";
                     break;
             }
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("3FSDatabase")))

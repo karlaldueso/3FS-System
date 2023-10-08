@@ -28,9 +28,39 @@ namespace _3FS_System
             MaximumSize = new Size(screenWidth, screenHeight);
 
             this.WindowState = FormWindowState.Maximized;
-
-
+            
         }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Properties.Settings.Default.FormBackground;
+            int myvalue = panel1.Height + 4;
+            myvalue /= 6;
+            int buttonheight = myvalue;
+            customers_button.Height = buttonheight;
+            customerProfile.Height = buttonheight;
+            sales_button.Height = buttonheight;
+            Inventory_new.Height = buttonheight;
+            users.Height = buttonheight;
+            suppliers_button.Height = buttonheight;
+            SetBackGroundColorOfMDIForm();
+
+            System.Threading.TimerCallback callback = new System.Threading.TimerCallback(ProcessTimerEvent);
+            //first occurrence at
+            var dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 17, 35, 0);
+
+            //if (DateTime.Now < dt)
+            //{
+                var timer = new System.Threading.Timer(callback, null,
+                                //other occurrences every 24 hours
+                                TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(10));
+            //}
+        }
+        private void ProcessTimerEvent(object obj)
+        {
+            MessageBox.Show("Hi Its Time");
+        }
+
         private void Main_Resize(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Maximized)
@@ -77,37 +107,6 @@ namespace _3FS_System
 
             }
         }
-
-        private void inventory_button_Click(object sender, EventArgs e)
-        {
-            
-            
-            //FormCollection fc = Application.OpenForms;
-            //bool bFormNameOpen = false;
-            //foreach (Form frm in fc)
-            //{
-            //    if (frm.Name == "Inventory")
-            //    {
-            //        bFormNameOpen = true;
-            //        frm.Focus();
-            //        break;
-            //    }
-            //    else
-            //    {
-            //        bFormNameOpen = false;
-            //    }
-            //}
-            //if(bFormNameOpen == false)
-            //{
-            //    Inventory invtry = new Inventory();
-            //    invtry.MdiParent = this;
-                
-            //    invtry.Show();
-            //}
-
-
-        }
-
         private void sales_button_Click(object sender, EventArgs e)
         {
             FormCollection fc = Application.OpenForms;
@@ -159,25 +158,7 @@ namespace _3FS_System
             }
         }
 
-        private void Main_Load(object sender, EventArgs e)
-        {
-            
-
-
-
-            this.BackColor = Properties.Settings.Default.FormBackground;
-            int myvalue = panel1.Height+4;
-            myvalue /= 6;
-            int buttonheight = myvalue;
-            customers_button.Height = buttonheight;
-            customerProfile.Height = buttonheight;
-            sales_button.Height = buttonheight;
-            Inventory_new.Height = buttonheight;
-            users.Height = buttonheight;
-            suppliers_button.Height = buttonheight;
-
-            SetBackGroundColorOfMDIForm();
-        }
+       
         private void SetBackGroundColorOfMDIForm()
         {
             foreach (Control ctl in this.Controls)
@@ -246,11 +227,6 @@ namespace _3FS_System
                 customerprofile.Show();
             }
         }
-
-       
-
-        
-
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -262,7 +238,7 @@ namespace _3FS_System
             bool bFormNameOpen = false;
             foreach (Form frm in fc)
             {
-                if (frm.Name == "Inventory")
+                if (frm.Name == "Items")
                 {
                     bFormNameOpen = true;
                     frm.Focus();
